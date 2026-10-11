@@ -1,7 +1,5 @@
-Ini, TOML
-
 [tool.ty.environment]
-python = "/home/shailesh/miniconda3/envs/jax/bin/python"
+python = "/home/shailesh/miniforge3/envs/jax/bin/python"
 
 [tool.marimo.language_servers.ty]
 enabled = true
