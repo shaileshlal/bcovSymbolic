@@ -1,5 +1,16 @@
 [tool.ty.environment]
 python = "/home/shailesh/miniforge3/envs/jax/bin/python"
+# Each subproject is run from its own directory and imports sibling modules
+# by bare name, so add every subproject directory to the import search path.
+extra-paths = [
+    "bcov_yy",
+    "coefficient_scan",
+    "yy p2 p3 exact",
+    "yy bootstrap",
+    "yy connections",
+    "yy crossing gap equations",
+    "metaplectic lift",
+]
 
 [tool.marimo.language_servers.ty]
 enabled = true

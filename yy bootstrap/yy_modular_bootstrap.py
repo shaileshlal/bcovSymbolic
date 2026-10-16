@@ -180,7 +180,7 @@ def make_report():
             assert yy.eval_poly(expand(mon-pure),gens)==yy.zero(m+1)
             emit('g=%d, %s: YY combination %s minus {%s} has F_g q^1..q^%d zero' %
                  (g,label,mon,correction,m))
-    Path('/mnt/data/yy_modular_bootstrap_results.txt').write_text('\n'.join(report)+'\n')
+    Path(__file__).with_name('yy_modular_bootstrap_results.txt').write_text('\n'.join(report)+'\n')
     emit('\nGIVEN PURE X AMBIGUITY COEFFICIENTS, PT CONSTRAINTS AT DEGREE FOUR:')
     assert GV[3][4] == 8625
     assert GV[2][4] + 4*GV[3][4] == 569250

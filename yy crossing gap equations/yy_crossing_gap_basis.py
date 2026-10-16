@@ -157,7 +157,7 @@ def run():
     emit('\nExact symbolic genus-two pole DUAL correction with arbitrary conifold jets:')
     for j,b in enumerate(pole,1):emit('B[2,%d](Delta) = %s'%(j,b))
     emit('\nAll identities and exact jet / Möbius checks PASS.')
-    Path('/mnt/data/yy_crossing_gap_results.txt').write_text('\n'.join(lines)+'\n')
+    Path(__file__).with_name('yy_crossing_gap_results.txt').write_text('\n'.join(lines)+'\n')
 
 if __name__=='__main__':
     run()

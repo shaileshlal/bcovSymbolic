@@ -152,5 +152,5 @@ if __name__=='__main__':
             '|C[x2,flog]-C[x4,f1]| = '+m.nstr(err2,9),
             'max unexpected log component = '+m.nstr(ae,9),
             'estimated good digits = '+str(digits)]
-    Path('/mnt/data/yy_connection_numeric_results.txt').write_text('\n'.join(lines)+'\n')
+    Path(__file__).with_name('yy_connection_numeric_results.txt').write_text('\n'.join(lines)+'\n')
     print('\n'.join(lines))
