@@ -28,7 +28,7 @@ def verify(checkpoint,engine,output):
         for j in range(d,g-1,-1):
             predicted[j]=(-1)**j*R.coeff(-j)-sum(
                 (comb(n,j)*predicted[n] for n in range(j+1,d+1)),Q(0))
-        actual=list(map(Q,a['ambiguity']))
+        actual=[Q(x) for x in a['ambiguity']]
         assert all(v==actual[n] for n,v in predicted.items()),g
         reports.append({'genus':g,'coefficients_predicted':len(predicted),
                         'predictions':{n:str(v) for n,v in sorted(predicted.items())},'all_match':True})

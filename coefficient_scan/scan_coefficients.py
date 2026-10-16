@@ -157,11 +157,11 @@ def scan(path,output):
     if data['schema']!=1 or not data['convention'].startswith('YY2004-quintic-psi-'):
         raise ValueError('Unsupported coefficient convention')
     output=Path(output);output.mkdir(parents=True,exist_ok=True)
-    arrays={};stats=[];all_coefficients=[];checks=[]
+    arrays={};stats: list[dict]=[];all_coefficients=[];checks=[]
     for amplitude in data['amplitudes']:
         g=amplitude['genus'];d=3*g-3
         if amplitude['ambiguity'] is None:raise ValueError(f'Unresolved genus {g}')
-        c=list(map(Q,amplitude['ambiguity']));c+= [Q(0)]*(d+1-len(c))
+        c=[Q(x) for x in amplitude['ambiguity']];c+= [Q(0)]*(d+1-len(c))
         arrays[g]=c
         all_terms={tuple(m):Q(int(a),int(b)) for m,a,b in amplitude['anomaly']}
         all_terms.update({(0,0,0,0,n):v for n,v in enumerate(c) if v})

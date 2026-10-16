@@ -51,7 +51,7 @@ def ratcoeff(nmax):
     dshift={k:[fr(v.subs(alpha,n)) for n in range(nmax+1)] for k,v in Ld.items()}
     def analytic(init):
         a=[Fraction(0)]*nmax
-        a[:3]=list(map(Fraction,init))
+        a[:3]=[Fraction(x) for x in init]
         for n in range(3,nmax):
             num=sum((a[j]*shift[n-j-3][j] for j in range(max(0,n-4),n)))
             a[n]=-num/shift[-3][n]

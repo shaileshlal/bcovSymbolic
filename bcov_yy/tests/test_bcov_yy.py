@@ -27,16 +27,17 @@ class PolynomialTests(unittest.TestCase):
         self.assertEqual(Q(1,3)*v1+Q(2,3)*v1, v1)
         self.assertEqual(len(v1-v1), 0)
         self.assertEqual(Poly.constant(0).degree(), -1)
-        for operation in (lambda: Poly.constant(0.1), lambda: v1*0.1,
+        for operation in (lambda: Poly.constant(0.1),  # ty: ignore[invalid-argument-type]
+                          lambda: v1*0.1,
                           lambda: v1+0.1, lambda: v1/0.1,
-                          lambda: v1.evaluate({"v1":0.1})):
+                          lambda: v1.evaluate({"v1":0.1})):  # ty: ignore[invalid-argument-type]
             with self.assertRaises(TypeError):
                 operation()
 
     def test_invalid_monomials_and_unsupported_division(self):
         for powers in ((1,0), (-1,0,0,0,0), (1.0,0,0,0,0)):
             with self.assertRaises(ValueError):
-                Poly({powers:1})
+                Poly({powers:1})  # ty: ignore[invalid-argument-type]
         with self.assertRaises(ZeroDivisionError):
             _ = v1/0
         with self.assertRaises(ValueError):

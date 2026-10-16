@@ -113,7 +113,7 @@ def projection_data(g, T, K, C):
     qvec=T*sp.Matrix([p.nth(r) for r in range(g)])
     gvvec=sp.Matrix([qvec[0]]+[sum(sp.mobius(r)*r**(2*g-3)*qvec[d//r] for r in sp.divisors(d)) for d in range(1,g)])
     assert sp.expand(ker-sum(gvvec[d]*C[d] for d in range(g)))==0
-    return f,polar,ker,[p.nth(r) for r in range(3*g-2)],list(gvvec)
+    return f,polar,ker,[p.nth(r) for r in range(3*g-2)],gvvec.flat()
 
 
 def run():

@@ -64,7 +64,8 @@ class Poly:
     """
     __slots__ = ("_terms", "_hash", "_integer_form")
 
-    def __init__(self, terms: Mapping[Monomial, int | Fraction] | None = None):
+    def __init__(self, terms: Mapping[Monomial, int | Fraction]
+                 | Mapping[tuple[int, ...], int | Fraction] | None = None):
         data = {}
         for powers, coefficient in (terms or {}).items():
             if len(powers) != 5 or any(type(p) is not int or p < 0 for p in powers):
@@ -90,7 +91,7 @@ class Poly:
 
     @classmethod
     def coerce(cls, value: Poly | int | Fraction) -> Poly:
-        return value if isinstance(value, cls) else cls.constant(value)
+        return value if isinstance(value, Poly) else cls.constant(value)
 
     @property
     def terms(self) -> Mapping[Monomial, Fraction]:
@@ -611,7 +612,7 @@ class BCOV:
     def save(self, path: str | Path):
         """Versioned exact JSON, written by atomic replacement; no pickle."""
         data = {"schema":1, "convention":self.convention, "amplitudes":
-                [a.to_data() for g,a in sorted(self.amplitudes.items())]}
+                [a.to_data() for _,a in sorted(self.amplitudes.items())]}
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
         fd, temporary = tempfile.mkstemp(prefix=path.name+".", dir=path.parent)

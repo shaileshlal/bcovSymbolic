@@ -4,21 +4,16 @@ __generated_with = "0.24.2"
 app = marimo.App()
 
 
-@app.cell
-def _():
-    from __future__ import annotations
-
+with app.setup:
     from dataclasses import dataclass
     from fractions import Fraction
     from collections import defaultdict
 
     import sympy as sp
 
-    return dataclass, sp
-
 
 @app.cell
-def _(dataclass, sp):
+def _():
     # ----------------------------------------------------------------------
     # Base coefficient field
     #

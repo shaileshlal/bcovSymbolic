@@ -79,7 +79,7 @@ def tests():
     expected=S.eye(4);expected[3,1]=-1
     assert Mc_con==expected
     x0,x1,t=S.symbols('x0 x1 t')
-    phi=S.Function('phi')
+    phi=S.symbols('phi',cls=S.Function)
     f=phi(x1/x0)/x0**2
     d1=S.diff(f,x0).subs(x1,t*x0)
     d2=S.diff(f,x0,2).subs(x1,t*x0)
