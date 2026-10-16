@@ -1,0 +1,20 @@
+SYMLECTIC: M0,Mc preserve Omega; (M0 Mc)^5=1; (Mc-I)^2=0: PASS
+GAUSS-MANIN theta companion =
+ Matrix([[0, 0, 0, 24*s/(625*(1 - s))], [1, 0, 0, 2*s/(5*(1 - s))], [0, 1, 0, 7*s/(5*(1 - s))], [0, 0, 1, 2*s/(1 - s)]])
+wedge basis indices (12,13,14,23,24,34)
+wedge M0=
+ Matrix([[1, 0, 0, 0, 0, 0], [0, 1, 0, 1, 0, 0], [-5, -1, 1, -1, 1, 0], [-5, 0, 0, 1, 0, 0], [0, 0, 0, -1, 1, 0], [-25, -5, 5, 0, 5, 1]])
+wedge Mc=
+ Matrix([[1, 0, 1, 0, 0, 0], [0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0], [0, 0, 0, 1, 0, -1], [0, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1]])
+simultaneous fixed space = span(W13+W24), identically zero on Griffiths-transversal periods
+Holomorphic J-action: J1->J1+A, J2->J2+2*A*J1+B, J3->J3+3*A*J2+3*B*J1+C
+YY v-action differences:
+v1 correction: sigma1
+v2 correction: -(2*J1*sigma1 - 5*X*sigma1 + sigma2)/2
+v3 correction: (10*J1*X*sigma1 - 3*J1*sigma2 - 3*J2*sigma1 + 25*X**2*sigma1 - 35*X*sigma1 + 5*X*sigma2 - sigma3)/2
+Genus-2 connection cocycle P2_new-P2 (factored over sigma):
+-5*sigma1**3/24 + sigma1**2*(-115*J1/24 + 45*X/4 + 125/24) + sigma1*(-115*J1**2/24 + 14935*J1*X/36 + 875*J1/9 - 725*J2/12 - 2825*X**2/288 - 133085*X/144 - 25*sigma2/12 - 15625/288) + sigma2*(-725*J1/12 + 14125*X/72 + 3125/72) - 175*sigma3/9
+Genus-3 cocycle degrees in sigma: 6 sigma monomials 22
+genus 3 sigma3 derivative = -235*(12*J1**3 - 648*J1**2*X - 300*J1**2 + 120*J1*J2 + 565*J1*X**2 + 53234*J1*X + 3125*J1 - 11300*J2*X - 2500*J2 + 1120*J3 - 30*X**3 - 1082*X**2 - 69482*X - 1250)/1728
+genus 3 coefficient sigma3^2 = -8225/108
+Tests passed: exact period monodromy, exterior square, transformation of P2 and P3.

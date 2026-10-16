@@ -1,0 +1,15 @@
+{
+  "test_command": "python -m unittest discover -s tests -q",
+  "tests_passed": 43,
+  "physical_completed_genus": 8,
+  "gv_validation_degree": 4,
+  "published_genus2_recovered_without_importing_ambiguity": true,
+  "known_gv": {
+    "n_2^4": 534750,
+    "n_3^4": 8625,
+    "n_51^20_boundary_input": 175
+  },
+  "target_genus": 53,
+  "target_executed": false,
+  "mu": "unevaluated nonzero coordinate scale; x=z/mu"
+}

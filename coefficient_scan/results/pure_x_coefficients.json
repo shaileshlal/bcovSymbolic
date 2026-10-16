@@ -1,0 +1,2835 @@
+[
+  {
+    "genus": 2,
+    "n": 0,
+    "top_offset": 3,
+    "coefficient": "3125/144",
+    "denominator_factors": {
+      "2": 4,
+      "3": 2
+    },
+    "v5": 5,
+    "normalized_by_5_to_d": "25/144",
+    "small_prime_factors": {
+      "5": 5
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 2,
+    "n": 1,
+    "top_offset": 2,
+    "coefficient": "-28795/144",
+    "denominator_factors": {
+      "2": 4,
+      "3": 2
+    },
+    "v5": 1,
+    "normalized_by_5_to_d": "-5759/3600",
+    "small_prime_factors": {
+      "5": 1,
+      "13": 1
+    },
+    "unfactored_cofactor": "443"
+  },
+  {
+    "genus": 2,
+    "n": 2,
+    "top_offset": 1,
+    "coefficient": "205/144",
+    "denominator_factors": {
+      "2": 4,
+      "3": 2
+    },
+    "v5": 1,
+    "normalized_by_5_to_d": "41/3600",
+    "small_prime_factors": {
+      "5": 1,
+      "41": 1
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 2,
+    "n": 3,
+    "top_offset": 0,
+    "coefficient": "25/48",
+    "denominator_factors": {
+      "2": 4,
+      "3": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "1/240",
+    "small_prime_factors": {
+      "5": 2
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 3,
+    "n": 0,
+    "top_offset": 6,
+    "coefficient": "1953125/36288",
+    "denominator_factors": {
+      "2": 6,
+      "3": 4,
+      "7": 1
+    },
+    "v5": 9,
+    "normalized_by_5_to_d": "125/36288",
+    "small_prime_factors": {
+      "5": 9
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 3,
+    "n": 1,
+    "top_offset": 5,
+    "coefficient": "17301875/9072",
+    "denominator_factors": {
+      "2": 4,
+      "3": 4,
+      "7": 1
+    },
+    "v5": 4,
+    "normalized_by_5_to_d": "27683/226800",
+    "small_prime_factors": {
+      "5": 4,
+      "19": 1,
+      "31": 1,
+      "47": 1
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 3,
+    "n": 2,
+    "top_offset": 4,
+    "coefficient": "-282070015/36288",
+    "denominator_factors": {
+      "2": 6,
+      "3": 4,
+      "7": 1
+    },
+    "v5": 1,
+    "normalized_by_5_to_d": "-56414003/113400000",
+    "small_prime_factors": {
+      "5": 1
+    },
+    "unfactored_cofactor": "56414003"
+  },
+  {
+    "genus": 3,
+    "n": 3,
+    "top_offset": 3,
+    "coefficient": "260935/1134",
+    "denominator_factors": {
+      "2": 1,
+      "3": 4,
+      "7": 1
+    },
+    "v5": 1,
+    "normalized_by_5_to_d": "52187/3543750",
+    "small_prime_factors": {
+      "5": 1,
+      "23": 1
+    },
+    "unfactored_cofactor": "2269"
+  },
+  {
+    "genus": 3,
+    "n": 4,
+    "top_offset": 2,
+    "coefficient": "235625/2016",
+    "denominator_factors": {
+      "2": 5,
+      "3": 2,
+      "7": 1
+    },
+    "v5": 4,
+    "normalized_by_5_to_d": "377/50400",
+    "small_prime_factors": {
+      "5": 4,
+      "13": 1,
+      "29": 1
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 3,
+    "n": 5,
+    "top_offset": 1,
+    "coefficient": "33125/1008",
+    "denominator_factors": {
+      "2": 4,
+      "3": 2,
+      "7": 1
+    },
+    "v5": 4,
+    "normalized_by_5_to_d": "53/25200",
+    "small_prime_factors": {
+      "5": 4,
+      "53": 1
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 3,
+    "n": 6,
+    "top_offset": 0,
+    "coefficient": "15625/1008",
+    "denominator_factors": {
+      "2": 4,
+      "3": 2,
+      "7": 1
+    },
+    "v5": 6,
+    "normalized_by_5_to_d": "1/1008",
+    "small_prime_factors": {
+      "5": 6
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 4,
+    "n": 0,
+    "top_offset": 9,
+    "coefficient": "244140625/435456",
+    "denominator_factors": {
+      "2": 8,
+      "3": 5,
+      "7": 1
+    },
+    "v5": 12,
+    "normalized_by_5_to_d": "125/435456",
+    "small_prime_factors": {
+      "5": 12
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 4,
+    "n": 1,
+    "top_offset": 8,
+    "coefficient": "107421875/24192",
+    "denominator_factors": {
+      "2": 7,
+      "3": 3,
+      "7": 1
+    },
+    "v5": 10,
+    "normalized_by_5_to_d": "55/24192",
+    "small_prime_factors": {
+      "5": 10,
+      "11": 1
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 4,
+    "n": 2,
+    "top_offset": 7,
+    "coefficient": "27917612375/145152",
+    "denominator_factors": {
+      "2": 8,
+      "3": 4,
+      "7": 1
+    },
+    "v5": 3,
+    "normalized_by_5_to_d": "223340899/2268000000",
+    "small_prime_factors": {
+      "5": 3,
+      "41": 1
+    },
+    "unfactored_cofactor": "5447339"
+  },
+  {
+    "genus": 4,
+    "n": 3,
+    "top_offset": 6,
+    "coefficient": "-101510017565/217728",
+    "denominator_factors": {
+      "2": 7,
+      "3": 5,
+      "7": 1
+    },
+    "v5": 1,
+    "normalized_by_5_to_d": "-20302003513/85050000000",
+    "small_prime_factors": {
+      "5": 1,
+      "11": 2
+    },
+    "unfactored_cofactor": "167785153"
+  },
+  {
+    "genus": 4,
+    "n": 4,
+    "top_offset": 5,
+    "coefficient": "14875268855/435456",
+    "denominator_factors": {
+      "2": 8,
+      "3": 5,
+      "7": 1
+    },
+    "v5": 1,
+    "normalized_by_5_to_d": "2975053771/170100000000",
+    "small_prime_factors": {
+      "5": 1,
+      "17": 1,
+      "43": 1
+    },
+    "unfactored_cofactor": "4069841"
+  },
+  {
+    "genus": 4,
+    "n": 5,
+    "top_offset": 4,
+    "coefficient": "327115075/15552",
+    "denominator_factors": {
+      "2": 6,
+      "3": 5
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "13084603/1215000000",
+    "small_prime_factors": {
+      "5": 2,
+      "7": 1
+    },
+    "unfactored_cofactor": "1869229"
+  },
+  {
+    "genus": 4,
+    "n": 6,
+    "top_offset": 3,
+    "coefficient": "4042706375/435456",
+    "denominator_factors": {
+      "2": 8,
+      "3": 5,
+      "7": 1
+    },
+    "v5": 3,
+    "normalized_by_5_to_d": "32341651/6804000000",
+    "small_prime_factors": {
+      "5": 3,
+      "61": 1
+    },
+    "unfactored_cofactor": "530191"
+  },
+  {
+    "genus": 4,
+    "n": 7,
+    "top_offset": 2,
+    "coefficient": "132221875/24192",
+    "denominator_factors": {
+      "2": 7,
+      "3": 3,
+      "7": 1
+    },
+    "v5": 5,
+    "normalized_by_5_to_d": "42311/15120000",
+    "small_prime_factors": {
+      "5": 5,
+      "29": 1
+    },
+    "unfactored_cofactor": "1459"
+  },
+  {
+    "genus": 4,
+    "n": 8,
+    "top_offset": 1,
+    "coefficient": "18453125/12096",
+    "denominator_factors": {
+      "2": 6,
+      "3": 3,
+      "7": 1
+    },
+    "v5": 6,
+    "normalized_by_5_to_d": "1181/1512000",
+    "small_prime_factors": {
+      "5": 6
+    },
+    "unfactored_cofactor": "1181"
+  },
+  {
+    "genus": 4,
+    "n": 9,
+    "top_offset": 0,
+    "coefficient": "390625/288",
+    "denominator_factors": {
+      "2": 5,
+      "3": 2
+    },
+    "v5": 8,
+    "normalized_by_5_to_d": "1/1440",
+    "small_prime_factors": {
+      "5": 8
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 5,
+    "n": 0,
+    "top_offset": 12,
+    "coefficient": "152587890625/12773376",
+    "denominator_factors": {
+      "2": 11,
+      "3": 4,
+      "7": 1,
+      "11": 1
+    },
+    "v5": 16,
+    "normalized_by_5_to_d": "625/12773376",
+    "small_prime_factors": {
+      "5": 16
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 5,
+    "n": 1,
+    "top_offset": 11,
+    "coefficient": "8544921875/684288",
+    "denominator_factors": {
+      "2": 8,
+      "3": 5,
+      "11": 1
+    },
+    "v5": 13,
+    "normalized_by_5_to_d": "35/684288",
+    "small_prime_factors": {
+      "5": 13,
+      "7": 1
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 5,
+    "n": 2,
+    "top_offset": 10,
+    "coefficient": "-414694296875/19160064",
+    "denominator_factors": {
+      "2": 10,
+      "3": 5,
+      "7": 1,
+      "11": 1
+    },
+    "v5": 7,
+    "normalized_by_5_to_d": "-5308087/59875200000",
+    "small_prime_factors": {
+      "5": 7,
+      "19": 1
+    },
+    "unfactored_cofactor": "279373"
+  },
+  {
+    "genus": 5,
+    "n": 3,
+    "top_offset": 9,
+    "coefficient": "193183541898125/9580032",
+    "denominator_factors": {
+      "2": 9,
+      "3": 5,
+      "7": 1,
+      "11": 1
+    },
+    "v5": 4,
+    "normalized_by_5_to_d": "309093667037/3742200000000",
+    "small_prime_factors": {
+      "5": 4
+    },
+    "unfactored_cofactor": "309093667037"
+  },
+  {
+    "genus": 5,
+    "n": 4,
+    "top_offset": 8,
+    "coefficient": "-141565106067325/4257792",
+    "denominator_factors": {
+      "2": 11,
+      "3": 3,
+      "7": 1,
+      "11": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "-5662604242693/41580000000000",
+    "small_prime_factors": {
+      "5": 2,
+      "19": 1
+    },
+    "unfactored_cofactor": "298031802247"
+  },
+  {
+    "genus": 5,
+    "n": 5,
+    "top_offset": 7,
+    "coefficient": "133073168355755/28740096",
+    "denominator_factors": {
+      "2": 9,
+      "3": 6,
+      "7": 1,
+      "11": 1
+    },
+    "v5": 1,
+    "normalized_by_5_to_d": "26614633671151/1403325000000000",
+    "small_prime_factors": {
+      "5": 1
+    },
+    "unfactored_cofactor": "26614633671151"
+  },
+  {
+    "genus": 5,
+    "n": 6,
+    "top_offset": 6,
+    "coefficient": "2616420843275/798336",
+    "denominator_factors": {
+      "2": 7,
+      "3": 4,
+      "7": 1,
+      "11": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "104656833731/7796250000000",
+    "small_prime_factors": {
+      "5": 2
+    },
+    "unfactored_cofactor": "104656833731"
+  },
+  {
+    "genus": 5,
+    "n": 7,
+    "top_offset": 5,
+    "coefficient": "52693990241875/28740096",
+    "denominator_factors": {
+      "2": 9,
+      "3": 6,
+      "7": 1,
+      "11": 1
+    },
+    "v5": 4,
+    "normalized_by_5_to_d": "84310384387/11226600000000",
+    "small_prime_factors": {
+      "5": 4
+    },
+    "unfactored_cofactor": "84310384387"
+  },
+  {
+    "genus": 5,
+    "n": 8,
+    "top_offset": 4,
+    "coefficient": "12084936753125/9580032",
+    "denominator_factors": {
+      "2": 9,
+      "3": 5,
+      "7": 1,
+      "11": 1
+    },
+    "v5": 5,
+    "normalized_by_5_to_d": "3867179761/748440000000",
+    "small_prime_factors": {
+      "5": 5
+    },
+    "unfactored_cofactor": "3867179761"
+  },
+  {
+    "genus": 5,
+    "n": 9,
+    "top_offset": 3,
+    "coefficient": "455725234375/798336",
+    "denominator_factors": {
+      "2": 7,
+      "3": 4,
+      "7": 1,
+      "11": 1
+    },
+    "v5": 7,
+    "normalized_by_5_to_d": "5833283/2494800000",
+    "small_prime_factors": {
+      "5": 7,
+      "23": 2
+    },
+    "unfactored_cofactor": "11027"
+  },
+  {
+    "genus": 5,
+    "n": 10,
+    "top_offset": 2,
+    "coefficient": "417564453125/798336",
+    "denominator_factors": {
+      "2": 7,
+      "3": 4,
+      "7": 1,
+      "11": 1
+    },
+    "v5": 9,
+    "normalized_by_5_to_d": "213793/99792000",
+    "small_prime_factors": {
+      "5": 9
+    },
+    "unfactored_cofactor": "213793"
+  },
+  {
+    "genus": 5,
+    "n": 11,
+    "top_offset": 1,
+    "coefficient": "-1220703125/66528",
+    "denominator_factors": {
+      "2": 5,
+      "3": 3,
+      "7": 1,
+      "11": 1
+    },
+    "v5": 13,
+    "normalized_by_5_to_d": "-5/66528",
+    "small_prime_factors": {
+      "5": 13
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 5,
+    "n": 12,
+    "top_offset": 0,
+    "coefficient": "244140625/1056",
+    "denominator_factors": {
+      "2": 5,
+      "3": 1,
+      "11": 1
+    },
+    "v5": 12,
+    "normalized_by_5_to_d": "1/1056",
+    "small_prime_factors": {
+      "5": 12
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 6,
+    "n": 0,
+    "top_offset": 15,
+    "coefficient": "13179779052734375/31384184832",
+    "denominator_factors": {
+      "2": 11,
+      "3": 7,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 19,
+    "normalized_by_5_to_d": "431875/31384184832",
+    "small_prime_factors": {
+      "5": 19
+    },
+    "unfactored_cofactor": "691"
+  },
+  {
+    "genus": 6,
+    "n": 1,
+    "top_offset": 14,
+    "coefficient": "4876251220703125/5230697472",
+    "denominator_factors": {
+      "2": 10,
+      "3": 6,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 16,
+    "normalized_by_5_to_d": "159785/5230697472",
+    "small_prime_factors": {
+      "5": 16
+    },
+    "unfactored_cofactor": "31957"
+  },
+  {
+    "genus": 6,
+    "n": 2,
+    "top_offset": 13,
+    "coefficient": "-9836856201171875/1120863744",
+    "denominator_factors": {
+      "2": 9,
+      "3": 7,
+      "7": 1,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 12,
+    "normalized_by_5_to_d": "-40291763/140107968000",
+    "small_prime_factors": {
+      "5": 12,
+      "97": 1
+    },
+    "unfactored_cofactor": "415379"
+  },
+  {
+    "genus": 6,
+    "n": 3,
+    "top_offset": 12,
+    "coefficient": "-404269227250015625/4483454976",
+    "denominator_factors": {
+      "2": 11,
+      "3": 7,
+      "7": 1,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 6,
+    "normalized_by_5_to_d": "-25873230544001/8756748000000000",
+    "small_prime_factors": {
+      "5": 6,
+      "43": 1
+    },
+    "unfactored_cofactor": "601703035907"
+  },
+  {
+    "genus": 6,
+    "n": 4,
+    "top_offset": 11,
+    "coefficient": "5562834181019040325/2615348736",
+    "denominator_factors": {
+      "2": 9,
+      "3": 6,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "222513367240761613/3192564375000000000",
+    "small_prime_factors": {
+      "5": 2,
+      "19": 1
+    },
+    "unfactored_cofactor": "11711229854776927"
+  },
+  {
+    "genus": 6,
+    "n": 5,
+    "top_offset": 10,
+    "coefficient": "-99345079722205/38016",
+    "denominator_factors": {
+      "2": 7,
+      "3": 3,
+      "11": 1
+    },
+    "v5": 1,
+    "normalized_by_5_to_d": "-19869015944441/232031250000000",
+    "small_prime_factors": {
+      "5": 1
+    },
+    "unfactored_cofactor": "19869015944441"
+  },
+  {
+    "genus": 6,
+    "n": 6,
+    "top_offset": 9,
+    "coefficient": "4490882967300717605/7846046208",
+    "denominator_factors": {
+      "2": 9,
+      "3": 7,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 1,
+    "normalized_by_5_to_d": "898176593460143521/47888465625000000000",
+    "small_prime_factors": {
+      "5": 1
+    },
+    "unfactored_cofactor": "898176593460143521"
+  },
+  {
+    "genus": 6,
+    "n": 7,
+    "top_offset": 8,
+    "coefficient": "21260968817159549375/47076277248",
+    "denominator_factors": {
+      "2": 10,
+      "3": 8,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 4,
+    "normalized_by_5_to_d": "34017550107455279/2298646350000000000",
+    "small_prime_factors": {
+      "5": 4,
+      "89": 1
+    },
+    "unfactored_cofactor": "382219664128711"
+  },
+  {
+    "genus": 6,
+    "n": 8,
+    "top_offset": 7,
+    "coefficient": "27816973646824460125/94152554496",
+    "denominator_factors": {
+      "2": 11,
+      "3": 8,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 3,
+    "normalized_by_5_to_d": "222535789174595681/22986463500000000000",
+    "small_prime_factors": {
+      "5": 3
+    },
+    "unfactored_cofactor": "222535789174595681"
+  },
+  {
+    "genus": 6,
+    "n": 9,
+    "top_offset": 6,
+    "coefficient": "185638634495816875/804722688",
+    "denominator_factors": {
+      "2": 11,
+      "3": 6,
+      "7": 2,
+      "11": 1
+    },
+    "v5": 4,
+    "normalized_by_5_to_d": "297021815193307/39293100000000000",
+    "small_prime_factors": {
+      "5": 4
+    },
+    "unfactored_cofactor": "297021815193307"
+  },
+  {
+    "genus": 6,
+    "n": 10,
+    "top_offset": 5,
+    "coefficient": "117434554356359375/871782912",
+    "denominator_factors": {
+      "2": 9,
+      "3": 5,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 6,
+    "normalized_by_5_to_d": "7515811478807/1702701000000000",
+    "small_prime_factors": {
+      "5": 6
+    },
+    "unfactored_cofactor": "7515811478807"
+  },
+  {
+    "genus": 6,
+    "n": 11,
+    "top_offset": 4,
+    "coefficient": "661236950231328125/5230697472",
+    "denominator_factors": {
+      "2": 10,
+      "3": 6,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 7,
+    "normalized_by_5_to_d": "8463832962961/2043241200000000",
+    "small_prime_factors": {
+      "5": 7,
+      "17": 2
+    },
+    "unfactored_cofactor": "29286619249"
+  },
+  {
+    "genus": 6,
+    "n": 12,
+    "top_offset": 3,
+    "coefficient": "-2402293849609375/435891456",
+    "denominator_factors": {
+      "2": 8,
+      "3": 5,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 9,
+    "normalized_by_5_to_d": "-1229974451/6810804000000",
+    "small_prime_factors": {
+      "5": 9,
+      "43": 1
+    },
+    "unfactored_cofactor": "28604057"
+  },
+  {
+    "genus": 6,
+    "n": 13,
+    "top_offset": 2,
+    "coefficient": "21574003251953125/145297152",
+    "denominator_factors": {
+      "2": 8,
+      "3": 4,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 10,
+    "normalized_by_5_to_d": "2209177933/454053600000",
+    "small_prime_factors": {
+      "5": 10,
+      "43": 1
+    },
+    "unfactored_cofactor": "51376231"
+  },
+  {
+    "genus": 6,
+    "n": 14,
+    "top_offset": 1,
+    "coefficient": "-299132568359375/3302208",
+    "denominator_factors": {
+      "2": 6,
+      "3": 4,
+      "7": 2,
+      "13": 1
+    },
+    "v5": 12,
+    "normalized_by_5_to_d": "-1225247/412776000",
+    "small_prime_factors": {
+      "5": 12,
+      "71": 1
+    },
+    "unfactored_cofactor": "17257"
+  },
+  {
+    "genus": 6,
+    "n": 15,
+    "top_offset": 0,
+    "coefficient": "843505859375/13104",
+    "denominator_factors": {
+      "2": 4,
+      "3": 2,
+      "7": 1,
+      "13": 1
+    },
+    "v5": 13,
+    "normalized_by_5_to_d": "691/327600",
+    "small_prime_factors": {
+      "5": 13
+    },
+    "unfactored_cofactor": "691"
+  },
+  {
+    "genus": 7,
+    "n": 0,
+    "top_offset": 18,
+    "coefficient": "8237361907958984375/376610217984",
+    "denominator_factors": {
+      "2": 13,
+      "3": 8,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 23,
+    "normalized_by_5_to_d": "2159375/376610217984",
+    "small_prime_factors": {
+      "5": 23
+    },
+    "unfactored_cofactor": "691"
+  },
+  {
+    "genus": 7,
+    "n": 1,
+    "top_offset": 17,
+    "coefficient": "-1092662811279296875/31384184832",
+    "denominator_factors": {
+      "2": 11,
+      "3": 7,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 19,
+    "normalized_by_5_to_d": "-286435/31384184832",
+    "small_prime_factors": {
+      "5": 19
+    },
+    "unfactored_cofactor": "57287"
+  },
+  {
+    "genus": 7,
+    "n": 2,
+    "top_offset": 16,
+    "coefficient": "11188060772705078125/41845579776",
+    "denominator_factors": {
+      "2": 13,
+      "3": 6,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 14,
+    "normalized_by_5_to_d": "1833051877/26153487360000",
+    "small_prime_factors": {
+      "5": 14,
+      "17": 1
+    },
+    "unfactored_cofactor": "107826581"
+  },
+  {
+    "genus": 7,
+    "n": 3,
+    "top_offset": 15,
+    "coefficient": "-30307563257763671875/13450364928",
+    "denominator_factors": {
+      "2": 11,
+      "3": 8,
+      "7": 1,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 11,
+    "normalized_by_5_to_d": "-620698895519/1050809760000000",
+    "small_prime_factors": {
+      "5": 11
+    },
+    "unfactored_cofactor": "620698895519"
+  },
+  {
+    "genus": 7,
+    "n": 4,
+    "top_offset": 14,
+    "coefficient": "-212428178362768315625/9656672256",
+    "denominator_factors": {
+      "2": 13,
+      "3": 7,
+      "7": 2,
+      "11": 1
+    },
+    "v5": 5,
+    "normalized_by_5_to_d": "-67977017076085861/11787930000000000000",
+    "small_prime_factors": {
+      "5": 5
+    },
+    "unfactored_cofactor": "67977017076085861"
+  },
+  {
+    "genus": 7,
+    "n": 5,
+    "top_offset": 13,
+    "coefficient": "111178661878305948175/498161664",
+    "denominator_factors": {
+      "2": 11,
+      "3": 5,
+      "7": 1,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "4447146475132237927/76013437500000000000",
+    "small_prime_factors": {
+      "5": 2,
+      "37": 1
+    },
+    "unfactored_cofactor": "120193147976546971"
+  },
+  {
+    "genus": 7,
+    "n": 6,
+    "top_offset": 12,
+    "coefficient": "-11891560485972343002725/53801459712",
+    "denominator_factors": {
+      "2": 13,
+      "3": 8,
+      "7": 1,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "-475662419438893720109/8209451250000000000000",
+    "small_prime_factors": {
+      "5": 2,
+      "31": 1
+    },
+    "unfactored_cofactor": "15343949014157861939"
+  },
+  {
+    "genus": 7,
+    "n": 7,
+    "top_offset": 11,
+    "coefficient": "36501727293084948499225/564915326976",
+    "denominator_factors": {
+      "2": 12,
+      "3": 9,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "1460069091723397939969/86199238125000000000000",
+    "small_prime_factors": {
+      "5": 2
+    },
+    "unfactored_cofactor": "1460069091723397939969"
+  },
+  {
+    "genus": 7,
+    "n": 8,
+    "top_offset": 10,
+    "coefficient": "980519222132493325825/17653603968",
+    "denominator_factors": {
+      "2": 7,
+      "3": 9,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "39220768885299733033/2693726191406250000000",
+    "small_prime_factors": {
+      "5": 2
+    },
+    "unfactored_cofactor": "39220768885299733033"
+  },
+  {
+    "genus": 7,
+    "n": 9,
+    "top_offset": 9,
+    "coefficient": "7635032110593248004625/188305108992",
+    "denominator_factors": {
+      "2": 12,
+      "3": 8,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 3,
+    "normalized_by_5_to_d": "61080256884745984037/5746615875000000000000",
+    "small_prime_factors": {
+      "5": 3,
+      "17": 1
+    },
+    "unfactored_cofactor": "3592956287337999061"
+  },
+  {
+    "genus": 7,
+    "n": 10,
+    "top_offset": 8,
+    "coefficient": "906876132312766203125/25677969408",
+    "denominator_factors": {
+      "2": 11,
+      "3": 9,
+      "7": 2,
+      "13": 1
+    },
+    "v5": 6,
+    "normalized_by_5_to_d": "58040072468017037/6269035500000000000",
+    "small_prime_factors": {
+      "5": 6,
+      "19": 1
+    },
+    "unfactored_cofactor": "3054740656211423"
+  },
+  {
+    "genus": 7,
+    "n": 11,
+    "top_offset": 7,
+    "coefficient": "4586265670381292265625/188305108992",
+    "denominator_factors": {
+      "2": 12,
+      "3": 8,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 7,
+    "normalized_by_5_to_d": "58704200580880541/9194585400000000000",
+    "small_prime_factors": {
+      "5": 7,
+      "59": 1
+    },
+    "unfactored_cofactor": "994986450523399"
+  },
+  {
+    "genus": 7,
+    "n": 12,
+    "top_offset": 6,
+    "coefficient": "725078881590403515625/31384184832",
+    "denominator_factors": {
+      "2": 11,
+      "3": 7,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 8,
+    "normalized_by_5_to_d": "1856201936871433/306486180000000000",
+    "small_prime_factors": {
+      "5": 8,
+      "19": 1
+    },
+    "unfactored_cofactor": "97694838782707"
+  },
+  {
+    "genus": 7,
+    "n": 13,
+    "top_offset": 5,
+    "coefficient": "11783320133931640625/15692092416",
+    "denominator_factors": {
+      "2": 10,
+      "3": 7,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 9,
+    "normalized_by_5_to_d": "6033059908573/30648618000000000",
+    "small_prime_factors": {
+      "5": 9
+    },
+    "unfactored_cofactor": "6033059908573"
+  },
+  {
+    "genus": 7,
+    "n": 14,
+    "top_offset": 4,
+    "coefficient": "635796691748046875/11321856",
+    "denominator_factors": {
+      "2": 9,
+      "3": 5,
+      "7": 1,
+      "13": 1
+    },
+    "v5": 11,
+    "normalized_by_5_to_d": "13021116247/884520000000",
+    "small_prime_factors": {
+      "5": 11,
+      "23": 1
+    },
+    "unfactored_cofactor": "566135489"
+  },
+  {
+    "genus": 7,
+    "n": 15,
+    "top_offset": 3,
+    "coefficient": "-12552622598388671875/145297152",
+    "denominator_factors": {
+      "2": 8,
+      "3": 4,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 12,
+    "normalized_by_5_to_d": "-51415542163/2270268000000",
+    "small_prime_factors": {
+      "5": 12
+    },
+    "unfactored_cofactor": "51415542163"
+  },
+  {
+    "genus": 7,
+    "n": 16,
+    "top_offset": 2,
+    "coefficient": "396715069580078125/3405402",
+    "denominator_factors": {
+      "2": 1,
+      "3": 5,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 14,
+    "normalized_by_5_to_d": "64997797/2128376250",
+    "small_prime_factors": {
+      "5": 14
+    },
+    "unfactored_cofactor": "64997797"
+  },
+  {
+    "genus": 7,
+    "n": 17,
+    "top_offset": 1,
+    "coefficient": "-7158355712890625/96096",
+    "denominator_factors": {
+      "2": 5,
+      "3": 1,
+      "7": 1,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 16,
+    "normalized_by_5_to_d": "-46913/2402400",
+    "small_prime_factors": {
+      "5": 16,
+      "43": 1
+    },
+    "unfactored_cofactor": "1091"
+  },
+  {
+    "genus": 7,
+    "n": 18,
+    "top_offset": 0,
+    "coefficient": "3814697265625/144",
+    "denominator_factors": {
+      "2": 4,
+      "3": 2
+    },
+    "v5": 18,
+    "normalized_by_5_to_d": "1/144",
+    "small_prime_factors": {
+      "5": 18
+    },
+    "unfactored_cofactor": "1"
+  },
+  {
+    "genus": 8,
+    "n": 0,
+    "top_offset": 21,
+    "coefficient": "26948750019073486328125/17072996548608",
+    "denominator_factors": {
+      "2": 16,
+      "3": 7,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 27,
+    "normalized_by_5_to_d": "56515625/17072996548608",
+    "small_prime_factors": {
+      "5": 27
+    },
+    "unfactored_cofactor": "3617"
+  },
+  {
+    "genus": 8,
+    "n": 1,
+    "top_offset": 20,
+    "coefficient": "-123766152858734130859375/25609494822912",
+    "denominator_factors": {
+      "2": 15,
+      "3": 8,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 22,
+    "normalized_by_5_to_d": "-259556435/25609494822912",
+    "small_prime_factors": {
+      "5": 22,
+      "19": 1
+    },
+    "unfactored_cofactor": "2732173"
+  },
+  {
+    "genus": 8,
+    "n": 2,
+    "top_offset": 19,
+    "coefficient": "24065515178680419921875/4656271785984",
+    "denominator_factors": {
+      "2": 16,
+      "3": 8,
+      "7": 2,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 18,
+    "normalized_by_5_to_d": "6308630411/582033973248000",
+    "small_prime_factors": {
+      "5": 18
+    },
+    "unfactored_cofactor": "6308630411"
+  },
+  {
+    "genus": 8,
+    "n": 3,
+    "top_offset": 18,
+    "coefficient": "2335763953287353515625/61561285632",
+    "denominator_factors": {
+      "2": 10,
+      "3": 8,
+      "7": 2,
+      "11": 1,
+      "17": 1
+    },
+    "v5": 13,
+    "normalized_by_5_to_d": "1913457830533/24047377200000000",
+    "small_prime_factors": {
+      "5": 13
+    },
+    "unfactored_cofactor": "1913457830533"
+  },
+  {
+    "genus": 8,
+    "n": 4,
+    "top_offset": 17,
+    "coefficient": "-2644214421806713380859375/8536498274304",
+    "denominator_factors": {
+      "2": 15,
+      "3": 7,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 9,
+    "normalized_by_5_to_d": "-1353837783965037251/2084106024000000000000",
+    "small_prime_factors": {
+      "5": 9,
+      "41": 1
+    },
+    "unfactored_cofactor": "33020433755244811"
+  },
+  {
+    "genus": 8,
+    "n": 5,
+    "top_offset": 16,
+    "coefficient": "-99746952273708458294903125/25609494822912",
+    "denominator_factors": {
+      "2": 15,
+      "3": 8,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 5,
+    "normalized_by_5_to_d": "-31919024727586706654369/3907698795000000000000000",
+    "small_prime_factors": {
+      "5": 5
+    },
+    "unfactored_cofactor": "31919024727586706654369"
+  },
+  {
+    "genus": 8,
+    "n": 6,
+    "top_offset": 15,
+    "coefficient": "23213058842234591859183275/997772525568",
+    "denominator_factors": {
+      "2": 15,
+      "3": 9,
+      "7": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "928522353689383674367331/19031000625000000000000000",
+    "small_prime_factors": {
+      "5": 2,
+      "73": 1
+    },
+    "unfactored_cofactor": "12719484297114844854347"
+  },
+  {
+    "genus": 8,
+    "n": 7,
+    "top_offset": 14,
+    "coefficient": "-28365829071749866959849325/1422749712384",
+    "denominator_factors": {
+      "2": 14,
+      "3": 6,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "-1134633162869994678393973/27136797187500000000000000",
+    "small_prime_factors": {
+      "5": 2
+    },
+    "unfactored_cofactor": "1134633162869994678393973"
+  },
+  {
+    "genus": 8,
+    "n": 8,
+    "top_offset": 13,
+    "coefficient": "440567344406685528569553125/65852986687488",
+    "denominator_factors": {
+      "2": 16,
+      "3": 10,
+      "7": 1,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 5,
+    "normalized_by_5_to_d": "140981550210139369142257/10048368330000000000000000",
+    "small_prime_factors": {
+      "5": 5
+    },
+    "unfactored_cofactor": "140981550210139369142257"
+  },
+  {
+    "genus": 8,
+    "n": 9,
+    "top_offset": 12,
+    "coefficient": "353685470402074381103973725/57621363351552",
+    "denominator_factors": {
+      "2": 13,
+      "3": 10,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "14147418816082975244158949/1099040286093750000000000000",
+    "small_prime_factors": {
+      "5": 2
+    },
+    "unfactored_cofactor": "14147418816082975244158949"
+  },
+  {
+    "genus": 8,
+    "n": 10,
+    "top_offset": 11,
+    "coefficient": "35247872880532671691172875/7316998520832",
+    "denominator_factors": {
+      "2": 16,
+      "3": 8,
+      "7": 1,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 3,
+    "normalized_by_5_to_d": "281982983044261373529383/27912134250000000000000000",
+    "small_prime_factors": {
+      "5": 3
+    },
+    "unfactored_cofactor": "281982983044261373529383"
+  },
+  {
+    "genus": 8,
+    "n": 11,
+    "top_offset": 10,
+    "coefficient": "2562292334968964399721875/554051570688",
+    "denominator_factors": {
+      "2": 10,
+      "3": 10,
+      "7": 2,
+      "11": 1,
+      "17": 1
+    },
+    "v5": 5,
+    "normalized_by_5_to_d": "819933547190068607911/84541560468750000000000",
+    "small_prime_factors": {
+      "5": 5
+    },
+    "unfactored_cofactor": "819933547190068607911"
+  },
+  {
+    "genus": 8,
+    "n": 12,
+    "top_offset": 9,
+    "coefficient": "34077146087433230271715625/9603560558592",
+    "denominator_factors": {
+      "2": 12,
+      "3": 9,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 5,
+    "normalized_by_5_to_d": "10904686747978633686949/1465387048125000000000000",
+    "small_prime_factors": {
+      "5": 5,
+      "67": 1
+    },
+    "unfactored_cofactor": "162756518626546771447"
+  },
+  {
+    "genus": 8,
+    "n": 13,
+    "top_offset": 8,
+    "coefficient": "255008426387100129734140625/76828484468736",
+    "denominator_factors": {
+      "2": 15,
+      "3": 9,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 7,
+    "normalized_by_5_to_d": "3264107857754881660597/468923855400000000000000",
+    "small_prime_factors": {
+      "5": 7
+    },
+    "unfactored_cofactor": "3264107857754881660597"
+  },
+  {
+    "genus": 8,
+    "n": 14,
+    "top_offset": 7,
+    "coefficient": "26429601321304968359375/18188561664",
+    "denominator_factors": {
+      "2": 8,
+      "3": 8,
+      "7": 2,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 8,
+    "normalized_by_5_to_d": "67659779382540719/22202834062500000000",
+    "small_prime_factors": {
+      "5": 8,
+      "11": 1,
+      "67": 1
+    },
+    "unfactored_cofactor": "91804313951887"
+  },
+  {
+    "genus": 8,
+    "n": 15,
+    "top_offset": 6,
+    "coefficient": "444400180670617099609375/29640619008",
+    "denominator_factors": {
+      "2": 10,
+      "3": 5,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 10,
+    "normalized_by_5_to_d": "45506578500671191/1447295850000000000",
+    "small_prime_factors": {
+      "5": 10
+    },
+    "unfactored_cofactor": "45506578500671191"
+  },
+  {
+    "genus": 8,
+    "n": 16,
+    "top_offset": 5,
+    "coefficient": "-17639869923515803662109375/355687428096",
+    "denominator_factors": {
+      "2": 12,
+      "3": 6,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 11,
+    "normalized_by_5_to_d": "-361264536033603659/3473510040000000000",
+    "small_prime_factors": {
+      "5": 11
+    },
+    "unfactored_cofactor": "361264536033603659"
+  },
+  {
+    "genus": 8,
+    "n": 17,
+    "top_offset": 4,
+    "coefficient": "99714950367027587890625/871782912",
+    "denominator_factors": {
+      "2": 9,
+      "3": 5,
+      "7": 2,
+      "11": 1,
+      "13": 1
+    },
+    "v5": 13,
+    "normalized_by_5_to_d": "81686487340669/340540200000000",
+    "small_prime_factors": {
+      "5": 13
+    },
+    "unfactored_cofactor": "81686487340669"
+  },
+  {
+    "genus": 8,
+    "n": 18,
+    "top_offset": 3,
+    "coefficient": "-2272877044908001708984375/14820309504",
+    "denominator_factors": {
+      "2": 9,
+      "3": 5,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 14,
+    "normalized_by_5_to_d": "-372388175037727/1157836680000000",
+    "small_prime_factors": {
+      "5": 14
+    },
+    "unfactored_cofactor": "372388175037727"
+  },
+  {
+    "genus": 8,
+    "n": 19,
+    "top_offset": 2,
+    "coefficient": "1948047619481353759765625/14820309504",
+    "denominator_factors": {
+      "2": 9,
+      "3": 5,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 16,
+    "normalized_by_5_to_d": "12766724879033/46313467200000",
+    "small_prime_factors": {
+      "5": 16
+    },
+    "unfactored_cofactor": "12766724879033"
+  },
+  {
+    "genus": 8,
+    "n": 20,
+    "top_offset": 1,
+    "coefficient": "-841778095245361328125/13069056",
+    "denominator_factors": {
+      "2": 8,
+      "3": 1,
+      "7": 1,
+      "11": 1,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 18,
+    "normalized_by_5_to_d": "-220667077/1633632000",
+    "small_prime_factors": {
+      "5": 18,
+      "71": 1
+    },
+    "unfactored_cofactor": "3107987"
+  },
+  {
+    "genus": 8,
+    "n": 21,
+    "top_offset": 0,
+    "coefficient": "344944000244140625/22848",
+    "denominator_factors": {
+      "2": 6,
+      "3": 1,
+      "7": 1,
+      "17": 1
+    },
+    "v5": 20,
+    "normalized_by_5_to_d": "3617/114240",
+    "small_prime_factors": {
+      "5": 20
+    },
+    "unfactored_cofactor": "3617"
+  },
+  {
+    "genus": 9,
+    "n": 0,
+    "top_offset": 24,
+    "coefficient": "147770102135837078094482421875/980946089696821248",
+    "denominator_factors": {
+      "2": 20,
+      "3": 10,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 30,
+    "normalized_by_5_to_d": "2479170921875/980946089696821248",
+    "small_prime_factors": {
+      "5": 30
+    },
+    "unfactored_cofactor": "158666939"
+  },
+  {
+    "genus": 9,
+    "n": 1,
+    "top_offset": 23,
+    "coefficient": "-3588064490258693695068359375/4716086969696256",
+    "denominator_factors": {
+      "2": 16,
+      "3": 10,
+      "7": 3,
+      "11": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 26,
+    "normalized_by_5_to_d": "-60197732975/4716086969696256",
+    "small_prime_factors": {
+      "5": 26
+    },
+    "unfactored_cofactor": "2407909319"
+  },
+  {
+    "genus": 9,
+    "n": 2,
+    "top_offset": 22,
+    "coefficient": "36132724752480030059814453125/18864347878785024",
+    "denominator_factors": {
+      "2": 18,
+      "3": 10,
+      "7": 3,
+      "11": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 21,
+    "normalized_by_5_to_d": "75775815980113/2358043484848128000",
+    "small_prime_factors": {
+      "5": 21
+    },
+    "unfactored_cofactor": "75775815980113"
+  },
+  {
+    "genus": 9,
+    "n": 3,
+    "top_offset": 21,
+    "coefficient": "-458160819026799073028564453125/122618261212102656",
+    "denominator_factors": {
+      "2": 17,
+      "3": 10,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 17,
+    "normalized_by_5_to_d": "-600520548714806081/9579551657195520000000",
+    "small_prime_factors": {
+      "5": 17
+    },
+    "unfactored_cofactor": "600520548714806081"
+  },
+  {
+    "genus": 9,
+    "n": 4,
+    "top_offset": 20,
+    "coefficient": "5724579302638313896668212890625/490473044848410624",
+    "denominator_factors": {
+      "2": 19,
+      "3": 10,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 12,
+    "normalized_by_5_to_d": "23447876823606533720753/119744395714944000000000000",
+    "small_prime_factors": {
+      "5": 12
+    },
+    "unfactored_cofactor": "23447876823606533720753"
+  },
+  {
+    "genus": 9,
+    "n": 5,
+    "top_offset": 19,
+    "coefficient": "-268286087689487279434455859375/8758447229435904",
+    "denominator_factors": {
+      "2": 16,
+      "3": 10,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 8,
+    "normalized_by_5_to_d": "-686812384485087435352207/1336432987890000000000000000",
+    "small_prime_factors": {
+      "5": 8,
+      "29": 1
+    },
+    "unfactored_cofactor": "23683185671899566736283"
+  },
+  {
+    "genus": 9,
+    "n": 6,
+    "top_offset": 18,
+    "coefficient": "-20721870436861238471130273686875/35033788917743616",
+    "denominator_factors": {
+      "2": 18,
+      "3": 10,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 4,
+    "normalized_by_5_to_d": "-33154992698977981553808437899/3341082469725000000000000000000",
+    "small_prime_factors": {
+      "5": 4
+    },
+    "unfactored_cofactor": "33154992698977981553808437899"
+  },
+  {
+    "genus": 9,
+    "n": 7,
+    "top_offset": 17,
+    "coefficient": "222272146856789583569550536286125/91963695909076992",
+    "denominator_factors": {
+      "2": 15,
+      "3": 11,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 3,
+    "normalized_by_5_to_d": "1778177174854316668556404290289/43851707415140625000000000000000",
+    "small_prime_factors": {
+      "5": 3,
+      "73": 1
+    },
+    "unfactored_cofactor": "24358591436360502308991839593"
+  },
+  {
+    "genus": 9,
+    "n": 8,
+    "top_offset": 16,
+    "coefficient": "-2090405785474667251440041452175/1100949595619328",
+    "denominator_factors": {
+      "2": 20,
+      "3": 6,
+      "7": 3,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "-83616231418986690057601658087/2624868382500000000000000000000",
+    "small_prime_factors": {
+      "5": 2,
+      "47": 1
+    },
+    "unfactored_cofactor": "1779068753595461490587269321"
+  },
+  {
+    "genus": 9,
+    "n": 9,
+    "top_offset": 15,
+    "coefficient": "117793610131308538460670408959875/183927391818153984",
+    "denominator_factors": {
+      "2": 16,
+      "3": 11,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 3,
+    "normalized_by_5_to_d": "942348881050468307685363271679/87703414830281250000000000000000",
+    "small_prime_factors": {
+      "5": 3
+    },
+    "unfactored_cofactor": "942348881050468307685363271679"
+  },
+  {
+    "genus": 9,
+    "n": 10,
+    "top_offset": 14,
+    "coefficient": "2036267706010476849538541090898025/3310693052726771712",
+    "denominator_factors": {
+      "2": 17,
+      "3": 13,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "81450708240419073981541643635921/7893307334725312500000000000000000",
+    "small_prime_factors": {
+      "5": 2
+    },
+    "unfactored_cofactor": "81450708240419073981541643635921"
+  },
+  {
+    "genus": 9,
+    "n": 11,
+    "top_offset": 13,
+    "coefficient": "236324863392716016294106399578625/472956150389538816",
+    "denominator_factors": {
+      "2": 17,
+      "3": 13,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 3,
+    "normalized_by_5_to_d": "1890598907141728130352851196629/225523066706437500000000000000000",
+    "small_prime_factors": {
+      "5": 3,
+      "43": 1
+    },
+    "unfactored_cofactor": "43967416445156468147740725503"
+  },
+  {
+    "genus": 9,
+    "n": 12,
+    "top_offset": 12,
+    "coefficient": "8293159201742522625140539508125/15840636615917568",
+    "denominator_factors": {
+      "2": 17,
+      "3": 13,
+      "7": 3,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 4,
+    "normalized_by_5_to_d": "13269054722788036200224863213/1510680829612500000000000000000",
+    "small_prime_factors": {
+      "5": 4
+    },
+    "unfactored_cofactor": "13269054722788036200224863213"
+  },
+  {
+    "genus": 9,
+    "n": 13,
+    "top_offset": 11,
+    "coefficient": "457006388711519898615409029828125/1103564350908923904",
+    "denominator_factors": {
+      "2": 17,
+      "3": 12,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 6,
+    "normalized_by_5_to_d": "29248408877537273511386177909/4209763911853500000000000000000",
+    "small_prime_factors": {
+      "5": 6
+    },
+    "unfactored_cofactor": "29248408877537273511386177909"
+  },
+  {
+    "genus": 9,
+    "n": 14,
+    "top_offset": 10,
+    "coefficient": "139425162208726749064310598203125/367854783636307968",
+    "denominator_factors": {
+      "2": 17,
+      "3": 11,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 7,
+    "normalized_by_5_to_d": "1784642076271702388023175657/280650927456900000000000000000",
+    "small_prime_factors": {
+      "5": 7,
+      "23": 1
+    },
+    "unfactored_cofactor": "77593133750943582087964159"
+  },
+  {
+    "genus": 9,
+    "n": 15,
+    "top_offset": 9,
+    "coefficient": "20080797136298409829369029296875/22990923977269248",
+    "denominator_factors": {
+      "2": 13,
+      "3": 11,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 9,
+    "normalized_by_5_to_d": "10281368133784785832636943/701627318642250000000000000",
+    "small_prime_factors": {
+      "5": 9
+    },
+    "unfactored_cofactor": "10281368133784785832636943"
+  },
+  {
+    "genus": 9,
+    "n": 16,
+    "top_offset": 8,
+    "coefficient": "46626858689876841189787607421875/20436376868683776",
+    "denominator_factors": {
+      "2": 16,
+      "3": 9,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 10,
+    "normalized_by_5_to_d": "4774590329843388537834251/124733745536400000000000000",
+    "small_prime_factors": {
+      "5": 10
+    },
+    "unfactored_cofactor": "4774590329843388537834251"
+  },
+  {
+    "genus": 9,
+    "n": 17,
+    "top_offset": 7,
+    "coefficient": "-7028869400857015878257568359375/319318388573184",
+    "denominator_factors": {
+      "2": 10,
+      "3": 9,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 12,
+    "normalized_by_5_to_d": "-28790249065910337037343/77958590960250000000000",
+    "small_prime_factors": {
+      "5": 12,
+      "79": 1
+    },
+    "unfactored_cofactor": "364433532479877684017"
+  },
+  {
+    "genus": 9,
+    "n": 18,
+    "top_offset": 6,
+    "coefficient": "73808134644979405602950439453125/851515702861824",
+    "denominator_factors": {
+      "2": 13,
+      "3": 8,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 13,
+    "normalized_by_5_to_d": "60463623901167129069937/41577915178800000000000",
+    "small_prime_factors": {
+      "5": 13
+    },
+    "unfactored_cofactor": "60463623901167129069937"
+  },
+  {
+    "genus": 9,
+    "n": 19,
+    "top_offset": 5,
+    "coefficient": "-156729992138472241302490234375/806359567104",
+    "denominator_factors": {
+      "2": 8,
+      "3": 7,
+      "7": 3,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 15,
+    "normalized_by_5_to_d": "-5135728382393458403/1574921029500000000",
+    "small_prime_factors": {
+      "5": 15,
+      "41": 1
+    },
+    "unfactored_cofactor": "125261667863255083"
+  },
+  {
+    "genus": 9,
+    "n": 20,
+    "top_offset": 4,
+    "coefficient": "40383785228444261494293212890625/141919283810304",
+    "denominator_factors": {
+      "2": 12,
+      "3": 7,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 16,
+    "normalized_by_5_to_d": "264659174873132312129/55437220238400000000",
+    "small_prime_factors": {
+      "5": 16,
+      "71": 1
+    },
+    "unfactored_cofactor": "3727594012297638199"
+  },
+  {
+    "genus": 9,
+    "n": 21,
+    "top_offset": 3,
+    "coefficient": "-19150677552842601776123046875/69296525298",
+    "denominator_factors": {
+      "2": 1,
+      "3": 7,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 18,
+    "normalized_by_5_to_d": "-5020235216412371/1082758207781250",
+    "small_prime_factors": {
+      "5": 18
+    },
+    "unfactored_cofactor": "5020235216412371"
+  },
+  {
+    "genus": 9,
+    "n": 22,
+    "top_offset": 2,
+    "coefficient": "1032244845360994052886962890625/5913303492096",
+    "denominator_factors": {
+      "2": 9,
+      "3": 6,
+      "7": 3,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 20,
+    "normalized_by_5_to_d": "10823871709692497/3695814682560000",
+    "small_prime_factors": {
+      "5": 20
+    },
+    "unfactored_cofactor": "10823871709692497"
+  },
+  {
+    "genus": 9,
+    "n": 23,
+    "top_offset": 1,
+    "coefficient": "-768059253871440887451171875/11732745024",
+    "denominator_factors": {
+      "2": 6,
+      "3": 4,
+      "7": 2,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 24,
+    "normalized_by_5_to_d": "-12885896003/11732745024",
+    "small_prime_factors": {
+      "5": 24,
+      "59": 1,
+      "71": 1
+    },
+    "unfactored_cofactor": "3076127"
+  },
+  {
+    "genus": 9,
+    "n": 24,
+    "top_offset": 0,
+    "coefficient": "2614676952362060546875/229824",
+    "denominator_factors": {
+      "2": 6,
+      "3": 3,
+      "7": 1,
+      "19": 1
+    },
+    "v5": 24,
+    "normalized_by_5_to_d": "43867/229824",
+    "small_prime_factors": {
+      "5": 24
+    },
+    "unfactored_cofactor": "43867"
+  },
+  {
+    "genus": 10,
+    "n": 0,
+    "top_offset": 27,
+    "coefficient": "891701869782991707324981689453125/48556831439992651776",
+    "denominator_factors": {
+      "2": 19,
+      "3": 12,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 33,
+    "normalized_by_5_to_d": "119682199015625/48556831439992651776",
+    "small_prime_factors": {
+      "5": 33
+    },
+    "unfactored_cofactor": "7659660737"
+  },
+  {
+    "genus": 10,
+    "n": 1,
+    "top_offset": 26,
+    "coefficient": "-973256252147257328033447265625/7864728124391424",
+    "denominator_factors": {
+      "2": 18,
+      "3": 10,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 29,
+    "normalized_by_5_to_d": "-130628242925/7864728124391424",
+    "small_prime_factors": {
+      "5": 29
+    },
+    "unfactored_cofactor": "5225129717"
+  },
+  {
+    "genus": 10,
+    "n": 2,
+    "top_offset": 25,
+    "coefficient": "1359023476894795894622802734375/3640488187133952",
+    "denominator_factors": {
+      "2": 18,
+      "3": 9,
+      "7": 3,
+      "11": 2,
+      "17": 1
+    },
+    "v5": 25,
+    "normalized_by_5_to_d": "4560126084187/91012204678348800",
+    "small_prime_factors": {
+      "5": 25
+    },
+    "unfactored_cofactor": "4560126084187"
+  },
+  {
+    "genus": 10,
+    "n": 3,
+    "top_offset": 24,
+    "coefficient": "-10166764366576626532077789306640625/16185610479997550592",
+    "denominator_factors": {
+      "2": 19,
+      "3": 11,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 22,
+    "normalized_by_5_to_d": "-4264250044978981097/50580032749992345600000",
+    "small_prime_factors": {
+      "5": 22
+    },
+    "unfactored_cofactor": "4264250044978981097"
+  },
+  {
+    "genus": 10,
+    "n": 4,
+    "top_offset": 23,
+    "coefficient": "7481391710081526403994598388671875/16185610479997550592",
+    "denominator_factors": {
+      "2": 19,
+      "3": 11,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 16,
+    "normalized_by_5_to_d": "49030048711190291441219/790313011718630400000000000",
+    "small_prime_factors": {
+      "5": 16,
+      "47": 1
+    },
+    "unfactored_cofactor": "1043192525770006200877"
+  },
+  {
+    "genus": 10,
+    "n": 5,
+    "top_offset": 22,
+    "coefficient": "1477135067361500863052467041015625/1245046959999811584",
+    "denominator_factors": {
+      "2": 19,
+      "3": 11,
+      "7": 3,
+      "11": 2,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 13,
+    "normalized_by_5_to_d": "1210069047182541507012581/7599163574217600000000000000",
+    "small_prime_factors": {
+      "5": 13
+    },
+    "unfactored_cofactor": "1210069047182541507012581"
+  },
+  {
+    "genus": 10,
+    "n": 6,
+    "top_offset": 21,
+    "coefficient": "-994121886561881468275984101171875/1348800873333129216",
+    "denominator_factors": {
+      "2": 17,
+      "3": 10,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 8,
+    "normalized_by_5_to_d": "-2544952029598416558786519299/25726335016882500000000000000000",
+    "small_prime_factors": {
+      "5": 8,
+      "61": 1
+    },
+    "unfactored_cofactor": "41720525075383878012893759"
+  },
+  {
+    "genus": 10,
+    "n": 7,
+    "top_offset": 20,
+    "coefficient": "-41577166677298705441540453144885625/505800327499923456",
+    "denominator_factors": {
+      "2": 14,
+      "3": 11,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 4,
+    "normalized_by_5_to_d": "-66523466683677928706464725031817/6029609769581835937500000000000000",
+    "small_prime_factors": {
+      "5": 4
+    },
+    "unfactored_cofactor": "66523466683677928706464725031817"
+  },
+  {
+    "genus": 10,
+    "n": 8,
+    "top_offset": 19,
+    "coefficient": "4068666011339316075422830599964339925/16185610479997550592",
+    "denominator_factors": {
+      "2": 19,
+      "3": 11,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "162746640453572643016913223998573597/4823687815665468750000000000000000000",
+    "small_prime_factors": {
+      "5": 2,
+      "29": 1
+    },
+    "unfactored_cofactor": "5611953119088711828169421517192193"
+  },
+  {
+    "genus": 10,
+    "n": 9,
+    "top_offset": 18,
+    "coefficient": "-240413709875081435192288687326052525/1277811353684017152",
+    "denominator_factors": {
+      "2": 18,
+      "3": 12,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "-9616548395003257407691547493042101/380817459131484375000000000000000000",
+    "small_prime_factors": {
+      "5": 2,
+      "61": 1
+    },
+    "unfactored_cofactor": "157648334344315695208058155623641"
+  },
+  {
+    "genus": 10,
+    "n": 10,
+    "top_offset": 17,
+    "coefficient": "12522092623506942999527160461411703725/218505741479966932992",
+    "denominator_factors": {
+      "2": 18,
+      "3": 14,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "500883704940277719981086418456468149/65119785511483828125000000000000000000",
+    "small_prime_factors": {
+      "5": 2
+    },
+    "unfactored_cofactor": "500883704940277719981086418456468149"
+  },
+  {
+    "genus": 10,
+    "n": 11,
+    "top_offset": 16,
+    "coefficient": "24739068904436742521520079045695941225/437011482959933865984",
+    "denominator_factors": {
+      "2": 19,
+      "3": 14,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 2,
+    "normalized_by_5_to_d": "989562756177469700860803161827837649/130239571022967656250000000000000000000",
+    "small_prime_factors": {
+      "5": 2,
+      "59": 1
+    },
+    "unfactored_cofactor": "16772250104702876285776324776743011"
+  },
+  {
+    "genus": 10,
+    "n": 12,
+    "top_offset": 15,
+    "coefficient": "19898744620393313914493900624725442875/437011482959933865984",
+    "denominator_factors": {
+      "2": 19,
+      "3": 14,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 3,
+    "normalized_by_5_to_d": "159189956963146511315951204997803543/26047914204593531250000000000000000000",
+    "small_prime_factors": {
+      "5": 3,
+      "43": 1
+    },
+    "unfactored_cofactor": "3702092022398756077115144302274501"
+  },
+  {
+    "genus": 10,
+    "n": 13,
+    "top_offset": 14,
+    "coefficient": "5624561417397420810044896563643991875/109252870739983466496",
+    "denominator_factors": {
+      "2": 17,
+      "3": 14,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 4,
+    "normalized_by_5_to_d": "8999298267835873296071834501830387/1302395710229676562500000000000000000",
+    "small_prime_factors": {
+      "5": 4
+    },
+    "unfactored_cofactor": "8999298267835873296071834501830387"
+  },
+  {
+    "genus": 10,
+    "n": 14,
+    "top_offset": 13,
+    "coefficient": "469933003143293175001097196424384375/13656608842497933312",
+    "denominator_factors": {
+      "2": 14,
+      "3": 14,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 5,
+    "normalized_by_5_to_d": "150378561005853816000351102855803/32559892755741914062500000000000000",
+    "small_prime_factors": {
+      "5": 5,
+      "61": 1
+    },
+    "unfactored_cofactor": "2465222311571374032792641030423"
+  },
+  {
+    "genus": 10,
+    "n": 15,
+    "top_offset": 12,
+    "coefficient": "19972824837989114674349739820452953125/437011482959933865984",
+    "denominator_factors": {
+      "2": 19,
+      "3": 14,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 6,
+    "normalized_by_5_to_d": "1278260789631303339158383348508989/208383313636748250000000000000000000",
+    "small_prime_factors": {
+      "5": 6,
+      "41": 1
+    },
+    "unfactored_cofactor": "31177092430031788759960569475829"
+  },
+  {
+    "genus": 10,
+    "n": 16,
+    "top_offset": 11,
+    "coefficient": "9599594774453473506465905488315234375/24278415719996325888",
+    "denominator_factors": {
+      "2": 18,
+      "3": 12,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 8,
+    "normalized_by_5_to_d": "24574962622600892176552718050087/463074030303885000000000000000000",
+    "small_prime_factors": {
+      "5": 8,
+      "53": 1
+    },
+    "unfactored_cofactor": "463678540049073437293447510379"
+  },
+  {
+    "genus": 10,
+    "n": 17,
+    "top_offset": 10,
+    "coefficient": "-26183608033411167740540285697265625/45043442894241792",
+    "denominator_factors": {
+      "2": 18,
+      "3": 12,
+      "7": 1,
+      "11": 1,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 9,
+    "normalized_by_5_to_d": "-13406007313106517883156626277/171827098443000000000000000000",
+    "small_prime_factors": {
+      "5": 9
+    },
+    "unfactored_cofactor": "13406007313106517883156626277"
+  },
+  {
+    "genus": 10,
+    "n": 18,
+    "top_offset": 9,
+    "coefficient": "-757328586032812104433804057958984375/94837561406235648",
+    "denominator_factors": {
+      "2": 10,
+      "3": 12,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 11,
+    "normalized_by_5_to_d": "-15510089441951991898804307107/14471063446996406250000000000",
+    "small_prime_factors": {
+      "5": 11,
+      "73": 1
+    },
+    "unfactored_cofactor": "212466978656876601353483659"
+  },
+  {
+    "genus": 10,
+    "n": 19,
+    "top_offset": 8,
+    "coefficient": "13277620072366059548982391819091796875/224800145555521536",
+    "denominator_factors": {
+      "2": 16,
+      "3": 9,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 12,
+    "normalized_by_5_to_d": "54385131816411379912631876891/6860356004502000000000000000",
+    "small_prime_factors": {
+      "5": 12
+    },
+    "unfactored_cofactor": "54385131816411379912631876891"
+  },
+  {
+    "genus": 10,
+    "n": 20,
+    "top_offset": 7,
+    "coefficient": "-5774200196217589419507187054443359375/28100018194440192",
+    "denominator_factors": {
+      "2": 13,
+      "3": 9,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 14,
+    "normalized_by_5_to_d": "-946044960148289850492057527/34301780022510000000000000",
+    "small_prime_factors": {
+      "5": 14,
+      "89": 1
+    },
+    "unfactored_cofactor": "10629718653351571353843343"
+  },
+  {
+    "genus": 10,
+    "n": 21,
+    "top_offset": 6,
+    "coefficient": "12756886122433947934156511138916015625/28100018194440192",
+    "denominator_factors": {
+      "2": 13,
+      "3": 9,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 15,
+    "normalized_by_5_to_d": "418017644459915605906440557/6860356004502000000000000",
+    "small_prime_factors": {
+      "5": 15
+    },
+    "unfactored_cofactor": "418017644459915605906440557"
+  },
+  {
+    "genus": 10,
+    "n": 22,
+    "top_offset": 5,
+    "coefficient": "-1073987541360943437062173309326171875/1561112121913344",
+    "denominator_factors": {
+      "2": 12,
+      "3": 7,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 16,
+    "normalized_by_5_to_d": "-7038484751063078909130659/76226177827800000000000",
+    "small_prime_factors": {
+      "5": 16,
+      "71": 1
+    },
+    "unfactored_cofactor": "99133588043141956466629"
+  },
+  {
+    "genus": 10,
+    "n": 23,
+    "top_offset": 4,
+    "coefficient": "3426775437647769272525089263916015625/4683336365740032",
+    "denominator_factors": {
+      "2": 12,
+      "3": 8,
+      "7": 3,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 18,
+    "normalized_by_5_to_d": "898308620326736828176817/9147141339336000000000",
+    "small_prime_factors": {
+      "5": 18
+    },
+    "unfactored_cofactor": "898308620326736828176817"
+  },
+  {
+    "genus": 10,
+    "n": 24,
+    "top_offset": 3,
+    "coefficient": "-22626415535801747175884246826171875/41815503265536",
+    "denominator_factors": {
+      "2": 8,
+      "3": 8,
+      "7": 2,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 20,
+    "normalized_by_5_to_d": "-237255162968688528467/3266836192620000000",
+    "small_prime_factors": {
+      "5": 20
+    },
+    "unfactored_cofactor": "237255162968688528467"
+  },
+  {
+    "genus": 10,
+    "n": 25,
+    "top_offset": 2,
+    "coefficient": "1653862671180338017940521240234375/6194889372672",
+    "denominator_factors": {
+      "2": 10,
+      "3": 5,
+      "7": 2,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 22,
+    "normalized_by_5_to_d": "693680281718237647/19359029289600000",
+    "small_prime_factors": {
+      "5": 22,
+      "37": 1,
+      "53": 1
+    },
+    "unfactored_cofactor": "353738032492727"
+  },
+  {
+    "genus": 10,
+    "n": 26,
+    "top_offset": 1,
+    "coefficient": "-2933642281811773777008056640625/36874341504",
+    "denominator_factors": {
+      "2": 7,
+      "3": 4,
+      "7": 1,
+      "11": 2,
+      "13": 1,
+      "17": 1,
+      "19": 1
+    },
+    "v5": 24,
+    "normalized_by_5_to_d": "-49218350228689/4609292688000",
+    "small_prime_factors": {
+      "5": 24
+    },
+    "unfactored_cofactor": "49218350228689"
+  },
+  {
+    "genus": 10,
+    "n": 27,
+    "top_offset": 0,
+    "coefficient": "52038133144378662109375/4752",
+    "denominator_factors": {
+      "2": 4,
+      "3": 3,
+      "11": 1
+    },
+    "v5": 25,
+    "normalized_by_5_to_d": "174611/118800",
+    "small_prime_factors": {
+      "5": 25
+    },
+    "unfactored_cofactor": "174611"
+  }
+]

@@ -1,0 +1,273 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,hyperref}
+\newcommand{\tht}{\vartheta}
+\newcommand{\Q}{\mathbb Q}
+\title{Exact boundary fixing for the quintic YY recursion\\A companion to version 0.2}
+\author{}\date{16 October 2026}
+\setlength{\emergencystretch}{2em}
+\begin{document}\maketitle
+\noindent
+This supplement specifies the boundary layer of the runnable implementation.
+The previous algebra conventions are retained. The new physical driver has
+been executed through genus eight; genus 53 is its configured target, not a
+claimed completed computation or performance result.
+
+\section{Coordinate scale versus geometry}
+Let $\mu\ne0$, $x=z/\mu=\psi^{-5}$, $\delta=1-x$, and
+\[
+ X=\frac{x}{x-1}=\frac1{1-\psi^5},\qquad
+ \tht=\psi\partial_\psi=-5x\partial_x.
+\]
+The Picard--Fuchs operator is
+\[
+ L=\theta_x^4-x\prod_{j=1}^4(\theta_x+j/5),\qquad\theta_x=x\partial_x.
+\]
+Thus the MUM point is $x=0$, the conifold is $x=1$, and the orbifold is
+$x=\infty$. In $z$ these are $0,\mu,\infty$. Leaving $\mu$ free changes the
+coordinate scale, not the quintic exponents or topology. The standard quintic
+coordinate is $z_{\rm can}=x/3125$.
+
+For $f(x)=\sum c_nx^n$, the coefficient in the $z$ coordinate is
+$c_n\mu^{-n}$. The implementation stores $c_n$ and the exponent $-n$
+separately when this conversion is requested. It does not create a generic
+$\Q(\mu)$ coefficient field. This removes unnecessary coordinate powers, but
+not intrinsic rational or enumerative growth.
+
+\section{Normalization and local holomorphic limits}
+The original YY normalization is
+\[
+ C=\psi^3C_{\psi\psi\psi}=\frac{(2\pi i)^3}{125}(X-1),\qquad
+ P_g=C^{g-1}F_g.
+\]
+In a local period frame $(\omega,t)$, the holomorphic generators are
+\begin{align*}
+ u&=\frac{\tht\omega}{\omega},&
+ v_1&=\frac{\tht^2t}{\tht t}+2u,\\
+ v_2&=\frac{\tht^2\omega}{\omega}-uv_1,&
+ v_3&=\frac{\tht^3\omega}{\omega}+uv_2-5uX(v_1-2).
+\end{align*}
+The evaluated amplitude is
+\[
+ \mathcal F_g^{(\omega,t)}=
+ \left[\frac{\omega^2(x-1)}{625}\right]^{g-1}P_g^{\rm hol}.
+\]
+Indeed the frame factor is $(2\pi i)^3\omega^2/(5^7C)$;
+$5^7/5^3=5^4=625$, and $(X-1)^{-1}=x-1$.
+All signs in the boundary equations below refer to this coupling convention.
+A different string-coupling convention can change the written Bernoulli signs.
+
+The anomaly primitive is fixed by $P_g^{\rm an}(0,0,0,X)=0$ and
+\[
+ P_g=P_g^{\rm an}+\sum_{j=0}^{3g-3}a_{g,j}X^j.
+\]
+Restrictions on a different Feynman representative cannot be imposed directly
+on these raw $a_{g,j}$. We impose local conditions on the full evaluated amplitude.
+
+\section{Local monodromy information}
+The MUM Frobenius derivative basis without factorial division transforms by
+$(T_0)_{ij}=\binom{i}{j}$ for $i\ge j$, with indices $0,\ldots,3$.
+Consequently $(T_0-I)^4=0$ and $(T_0-I)^3\ne0$.
+At the conifold, a logarithmic companion
+$\nu\log\delta/(2\pi i)+\eta$ changes by $+\nu$ on a positive loop.
+The nilpotent part has rank one and square zero.
+The orbifold monodromy has eigenvalues $e^{2\pi i r/5}$,
+$r=1,2,3,4$, and is represented by the companion matrix of
+$\lambda^4+\lambda^3+\lambda^2+\lambda+1$.
+
+These are three different local bases. We do not claim a shared integral
+symplectic basis or a global connection matrix, and their matrices must not
+be multiplied to check a global monodromy relation. The boundary solver uses
+the local logarithmic structures together with Yukawa polarization and
+enumerative topology. Monodromy by itself is insufficient.
+
+\section{MUM series and constant maps}
+The two required periods are $f$ and $f\log x+h$, where
+\begin{align*}
+ f&=\sum_{n\ge0}c_nx^n,&c_0&=1,&
+ c_n&=c_{n-1}\frac{\prod_{j=1}^4(n-1+j/5)}{n^4},\\
+ h&=\sum_{n\ge1}c_n\ell_nx^n,&
+ \ell_n&=\sum_{k=1}^n\left(\sum_{j=1}^4\frac1{k-1+j/5}-\frac4k\right).
+\end{align*}
+The canonical instanton variable is
+\[
+ q=\frac{x}{3125}\exp(h/f)=\frac{z}{3125\mu}\exp(h/f).
+\]
+In the alternate variable $q_z=z\exp(h/f)$, a degree-$d$ canonical
+coefficient would acquire $(3125\mu)^{-d}$. Canonical GV integrality therefore
+must be imposed in $q$, not in $q_z$ for arbitrary $\mu$.
+
+With $\chi=-200$ and the Bernoulli convention $B_1=-1/2$, the stable constant is
+\[
+ N_{g,0}=\frac{(-1)^g\chi\,|B_{2g}B_{2g-2}|}
+ {2(2g)(2g-2)(2g-2)!}.
+\]
+It gives $N_{2,0}=-5/144$ and $N_{3,0}=5/36288$.
+At $x=0$, all $v_i$ and $X$ vanish and the frame factor is $-1/625$;
+therefore $a_{g,0}=(-625)^{g-1}N_{g,0}$.
+For genus two this gives $a_{2,0}=3125/144$, including its positive sign.
+
+\section{Conifold periods and the gap coefficient}
+In $\delta$, $\theta_x=-(1-\delta)\partial_\delta$.
+The analytic PF solution $f_c$ is specified by
+$[\delta^0]f_c=1$, $[\delta]f_c=[\delta^2]f_c=0$.
+These are a convenient rational A-period frame, not a declaration of an integral
+period basis. The vanishing period is
+\[
+ \nu=\delta+\frac7{10}\delta^2+\frac{41}{75}\delta^3+\cdots,
+ \qquad \tau=\nu/f_c.
+\]
+Here is how its second coefficient is fixed. Write
+$L\delta^r=\sum_s A_s(r)\delta^{r+s}$.
+Then
+\[
+ L(\delta^r\log\delta)=
+ \sum_s\bigl(A_s(r)\log\delta+A_s'(r)\bigr)\delta^{r+s}.
+\]
+The coefficient of $\delta^{-1}$ in the nonlogarithmic part of
+$L(\nu\log\delta)$ must vanish, since no analytic completion can cancel it.
+Thus, for $\nu=\delta+b\delta^2+\cdots$,
+$b=-A_{-2}'(1)/A_{-3}'(2)=7/10$.
+The ordinary analytic recurrence fixes the remaining coefficients.
+The implementation obtains these derivatives with exact dual numbers.
+
+The genus-zero Yukawa in the standard $x$ gauge is
+$C_{xxx}^{\rm can}=5/[x^3(1-x)]$.
+Changing to $\delta$ gives a minus sign from three coordinate derivatives;
+in the $f_c$ frame, near $\tau=0$, the residue is $-5/\tau$.
+To obtain unit conifold residue, use $t_c=\sqrt5\,\tau$:
+$C_{t_ct_ct_c}\sim-1/t_c$.
+Consequently the gap in the rational frame is
+\[
+ \mathcal F_g^c(\tau)=
+ \frac{5^{1-g}(-1)^{g-1}B_{2g}}{2g(2g-2)}
+ \tau^{2-2g}+O(\tau^0).
+\]
+No irrational coefficients are required: $(\sqrt5)^{2-2g}=5^{1-g}$.
+In particular the coefficients are $+1/1200$ at genus two and $+1/25200$
+at genus three. The factor $5^{1-g}$ is a period normalization factor,
+not a tunable extra condition.
+
+The code subtracts this entire singular expression in $\delta$ and cancels
+all negative-power coefficients. Their exponents range from $-2g+2$ to $-1$.
+For example at genus two,
+\[
+ \frac1{1200}\tau^{-2}=
+ \frac1{1200}\delta^{-2}-\frac7{6000}\delta^{-1}+O(1).
+\]
+Discarding the $\delta^{-1}$ term would impose an incorrect boundary condition.
+Since $X=1-\delta^{-1}$ and the frame factor has valuation $g-1$,
+there are $2g-2$ potentially negative powers.
+
+\section{Orbifold regularity}
+Let $y=\psi^5=1/x$ and
+$\omega_r=\psi^r f_r(y)$, $r=1,2$, where
+\[
+ f_r(y)=\sum_{k\ge0}c_{r,k}y^k,\qquad c_{r,0}=1,\qquad
+ \frac{c_{r,k}}{c_{r,k-1}}=
+ \frac{(r+5k-5)^4}{\prod_{j=1}^4(r+5k-j)}.
+\]
+These follow by substituting into the original psi PF operator.
+Take $\omega=\omega_1$, $t=\omega_2/\omega_1$.
+Writing $D=5y\partial_y$ gives
+\begin{align*}
+ u&=1+D\log f_1,&
+ T&=1+D\log(f_2/f_1),\\
+ v_1&=T+D\log T+2u,&
+ B_2&=Du+u^2,&B_3&=DB_2+uB_2.
+\end{align*}
+The explicit $1$ in $u$ and $T$ comes from the stripped psi powers.
+Use $v_2=B_2-uv_1$ and $v_3=B_3+uv_2-5uX(v_1-2)$.
+Since
+\[
+ \omega_1^2(x-1)/625=\psi^{-3}f_1(y)^2(1-y)/625,
+\]
+regularity means that the coefficients of
+\[
+ S_g(y)=\left[f_1(y)^2(1-y)/625\right]^{g-1}P_g^{\rm hol}(y)
+\]
+vanish for $0\le k<\lceil(3g-3)/5\rceil$.
+This removes negative psi powers in $\psi^{-3g+3}S_g(\psi^5)$.
+
+\section{Enumerative input and genus 53}
+For positive degree, use
+\[
+ \sum_{g\ge0,d\ge1}N_{g,d}\lambda^{2g-2}q^d=
+ \sum_{h\ge0,d\ge1,r\ge1}\frac{n_h^d}{r}
+ \bigl(2\sin(r\lambda/2)\bigr)^{2h-2}q^{rd},
+\]
+where the left genus sum also includes genus zero.
+To remove any possible indexing ambiguity, its coefficient form is
+\[
+ N_{g,d}=\sum_{r\mid d}r^{2g-3}\sum_{h=0}^g
+ n_h^{d/r}\,[w^{g-h}]
+ \left(\sum_{j\ge0}\frac{(-1)^j w^j}{2^{2j}(2j+1)!}\right)^{2h-2}.
+\]
+The sine-series constant is one. Thus the $r=1,h=g$ coefficient is exactly
+$n_g^d$; proper covers and lower genera supply the other terms.
+
+The proven Castelnuovo input is $n_g^d=0$ when
+$10g>d^2+5d+10$.
+Through genus 53, all same-genus invariants needed for
+$d\le D_g=\lfloor(2g-2)/5\rfloor$ vanish except
+\[
+ n_{51}^{20}=175.
+\]
+For degree 20 the extremal genus is 51. Liu--Ruan's extremal formula, with
+$m=4$, gives $(-1)^{\binom73-\binom23+3}5(\binom73-\binom23)
+=(-1)^{38}\cdot175=175$.
+In contrast $n_{52}^{20}=n_{53}^{20}=0$ by the strict vanishing bound.
+Unknown invariants outside the supported range are never silently set to zero.
+
+The genus-zero Yukawa and genus-one derivative seed initialize the GV table;
+lower-genus computed amplitudes provide subsequent entries. To avoid explicit
+series reversion, for $q=x\exp(m(x))/3125$ use Lagrange inversion:
+\[
+ [q^d]A(x(q))=\frac{3125^d}{d}
+ [x^{d-1}]A'(x)\exp(-dm(x)),\qquad d\ge1.
+\]
+The MUM equations can instead compare power series directly in $x$.
+
+There are $3g-2$ raw pure-$X$ coefficients and
+\[
+ \underbrace{\left\lceil\frac{3g-3}5\right\rceil}_{\rm orbifold}
+ +\underbrace{(2g-2)}_{\rm conifold}
+ +\underbrace{\left(1+\left\lfloor\frac{2g-2}5\right\rfloor\right)}_{\rm MUM}
+ =3g-2
+\]
+conditions. Actual exact rank is checked as well as the count.
+At genus 53 these numbers are $32+104+21=157$ and $D_{53}=20$.
+These are boundary linear-system sizes, not sizes of the anomaly polynomials.
+
+\section{Certification, checkpoints, and practical limits}
+A Laurent jet stores its absolute precision $O(t^N)$.
+For valuations $a,b$, multiplication has precision
+$\min(N_f+b,N_g+a)$; inversion has precision $N_f-2a$.
+Uncertified coefficient access raises. A conservative working precision
+$6g+16$ is used and low-genus answers are tested again at larger precision.
+Nested Horner evaluation reduces repeated jet products.
+Polynomial and jet multiplication collect common denominators and multiply
+integers internally, with rational reduction at output coefficients.
+
+The physical driver checks the full BCOV residual, exact boundary rank,
+GV integrality, and available Castelnuovo values before committing a genus.
+On resume it recomputes the physical boundary vector as well as the anomaly;
+a formally valid zero-ambiguity checkpoint is rejected.
+Resource-limit errors retain the last completed physical checkpoint.
+The standard-library expanded-polynomial backend is not claimed to be practical
+at genus 53. Leaving $\mu$ free removes coordinate artifacts but does not
+replace a high-performance polynomial kernel or certified modular reconstruction.
+
+\begin{thebibliography}{9}
+\bibitem{YY} S. Yamaguchi and S.-T. Yau,
+\emph{Topological String Partition Functions as Polynomials},
+\href{https://arxiv.org/abs/hep-th/0406078}{hep-th/0406078}.
+\bibitem{HKQ} M.-x. Huang, A. Klemm, and S. Quackenbush,
+\emph{Topological String Theory on Compact Calabi--Yau: Modularity and Boundary Conditions},
+\href{https://arxiv.org/abs/hep-th/0612125}{hep-th/0612125}.
+\bibitem{LR} Z. Liu and Y. Ruan,
+\emph{Castelnuovo bound and higher genus Gromov--Witten invariants of quintic 3-folds},
+\href{https://arxiv.org/abs/2210.13411}{arXiv:2210.13411v2},
+Theorems 1.1, 1.3 and Appendix A.
+\end{thebibliography}
+\end{document}

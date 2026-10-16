@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "target_genus": 8,
+  "mu": "mu",
+  "coordinate": "x=z/mu",
+  "physical_q": "x*exp(h/f)/3125",
+  "gv_degree": 4,
+  "backend": "Python Fraction; expanded sparse polynomials",
+  "max_terms": 1000000,
+  "max_products": 50000000,
+  "completed_genus": 8,
+  "status": "complete"
+}

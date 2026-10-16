@@ -1,0 +1,26 @@
+J2: 5*X*v1 - 10*X - 2*v2 
+J3: 50*X**2*v1 - 100*X**2 - 35*X*v1 - 10*X*v2 + 50*X - 2*v3
+H2: 5*X*v1 - 2*v2 
+H3: 50*X**2*v1 - 35*X*v1 - 10*X*v2 - 2*v3
+
+Genus 2:
+monomials original, J, centered H: 14 14 14
+original X-only projection: 5*(15*X**3 + 41*X**2 - 5759*X + 625)/144
+uncentered J-induced projection shift: 625*X*(X + 81)/36
+X-only projection at P=1-X: -25*Y**3/48 + 215*Y**2/72 + 1760*Y/9 - 12695/72
+H3 squared coefficient: 0
+Fourier-dual coordinates b[g,k]: ['3125/144', '40484375/72', '-40337734375/144', '1232037109375/36']
+Dual Psi[g,k], first two: [['1', '2885', '-183600', '312150000'], ['0', '1', '530', '-1010375']]
+Full A-model F_g coefficients (reliable through q^4): ['-5/144', '575/48', '5125/2', '7930375/6', '1010821250']
+
+Genus 3:
+monomials original, J, centered H: 62 62 62
+original X-only projection: 5*(112500*X**6 + 238500*X**5 + 848250*X**4 + 1669984*X**3 - 56414003*X**2 + 13841500*X + 390625)/36288
+uncentered J-induced projection shift: 125*X*(3375*X**4 + 25521*X**3 + 40930*X**2 - 5737125*X - 223125)/2592
+X-only projection at P=1-X: 15625*Y**6/1008 - 18125*Y**5/144 + 1035625*Y**4/2016 - 757655*Y**3/567 - 211210255*Y**2/36288 + 10561435*Y/864 - 7020115/1296
+H3 squared coefficient: -8225/108
+Fourier-dual coordinates b[g,k]: ['1953125/36288', '-37923828125/6048', '-12302900390625/224', '967464214697265625/18144', '-336566856193603515625/18144', '55742594822161943359375/3024', '354606948394356103685546875/9072']
+Dual Psi[g,k], first two: [['1', '5770', '7956025', '-435072000', '578917860000', '-960073724700480', '1811363245278482400'], ['0', '1', '3415', '335075', '-503508625', '913693975000', '-1850835910185326']]
+Full A-model F_g coefficients (reliable through q^4): ['5/36288', '2875/6048', '35125/336', '9915125/189', '5046984125/126']
+
+All exact identities and enumerative sanity checks PASSED.

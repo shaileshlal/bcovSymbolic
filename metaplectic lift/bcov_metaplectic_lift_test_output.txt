@@ -1,0 +1,8 @@
+CONVENTION: y=chi-beta*F0_prime(chi), K=beta/(1-beta*F0_second(chi))
+GENUS TWO correction G2-F2:
+5*K**3*f03**2/24 + K**2*(f03*f11/2 + f04/8) + K*(f11**2/2 + f12/2)
+GENUS THREE correction G3-F3, collected by K:
+5*K**6*f03**4/16 + K**5*(5*f03**3*f11/8 + 25*f03**2*f04/48) + K**4*(f03**2*f11**2/2 + 5*f03**2*f12/8 + 2*f03*f04*f11/3 + 7*f03*f05/48 + f04**2/12) + K**3*(f03*f11**3/6 + f03*f11*f12 + 5*f03*f13/12 + f04*f11**2/4 + f04*f12/4 + f05*f11/8 + f06/48) + K**2*(f03*f21/2 + f11**2*f12/2 + f11*f13/2 + f12**2/4 + f14/8) + K*(f11*f21 + f22/2)
+genus 3 number of distinct K/jets monomials: 23
+CONIFOLD POLARIZATION R: (x2,x4)->(x4,-x2); conjugated Mc acts p_c->p_c-q_c
+PASS: exact Wick, ambiguity transport, homogeneous derivatives, and symplectic Fourier-frame tests.

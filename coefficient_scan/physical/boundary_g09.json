@@ -1,0 +1,24 @@
+{
+  "orbifold": {
+    "rank_after": 5,
+    "equations": 5
+  },
+  "conifold": {
+    "rank_after": 21,
+    "equations": 16
+  },
+  "mum": {
+    "rank_after": 25,
+    "equations": 4
+  },
+  "genus": 9,
+  "unknowns": 25,
+  "rank": 25,
+  "curve_degree": 3,
+  "jet_precision": 70,
+  "constant_map": "158666939/24523652242420531200",
+  "conifold_coefficient": "43867/89775000000",
+  "terms": 4211,
+  "seconds": 16.796400528999584,
+  "max_coefficient_bits": 111
+}

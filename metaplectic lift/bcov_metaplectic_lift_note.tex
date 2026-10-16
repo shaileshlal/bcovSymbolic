@@ -1,0 +1,159 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1.03in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref,microtype,booktabs}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\title{The Metaplectic Lift of Quintic Conifold Monodromy:\\Genus-Two and Genus-Three Crossing Blocks}
+\author{A computational research note}
+\date{16 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The conifold monodromy of the mirror quintic, expressed in Movasati's symplectic period basis, is a rank-one shear. Its metaplectic lift is therefore a one-directional Gaussian operator on the BCOV wave function. We derive the exact connected-graph corrections through genus three, with all rational symmetry factors; give a transport law for genus-two and genus-three ambiguity variations; and identify an intrinsic family of polarization-covariant completed insertions. The calculation gives an exact local monodromy trivialization in the vanishing-cycle polarization and supports crossing-adapted \emph{completed} blocks, but does not by itself eliminate the holomorphic ambiguity. Actual cancellation of the previously computed Yamaguchi--Yau generator cocycles requires pulling back the homogeneous amplitudes and the genus-one half-form normalization; that separate quintic-specific comparison is not claimed here.
+\end{abstract}
+
+\section{Conifold shear and the precise meaning of the lift}
+Normalize the mirror coordinate by $s=5^5z$ and use the period ordering of Movasati,
+$\Pi=(x_1,x_2,x_3,x_4)^T$, with symplectic pairing $\langle x_1,x_3\rangle=\langle x_2,x_4\rangle=1$. The conifold matrix is
+\begin{equation}
+M_c=\begin{pmatrix}1&0&0&0\\0&1&0&1\\0&0&1&0\\0&0&0&1\end{pmatrix},\qquad
+(x_2,x_4)\longmapsto(x_2+x_4,x_4).
+\label{eq:Mc}
+\end{equation}
+It is a rank-one unipotent symplectic shear, not a mere substitution $s\mapsto1-s$. The wave function is defined on the \emph{two-dimensional} space of homogeneous $A$-periods; for this shear only the $x_2$ direction participates. With $x=x_2$, $p=\partial_x\mathcal F_0$ at fixed $x_1$ and $h=\lambda^2$, we adopt the following heat-operator convention:
+\begin{equation}
+\boxed{\quad Z_\beta(y;h)=\exp\!\left(\frac{\beta h}{2}\partial_y^2\right)Z_0(y;h),\qquad
+Z_0(x;h)=\exp\sum_{g\geq0}h^{g-1}\mathcal F_g(x).\quad}
+\label{eq:heat}
+\end{equation}
+Its Gaussian kernel is formally $\exp[-(y-x)^2/(2\beta h)]$. Its saddle equation reads $y=x-\beta\mathcal F_0'(x)$; hence the sign choice for the shear $y=x+p$ of \eqref{eq:Mc} is $\beta=-1$. The integral is understood as a formal steepest-descent expansion. The inverse representation, a different phase convention for $p$, or the opposite monodromy orientation reverses this sign, not the structure of the resulting formulas. Global metaplectic phases and the half-form normalization must be tracked separately.
+
+Let $\chi=\chi(y)$ solve the saddle equation and introduce
+\begin{equation}
+A=1-\beta\mathcal F_0''(\chi),\qquad
+\boxed{\kappa=\frac{\beta}{1-\beta\mathcal F_0''(\chi)}}.
+\end{equation}
+The classical and one-loop actions are
+\begin{align}
+\mathcal F_0^{(\beta)}(y)&=\mathcal F_0(\chi)-\frac{(y-\chi)^2}{2\beta},\\
+\mathcal F_1^{(\beta)}(y)&=\mathcal F_1(\chi)-\frac12\log A,
+\end{align}
+up to a $y$-independent metaplectic normalization. All derivatives below are $\partial_x$ at fixed $x_1$ and are evaluated at $x=\chi(y)$.
+
+\section{Exact genus-two correction}
+Set $f_{gn}=\partial_x^n\mathcal F_g(\chi)$, with $f_{g0}=\mathcal F_g(\chi)$. Wick expansion of the Gaussian to order $h^1$ yields
+\begin{equation}\boxed{\begin{aligned}
+\mathcal F_2^{(\beta)}&=f_{20}+\Gamma_2,\\
+\Gamma_2&=\frac{\kappa}{2}(f_{12}+f_{11}^2)
++\kappa^2\left(\frac{f_{04}}8+\frac{f_{03}f_{11}}2\right)
++\frac{5\kappa^3}{24}f_{03}^2.
+\end{aligned}}\label{eq:g2}\end{equation}
+The coefficients $1/2,1/8,5/24$ arise from exact Wick-pairing counts, not from fitting quintic coefficients. In particular, the bare $\mathcal F_2$ is \emph{not} invariant: it is accompanied by a uniquely determined connected lower-genus Gaussian correction.
+
+\section{Exact genus-three correction}
+The full $h^2$ calculation gives $\mathcal F_3^{(\beta)}=f_{30}+\Gamma_3$, where
+\begin{align}
+\Gamma_3={}&\kappa\left(f_{11}f_{21}+\frac12 f_{22}\right)\nonumber\\
+&+\kappa^2\left(\frac12 f_{03}f_{21}+\frac12f_{11}^2f_{12}+\frac12f_{11}f_{13}+\frac14f_{12}^2+\frac18 f_{14}\right)\nonumber\\
+&+\kappa^3\left(\frac16f_{03}f_{11}^3+f_{03}f_{11}f_{12}+\frac5{12}f_{03}f_{13}
+ +\frac14f_{04}f_{11}^2+\frac14f_{04}f_{12}+\frac18f_{05}f_{11}+\frac1{48}f_{06}\right)\nonumber\\
+&+\kappa^4\left(\frac12f_{03}^2f_{11}^2+\frac58 f_{03}^2f_{12}+\frac23f_{03}f_{04}f_{11}
++\frac7{48}f_{03}f_{05}+\frac1{12}f_{04}^2\right)\nonumber\\
+&+\kappa^5\left(\frac58 f_{03}^3f_{11}+\frac{25}{48}f_{03}^2f_{04}\right)
++\frac5{16}\kappa^6 f_{03}^4.
+\label{eq:g3}
+\end{align}
+This is a polynomial with 23 monomials including $f_{30}$, all coefficients rational. The third-genus amplitude receives contributions from the \emph{derivatives} $f_{21},f_{22}$ of genus two, besides universal $F_0,F_1$ terms. It is not correct to compare the earlier raw YY connection cocycles directly to zero without these terms.
+
+To verify \eqref{eq:g2}--\eqref{eq:g3} independently of graph tables, let $r=\sqrt h$, $\xi$ a centered Gaussian of variance $\kappa$, and define
+\begin{align*}
+V_1&=f_{11}\xi+f_{03}\xi^3/6,\\
+V_2&=f_{20}+f_{12}\xi^2/2+f_{04}\xi^4/24,\\
+V_3&=f_{21}\xi+f_{13}\xi^3/6+f_{05}\xi^5/120,\\
+V_4&=f_{30}+f_{22}\xi^2/2+f_{14}\xi^4/24+f_{06}\xi^6/720.
+\end{align*}
+Then exactly
+\begin{align}
+\mathcal F_2^{(\beta)}&=\langle V_2+V_1^2/2\rangle,\\
+\mathcal F_3^{(\beta)}&=\big\langle V_4+V_1V_3+V_2^2/2+V_1^2V_2/2+V_1^4/24\big\rangle
+-\frac12\langle V_2+V_1^2/2\rangle^2,
+\end{align}
+with $\langle\xi^{2n}\rangle=(2n-1)!!\kappa^n$. The subtraction is the connected-graph (logarithm) prescription.
+
+
+\section{Exact conifold Fourier polarization and local trivialization}
+The physically distinguished $A$-cycle at the conifold is the \emph{vanishing} cycle, whose period is $x_4$. Introduce a new symplectic basis by exchanging one conjugate pair,
+\begin{equation}
+\widetilde\Pi=R\Pi,\qquad
+R=\begin{pmatrix}1&0&0&0\\0&0&0&1\\0&0&1&0\\0&-1&0&0\end{pmatrix},\qquad
+(\widetilde q,\widetilde p)=(x_4,-x_2).
+\end{equation}
+Direct exact matrix multiplication gives
+\begin{equation}
+R^T\Omega R=\Omega,\qquad
+\boxed{RM_cR^{-1}=\begin{pmatrix}1&0&0&0\\0&1&0&0\\0&0&1&0\\0&-1&0&1\end{pmatrix}.}
+\end{equation}
+Thus conifold monodromy becomes the \emph{momentum} shear $\widetilde q\mapsto\widetilde q$, $\widetilde p\mapsto\widetilde p-\widetilde q$. In the Schr\"odinger convention $p=h\partial_q$ for the WKB slope, its action on wave-function components is multiplication by
+\begin{equation}
+\boxed{Z_c(\widetilde q;h)\longmapsto
+\exp\!\left(-\frac{\widetilde q^2}{2h}\right) Z_c(\widetilde q;h),}
+\end{equation}
+up to a constant metaplectic phase and orientation convention. Accordingly, only $\mathcal F_0^c$ shifts by $-\widetilde q^2/2$, and $\mathcal F_g^c$ for $g\geq1$ are unchanged by this \emph{local monodromy}. This is an exact, nontrivial sense in which the conifold polarization makes crossing-like behavior triangular or trivial.
+
+The operator relating LCS and this vanishing-cycle polarization is a Fourier transform in the $(x_2,x_4)$ pair, with $x_1$ fixed:
+\begin{equation}\boxed{
+Z_c(\widetilde q;h)=\mathcal C(h)\int_{\mathcal C}\!dx\,
+\exp\left(-\frac{\widetilde q x}{h}\right)
+Z_{\rm LCS}(x;h),\qquad x=x_2.}
+\end{equation}
+Its formal stationary point satisfies $\widetilde q=\mathcal F_0'(\chi)$, and the Gaussian covariance is $\kappa_c=-1/\mathcal F_0''(\chi)$. The genus-two and genus-three connected-graph formulas \eqref{eq:g2}--\eqref{eq:g3} therefore apply directly with $\kappa=\kappa_c$, subject to analytic continuation along the chosen path and the appropriate genus-one determinant/half-form normalization. This calculates the universal higher-genus portion of the LCS-to-conifold \emph{polarization} change; it is not yet a numerical comparison of its projection onto the proposed finite YY bases.
+
+The local trivialization alone does not determine the $g\geq2$ amplitudes: every additional function of the conifold $A$-coordinate has the same local monodromy. Conifold gap, global continuation, and modular/GV data are additional independent inputs.
+
+\section{What happens to holomorphic ambiguities?}
+Suppose a genus-two ambiguity is shifted by $\delta\mathcal F_2=a(x)$ while $\mathcal F_0,\mathcal F_1$ are held fixed. Independently, shift $\mathcal F_3$ by $b(x)$. Equations \eqref{eq:g2}--\eqref{eq:g3} give the exact \emph{linear} transformation law
+\begin{equation}
+\boxed{\begin{aligned}
+\delta\mathcal F_2^{(\beta)}&=a(\chi),\\
+\delta\mathcal F_3^{(\beta)}&=b(\chi)+\frac{\kappa}{2}a''(\chi)
++\left(\kappa\mathcal F_1'(\chi)+\frac{\kappa^2}{2}\mathcal F_0'''(\chi)\right)a'(\chi).
+\end{aligned}}\label{eq:ambiguity}
+\end{equation}
+In other words, the homogeneous ambiguity is \emph{transported} by the lift; it is not killed. Even a simple nonzero $a(x)=c\,x^{-2}$ induces a genus-three term: $a'=-2cx^{-3}$, $a''=6cx^{-4}$. The generic transform is therefore nonzero.
+
+For the actual quintic, a YY ambiguity polynomial $a_g(X)=\sum_{j=0}^{3g-3}c_jX^j$ is converted to the homogeneous free energy
+\begin{equation}
+\delta\mathcal F_g(X^0,X^1)=(X^0)^{2-2g}\,\phi_g(t),\quad
+ t=\frac{X^1}{X^0},\quad \phi_g(t)=\mathcal N_g(t)\,a_g(X(t)).
+\end{equation}
+The overall period, Yukawa and gauge factors are contained in $\mathcal N_g$. One must \emph{not} simply differentiate $a_g(X)$ with respect to $X^0$ holding $X$ fixed. In the physical polarization the correct exact rule is
+\begin{equation}
+\partial_{X^0}^n[(X^0)^k\phi(t)]
+=(X^0)^{k-n}\prod_{j=0}^{n-1}\left(k-j-t\frac{d}{dt}\right)\phi(t)
+\qquad(X^1\ \mathrm{held\ fixed}).\label{eq:homogeneous}
+\end{equation}
+The genus-one amplitude furthermore carries its own scaling/half-form term. Without these conventions, \emph{numerical} cancellation of the previously obtained $P_2,P_3$ cocycles has not been established.
+
+\section{An intrinsic family of completed ``Polyakov-like'' blocks}
+For a candidate insertion $a(x)$, define the metaplectically completed insertion
+\begin{equation}
+\boxed{\quad\mathbb B_a^{(\beta)}(y;h)=
+\frac{\exp(\beta h\partial_y^2/2)[a(y)Z_0(y;h)]}
+{\exp(\beta h\partial_y^2/2)Z_0(y;h)}.\quad}\label{eq:blocks}
+\end{equation}
+The heat semigroup identity $T_{\beta_1}T_{\beta_2}=T_{\beta_1+\beta_2}$ gives a precise composition/gluing law for these objects (with the ambient wave function transformed as well). To first order in $h$,
+\begin{equation}
+\mathbb B_a^{(\beta)}=a(\chi)+h\left\{\frac{\kappa}{2}a''(\chi)
++\left[\kappa\mathcal F_1'(\chi)+\frac{\kappa^2}{2}\mathcal F_0'''(\chi)\right]a'(\chi)\right\}+O(h^2).
+\end{equation}
+This construction is the explicit positive result: the Gaussian lift supplies a universal, composition-compatible \emph{completion} of each proposed block. It does \emph{not} canonically single out a particular $a$ in the original YY monomial space, since \eqref{eq:blocks} exists for \emph{every} insertion. Thus the stronger crossing conjecture requires an additional condition (regularity/gap at the conifold, MUM normalization, orbifold growth, integrality, and/or the modular DT/PT bootstrap) that selects a subspace of these completed blocks.
+
+\section{Further computational tests}
+The exact-rational implementation accompanying this note verifies the 23 genus-three terms, the genus-two formula, the shear's symplectic property, and the affine action on the higher-genus ambiguities. A complete mirror-quintic \emph{numerical} verification would require: (i) the homogeneous prepotential and its full Hessian in Movasati's basis, (ii) the holomorphic genus-one half-form, (iii) the original YY $P_2,P_3$ transformed with the appropriate Yukawa/period weights, and (iv) matching all terms in \eqref{eq:g2}--\eqref{eq:g3} to their exact connection cocycles after converting from the real to the K\"ahler polarization. This last comparison is deliberately left open rather than inferred from the universal graph calculation.
+
+\begin{thebibliography}{9}
+\bibitem{Movasati} H.~Movasati, \emph{Modular-type functions attached to mirror quintic Calabi--Yau varieties}, \url{https://arxiv.org/abs/1111.0357}.
+\bibitem{ABK} M.~Aganagic, V.~Bouchard and A.~Klemm, \emph{Topological Strings and (Almost) Modular Forms}, \url{https://arxiv.org/abs/hep-th/0607100}.
+\bibitem{wavefunction} \emph{Geometric Transition as a Change of Polarization}, \url{https://arxiv.org/abs/0705.2980}.
+\bibitem{YY} S.~Yamaguchi and S.-T.~Yau, \emph{Topological String Partition Functions as Polynomials}, \url{https://arxiv.org/abs/hep-th/0406078}.
+\end{thebibliography}
+\end{document}

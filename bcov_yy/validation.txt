@@ -1,0 +1,58 @@
+COMMAND: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python -m unittest discover -s tests -v
+test_closed_table_matches_reduced_YY_formulas (test_bcov_yy.DifferentialRingTests.test_closed_table_matches_reduced_YY_formulas) ... ok
+test_covariant_derivative_tracks_changing_tensor_rank (test_bcov_yy.DifferentialRingTests.test_covariant_derivative_tracks_changing_tensor_rank) ... ok
+test_derivation_and_differential_operator_commutator (test_bcov_yy.DifferentialRingTests.test_derivation_and_differential_operator_commutator) ... ok
+test_original_AB_Picard_Fuchs_and_special_geometry (test_bcov_yy.DifferentialRingTests.test_original_AB_Picard_Fuchs_and_special_geometry) ... ok
+test_z_euler_operator_is_not_partial_z (test_bcov_yy.DifferentialRingTests.test_z_euler_operator_is_not_partial_z) ... ok
+test_arithmetic_against_independent_exact_evaluation (test_bcov_yy.PolynomialTests.test_arithmetic_against_independent_exact_evaluation) ... ok
+test_exactness_cancellation_and_float_rejection (test_bcov_yy.PolynomialTests.test_exactness_cancellation_and_float_rejection) ... ok
+test_invalid_monomials_and_unsupported_division (test_bcov_yy.PolynomialTests.test_invalid_monomials_and_unsupported_division) ... ok
+test_partial_and_primitive (test_bcov_yy.PolynomialTests.test_partial_and_primitive) ... ok
+test_public_terms_are_immutable (test_bcov_yy.PolynomialTests.test_public_terms_are_immutable) ... ok
+test_simultaneous_substitution_and_coefficients (test_bcov_yy.PolynomialTests.test_simultaneous_substitution_and_coefficients) ... ok
+test_weight_bound_and_json_roundtrip (test_bcov_yy.PolynomialTests.test_weight_bound_and_json_roundtrip) ... ok
+test_cross_arena_recipes_rejected (test_bcov_yy.RecipeTests.test_cross_arena_recipes_rejected) ... ok
+test_iterative_evaluation_avoids_recursion_depth (test_bcov_yy.RecipeTests.test_iterative_evaluation_avoids_recursion_depth) ... ok
+test_sharing_and_delayed_expansion (test_bcov_yy.RecipeTests.test_sharing_and_delayed_expansion) ... ok
+test_all_three_anomaly_derivatives_and_independent_chi_relation (test_bcov_yy.RecursionTests.test_all_three_anomaly_derivatives_and_independent_chi_relation) ... ok
+test_checkpoint_roundtrip_resume_and_tamper_detection (test_bcov_yy.RecursionTests.test_checkpoint_roundtrip_resume_and_tamper_detection) ... ok
+test_compaction_preserves_results (test_bcov_yy.RecursionTests.test_compaction_preserves_results) ... ok
+test_genus_four_nonlinear_chi_relation_and_degree (test_bcov_yy.RecursionTests.test_genus_four_nonlinear_chi_relation_and_degree) ... ok
+test_genus_one_seed_from_original_AB_expression (test_bcov_yy.RecursionTests.test_genus_one_seed_from_original_AB_expression) ... ok
+test_genus_two_matches_published_polynomial (test_bcov_yy.RecursionTests.test_genus_two_matches_published_polynomial) ... ok
+test_gradient_reconstruction_and_integrability_failure (test_bcov_yy.RecursionTests.test_gradient_reconstruction_and_integrability_failure) ... ok
+test_holomorphic_kernel_and_degree_guard (test_bcov_yy.RecursionTests.test_holomorphic_kernel_and_degree_guard) ... ok
+test_lower_ambiguity_propagates_and_stale_vertices_are_invalidated (test_bcov_yy.RecursionTests.test_lower_ambiguity_propagates_and_stale_vertices_are_invalidated) ... ok
+test_unresolved_ambiguity_blocks_continuation (test_bcov_yy.RecursionTests.test_unresolved_ambiguity_blocks_continuation) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.228s
+
+OK
+
+COMMAND: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python worked_example.py
+1. The genus-one one-point seed
+P_1^(1) = 125/12 + 5/12*X - 1/2*v1 - 28/3*u
+
+2. Form the shared genus-two source, then expand it
+Before expansion: {'nodes': 8, 'expanded_nodes': 1, 'operations': {'leaf': 3, 'cov': 1, 'mul': 3, 'add': 1}}
+[u^0] R_2 = -15625/288 - 835/144*X + 125/12*v1 - 325/288*X^2 + 25/6*v2 + 5/3*v1*X - 5/8*v1^2
+[u^1] R_2 = 3125/36 + 125/36*X - 25/6*v1
+[u^2] R_2 = -350/9
+
+3. Recover the three anomaly derivatives
+dP_2/dv1 = -15625/288 - 835/144*X + 125/12*v1 - 325/288*X^2 + 25/6*v2 + 5/3*v1*X - 5/8*v1^2
+dP_2/dv2 = -3125/36 - 2375/12*X + 25/6*v1
+dP_2/dv3 = 350/9
+Integrated representative: -15625/288*v1 - 3125/36*v2 - 835/144*v1*X + 125/24*v1^2 + 350/9*v3 - 2375/12*v2*X - 325/288*v1*X^2 + 25/6*v1*v2 + 5/6*v1^2*X - 5/24*v1^3
+Ambiguity status: None (unresolved)
+
+4. Supply published genus-two boundary data
+P_2 matches YY (4.1) exactly; full BCOV residual = 0.
+
+5. Compute the next anomaly polynomial
+P_3 anomaly: 55 terms, weighted degree 6.
+dP_3/dv3 = -47/3 P_2, checked exactly.
+The seven pure-X genus-three coefficients remain unresolved.
+No mirror map or floating point arithmetic was used.
+

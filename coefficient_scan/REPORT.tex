@@ -1,0 +1,311 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,longtable,hyperref}
+\hypersetup{hidelinks}
+\setlength{\emergencystretch}{2em}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\val}{\operatorname{ord}}
+\newcommand{\den}{\operatorname{den}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\title{Arithmetic and combinatorics of the pure-$X$ coefficients\\An exact scan through genus ten}
+\author{}\date{16 October 2026}
+\begin{document}\maketitle
+\noindent
+The scan covers 144 pure-$X$ coefficients and 16,384 nonzero monomial
+coefficients of the physical quintic polynomials $P_2,\ldots,P_{10}$.
+The count 16,384 is simply the observed total; no significance is assigned
+to its being a power of two. Genera nine and ten were computed after the
+first patterns had been identified in genera two through eight. All arithmetic
+and comparisons below are exact. The leading-edge formulas are derived
+consequences of the imposed BCOV and conifold equations. The broader denominator
+bound remains a conjectural interpretation of the finite data.
+
+\section{What is being scanned}
+Retain the original YY conventions of the implementation:
+\[
+ P_g=C^{g-1}F_g=P_g^{\rm an}+a_g(X),\qquad
+ a_g(X)=\sum_{n=0}^{d_g}a_{g,n}X^n,\qquad d_g=3g-3,
+\]
+where $P_g^{\rm an}(v_1=v_2=v_3=0,X)=0$.
+The coefficient of $X^n$ in the full polynomial is generally a polynomial
+in $v_1,v_2,v_3$. The phrase ``pure-$X$ coefficient'' here means specifically
+$[u^0v_1^0v_2^0v_3^0X^n]P_g$.
+For denominator tests, the scan also examines all the mixed monomials.
+
+Set $x=z/\mu=\psi^{-5}$, $\delta=1-x$, and $X=1-\delta^{-1}$.
+The rational coefficients in this normalized ring do not depend on $\mu$.
+A coordinate conversion back to $z$ introduces known external powers of
+$\mu$. Consequently keeping $\mu$ free removes coordinate-scale clutter, but
+does not itself create or alter the arithmetic patterns below.
+All statements are specific to the stated generator and amplitude normalization.
+
+\section{The highest pure-$X$ coefficient: an exact formula}
+Define $b_g=|B_{2g}|$. The result is
+\begin{equation}\boxed{
+ A_g:=a_{g,3g-3}=5^{3g-3}\frac{b_g}{2g(2g-2)}.}
+ \label{eq:leading}
+\end{equation}
+The normalized values are in Table~\ref{tab:edge}. The apparently exceptional
+numerators $691$ at genus six and $3617$ at genus eight are precisely the
+Bernoulli numerators, not new unexplained integers introduced by the solver.
+
+\begin{table}[ht]\centering
+\input{results/edge_table.tex}
+\caption{Highest pure-$X$ coefficient with the known power of five removed.
+Every row agrees exactly with the independently computed physical polynomial.}
+\label{tab:edge}
+\end{table}
+
+Here is the derivation, including the signs. In the rational conifold frame,
+\[
+ f_c=1+O(\delta^3),\quad
+ \tau=\nu/f_c=\delta+\tfrac7{10}\delta^2+O(\delta^3),\quad
+ K_g=\left[-\frac{\delta f_c^2}{625}\right]^{g-1}.
+\]
+The physical amplitude is $\mathcal F_g^c=K_gP_g^{\rm hol}$, and the gap is
+\[
+ \mathcal F_g^c=\kappa_g\tau^{2-2g}+O(1),\qquad
+ \kappa_g=\frac{5^{1-g}b_g}{2g(2g-2)}.
+\]
+The generators $v_i$ are regular in this frame. Weighted degree implies that
+only $A_gX^{d_g}$ contributes to the most singular pole.
+Since $X^{d_g}=(-1)^{d_g}\delta^{-d_g}(1-\delta)^{d_g}$, its sign after
+multiplication by $K_g$ is $(-1)^{d_g+g-1}=(-1)^{4g-4}=+1$.
+Thus $A_g/625^{g-1}=\kappa_g$, which gives \eqref{eq:leading}.
+This is a consequence of the gap normalization already imposed, rather than
+an independent new boundary condition.
+
+\subsection{Determination from lower-order data}
+Even the Bernoulli input has an exact convolution in lower indices:
+\begin{equation}\boxed{
+ b_1=\frac16,\qquad
+ b_g=\frac1{2g+1}\sum_{h=1}^{g-1}\binom{2g}{2h}b_hb_{g-h},\quad g\ge2.}
+ \label{eq:bernoulli_rec}
+\end{equation}
+This is the classical Bernoulli convolution with its alternating signs removed.
+One way to derive it is to use
+\[
+ H(t)=\frac t2\cot\frac t2
+     =1-\sum_{g\ge1}\frac{b_g}{(2g)!}t^{2g},\qquad
+ tH'=H-H^2-\frac{t^2}{4}.
+\]
+At degree $2g\ge4$, equating coefficients gives
+$(2g+1)b_g/(2g)!=\sum_{h=1}^{g-1}b_hb_{g-h}/((2h)!(2g-2h)!)$.
+The scan checks this convolution against a separate linear Bernoulli recurrence
+through $g=53$. Formula \eqref{eq:leading} therefore predicts this edge of the
+polynomial through genus 53 without computing full genus-53 amplitudes.
+
+\section{A second exact law: the next pure-$X$ coefficient}
+Put
+\[
+ k_h=5^{3h-2}\frac{b_h}{2h},\quad h\ge1;
+ \qquad k_1=\frac5{12}.
+\]
+Then
+\begin{equation}\boxed{\begin{aligned}
+ a_{g,3g-4}={}&-\frac85(g-1)A_g
+       +5(2g-3)k_{g-1}
+       +\sum_{h=1}^{g-1}k_hk_{g-h}.
+\end{aligned}}\label{eq:next}\end{equation}
+This is an actual genus-splitting convolution. It matches every genus
+$2,\ldots,10$, including the fresh genus-nine and genus-ten computations.
+For example it gives $a_{2,2}=205/144$, $a_{3,5}=33125/1008$,
+and $a_{4,8}=18453125/12096$.
+It also predicts the sign change in $a_{g,3g-4}$ between genera four and five.
+
+To derive it, let $P_h^{(1)}$ be the normalized one-point vertex and define
+\[
+ M_g=[v_1X^{3g-4}]P_g.
+\]
+At $u=v_1=v_2=v_3=0$, the highest pure-$X$ term of $P_h^{(1)}$ is
+$k_hX^{3h-2}$. For $h\ge2$, differentiating $A_hX^{3h-3}$ gives
+$5(3h-3)A_hX^{3h-2}$; the connection contributes
+$-5(h-1)A_hX^{3h-2}$. Their sum is $10(h-1)A_h=k_h$.
+The same formula includes the separately known $h=1$ seed $5X/12$.
+A second covariant derivative has leading pure-$X$ coefficient
+$5(2h-1)k_h$. Therefore the $u^0$ anomaly equation gives
+\begin{equation}
+ M_g=-\frac12\left[5(2g-3)k_{g-1}
+                       +\sum_{h=1}^{g-1}k_hk_{g-h}\right].
+\end{equation}
+This mixed coefficient is also checked directly against every full polynomial.
+
+At the conifold $v_1(0)=2$. Weighted degree shows that the next pole of $P_g$
+can receive contributions only from $A_gX^{d_g}$,
+$a_{g,d_g-1}X^{d_g-1}$, and $M_gv_1X^{d_g-1}$.
+The next term in $K_gP_g$ is consequently
+\[
+ 625^{1-g}\bigl[-d_gA_g-a_{g,d_g-1}-2M_g\bigr]\delta^{3-2g}.
+\]
+Meanwhile $\tau^{2-2g}=\delta^{2-2g}
+[1-\frac75(g-1)\delta+O(\delta^2)]$.
+Equating these coefficients gives
+$a_{g,d_g-1}=-\frac85(g-1)A_g-2M_g$, hence \eqref{eq:next}.
+This derivation uses only the leading coefficients of earlier genera and the
+specified local frame, without fitting a sequence to the data.
+
+\section{A triangular binomial rule determines a larger block}
+There is a useful extension beyond these two explicit formulas. Given the
+known anomaly body at genus $g$, form
+\[
+ R_g(\delta)=\frac{\kappa_g\tau^{2-2g}}{K_g}
+             -P_g^{\rm an}(v_1^c,v_2^c,v_3^c,X_c),\qquad
+ r_{g,j}=[\delta^{-j}]R_g(\delta).
+\]
+The regular $O(1)$ part of the physical amplitude, divided by $K_g$, is
+$O(\delta^{1-g})$. Thus $r_{g,j}$ is prescribed for every $j\ge g$.
+But $X=1-\delta^{-1}$ implies
+\[
+ [\delta^{-j}]a_g(1-\delta^{-1})
+ =(-1)^j\sum_{n=j}^{3g-3}\binom nj a_{g,n}.
+\]
+Consequently there is an exact downward recursion
+\begin{equation}\boxed{
+ a_{g,j}=(-1)^j r_{g,j}
+       -\sum_{n=j+1}^{3g-3}\binom nj a_{g,n},
+ \quad j=3g-3,\ldots,g.}
+\end{equation}
+It determines the highest $2g-2$ pure-$X$ coefficients. Unlike the special
+formula for the next coefficient, the general rule uses the full lower-genus
+amplitudes through the anomaly body, not just their pure-$X$ subsequences.
+An independent implementation of this triangular rule predicts and checks
+90 coefficients across genera two through ten, without using those unknown
+coefficients in constructing the predictions.
+The remaining low powers still require the other boundary data.
+
+\section{The constant term is also controlled}
+The MUM constant-map condition fixes
+\begin{equation}\boxed{
+ a_{g,0}=100\,625^{g-1}
+ \frac{|B_{2g}B_{2g-2}|}{2g(2g-2)(2g-2)!}.}
+\end{equation}
+It is positive in this normalization. This supplies another exactly
+predictable coefficient, with a product of Bernoulli numbers and a factorial.
+It is useful to keep this known contribution visible when searching for
+arithmetic novelty in denominator tables.
+
+\section{A proved sieve and an empirical one}
+\subsection{Bernoulli denominators: an established theorem}
+The von Staudt--Clausen theorem gives
+\[
+ \den(B_{2g})=\prod_{\substack{p\text{ prime}\\p-1\mid2g}}p.
+\]
+Together with \eqref{eq:leading}, this completely explains the denominator
+of the leading coefficient. If $B_{2g}=N_g/D_g$ is reduced, then
+\[
+ \den(A_g)=\frac{2g(2g-2)D_g}
+ {\gcd\bigl(5^{3g-3}|N_g|,\,2g(2g-2)D_g\bigr)}.
+\]
+The exact numerator still contains Bernoulli arithmetic, but it is generated
+by \eqref{eq:bernoulli_rec}. This is a precise sense in which both
+combinatorics and a prime-divisibility sieve control the same coefficients.
+When studying denominators, dividing out $5^{3g-3}$ is transparent.
+Dividing by the entire leading coefficient would insert its Bernoulli numerator
+into other denominators and can create misleading appearances of primes such
+as $691$.
+
+\subsection{Full coefficient arrays: observed Todd-type bound}
+Let $L_g$ be the least common multiple of all reduced coefficient denominators
+of $P_g$. Let $L_g^{\ge7}$ retain only its prime factors $p\ge7$.
+For every computed genus $2\le g\le10$, we find the exact equality
+\begin{equation}
+ L_g^{\ge7}=\prod_{\substack{p\ge7\\p\text{ prime}}}
+                    p^{\lfloor2g/(p-1)\rfloor}.
+ \label{eq:empirical}
+\end{equation}
+The pure-$X$ coefficient LCM has the same $p\ge7$ part.
+Every coefficient is also 5-integral: its denominator is coprime to 5.
+No denominator prime larger than $2g+1$ occurs in the data.
+
+The product in \eqref{eq:empirical} is the $p\ge7$ part of the
+Todd/Hirzebruch denominator of degree $2g$.
+The Hirzebruch denominator formula is a theorem for Todd polynomials
+\cite{BV}; its applicability as a bound to all our BCOV coefficients
+has not been proved here. The natural conjecture suggested by the data is
+\[
+ \val_p(L_g)\le\left\lfloor\frac{2g}{p-1}\right\rfloor,
+ \qquad p\ge7,
+\]
+with equality throughout the observed range. We do not claim eventual equality
+for every genus, nor a proof of this upper bound.
+
+\begin{table}[ht]\centering
+\input{results/denominator_table.tex}
+\caption{Exact denominators in the full YY polynomials. The factors at 2 and 3
+are displayed separately; the last column is the observed $p\ge7$ part.}
+\end{table}
+
+There are two qualifications to the apparent strength of this observation.
+First, primes 2 and 3 have larger exponents than the naive Todd degree-$2g$
+formula in some genera, while powers of 5 are absent. The generator
+normalization and genus-one seed matter.
+Second, throughout $2\le g\le10$, the single known constant-map coefficient
+$a_{g,0}$ already attains all the maximal exponents at primes $p\ge7$.
+Thus the new empirical information in the rest of the array is the upper bound:
+none of the other 16,000-plus coefficients introduces a larger exponent.
+The observed LCM equality is not an independent determination of their numerators.
+
+The bound would still be useful. Polynomial primitives can divide by exponents
+as large as $3g-3$; the absence of primes between $2g+1$ and $3g-3$ therefore
+requires cancellations. For example, at genus ten the degree bound permits
+27, but no denominator factor 23 appears.
+A proof would have to explain those cancellations in the normalized recursion,
+perhaps through a stable-graph or characteristic-class organization. This is a
+research direction suggested by the data, not an established identification.
+
+A weaker additional observation is
+\[
+ \min_{\text{nonzero coefficients }c\text{ of }P_g}\val_5(c)=
+ \begin{cases}1,&2\le g\le6,\\2,&7\le g\le10.\end{cases}
+\]
+The staircase $\lceil(g-1)/5\rceil$ fits these values, but only one jump has
+been seen. It is recorded as a low-confidence extrapolation, not promoted
+to a law. It predicts the next increase at genus twelve.
+
+\section{Searches that did not give a predictive law}
+The scan also tested first-order rational-ratio recurrences
+\[
+ a_{j+1}/a_j=P(j)/Q(j),\qquad\deg P,\deg Q\le2.
+\]
+They were tested both across genus along the top four diagonals (after
+removing $5^{3g-3}$) and across $X$ powers within each available row.
+Fits used the first five consecutive ratios. Every fitted model failed at
+held-out coefficients. In particular, a degree-$(2,2)$ rational function can
+interpolate five ratios, so fitting those five data points alone is not evidence.
+This is only a bounded search; it does not exclude other recurrence structures.
+
+We have not found a compact new rule fixing all interior numerators from
+nearby pure-$X$ coefficients. They remain controlled by the full anomaly and
+boundary system. The evidence supports separating the known Bernoulli and
+binomial structures from an integer numerator array before attempting further
+recurrence or congruence searches.
+
+\section{Reproduction and precise scope}
+Run from the extracted directory:
+\begin{verbatim}
+python scan_coefficients.py physical/amplitudes.json --output results
+python verify_triangular.py
+\end{verbatim}
+The first script uses only the Python standard library. The second uses the
+bundled snapshot of the exact algebra and period modules, also without external
+runtime dependencies. Input data, per-genus physical diagnostics for the newly
+computed genera, and the complete exact results are included.
+The file \texttt{exact\_edge\_predictions\_through\_53.json} contains
+formulas \eqref{eq:leading} and \eqref{eq:next}, the constant term, and the
+mixed coefficient $M_g$ through genus 53. It does not contain full amplitudes
+above genus ten. The scan checks 45 edge/arithmetic identities against the
+nine physical polynomials, the Bernoulli convolution through index $g=53$,
+and 90 independent triangular coefficient predictions.
+
+\begin{thebibliography}{9}
+\bibitem{YY} S. Yamaguchi and S.-T. Yau,
+\emph{Topological String Partition Functions as Polynomials},
+\href{https://arxiv.org/abs/hep-th/0406078}{hep-th/0406078},
+especially the polynomial anomaly equations and the stable-graph discussion.
+\bibitem{BV} V. M. Buchstaber and A. P. Veselov,
+\emph{Todd polynomials and Hirzebruch numbers},
+\href{https://arxiv.org/abs/2310.07383}{arXiv:2310.07383v4}.
+This paper discusses both the Hirzebruch denominator formula and the
+von Staudt--Clausen formula, together with combinatorial representations.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,31 @@
+{
+  "created": "2026-10-16",
+  "input_path": "physical/amplitudes.json",
+  "input_sha256": "a7d5afb3078768c76a34f65236a655900ae7fb29ede55522c0b10e18e94d9b74",
+  "convention": "YY2004-quintic-psi-X=1/(1-psi^5)-v3-unscaled-v1",
+  "computed_genera": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "coordinate": "x=z/mu; X=x/(x-1)",
+  "mu": "symbolic; absent from normalized ring coefficients",
+  "new_physical_genera": [
+    9,
+    10
+  ],
+  "physical_run_command": "python bcov_yy/run_physical.py --genus 10 --gv-degree 4 --output coefficient_scan/physical",
+  "exact_arithmetic": "fractions.Fraction",
+  "edge_and_arithmetic_checks": 45,
+  "triangular_coefficients_verified": 90,
+  "bernoulli_convolution_verified_through_genus": 53,
+  "full_amplitudes_computed_through_genus": 10,
+  "edge_formula_predictions_through_genus": 53,
+  "full_array_denominator_bound_status": "empirical, unproved for arbitrary genus"
+}

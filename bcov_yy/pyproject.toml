@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bcov-yy-exact"
+version = "0.2.0"
+description = "Preliminary exact quintic BCOV engine in Yamaguchi-Yau generators"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools]
+py-modules = ["bcov_yy", "exact_series", "period_frames", "physical_boundaries", "monodromy", "run_physical"]

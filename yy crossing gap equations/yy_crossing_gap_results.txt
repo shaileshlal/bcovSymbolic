@@ -1,0 +1,61 @@
+TWO-BOUNDARY CONIFOLD/LCS BASIS, EXACT RATIONAL ARITHMETIC
+Convention: X=1/(1-psi^5)=1-Delta^-1, Delta=1-3125*z.
+Normalized LCS amplitude is N_g * E_g * f_g, N_g=(-1/625)^(g-1).
+Conifold exact gap KERNEL is span[(1-X)^r, 0<=r<=g-1].
+The simple conifold pole DUAL basis below assumes t_c=Delta,U_g=1.
+
+=== GENUS 2 ===
+ambiguity dim=4; conifold gap rank=2, kernel dim=2
+single-MUM filtration quotient dims (degrees 0..m): [1, 1, 1, 1]
+joint gap-kernel / MUM filtration dims: [2, 1, 0]
+MUM q-jet matrix (rows degree 0..g-1, columns (1-X)^r):
+Matrix([[1, 1], [-2885, 240]])
+det T=3125
+MUM-crossing dual K[g,d] (gap regular, q^d dual):
+K[2,0] = 1 - 577*X/625
+K[2,1] = -X/3125
+GV-crossing dual C[g,d] (gap regular, primitive n_g(d) dual):
+C[2,0] = 1 - 577*X/625
+C[2,1] = -X/3125
+leading conifold pole modes:
+j=1: (1-X)^2   =>   Delta^(-1)
+j=2: (1-X)^3   =>   Delta^(-2)
+pure-X projection f_g(X): 25*X**3/48 + 205*X**2/144 - 28795*X/144 + 3125/144
+decomposition f_g = gap-polar part + gap-regular part:
+pole-mode coefficients r=0..m: [-12695/72, 1760/9, 215/72, -25/48]
+gap-polar part = 5*(X - 1)**2*(15*X + 71)/144
+gap-regular part = -5*(2816*X - 277)/72
+gap-regular coordinates in GV-crossing basis C[g,0..g-1]: [1385/72, 40004275/72]
+
+=== GENUS 3 ===
+ambiguity dim=7; conifold gap rank=4, kernel dim=3
+single-MUM filtration quotient dims (degrees 0..m): [1, 1, 1, 1, 1, 1, 1]
+joint gap-kernel / MUM filtration dims: [3, 2, 1, 0]
+MUM q-jet matrix (rows degree 0..g-1, columns (1-X)^r):
+Matrix([[1, 1, 1], [-5770, -2645, 480], [11748525, 1076650, 170400]])
+det T=30517578125
+MUM-crossing dual K[g,d] (gap regular, q^d dual):
+K[3,0] = 318241*X**2/390625 - 1154*X/625 + 1
+K[3,1] = 683*X**2/1953125 - X/3125
+K[3,2] = X**2/9765625
+GV-crossing dual C[g,d] (gap regular, primitive n_g(d) dual):
+C[3,0] = 318241*X**2/390625 - 1154*X/625 + 1
+C[3,1] = 3423*X**2/9765625 - X/3125
+C[3,2] = X**2/9765625
+leading conifold pole modes:
+j=1: (1-X)^3   =>   Delta^(-1)
+j=2: (1-X)^4   =>   Delta^(-2)
+j=3: (1-X)^5   =>   Delta^(-3)
+j=4: (1-X)^6   =>   Delta^(-4)
+pure-X projection f_g(X): 15625*X**6/1008 + 33125*X**5/1008 + 235625*X**4/2016 + 260935*X**3/1134 - 282070015*X**2/36288 + 17301875*X/9072 + 1953125/36288
+decomposition f_g = gap-polar part + gap-regular part:
+pole-mode coefficients r=0..m: [-7020115/1296, 10561435/864, -211210255/36288, -757655/567, 1035625/2016, -18125/144, 15625/1008]
+gap-polar part = 5*(X - 1)**3*(56250*X**3 + 288000*X**2 + 1119375*X + 3385367)/18144
+gap-regular part = -5*(42242051*X**2 + 4231952*X - 7161359)/36288
+gap-regular coordinates in GV-crossing basis C[g,0..g-1]: [35806795/36288, -70240478575/18144, -233326698293725/4536]
+
+Exact symbolic genus-two pole DUAL correction with arbitrary conifold jets:
+B[2,1](Delta) = -c_1/Delta - u_1/Delta + Delta**(-2)
+B[2,2](Delta) = 3*c_1**2/Delta + 2*c_1*u_1/Delta - 2*c_2/Delta + u_1**2/Delta - u_2/Delta - 2*c_1/Delta**2 - u_1/Delta**2 + Delta**(-3)
+
+All identities and exact jet / Möbius checks PASS.

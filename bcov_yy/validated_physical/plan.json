@@ -1,0 +1,72 @@
+[
+  {
+    "genus": 2,
+    "unknowns": 4,
+    "conifold": 2,
+    "orbifold": 1,
+    "mum": 1,
+    "gv_max_degree": 0,
+    "jet_precision": 28,
+    "special_gv": null
+  },
+  {
+    "genus": 3,
+    "unknowns": 7,
+    "conifold": 4,
+    "orbifold": 2,
+    "mum": 1,
+    "gv_max_degree": 0,
+    "jet_precision": 34,
+    "special_gv": null
+  },
+  {
+    "genus": 4,
+    "unknowns": 10,
+    "conifold": 6,
+    "orbifold": 2,
+    "mum": 2,
+    "gv_max_degree": 1,
+    "jet_precision": 40,
+    "special_gv": null
+  },
+  {
+    "genus": 5,
+    "unknowns": 13,
+    "conifold": 8,
+    "orbifold": 3,
+    "mum": 2,
+    "gv_max_degree": 1,
+    "jet_precision": 46,
+    "special_gv": null
+  },
+  {
+    "genus": 6,
+    "unknowns": 16,
+    "conifold": 10,
+    "orbifold": 3,
+    "mum": 3,
+    "gv_max_degree": 2,
+    "jet_precision": 52,
+    "special_gv": null
+  },
+  {
+    "genus": 7,
+    "unknowns": 19,
+    "conifold": 12,
+    "orbifold": 4,
+    "mum": 3,
+    "gv_max_degree": 2,
+    "jet_precision": 58,
+    "special_gv": null
+  },
+  {
+    "genus": 8,
+    "unknowns": 22,
+    "conifold": 14,
+    "orbifold": 5,
+    "mum": 3,
+    "gv_max_degree": 2,
+    "jet_precision": 64,
+    "special_gv": null
+  }
+]
