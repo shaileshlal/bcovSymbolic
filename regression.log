@@ -1,0 +1,63 @@
+
+>>> /opt/pyvenv/bin/python test_frames.py
+PASS: HKQ g2, exact frame changes, typed frame guard, Euler differential ring
+
+>>> /opt/pyvenv/bin/python test_gu_gauge.py
+PASS: Gu/Klemm q-gauge propagator differential identities
+
+>>> /opt/pyvenv/bin/python bcov_yy.py --genus 3
+Exact quintic BCOV recursion; original YY psi convention
+P_1^(1) = 125/12 + 5/12*X - 1/2*v1 - 28/3*u
+g=2: anomaly terms=10, weight<=3, u-independent=True
+Published genus-two polynomial reproduced exactly.
+P_2 = 3125/144 - 28795/144*X - 15625/288*v1 + 205/144*X^2 - 3125/36*v2 - 835/144*v1*X + 125/24*v1^2 + 25/48*X^3 + 350/9*v3 - 2375/12*v2*X - 325/288*v1*X^2 + 25/6*v1*v2 + 5/6*v1^2*X - 5/24*v1^3
+BCOV residual=0, elapsed=0.002s
+g=3: anomaly terms=55, weight<=6, u-independent=True
+g=3: ambiguity unresolved; 7 rational slots available.
+BCOV residual=0, elapsed=0.005s
+Shared recipe DAG: {'nodes': 16, 'expanded_nodes': 16, 'operations': {'leaf': 5, 'cov': 3, 'mul': 6, 'add': 2}}
+
+>>> /opt/pyvenv/bin/python audit_coefficients.py
+g= 2 a0= True a1= True r1= -5759/625
+g= 3 a0= True a1= True r1= 110732/3125
+g= 4 a0= True a1= True r1= 198/25
+g= 5 a0= True a1= True r1= 392/375
+g= 6 a0= True a1= True r1= 191742/86375
+g= 7 a0= True a1= True r1= -687444/431875
+g= 8 a0= True a1= True r1= -103822574/33909375
+g= 9 a0= True a1= True r1= -500845138352/99166836875
+g= 10 a0= True a1= True r1= -32259950872758/4787287960625
+g= 11 a0= True a1= True r1= -211874819677708/25433074336875
+g= 12 a0= True a1= True r1= -563358020621258242/57379599003603125
+g= 13 a0= True a1= True r1= -5454658882582436088/485972696111628125
+g= 14 a0= True a1= True r1= -368098649891321152534/29297824958008123125
+g= 15 a0= True a1= True r1= -50606432294694895888045956/3653956903866613934091875
+PASS: all constant and linear Bernoulli identities through genus 15
+
+>>> /opt/pyvenv/bin/python audit_denominators.py --genus 8
+g 2 HKQ/z LCD equal? True YY agrees away from 5? True
+g 3 HKQ/z LCD equal? True YY agrees away from 5? True
+g 4 HKQ/z LCD equal? True YY agrees away from 5? True
+g 5 HKQ/z LCD equal? True YY agrees away from 5? True
+g 6 HKQ/z LCD equal? True YY agrees away from 5? True
+g 7 HKQ/z LCD equal? True YY agrees away from 5? True
+g 8 HKQ/z LCD equal? True YY agrees away from 5? True
+PASS 7 genus tables
+
+>>> /opt/pyvenv/bin/python verify_physical_qseries.py --genus 15 --degree 6
+g= 2:     13 relevant terms, q^1..q^6 residual zero = True
+g= 3:     59 relevant terms, q^1..q^6 residual zero = True
+g= 4:    175 relevant terms, q^1..q^6 residual zero = True
+g= 5:    392 relevant terms, q^1..q^6 residual zero = True
+g= 6:    720 relevant terms, q^1..q^6 residual zero = True
+g= 7:   1169 relevant terms, q^1..q^6 residual zero = True
+g= 8:   1742 relevant terms, q^1..q^6 residual zero = True
+g= 9:   2443 relevant terms, q^1..q^6 residual zero = True
+g=10:   3269 relevant terms, q^1..q^6 residual zero = True
+g=11:   4224 relevant terms, q^1..q^6 residual zero = True
+g=12:   5304 relevant terms, q^1..q^6 residual zero = True
+g=13:   6513 relevant terms, q^1..q^6 residual zero = True
+g=14:   7846 relevant terms, q^1..q^6 residual zero = True
+g=15:   9306 relevant terms, q^1..q^6 residual zero = True
+
+ALL BCOV v0.2 REGRESSIONS PASSED

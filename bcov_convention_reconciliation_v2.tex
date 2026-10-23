@@ -1,0 +1,212 @@
+% This is an included, supplementary section in bcov_yy_conventions_and_derivations_v2.tex.
+\section{Convention ledger and exact cross-frame audit (19 October 2026)}
+\label{sec:ledger2026}
+This section records the normalization and gauge reconciliation among original
+Yamaguchi--Yau (YY), Huang--Klemm--Quackenbush (HKQ), and the small-radius
+coordinate used in the Gu/Klemm free-energy source files. The original YY
+BCOV recursion below remains our \emph{canonical computational convention}.
+Coordinates and gauges are metadata, not implicitly interchangeable symbols.
+
+\subsection{Coordinates, Yukawa tensors, and normalized amplitudes}
+Write $s$ for the original YY fifth-root coordinate, $\psi=s^5$ for HKQ, and
+$z=(3125\psi)^{-1}$ for the small large-radius coordinate. In particular,
+\begin{equation}\label{eq:2026coordinates}
+ \theta_s=5\theta_\psi=-5\theta_z,\qquad
+ X_{\rm YY}=X_{\rm HKQ}=\frac{1}{1-\psi},\qquad
+ X_z=\frac{1}{1-3125z},\qquad X_{\rm HKQ}=1-X_z.
+\end{equation}
+The holomorphic Yukawa coupling $C_{ijk}$ is a cubic tensor: it transforms with
+\emph{three} coordinate Jacobians. Set $C_t=t^3C_{ttt}$ for each coordinate $t$,
+using a \emph{common} choice of holomorphic three-form. Then
+\begin{equation}
+ C_s=125 C_\psi,\qquad C_\psi=-C_z,
+ \qquad C_z=5X_z,\quad C_{zzz}=5X_z/z^3,
+ \quad P_g^{(t)}=C_t^{g-1}F_g^{(t)}.
+\end{equation}
+A further constant rescaling of the holomorphic three-form changes the
+individual Yukawa and section-valued free energy but cancels in the normalized
+$P_g$, provided it is implemented consistently. The $\kappa=5$ A-model frame
+and factors of $(2\pi i)^3$ should not be silently combined.
+
+Under the metric pullback $G_{\psi\bar\psi}=|dz/d\psi|^2G_{z\bar z}$
+(with the same K\"ahler frame),
+\begin{equation}
+ A_\psi=-A_z-2,\quad B_{p,\psi}=(-1)^p B_{p,z},
+ \quad A_s=5A_\psi+4,\quad B_{p,s}=5^p B_{p,\psi}.
+\end{equation}
+The polynomial generators consequently satisfy
+\begin{align}\label{eq:2026gens}
+(u,v_1,v_2,v_3,X)_\psi
+ &=(-u,-v_1,v_2,-v_3,1-X)_z,\\
+(u,v_1,v_2,v_3,X)_s
+ &=(5u_\psi,5v_{1,\psi},25v_{2,\psi},125v_{3,\psi},X_\psi).
+\end{align}
+If $T$ acts by substituting the variables in the right-hand side, the corresponding
+free-energy polynomial transformations are
+\begin{align}\label{eq:2026polys}
+P_g^{\rm HKQ}(v_1,v_2,v_3,X)
+ &=(-1)^{g-1}P_g^{z}(-v_1,v_2,-v_3,1-X),\\
+P_g^{\rm YY}(v_1,v_2,v_3,X)
+ &=5^{3g-3}P_g^{\rm HKQ}(v_1/5,v_2/25,v_3/125,X).
+\end{align}
+These are involutive/rational polynomial frame maps, checked symbolically at
+$g=2$ and with multiple independent polynomial round trips. They include
+the overall Yukawa sign; changing only $X$ is insufficient.
+
+\subsection{Propagator gauge: supplied five holomorphic functions}
+Set $\mu=1/3125$, $\kappa=5$ and use $X_z$ in the following equations.
+The holomorphic functions are precisely the supplied Gu/Klemm choice:
+\begin{equation}\label{eq:2026gauge}
+ q^z_{zz}=-\frac8{5z},\quad q_z^{zz}=\frac z{25},\quad
+ q_z^z=-\frac6{625},\quad q_{zz}=\frac2{25z^2},\quad
+ q_z=\frac2{3125z}.
+\end{equation}
+In this gauge the three modified propagators are
+\begin{align}\label{eq:2026prop}
+ S^{zz}&=-\frac{z^2}{5X_z}\left(v_{1,z}+\frac35\right),\\
+ \widetilde S^{z}&=\frac{z}{5X_z}\left(v_{2,z}+\frac2{25}\right),\\
+ \widetilde S&=\frac{1}{10X_z}
+ \left[v_{3,z}+(1-X_z)\left(v_{2,z}+\frac4{125}\right)\right].
+\end{align}
+The two derivative identities determining $\widetilde S^z,\widetilde S$ have
+been independently reduced to zero using exact rational SymPy expressions.
+The fifth $q_z$ enters the larger BCOV differential system; it is
+\emph{recorded but not tested} by those two propagator identities.
+The original background notes had a repeated $\widetilde S^z$ label on the
+left-hand side of the third propagator equation. It should read
+$\widetilde S$. Likewise $z\partial_z=X(X-1)\partial_X$ only
+\emph{when acting on functions of $X$ alone}.
+
+\subsection{Genus-two anchor and period/mirror-map normalization}
+The exact polynomial from the source $\code{ff_2.txt}$ after the above coordinate
+transformation is the HKQ expression
+\begin{align}\label{eq:2026P2}
+ P_2^{\rm HKQ}={}&\frac{25}{144}-\frac{625}{288}v_1
+ +\frac{25}{24}v_1^2-\frac5{24}v_1^3
+ -\frac{625}{36}v_2+\frac{25}{6}v_1v_2+\frac{350}{9}v_3\notag\\
+ &-\frac{5759}{3600}X-\frac{167}{720}v_1X
+ +\frac16v_1^2X-\frac{475}{12}v_2X
+ +\frac{41}{3600}X^2-\frac{13}{288}v_1X^2+\frac{X^3}{240}.
+\end{align}
+Substitution into the original YY frame reproduces the published $P_2$
+and the program's $\code{reference_genus2()}$.
+For the Frobenius periods with $z\to0$,
+\begin{align}
+\omega_0(z)&=\sum_{n\ge0}\frac{(5n)!}{(n!)^5}z^n,\\
+\sigma_1(z)&=\sum_{n\ge1}\frac{(5n)!}{(n!)^5}
+ 5(H_{5n}-H_n)z^n,\\
+ t&=\frac{\omega_1}{\omega_0},\quad
+ \omega_1=\frac{\omega_0\log z+\sigma_1}{2\pi i},\quad
+ q=e^{2\pi i t}=z\exp(\sigma_1/\omega_0).
+\end{align}
+In particular $z(q)=q-770q^2+171525q^3-81623000q^4+\cdots$.
+The correctly normalized A-model limit is
+\begin{equation}\label{eq:2026hol}
+ F_g^A=\omega_0^{2g-2}
+ \left(\frac{1-\psi}{5\psi}\right)^{g-1}
+ P_g^{\rm HKQ}\big|_{\mathrm{hol}},\qquad \psi=(3125z)^{-1}.
+\end{equation}
+Our older Mathematica \code{BCOVpropagators.txt} helper used a fifth-root
+variable in its $C_{fff}$ definition but substituted the HKQ variable
+$1/(3125z)$ directly for it. That substitution omits a fifth root and,
+for $C_{sss}$, a cubic Jacobian. Its object called $\code{Cf[z]}$ was
+\emph{an inverse Yukawa} in that helper, whereas the source $\code{ff_g.txt}$
+uses $C_{zzz}=5X_z/z^3$. These two quantities must never share an
+unqualified symbol in executable code.
+
+\subsection{Exact enumerative check: genera 2--15, degrees 1--6}
+For $g\ge2$ the instanton contribution is extracted by
+\begin{equation}\label{eq:2026gv}
+ [q^d] F_g^A
+ =\sum_{m\mid d}m^{2g-3}
+  \sum_{h=0}^{g} n^h_{d/m}\,
+  [y^{g-h}]\left(\frac{2\sin(\sqrt y/2)}{\sqrt y}\right)^{2h-2}.
+\end{equation}
+For $h=0$ the displayed coefficient prescription is
+$[y^g](2\sin(\sqrt y/2)/\sqrt y)^{-2}$; it accounts for the
+$\lambda^{-2}$ genus-zero contribution correctly. Genus-one GV data
+contribute no higher-genus coefficient because the sine power is zero.
+The source is \code{quinticGVDTPT.m} and its \code{GVTab}, not a manually typed
+subset. Running \code{verify_physical_qseries.py} confirms \textbf{all 84
+positive-degree coefficients}, $g=2,\dots,15$ and $d=1,\dots,6$, with
+exact rational zero residuals. For example, $[q]F_2^A=2875/240=575/48$:
+the free-energy coefficients are rational genus-$g$ Gromov--Witten
+quantities, not the integer GV invariants themselves.
+
+The 61-by-44 $\code{GVTab}$ and the partial 113-by-31
+$\code{GVTabExt}$ disagree at 29 numerical overlaps, beginning at
+$(g,d)=(26,16)$. These conflicts have \emph{not} been adjudicated;
+our free-energy sources stop at genus 15. Do not treat an unknown entry
+in the extended table as zero, nor mistake its sparse genus-64 row for a
+complete genus-64 enumeration.
+
+\subsection{Bernoulli and arithmetic invariants after frame correction}
+Define $P_g=P_g^{\rm an}+a_g(X)$ in the original YY frame,
+with $P_g^{\rm an}(0,0,0,X)=0$, and $a_g(X)=\sum_n a_{g,n}X^n$.
+The two independently re-tested formulas are
+\begin{align}\label{eq:2026bernoulli}
+ b_1&=\frac16,\quad
+ b_g=\frac{1}{2g+1}\sum_{h=1}^{g-1}{2g\choose 2h}b_hb_{g-h},
+ \qquad b_g=|B_{2g}|,\\
+ a_{g,0}&=100\,625^{g-1}\frac{b_gb_{g-1}}{2g(2g-2)(2g-2)!}.
+\end{align}
+For $g\ge3$, put
+\begin{equation}
+ S_g=\sum_{h=2}^{g-2}(2h-2)(2g-2h-2)a_{h,0}a_{g-h,0},\qquad
+ I_g=\frac{23}{25}\frac{(-625)^{g-1}b_g}{2g(2g-2)!},
+\end{equation}
+and then
+\begin{align}\label{eq:2026a1}
+ a_{g,1}={}&-\frac{577}{625}(g-1)a_{g,0}
+ +(2g-4)\left(62-\frac{24g}{5}\right)a_{g-1,0}
+ -\frac{12}{5}S_g-I_g.
+\end{align}
+Genus two supplies the separate seed $a_{2,1}=-28795/144$.
+We extracted $[X^0],\ldots,[X^4]$ from all 14 source amplitudes
+without full multivariate expansion. Equations \eqref{eq:2026bernoulli} and
+\eqref{eq:2026a1} pass \textbf{28 of 28 independent rational equalities}
+for $g=2,\ldots,15$.
+
+The original YY and HKQ pure coefficients are related by
+$a_{g,n}^{\rm YY}=5^{3g-3}a_{g,n}^{\rm HKQ}$, so ratios
+$a_{g,n}/a_{g,0}$ agree in these frames. By contrast, under $X\mapsto1-X$
+the \emph{individual} coefficients mix by an integral, upper-triangular
+binomial matrix with determinant $\pm1$. Therefore the least common
+multiple of their reduced denominators is exactly invariant:
+\begin{equation}\label{eq:2026lcd}
+ \mathop{\rm lcm}_n\operatorname{den}(a_{g,n}^{z})
+ =\mathop{\rm lcm}_n\operatorname{den}(a_{g,n}^{\rm HKQ}).
+\end{equation}
+Between YY and HKQ, the non-$5$-primary part of this denominator lattice
+is unchanged. The assertion follows algebraically from the integral
+inverse matrix, and was checked against full pure-$X$ polynomials for
+genera 2--8. This protects denominator-lattice patterns, not individual
+face-value sequences, from the coordinate inversion. General propagator
+gauge transformations may mix the \emph{primitive/ambiguity split} and
+must be handled separately.
+
+\subsection{Provenance, regression suite, and unsolved problems}
+The v0.2 archive includes the unchanged YY recursion and the additional
+frame maps, tests, and source-derived data. The immutable
+\code{FramedPolynomial} wrapper carries the genus and frame and rejects
+additions of expressions with incompatible frame metadata. The principal modules are:
+\begin{quote}\small\raggedright
+\code{bcov_yy.py}, \code{quintic_frames.py},
+\code{test_frames.py}, \code{test_gu_gauge.py},
+\code{audit_coefficients.py}, \code{audit_denominators.py},
+\code{verify_physical_qseries.py}.
+\end{quote}
+The identity checks include $P_2$ in both frames, the two Gu gauge
+derivative equations, formal round trips, Bernoulli coefficients to genus
+15, full pure-$X$ denominator lattices to genus 8, and the 84 independent
+$q$-series checks. The source free energies and source GV table both come
+from the same research provenance; the comparison is algebraically independent
+but is not a proof of mathematical correctness of all the tabulated invariants.
+
+We have \emph{not} determined holomorphic ambiguities without external
+boundary inputs, settled the 29 conflicting high-genus integers, proved a
+new small-integer uniqueness principle, or certified an all-genus Bernoulli
+formula for the middle powers $n\sim g$. The independently established
+fixed-low-$X$ jet recursions through genus 53 belong to the original YY
+normalization and remain valid there; the present audit independently
+rechecks the source free energies through genus 15.

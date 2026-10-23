@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.2.0",
+  "date": "2026-10-19",
+  "geometry": "Fermat quintic / mirror quintic",
+  "canonical_ring_frame": "YY2004_fifth_root_s",
+  "coordinates": {
+    "yy": "s",
+    "hkq": "psi=s^5",
+    "small_z": "z=1/(3125*psi)",
+    "theta_yy_over_theta_hkq": 5,
+    "theta_hkq_over_theta_z": -1
+  },
+  "generators": {
+    "X_yy": "X_hkq=1/(1-psi)",
+    "X_hkq": "1-X_small_z",
+    "u_yy": "5*u_hkq",
+    "v1_yy": "5*v1_hkq",
+    "v2_yy": "25*v2_hkq",
+    "v3_yy": "125*v3_hkq",
+    "u_hkq": "-u_small_z",
+    "v1_hkq": "-v1_small_z",
+    "v2_hkq": "v2_small_z",
+    "v3_hkq": "-v3_small_z"
+  },
+  "physical_Yukawa_small_z": "Czzz=5*Xz/z^3",
+  "normalized_Pg": "P_g=(coordinate^3 * C_{coordinate,coordinate,coordinate})^(g-1) * F_g",
+  "physical_holomorphic_limit_hkq": "omega0^(2g-2)*((1-psi)/(5*psi))^(g-1)*Pg_hkq",
+  "chi": -200,
+  "kappa": 5,
+  "c2_pairing": 50,
+  "mu": "1/3125",
+  "gu_gauge": {
+    "q^z_zz": "-8/(5*z)",
+    "q_z^zz": "z/25",
+    "q_z^z": "-6/625",
+    "q_zz": "2/(25*z^2)",
+    "q_z": "2/(3125*z)"
+  },
+  "main_gv_conflicts_vs_extended": 29,
+  "validated_source_genus_range": [2,15],
+  "validated_q_degree_range": [1,6],
+  "bern_const_and_linear_checked_through_genus": 15,
+  "denominator_LCM_checked_through_genus": 8,
+  "precision": "Python fractions.Fraction; no floating point"
+}
