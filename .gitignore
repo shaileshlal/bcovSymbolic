@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Notebooks (marimo, Jupyter, IPython)
+__marimo__/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+
+# Tooling caches and reports
+.coverage
+.coverage.*
+htmlcov/
+mutants/
+.mutmut-cache
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
