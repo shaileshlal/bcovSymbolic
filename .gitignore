@@ -21,3 +21,9 @@ mutants/
 .hypothesis/
 .mypy_cache/
 .ruff_cache/
+
+# Generated outputs
+bcov/notebook_output/
+bcov/low_x_reaudit_genus_2_15.csv
+bcov/denominator_invariants.csv
+bcov/qseries_gv_residuals.json
