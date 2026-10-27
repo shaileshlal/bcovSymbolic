@@ -10,13 +10,28 @@ The public names the Quintic BCOV tutorial imports are unchanged.
 | `quintic_frames.py` | Frame maps `yy_to_hkq`, `hkq_to_yy`, `hkq_to_z`, `z_to_hkq`, `yy_to_z`, `z_to_yy`; Euler derivations `theta_hkq`, `theta_z`; `GU_GAUGE`; frame-tagged `FramedPolynomial` |
 | `test_frames.py`, `CONVENTIONS.json` | Frame-change regression test and the conventions ledger it checks against |
 | `tools/callgraph.py` | Builds the call graph below |
+| `audit_coefficients.py` | Bernoulli constant and linear pure-`X` coefficients, genera 2–15 → `low_x_reaudit_genus_2_15.csv` |
+| `audit_denominators.py` | Denominator-lattice invariance of the pure-`X` polynomials → `denominator_invariants.csv` |
+| `verify_physical_qseries.py` | Physical A-model `q`-series vs `GVTab` multicover prediction → `qseries_gv_residuals.json` |
+| `verify_yy_qseries_legacy.py` | Older SymPy-based `q`-series check from the raw `ff_g` files (genus 2–3 GV assertions) |
+| `data/` | Raw free energies `ff_2..ff_15.txt`, `quinticGVDTPT.m`, extracted `GVTab.csv.gz`, HKQ atomic data `bcov_hkq_atomic_genus_2_15.jsonl.gz`, propagators, GV manifest and conflicts |
 
-Standard library only, Python 3.10+.
+The core modules and the audit/verification scripts (except the legacy one) need only the
+standard library, Python 3.10+. `verify_yy_qseries_legacy.py` needs SymPy.
+The audit and verification scripts still use their own polynomial and series
+code rather than `Poly`; that is unchanged for now.
 
 ```bash
 python test_frames.py
 python bcov_yy.py --genus 3
+python audit_coefficients.py
+python audit_denominators.py --genus 8
+python verify_physical_qseries.py --genus 15 --degree 6
+python verify_yy_qseries_legacy.py
 ```
+
+The result files the scripts write are not committed; regenerated outputs are
+byte-identical to those on `pypackage`.
 
 ## Call graph
 
@@ -323,6 +338,10 @@ Refactored without changing behaviour:
   the conversion table `_CONVERSIONS` is built once at import; `FRAMES` is derived from `Frame`.
 
 Kept as is: all input-validation guards, and every name the tutorial imports.
+
+The audit and verification scripts and `data/` are copied unchanged, except that
+`verify_yy_qseries_legacy.py` now reads `data/ff_{g}.txt` next to the script
+instead of the hard-coded `/mnt/data/ff_{g}.txt`.
 
 Verified against `pypackage` with these modules dropped in: `test_frames.py` passes,
 the `bcov_yy.py --genus 4` checkpoint is byte-identical, the tutorial output is

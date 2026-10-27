@@ -1,0 +1,53 @@
+{
+  "GVTab": {
+    "rows": 61,
+    "columns": 44,
+    "numeric_cells": 2684,
+    "unknown_cells": 0,
+    "nonzero_cells": 1856
+  },
+  "PTTab": {
+    "rows": 23,
+    "columns": 102,
+    "numeric_cells": 2346,
+    "unknown_cells": 0,
+    "nonzero_cells": 2217
+  },
+  "DTTab": {
+    "rows": 23,
+    "columns": 102,
+    "numeric_cells": 2346,
+    "unknown_cells": 0,
+    "nonzero_cells": 2317
+  },
+  "PTTabGv": {
+    "rows": 24,
+    "columns": 22,
+    "numeric_cells": 507,
+    "unknown_cells": 21,
+    "nonzero_cells": 458
+  },
+  "GVTabExt": {
+    "rows": 113,
+    "columns": 31,
+    "numeric_cells": 2497,
+    "unknown_cells": 1006,
+    "nonzero_cells": 296
+  },
+  "GVTabExt2": {
+    "rows": 31,
+    "columns": 114,
+    "numeric_cells": 364,
+    "unknown_cells": 3170,
+    "nonzero_cells": 327
+  },
+  "GV_overlap": {
+    "identical": 939,
+    "different": 29
+  },
+  "quintic": {
+    "chi": -200,
+    "kappa": 5,
+    "c2": 50
+  }
+}

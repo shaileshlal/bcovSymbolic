@@ -1,0 +1,33 @@
+
+In[4]:= Cfff[\[Psi]_]:=((2\[Pi]*I)/5)^3 (\[Psi]^2/(1-\[Psi]^5));
+Cyy[\[Psi]_]:=\[Psi]^3 Cfff[\[Psi]];
+(*obtained from explicit expressions*)
+In[14]:= A[\[Psi]_]:=(-1+1227234056/(78857421875 \[Psi]^3)+138568/(390625 \[Psi]^2)+154/(625 \[Psi]));
+B[\[Psi]_]:=(-(3723264/(244140625 \[Psi]^3))-8496/(390625 \[Psi]^2)-24/(625 \[Psi]));
+B2[\[Psi]_]:=(463104/(9765625 \[Psi]^3)+17568/(390625 \[Psi]^2)+24/(625 \[Psi]));
+B3[\[Psi]_]:=(-(35358336/(244140625 \[Psi]^3))-35712/(390625 \[Psi]^2)-24/(625 \[Psi]));
+X[\[Psi]_]:=(1/(1-\[Psi]));
+A2[\[Psi]_]:=\[Psi]*D[A[\[Psi]],\[Psi]]+A[\[Psi]]^2;
+In[54]:= S2yy[\[Psi]_]:=\[Psi]^2/Cyy[\[Psi]] (2-2B[\[Psi]]-A[\[Psi]]);
+S1[\[Psi]_]:=\[Psi]/Cyy[\[Psi]] (2-3B[\[Psi]]+B2[\[Psi]]);
+S0[\[Psi]_]:=1/(2Cyy[\[Psi]]) (2+2A[\[Psi]]+A2[\[Psi]]-3B[\[Psi]]-A2[\[Psi]]B[\[Psi]]-B[\[Psi]]^2-2A[\[Psi]]B[\[Psi]]^2+2B[\[Psi]]^3+4B2[\[Psi]]-5B[\[Psi]]B2[\[Psi]]+B3[\[Psi]]-5A[\[Psi]]X[\[Psi]]-5B[\[Psi]]X[\[Psi]]+5A[\[Psi]]B[\[Psi]]X[\[Psi]]+10B[\[Psi]]^2 X[\[Psi]]-5B2[\[Psi]]X[\[Psi]]);
+S2[z_]=Series[S2yy[1/(5^5 z)],{z,0,3}]//Normal
+tS1[z_]=Series[(S1[\[Psi]]+S2yy[\[Psi]]/\[Psi] B[\[Psi]])/.{\[Psi]->1/(5^5 z)},{z,0,3}]//Normal
+tS0[z_]=Series[(S0[\[Psi]]+S1[\[Psi]]/\[Psi] B[\[Psi]]+1/2 S2yy[\[Psi]](B[\[Psi]]^2/\[Psi]^2))/.{\[Psi]->1/(5^5 z)},{z,0,3}]//Normal
+Cf[z_]=Series[1/Cfff[\[Psi]]/.{\[Psi]->1/(5^5 z)},{z,0,3}]//Normal
+Ff[2]=Series[-179/2250+((53*z^6)/900000-(23*z^7)/288)*Cf[z]^2+((-2*z^2)/15+(3125*z^3)/6)*Cf[z]^2*S2[z]^2+(5*Cf[z]^2*S2[z]^3)/24+(700*tS0[z])/9+((107*z^2)/36-(87500*z^3)/9)*Cf[z]*tS1[z]+S2[z]*(((2129*z^4)/36000-(6725*z^5)/18+(5468750*z^6)/9)*Cf[z]^2-(25*Cf[z]*tS1[z])/6),{z,0,3}]//Normal
+Out[57]= (15197 I)/(3125 \[Pi]^3)-(3 I)/(625000 \[Pi]^3 z^2)+(53 I)/(62500 \[Pi]^3 z)-(147249311 I z)/(201875 \[Pi]^3)+(11444091796875 I z^3)/(8 \[Pi]^3)
+Out[58]= -((3 I)/(5 \[Pi]^3))-I/(100 \[Pi]^3 z)-(2514 I z)/\[Pi]^3-(9622500 I z^2)/\[Pi]^3-(1352609615400 I z^3)/(323 \[Pi]^3)
+Out[59]= -((125 I)/(16 \[Pi]^3))+(2004375 I z)/(16 \[Pi]^3)+(5550771875 I z^2)/(16 \[Pi]^3)+(2511592190265625 I z^3)/(5168 \[Pi]^3)
+Out[60]= -(I/(1953125000 \[Pi]^3 z^3))+(1220703125 I z^2)/(8 \[Pi]^3)
+
+In[29]:= BB=Exp[K[x]]*x*D[Exp[-K[x]],{x}]
+Out[29]= -x (K^\[Prime])[x]
+In[26]:= BB2=Exp[K[x]]*x*D[x*D[Exp[-K[x]],{x}],x]//FullSimplify//Expand
+Out[26]= -x (K^\[Prime])[x]+x^2 (K^\[Prime])[x]^2-x^2 (K^\[Prime]\[Prime])[x]
+Kxx=BB2-BB-BB^2
+Out[34]= -x^2 (K^\[Prime]\[Prime])[x]
+In[37]:= -2 BB/x^2+BB^2/x^2-2/x^2+Kxx/x^2
+Out[37]= -(2/x^2)+(2 (K^\[Prime])[x])/x+(K^\[Prime])[x]^2-(K^\[Prime]\[Prime])[x]
+In[42]:= -2 BB/x^2+BB^2/x^2-2/x^2+(B2-BB-BB^2)/x^2//FullSimplify
+Out[42]= (-2+B2+3 x (K^\[Prime])[x])/x^2
