@@ -1,0 +1,23 @@
+{
+  "g": 54,
+  "degree": 21,
+  "n_predicted": 319125,
+  "YY_homogeneous_difference": "319125*5^107*X^21*(1-X)^32",
+  "reduced_section_difference": "319125*5^107*x^21",
+  "physical_MUM_q_response": "Delta F_g = n*q^D * omega0(z(q))^(2g-2) * (z(q)/q)^D",
+  "q_shifts_per_unit_charge": [
+    "1",
+    "-3450",
+    "4790625",
+    "-3685910000",
+    "1751393550000"
+  ],
+  "q_shifts_for_predicted_319125": [
+    "319125",
+    "-1100981250",
+    "1528808203125",
+    "-1176266028750000",
+    "558913466643750000"
+  ],
+  "limitation": "This certifies the ambiguity response/section and MUM behavior, NOT full physical BCOV genus54; the charge is not fixed by the anomaly alone."
+}

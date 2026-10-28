@@ -1,0 +1,254 @@
+{
+  "scores": {
+    "v05_fixed_train_Q1_Q20": {
+      "exact": 28,
+      "n": 48,
+      "sign_correct": 48,
+      "median_relative_error": 0.0,
+      "median_relative_error_misses": 0.0001809087557368411,
+      "mean_absolute_relative_error": 0.0028892975137900113,
+      "max_relative_error": 0.08504395483166524,
+      "by_shell": {
+        "0": [
+          10,
+          10
+        ],
+        "1": [
+          10,
+          10
+        ],
+        "2": [
+          6,
+          10
+        ],
+        "3": [
+          2,
+          10
+        ],
+        "4": [
+          0,
+          6
+        ],
+        "5": [
+          0,
+          2
+        ]
+      }
+    },
+    "v05_update_first_block": {
+      "exact": 14,
+      "n": 24,
+      "sign_correct": 24,
+      "median_relative_error": 0.0,
+      "median_relative_error_misses": 0.00011993092833624749,
+      "mean_absolute_relative_error": 0.0020370556070820373,
+      "max_relative_error": 0.04638879747835336,
+      "by_shell": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          3,
+          5
+        ],
+        "3": [
+          1,
+          5
+        ],
+        "4": [
+          0,
+          3
+        ],
+        "5": [
+          0,
+          1
+        ]
+      }
+    },
+    "rolling_quad_second_block": {
+      "exact": 15,
+      "n": 24,
+      "sign_correct": 24,
+      "median_relative_error": 0.0,
+      "median_relative_error_misses": 2.517364911076085e-06,
+      "mean_absolute_relative_error": 8.757946230654538e-05,
+      "max_relative_error": 0.001993620414673046,
+      "by_shell": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          4,
+          5
+        ],
+        "2": [
+          3,
+          5
+        ],
+        "3": [
+          2,
+          5
+        ],
+        "4": [
+          1,
+          3
+        ],
+        "5": [
+          0,
+          1
+        ]
+      }
+    },
+    "new_mirror_bracket_second_block": {
+      "exact": 17,
+      "n": 24,
+      "sign_correct": 24,
+      "median_relative_error": 0.0,
+      "median_relative_error_misses": 1.66631593726963e-06,
+      "mean_absolute_relative_error": 6.503458505558005e-07,
+      "max_relative_error": 7.4123568976540214e-06,
+      "by_shell": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          4,
+          5
+        ],
+        "3": [
+          2,
+          5
+        ],
+        "4": [
+          1,
+          3
+        ],
+        "5": [
+          0,
+          1
+        ]
+      }
+    },
+    "v06_sequential_Q21_Q30": {
+      "exact": 31,
+      "n": 48,
+      "sign_correct": 48,
+      "median_relative_error": 0.0,
+      "median_relative_error_misses": 3.865196312971765e-05,
+      "mean_absolute_relative_error": 0.0010188529764662967,
+      "max_relative_error": 0.04638879747835336,
+      "by_shell": {
+        "0": [
+          10,
+          10
+        ],
+        "1": [
+          10,
+          10
+        ],
+        "2": [
+          7,
+          10
+        ],
+        "3": [
+          3,
+          10
+        ],
+        "4": [
+          1,
+          6
+        ],
+        "5": [
+          0,
+          2
+        ]
+      }
+    }
+  },
+  "defect_support": {
+    "active_first_window": 13,
+    "active_second_window": 9,
+    "new_activations": 0,
+    "healed_defects": 4,
+    "stable_persistence": {
+      "success": 11,
+      "total": 11
+    },
+    "active_shells_by_residue": {
+      "0": {
+        "earlier": [
+          4,
+          5
+        ],
+        "later": [
+          5
+        ]
+      },
+      "1": {
+        "earlier": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "later": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "2": {
+        "earlier": [
+          1,
+          2,
+          3
+        ],
+        "later": [
+          2,
+          3
+        ]
+      },
+      "3": {
+        "earlier": [
+          2,
+          3
+        ],
+        "later": [
+          3
+        ]
+      },
+      "4": {
+        "earlier": [
+          3,
+          4
+        ],
+        "later": [
+          4
+        ]
+      }
+    },
+    "exchangeable_active_set_probability": 0.0005468434513393458,
+    "no_future_label_in_prediction_module": true
+  },
+  "calibration": {
+    "n_cal": 24,
+    "target_coverage": 0.9,
+    "quantile_rank": 23,
+    "relative_width": 0.0015752719943082614,
+    "coverage": 1.0,
+    "covered": 24,
+    "total": 24
+  }
+}

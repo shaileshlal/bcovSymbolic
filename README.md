@@ -9,7 +9,7 @@ Core calculations use `fractions.Fraction` and have no external dependencies.
 
 ```bash
 conda activate sage-env                       # optional; ordinary Python also works
-python -m pip install -e '.[notebooks,dev]'
+python -m pip install -e '.[notebooks,science,dev]'
 ```
 
 Sage is available for future symbolic extensions but is not required by the
@@ -88,12 +88,82 @@ only at small genus when a full polynomial is needed.
 | HKQ/small-z denominator lattice; YY agreement away from 5 | `invert_x`, `denominator_lcm`, `audit_patterns` | Full coefficient vectors; integral inverse binomial transformation |
 | Periods, mirror map and physical multicover residuals | `bcov.verify_physical_qseries` | Default 84 comparisons: genera 2–15, degrees 1–6 |
 
-The separate **Develop AI Quintic Framework** chat contains newer shelf-depth,
-scale-change-pulse, and residual-recurrence work. Its generated code and formulas
-were not accessible through the chat reader during this reorganization. Those
-extensions are **pending source import**, not implemented or claimed verified
-here. The older notes mention low-X checks through genus 53; this repository's
-bundled source amplitudes stop at genus 15.
+## Integrated sequential research framework
+
+The supplied **Quintic BCOV Sequential Research v1.3** bundle is now included.
+Its 18 stages cover low-X learning, exact residual sections, GV lattice
+transport, degree 31–53 survival, deep-shell pulse profiles, depths 11–15,
+and nested residuals. All 528 supplied files are preserved byte-for-byte in
+[`quintic_bcov_lab/archive/`](quintic_bcov_lab/archive/README.md), with the ZIP
+checksum and per-file hashes in `quintic_bcov_lab/IMPORT_MANIFEST.json`.
+
+The live, typed `quintic_bcov_lab` analysis modules use **`bcov.bcov_yy`** by
+default. Archived subprocesses keep their pinned original engines. The two
+engines reproduce the same anomaly polynomials through genus 3, and all eleven
+supplied g2–12 ambiguity vectors agree with the existing HKQ-derived data,
+including the corrected genus-four seed. We do not replace either dataset.
+
+```bash
+quintic-bcov backend-check
+quintic-bcov list
+quintic-bcov prepare
+quintic-bcov generate-intermediate
+quintic-bcov stage 18 --action test
+quintic-bcov stage 18 --action run
+quintic-bcov all --action test
+quintic-bcov audit
+# Equivalent: python -m quintic_bcov_lab ...
+```
+
+The default writable workspace is `.bcov-research/` beneath your current
+directory. `prepare` copies the historical studies and restores ten shared
+reference aliases there. Stage programs may overwrite **their workspace
+outputs**; the packaged archive and supplied benchmarks remain unchanged.
+Fresh complete logs and JSON reports go to `.bcov-research/run_logs/`.
+The `--workspace` option goes **before** the subcommand:
+
+```bash
+quintic-bcov --workspace /tmp/quintic-run all --action test --timeout-minutes 10
+```
+
+The timeout applies per stage. Selected stages always execute chronologically.
+Failures and timeouts produce nonzero command exit status. Use a new empty
+workspace when reproducing from pristine inputs. Original marimo notebooks are
+available under `.bcov-research/studies/` after `prepare`; those are historical
+sources and can be edited in that workspace without changing the archive.
+
+```python
+from quintic_bcov_lab import datasets
+from quintic_bcov_lab.sections import from_reference
+from quintic_bcov_lab.arithmetic import difference, newton_forecast
+
+labels = datasets.intermediate_labels()
+assert len(labels) == 22  # reference-derived labels, not predictions
+reference = datasets.read_reference()["amplitudes"][2]  # genus four
+section = from_reference(reference["genus"], reference["ambiguity"])
+assert section.validate()
+assert newton_forecast([0, 1, 4, 9], order=2) == [16]
+```
+
+The API also exposes exact Newton-pulse reconstruction, period-four phases,
+prime valuations, quadratic envelopes, moving fronts, and triangular GV charge
+response decoding. The original empirical predictors and their validation
+programs remain runnable through the stage catalog.
+
+See [archived baselines](quintic_bcov_lab/archive/BASELINES.md),
+[original evaluation protocols](quintic_bcov_lab/archive/REPRODUCIBILITY.md),
+and [integration validation](docs/research/INTEGRATION.md). These distinguish
+reference-derived labels, empirical predictions, conditional modular/PT
+references, supplied mature-scale inputs, misses, and abstentions. Finite
+recursive closure and all-genus ambiguity reconstruction remain open.
+
+The optional exact genus-1000 dataset was **not** included in the supplied ZIP.
+The numerical cache is preserved but is not an exact certificate. If you later
+supply the separate archive, install it into a workspace with:
+
+```bash
+quintic-bcov install-large-data --source /path/to/Quintic_BCOV_Optional_Exact_LowX_Data.zip
+```
 
 ## Command line
 
@@ -119,6 +189,7 @@ reported separately, not compared to positive-degree GV invariants.
 marimo edit Quintic_BCOV_Tutorial.py
 marimo edit notebooks/arithmetic_patterns.py
 marimo edit notebooks/physical_verification.py
+marimo edit notebooks/research_overview.py
 ```
 
 The original guided laboratory covers recursion, frames, source extraction and
@@ -136,6 +207,7 @@ python -m unittest discover -s tests -v     # dependency-free package regression
 python run_all_checks.py                   # historical full suite; needs SymPy
 python -m bcov patterns --genus 15          # low-X and full denominator audits
 python -m bcov verify --genus 15 --degree 6 # complete physical comparison
+python -m pytest -q tests                 # includes research integration checks
 python -m mypy                            # typed public analysis modules
 python -m build                          # wheel and source distribution
 ```
@@ -154,6 +226,8 @@ bcov/
   verify_physical_qseries.py  periods and GW/GV verification
   data/                    raw and derived research data, packaged in wheels
   *.py                     historical conversion/audit/verification scripts
+quintic_bcov_lab/           typed research adapter, sections, arithmetic and runner
+  archive/                 all 18 original studies and their provenance
 notebooks/                 focused interactive demonstrations
 tests/                     package-level regressions
 Quintic_BCOV_Tutorial.py   extended guided laboratory

@@ -1,0 +1,11 @@
+degree,residue,genus,m,delta,chi,kinematic_multiplier,rankzero_mu,rankzero_qhat,wall_inequality_pass,nonvacuum_candidate_count,predicted_PT_leading,theorem_single_wall_certified
+31,1,111,-110,1,-84,-84,1,83/120,True,0,-724500,True
+32,2,117,-116,2,-89,89,2,-13/120,True,0,-108446500,True
+33,3,124,-123,2,-95,95,2,-13/120,True,0,-115757500,True
+34,4,132,-131,1,-102,-102,1,83/120,True,0,-879750,True
+35,0,141,-140,0,-110,-110,0,55/24,True,0,-550,True
+36,1,147,-146,1,-115,115,1,83/120,True,0,991875,True
+37,2,154,-153,2,-121,121,2,-13/120,True,0,-147438500,True
+38,3,162,-161,2,-128,-128,2,-13/120,True,0,155968000,True
+39,4,171,-170,1,-136,-136,1,83/120,True,0,-1173000,True
+40,0,181,-180,0,-145,145,0,55/24,True,0,725,True

@@ -1,0 +1,79 @@
+[
+  {
+    "genus": 2,
+    "original_coefficients": 4,
+    "residual_dimension": 0,
+    "round_trip_exact": true,
+    "xQ_degree": -1
+  },
+  {
+    "genus": 3,
+    "original_coefficients": 7,
+    "residual_dimension": 0,
+    "round_trip_exact": true,
+    "xQ_degree": -1
+  },
+  {
+    "genus": 4,
+    "original_coefficients": 10,
+    "residual_dimension": 1,
+    "round_trip_exact": true,
+    "xQ_degree": 1
+  },
+  {
+    "genus": 5,
+    "original_coefficients": 13,
+    "residual_dimension": 1,
+    "round_trip_exact": true,
+    "xQ_degree": 1
+  },
+  {
+    "genus": 6,
+    "original_coefficients": 16,
+    "residual_dimension": 2,
+    "round_trip_exact": true,
+    "xQ_degree": 2
+  },
+  {
+    "genus": 7,
+    "original_coefficients": 19,
+    "residual_dimension": 2,
+    "round_trip_exact": true,
+    "xQ_degree": 2
+  },
+  {
+    "genus": 8,
+    "original_coefficients": 22,
+    "residual_dimension": 2,
+    "round_trip_exact": true,
+    "xQ_degree": 2
+  },
+  {
+    "genus": 9,
+    "original_coefficients": 25,
+    "residual_dimension": 3,
+    "round_trip_exact": true,
+    "xQ_degree": 3
+  },
+  {
+    "genus": 10,
+    "original_coefficients": 28,
+    "residual_dimension": 3,
+    "round_trip_exact": true,
+    "xQ_degree": 3
+  },
+  {
+    "genus": 11,
+    "original_coefficients": 31,
+    "residual_dimension": 4,
+    "round_trip_exact": true,
+    "xQ_degree": 4
+  },
+  {
+    "genus": 12,
+    "original_coefficients": 34,
+    "residual_dimension": 4,
+    "round_trip_exact": true,
+    "xQ_degree": 4
+  }
+]

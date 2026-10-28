@@ -1,0 +1,12 @@
+{
+  "id": "07_lattice_walk",
+  "title": "Integer GV response lattice, minimum height, step/integrality checks",
+  "version": "lattice walk",
+  "run": [
+    "experiment.py"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_GV_Lattice_Walk_Residual_Test.zip"
+}

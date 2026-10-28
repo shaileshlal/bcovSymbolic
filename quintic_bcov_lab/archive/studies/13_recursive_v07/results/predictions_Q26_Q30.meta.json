@@ -1,0 +1,31 @@
+{
+  "period": 4,
+  "signed_phases": {
+    "1,0": 1,
+    "2,0": 1,
+    "3,0": 1,
+    "4,0": 1,
+    "0,1": 1,
+    "1,1": -1,
+    "2,1": 1,
+    "3,1": -1,
+    "4,1": 1,
+    "0,2": -1,
+    "1,2": -1,
+    "2,2": -1,
+    "3,2": -1,
+    "4,2": -1,
+    "0,3": -1,
+    "1,3": 1,
+    "2,3": -1,
+    "3,3": 1,
+    "4,3": -1,
+    "0,0": 1
+  },
+  "inputs": [
+    "/mnt/data/Quintic_PT_Recursive_Defects_v07/data/calibration_Q1_Q20.csv",
+    "/mnt/data/Quintic_PT_Recursive_Defects_v07/data/update_Q21_Q25.csv",
+    "/mnt/data/Quintic_PT_Recursive_Defects_v07/data/sites_Q26_Q30.csv"
+  ],
+  "reference_not_read": true
+}

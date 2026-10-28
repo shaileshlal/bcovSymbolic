@@ -1,0 +1,74 @@
+{
+  "summary": [
+    {
+      "genus": 45,
+      "residual_dim": 17,
+      "number_nonzero": 0,
+      "charges": []
+    },
+    {
+      "genus": 46,
+      "residual_dim": 18,
+      "number_nonzero": 0,
+      "charges": []
+    },
+    {
+      "genus": 47,
+      "residual_dim": 18,
+      "number_nonzero": 0,
+      "charges": []
+    },
+    {
+      "genus": 48,
+      "residual_dim": 18,
+      "number_nonzero": 0,
+      "charges": []
+    },
+    {
+      "genus": 49,
+      "residual_dim": 19,
+      "number_nonzero": 0,
+      "charges": []
+    },
+    {
+      "genus": 50,
+      "residual_dim": 19,
+      "number_nonzero": 0,
+      "charges": []
+    },
+    {
+      "genus": 51,
+      "residual_dim": 20,
+      "number_nonzero": 1,
+      "charges": [
+        [
+          20,
+          175
+        ]
+      ]
+    },
+    {
+      "genus": 52,
+      "residual_dim": 20,
+      "number_nonzero": 0,
+      "charges": []
+    },
+    {
+      "genus": 53,
+      "residual_dim": 20,
+      "number_nonzero": 0,
+      "charges": []
+    }
+  ],
+  "integer_sites": 169,
+  "zero_sites": 168,
+  "predicted_exception": {
+    "genus": 51,
+    "degree": 20,
+    "GV_integer": 175,
+    "scale_5_exponent": 100,
+    "section_difference": "175*5**100*x**20"
+  },
+  "baseline_exceptions": 1,
+  "status": "Analytic-geometric integer prediction; not independent ML discovery or complete genus45-53 amplitude reconstruction"
+}

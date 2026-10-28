@@ -1,0 +1,230 @@
+[
+  {
+    "id": "01_v01_low_x",
+    "archive": "Quintic_Holomorphic_Ambiguity_AI_Prototype.zip",
+    "title": "BCOV exact jets, Bernoulli/Airy seeds, low-X and mixed-YY ML",
+    "run": [
+      "-m",
+      "hybrid.tests"
+    ],
+    "test": [
+      "-m",
+      "hybrid.tests"
+    ],
+    "version": "v0.1"
+  },
+  {
+    "id": "02_high_x_rope",
+    "archive": "Quintic_High_X_GV_RoPE_Study.zip",
+    "title": "High-X reverse cumulants and GV/RoPE phase controls",
+    "run": [
+      "high_degree_phase_study.py"
+    ],
+    "test": [
+      "verify_phases_and_digits.py"
+    ],
+    "version": "high-X"
+  },
+  {
+    "id": "03_two_stream",
+    "archive": "Quintic_Two_Stream_GV_YY_Experiment.zip",
+    "title": "YY-vs-GV streams and exact high-X boundary holdout",
+    "run": [
+      "run_experiment.py"
+    ],
+    "test": [
+      "exact_response_audit.py"
+    ],
+    "version": "two-stream"
+  },
+  {
+    "id": "04_midpoint",
+    "archive": "Quintic_Midpoint_Involution_Exact_Test.zip",
+    "title": "Section transformation x -> 1-x and midpoint kernel",
+    "run": [
+      "midpoint_test.py"
+    ],
+    "test": [
+      "midpoint_test.py"
+    ],
+    "version": "midpoint"
+  },
+  {
+    "id": "05_intermediate_dataset",
+    "archive": "Quintic_BCOV_Intermediate_Marimo_v02.zip",
+    "title": "Exact X(1-X)^m and x(1-x) intermediate-only dataset",
+    "run": [
+      "intermediate.py",
+      "--source",
+      "data/reference_amplitudes.json",
+      "--output",
+      "data"
+    ],
+    "test": [
+      "tests_intermediate.py"
+    ],
+    "version": "intermediate"
+  },
+  {
+    "id": "06_intermediate_ml",
+    "archive": "Quintic_Intermediate_Only_ML_Experiment.zip",
+    "title": "Intermediate-only magnitude/shape/sign baselines",
+    "run": [
+      "run_experiment.py"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "intermediate ML"
+  },
+  {
+    "id": "07_lattice_walk",
+    "archive": "Quintic_GV_Lattice_Walk_Residual_Test.zip",
+    "title": "Integer GV response lattice, minimum height, step/integrality checks",
+    "run": [
+      "experiment.py"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "lattice walk"
+  },
+  {
+    "id": "08_displacement",
+    "archive": "Quintic_GV_Displacement_AI_v03.zip",
+    "title": "Integer displacement, extremal phases and neighborhood transport",
+    "run": [
+      "learn_top.py"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "displacement"
+  },
+  {
+    "id": "09_genus45_53",
+    "archive": "Quintic_GV_Bootstrap_45_53_and_PT_DT_Periodicity.zip",
+    "title": "Genus 45-53 charge bootstrap and BCOV delta-g51-53 sensitivity",
+    "run": [
+      "code/near_extremal_benchmark.py"
+    ],
+    "test": [
+      "code/tests.py"
+    ],
+    "version": "genus 45-53"
+  },
+  {
+    "id": "10_dtpt_v04",
+    "archive": "Quintic_DT_PT_Empirical_v04.zip",
+    "title": "DT/PT residue normalization, blind integer holdout, BCOV response",
+    "run": [
+      "blind_predict.py"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "DT/PT v0.4"
+  },
+  {
+    "id": "11_pt_boundary_v05",
+    "archive": "Quintic_Empirical_PT_DT_Boundary_v05.zip",
+    "title": "PT/GV finite differences and DT fingerprint",
+    "run": [
+      "run_experiments.py",
+      "--train",
+      "data/calibration.csv",
+      "--sites",
+      "data/sites_unlabeled.csv",
+      "--out",
+      "results/pt_predictions.csv"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "PT boundary v0.5"
+  },
+  {
+    "id": "12_defects_v06",
+    "archive": "Quintic_PT_Defect_Empirical_v06.zip",
+    "title": "Third differences and moving-defect classifier",
+    "run": [
+      "train_and_forecast.py"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "defects v0.6"
+  },
+  {
+    "id": "13_recursive_v07",
+    "archive": "Quintic_PT_Recursive_Defects_v07.zip",
+    "title": "Sparse Newton pulses, mirrored curvature and locking fronts",
+    "run": [
+      "recursive_defects.py"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "recursive v0.7"
+  },
+  {
+    "id": "14_survival_v08",
+    "archive": "Quintic_PT_Recursive_Survival_v08.zip",
+    "title": "Frozen 31-53 survival: teacher-forced and autonomous holdouts",
+    "run": [
+      "predictor/rollout.py"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "survival v0.8"
+  },
+  {
+    "id": "15_deep_v09",
+    "archive": "Quintic_PT_Deep_Shell_v09.zip",
+    "title": "Deep shells 6-10, quadratic envelope and gated recurrence",
+    "run": [
+      "predictor/gated_recurrence.py"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "deep v0.9"
+  },
+  {
+    "id": "16_pulses_v10",
+    "archive": "Quintic_PT_Pulse_Recurrence_v10.zip",
+    "title": "Front pulse transfer, affine 1/W profiles and rank checks",
+    "run": [
+      "predictor/pulse_profile.py"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "pulses v1.0"
+  },
+  {
+    "id": "17_depth11_15_v11",
+    "archive": "Quintic_PT_Depth11_15_v11.zip",
+    "title": "Shells 11-15, finite-rank anchors and no-closure tests",
+    "run": [
+      "predictor/linear_extension_pairs.py"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "depth v1.1"
+  },
+  {
+    "id": "18_nested_v12",
+    "archive": "Quintic_PT_Nested_Residuals_v12.zip",
+    "title": "Second-order residual hierarchy and terminal-pulse extrapolation",
+    "run": [
+      "run.py"
+    ],
+    "test": [
+      "tests.py"
+    ],
+    "version": "nested v1.2"
+  }
+]

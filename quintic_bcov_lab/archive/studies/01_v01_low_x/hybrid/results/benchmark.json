@@ -1,0 +1,186 @@
+{
+  "training": {
+    "algorithm": "inverse-genus log-series multioutput least squares",
+    "degree": 2,
+    "training_window": [
+      40,
+      53
+    ],
+    "coefficients": [
+      [
+        -0.9229347529100972,
+        -0.44512910119810595,
+        -0.2904342454435722,
+        -0.21471526473081512
+      ],
+      [
+        -5.100288738684294,
+        -5.365340905570006,
+        -5.235725643497032,
+        -5.056752949001073
+      ],
+      [
+        76.26202704928302,
+        62.52710968007742,
+        52.36286556501529,
+        44.246861966580795
+      ]
+    ],
+    "output": "a[g,j]/a[g,0], approximate floating point, j=0..4",
+    "normalization": "a[g,0] is known independently from the Bernoulli constant map"
+  },
+  "held_out": [
+    {
+      "genus_range": [
+        54,
+        100
+      ],
+      "n_genera": 47,
+      "model": {
+        "mean_relative_error": 4.1927328047948256e-05,
+        "median_relative_error": 3.0030710489736823e-05,
+        "p90_relative_error": 0.00010172493399390747,
+        "maximum_relative_error": 0.00015828587881139278,
+        "by_j_median": [
+          1.527529259659488e-05,
+          3.047207772521876e-05,
+          4.558191419501423e-05,
+          6.0595950783559616e-05
+        ]
+      },
+      "binomial_baseline": {
+        "mean_relative_error": 0.06225303467087249,
+        "median_relative_error": 0.05648481036947106,
+        "p90_relative_error": 0.11528129323117342,
+        "maximum_relative_error": 0.15060496528254141,
+        "by_j_median": [
+          0.02424947712688308,
+          0.04988918287209576,
+          0.0770133888121387,
+          0.10572450706005432
+        ]
+      }
+    },
+    {
+      "genus_range": [
+        101,
+        250
+      ],
+      "n_genera": 150,
+      "model": {
+        "mean_relative_error": 0.00025884393604464075,
+        "median_relative_error": 0.00023858268102383562,
+        "p90_relative_error": 0.000473782945900958,
+        "maximum_relative_error": 0.0006003326413218657,
+        "by_j_median": [
+          0.00010687631384109775,
+          0.0002149156196416535,
+          0.00032411599623866083,
+          0.0004344753971129989
+        ]
+      },
+      "binomial_baseline": {
+        "mean_relative_error": 0.1366709845927454,
+        "median_relative_error": 0.12438216228144416,
+        "p90_relative_error": 0.241344754555803,
+        "maximum_relative_error": 0.2701013441030866,
+        "by_j_median": [
+          0.05305072617052764,
+          0.10923711934666469,
+          0.16876298212750274,
+          0.23184654519092862
+        ]
+      }
+    },
+    {
+      "genus_range": [
+        251,
+        1000
+      ],
+      "n_genera": 750,
+      "model": {
+        "mean_relative_error": 0.0005426635945876864,
+        "median_relative_error": 0.000490323148480909,
+        "p90_relative_error": 0.0009255313117667696,
+        "maximum_relative_error": 0.0009891300922603152,
+        "by_j_median": [
+          0.00022366232855552948,
+          0.0004483863277472966,
+          0.000674171479669361,
+          0.0009010172587743948
+        ]
+      },
+      "binomial_baseline": {
+        "mean_relative_error": 0.19574719038741037,
+        "median_relative_error": 0.1785482607644382,
+        "p90_relative_error": 0.3357340443274327,
+        "maximum_relative_error": 0.3476465780106073,
+        "by_j_median": [
+          0.07399615463816189,
+          0.15355285252121453,
+          0.23909437750919826,
+          0.33107788054768217
+        ]
+      }
+    },
+    {
+      "genus_range": [
+        54,
+        1000
+      ],
+      "n_genera": 947,
+      "model": {
+        "mean_relative_error": 0.00047285625212852635,
+        "median_relative_error": 0.00045578355405845317,
+        "p90_relative_error": 0.0008994768868787584,
+        "maximum_relative_error": 0.0009891300922603152,
+        "by_j_median": [
+          0.00021300272713342672,
+          0.0004271827835888864,
+          0.000642539657978447,
+          0.0008590728279219695
+        ]
+      },
+      "binomial_baseline": {
+        "mean_relative_error": 0.17976444890073978,
+        "median_relative_error": 0.15856715882496797,
+        "p90_relative_error": 0.3307840362491078,
+        "maximum_relative_error": 0.3476465780106073,
+        "by_j_median": [
+          0.0723437844708612,
+          0.15002269611409536,
+          0.23343771106337385,
+          0.32302051083088523
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Reference exact low-X dataset is derived from BCOV + exact enumerative vanishing conditions",
+    "No g>53 coefficient labels enter fitting",
+    "Numerical extrapolation is not exact rational reconstruction",
+    "Window and order selected exploratorily; evaluate rolling splits before claiming out-of-sample universality"
+  ],
+  "physics_anchored": {
+    "predicted_columns": [
+      2,
+      3,
+      4
+    ],
+    "supplied_exact_column": 1,
+    "genus_range": [
+      54,
+      1000
+    ],
+    "median_relative_error": 9.766410720146723e-07,
+    "mean_relative_error": 1.0765757808366814e-06,
+    "p90_relative_error": 2.1671043793913825e-06,
+    "max_relative_error": 3.779604043074869e-06,
+    "by_column_median": [
+      3.3876988170256084e-07,
+      1.0132014215402663e-06,
+      2.020193109131263e-06
+    ],
+    "input_a1_policy": "Supplied known all-genus Bernoulli coefficient. Not counted as predicted."
+  }
+}

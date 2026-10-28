@@ -1,0 +1,100 @@
+{
+  "quintic_gauge": "x=psi^-5=3125 z_PF; X=x/(x-1); P_g^an(0,0,0,X)=0",
+  "genus4": "GV-corrected: P4_corrected=P4_printed+(6746/5^12)*X^5(1-X)^2",
+  "reference": "shared/reference_amplitudes.json, exact g2..12; 11 physical amplitudes; reference-derived ambiguity labels",
+  "backend": "pinned v0.1 YY engine, canonical shared vendor; optional integration with external BCOV module by explicit adapter",
+  "label_separation": "conditional DT/modular reference used for external scoring of empirical PT predictors; not unconditional proof",
+  "sha256_reference": "9202c60808596447bd29e19461f538069c7d1af1e559b8e2dea5d9fca7455293",
+  "sources": [
+    {
+      "stage": "01_v01_low_x",
+      "archive": "Quintic_Holomorphic_Ambiguity_AI_Prototype.zip",
+      "sha256": "092c082709ad4daa55310603d9137d19abaa385a0ab8495d2e85a20cae7a48e6"
+    },
+    {
+      "stage": "02_high_x_rope",
+      "archive": "Quintic_High_X_GV_RoPE_Study.zip",
+      "sha256": "dfc4f8843350ae981834e7a2120a7e993ff61beb7315835b6dbe8329d6e0b7ee"
+    },
+    {
+      "stage": "03_two_stream",
+      "archive": "Quintic_Two_Stream_GV_YY_Experiment.zip",
+      "sha256": "557530c483cd3aa94cdf3289b50853ac06f4b83d906487b4eb26d93d80e731b1"
+    },
+    {
+      "stage": "04_midpoint",
+      "archive": "Quintic_Midpoint_Involution_Exact_Test.zip",
+      "sha256": "07722eed5ac1d52d22e883bbbba7fd11ab3c0cd3bcae346afa61601395cb671a"
+    },
+    {
+      "stage": "05_intermediate_dataset",
+      "archive": "Quintic_BCOV_Intermediate_Marimo_v02.zip",
+      "sha256": "6dead87c9e2dc99a0a5dcba36f2512454e83a9312708d333659a2dd8fd32d4ea"
+    },
+    {
+      "stage": "06_intermediate_ml",
+      "archive": "Quintic_Intermediate_Only_ML_Experiment.zip",
+      "sha256": "fe8f7d14b6416905bc2d7d666cd93faba08af8b09ee78f4854c352dc37b042cb"
+    },
+    {
+      "stage": "07_lattice_walk",
+      "archive": "Quintic_GV_Lattice_Walk_Residual_Test.zip",
+      "sha256": "3f5e72d82d02c064e48513faef6c8af256b4ee7685f3a6357f818c84838de3a9"
+    },
+    {
+      "stage": "08_displacement",
+      "archive": "Quintic_GV_Displacement_AI_v03.zip",
+      "sha256": "17f10be6826f659dc986e589f0fe1092d83f3133e496be8423474bd72837c5bc"
+    },
+    {
+      "stage": "09_genus45_53",
+      "archive": "Quintic_GV_Bootstrap_45_53_and_PT_DT_Periodicity.zip",
+      "sha256": "6136613b38a11db94e389a822b9b2f5b931fd8a5ebebb68b5867c4408eb7a85d"
+    },
+    {
+      "stage": "10_dtpt_v04",
+      "archive": "Quintic_DT_PT_Empirical_v04.zip",
+      "sha256": "197aaa7c247ac0a4818e9c3a65bc9413e5531105c4fda8308fc666fe070ef66b"
+    },
+    {
+      "stage": "11_pt_boundary_v05",
+      "archive": "Quintic_Empirical_PT_DT_Boundary_v05.zip",
+      "sha256": "fc1e02fbb8bd8dd1dbc52cd36d9f7f9ccd29d057a14686321a9b062398ae06e5"
+    },
+    {
+      "stage": "12_defects_v06",
+      "archive": "Quintic_PT_Defect_Empirical_v06.zip",
+      "sha256": "1b3c9df00e09018e366fc9cb45468a3cd723e5697004ad888aa75286e58c7ba5"
+    },
+    {
+      "stage": "13_recursive_v07",
+      "archive": "Quintic_PT_Recursive_Defects_v07.zip",
+      "sha256": "543ee05e77f65e039dd4bb1056f55cac827acabe889fcdad44b466b2bc4c1616"
+    },
+    {
+      "stage": "14_survival_v08",
+      "archive": "Quintic_PT_Recursive_Survival_v08.zip",
+      "sha256": "e5df49258b18e4a0e2a11ab4d7dc7cb6dc357c5f9eecd1fbe3537e8d6da9c71b"
+    },
+    {
+      "stage": "15_deep_v09",
+      "archive": "Quintic_PT_Deep_Shell_v09.zip",
+      "sha256": "351c104602d8ef6834e16b5406da25c717b614917aff5ff0b31ad8e2bfbc19cb"
+    },
+    {
+      "stage": "16_pulses_v10",
+      "archive": "Quintic_PT_Pulse_Recurrence_v10.zip",
+      "sha256": "2708db43baaf3ee9c1ba73c3b7354cb350baa01075b741a0d343f46d8c0b9989"
+    },
+    {
+      "stage": "17_depth11_15_v11",
+      "archive": "Quintic_PT_Depth11_15_v11.zip",
+      "sha256": "0509c6d0e5ce425fa9d89bc3a85594554ccce17bf0691a18c14d631e7e802a67"
+    },
+    {
+      "stage": "18_nested_v12",
+      "archive": "Quintic_PT_Nested_Residuals_v12.zip",
+      "sha256": "66481b2753f6f7fa6fbbadf09ba2cbcf36bbcd89a07a599ea969cf23a1e0e6d1"
+    }
+  ]
+}

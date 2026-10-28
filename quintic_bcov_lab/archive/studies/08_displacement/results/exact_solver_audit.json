@@ -1,0 +1,145 @@
+{
+  "calibration": [
+    {
+      "g": 4,
+      "D": 1,
+      "physical_charge": [
+        0
+      ],
+      "exact_minimum_match": true,
+      "unit_shift_directions_verified": 1,
+      "boundary_particular_independent": true,
+      "first_bernstein_coefficient": "-101510017565/217728"
+    },
+    {
+      "g": 5,
+      "D": 1,
+      "physical_charge": [
+        0
+      ],
+      "exact_minimum_match": true,
+      "unit_shift_directions_verified": 1,
+      "boundary_particular_independent": true,
+      "first_bernstein_coefficient": "-141565106067325/4257792"
+    },
+    {
+      "g": 6,
+      "D": 2,
+      "physical_charge": [
+        0,
+        0
+      ],
+      "exact_minimum_match": true,
+      "unit_shift_directions_verified": 2,
+      "boundary_particular_independent": true,
+      "first_bernstein_coefficient": "14940798132687405215/2615348736"
+    },
+    {
+      "g": 7,
+      "D": 2,
+      "physical_charge": [
+        0,
+        0
+      ],
+      "exact_minimum_match": true,
+      "unit_shift_directions_verified": 2,
+      "boundary_particular_independent": true,
+      "first_bernstein_coefficient": "6105588334655276375/9237888"
+    },
+    {
+      "g": 8,
+      "D": 2,
+      "physical_charge": [
+        0,
+        0
+      ],
+      "exact_minimum_match": true,
+      "unit_shift_directions_verified": 2,
+      "boundary_particular_independent": true,
+      "first_bernstein_coefficient": "5871368318520400506002205575/76828484468736"
+    },
+    {
+      "g": 9,
+      "D": 3,
+      "physical_charge": [
+        0,
+        0,
+        0
+      ],
+      "exact_minimum_match": true,
+      "unit_shift_directions_verified": 3,
+      "boundary_particular_independent": true,
+      "first_bernstein_coefficient": "-49991913588216794106935319208874125/2942838269090463744"
+    },
+    {
+      "g": 10,
+      "D": 3,
+      "physical_charge": [
+        0,
+        0,
+        0
+      ],
+      "exact_minimum_match": true,
+      "unit_shift_directions_verified": 3,
+      "boundary_particular_independent": true,
+      "first_bernstein_coefficient": "-10217130023102330970685275432395068025/4046402619999387648"
+    },
+    {
+      "g": 11,
+      "D": 4,
+      "physical_charge": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "exact_minimum_match": true,
+      "unit_shift_directions_verified": 4,
+      "boundary_particular_independent": false,
+      "first_bernstein_coefficient": "731910331197406372604122466285771151959725/1256408013509809864704"
+    },
+    {
+      "g": 12,
+      "D": 4,
+      "physical_charge": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "exact_minimum_match": true,
+      "unit_shift_directions_verified": 4,
+      "boundary_particular_independent": false,
+      "first_bernstein_coefficient": "12783578663400866788052258934686975551357245510125/131711764872260387736649728"
+    }
+  ],
+  "model_error_corrections": [
+    {
+      "g": 9,
+      "correction_in_GV": [
+        0,
+        1,
+        -3400
+      ],
+      "exact_shift_in_Xbasis": [
+        "0",
+        "2384185791015625",
+        "499725341796875"
+      ]
+    },
+    {
+      "g": 10,
+      "correction_in_GV": [
+        0,
+        1,
+        -3231
+      ],
+      "exact_shift_in_Xbasis": [
+        "0",
+        "-1490116119384765625",
+        "-346183776855468750"
+      ]
+    }
+  ],
+  "validation": "exact rational triangular inversion, historical g4..12 archive"
+}

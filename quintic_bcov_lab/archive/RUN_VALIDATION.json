@@ -1,0 +1,145 @@
+{
+  "release": "1.3.0",
+  "stages": 18,
+  "archived_stage_tests_passed": 18,
+  "archived_stage_tests_failed": 0,
+  "release_regressions_pytest": "8 passed",
+  "stage_test_actions": [
+    {
+      "stage": "01_v01_low_x",
+      "status": "passed",
+      "elapsed_s": 4.726,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python -m hybrid.tests"
+    },
+    {
+      "stage": "02_high_x_rope",
+      "status": "passed",
+      "elapsed_s": 0.778,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python verify_phases_and_digits.py"
+    },
+    {
+      "stage": "03_two_stream",
+      "status": "passed",
+      "elapsed_s": 0.887,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python exact_response_audit.py"
+    },
+    {
+      "stage": "04_midpoint",
+      "status": "passed",
+      "elapsed_s": 22.62,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python midpoint_test.py"
+    },
+    {
+      "stage": "05_intermediate_dataset",
+      "status": "passed",
+      "elapsed_s": 0.683,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests_intermediate.py"
+    },
+    {
+      "stage": "06_intermediate_ml",
+      "status": "passed",
+      "elapsed_s": 1.51,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    },
+    {
+      "stage": "07_lattice_walk",
+      "status": "passed",
+      "elapsed_s": 0.621,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    },
+    {
+      "stage": "08_displacement",
+      "status": "passed",
+      "elapsed_s": 1.15,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    },
+    {
+      "stage": "09_genus45_53",
+      "status": "passed",
+      "elapsed_s": 0.807,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python code/tests.py"
+    },
+    {
+      "stage": "10_dtpt_v04",
+      "status": "passed",
+      "elapsed_s": 1.147,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    },
+    {
+      "stage": "11_pt_boundary_v05",
+      "status": "passed",
+      "elapsed_s": 1.45,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    },
+    {
+      "stage": "12_defects_v06",
+      "status": "passed",
+      "elapsed_s": 3.146,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    },
+    {
+      "stage": "13_recursive_v07",
+      "status": "passed",
+      "elapsed_s": 1.366,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    },
+    {
+      "stage": "14_survival_v08",
+      "status": "passed",
+      "elapsed_s": 1.591,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    },
+    {
+      "stage": "15_deep_v09",
+      "status": "passed",
+      "elapsed_s": 6.05,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    },
+    {
+      "stage": "16_pulses_v10",
+      "status": "passed",
+      "elapsed_s": 1.381,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    },
+    {
+      "stage": "17_depth11_15_v11",
+      "status": "passed",
+      "elapsed_s": 3.793,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    },
+    {
+      "stage": "18_nested_v12",
+      "status": "passed",
+      "elapsed_s": 2.757,
+      "returncode": 0,
+      "command": "/opt/pyvenv/bin/python tests.py"
+    }
+  ],
+  "source_audit": {
+    "matching": 480,
+    "changed_after_reproduction": 0,
+    "missing": 0,
+    "shared": 10,
+    "optional": 2
+  },
+  "reference_archive": "Shared corrected YY amplitudes g=2..12",
+  "optional_large_exact_data": "separate archive, >20MB; full v0.1 exact genus1000",
+  "constraints": "Archived numerical claims remain conditional on source data and stated assumptions"
+}

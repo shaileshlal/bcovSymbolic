@@ -1,0 +1,100 @@
+{
+  "frontier_results": [
+    {
+      "g": 51,
+      "d": 20,
+      "status": "extremal_from_theorem",
+      "delta_n": 175,
+      "sign_phase": 0,
+      "first_response": {
+        "g": 51,
+        "d": 20,
+        "D": 20,
+        "delta_n": 175,
+        "taylor_degree": 20,
+        "coefficient_factor": "175*5^100",
+        "coefficient_exact": "1380506584136770659470524989244875901928111261440790258347988128662109375",
+        "complete_displacement": true,
+        "statement": "delta_f_g(x) = coefficient*x^d"
+      }
+    },
+    {
+      "g": 52,
+      "d": 20,
+      "status": "certified_zero",
+      "delta_n": 0
+    },
+    {
+      "g": 53,
+      "d": 20,
+      "status": "certified_zero",
+      "delta_n": 0
+    },
+    {
+      "g": 54,
+      "d": 21,
+      "status": "ABSTAIN_unresolved",
+      "delta_n": null,
+      "untrusted_naive_zero_baseline": 0
+    },
+    {
+      "g": 55,
+      "d": 21,
+      "status": "ABSTAIN_unresolved",
+      "delta_n": null,
+      "untrusted_naive_zero_baseline": 0
+    },
+    {
+      "g": 56,
+      "d": 22,
+      "status": "ABSTAIN_unresolved",
+      "delta_n": null,
+      "untrusted_naive_zero_baseline": 0
+    },
+    {
+      "g": 76,
+      "d": 25,
+      "status": "extremal_from_theorem",
+      "delta_n": 275,
+      "sign_phase": 1,
+      "first_response": {
+        "g": 76,
+        "d": 25,
+        "D": 30,
+        "delta_n": 275,
+        "taylor_degree": 25,
+        "coefficient_factor": "275*5^175",
+        "coefficient_exact": "57422679318387015835050588161457618490170245471006905620276000808133564552457878799561485916314040878205560147762298583984375",
+        "complete_displacement": false,
+        "statement": "[x^d] delta_f_g(x) = coefficient; higher powers unknown"
+      }
+    },
+    {
+      "g": 76,
+      "d": 26,
+      "status": "ABSTAIN_unresolved",
+      "delta_n": null,
+      "untrusted_naive_zero_baseline": 0
+    }
+  ],
+  "g51": {
+    "g": 51,
+    "d": 20,
+    "D": 20,
+    "delta_n": 175,
+    "taylor_degree": 20,
+    "coefficient_factor": "175*5^100",
+    "coefficient_exact": "1380506584136770659470524989244875901928111261440790258347988128662109375",
+    "complete_displacement": true,
+    "statement": "delta_f_g(x) = coefficient*x^d"
+  },
+  "g54_unknown_template": {
+    "g": 54,
+    "d": 21,
+    "D": 21,
+    "delta_f_54": "n_(54,21) * 5^107 * x^21",
+    "falsifiable_naive_minheight_baseline": 0,
+    "prediction_status": "ABSTAIN_NO_EMPIRICAL_LABELS"
+  },
+  "general_rule": "If n(g,j)=0 for j<d, the first nonzero reduced-section coefficient is [x^d]delta_f = 5^(4g-4-5d)*n(g,d), exact."
+}

@@ -1,0 +1,17 @@
+{
+  "max_g": 1000,
+  "total": 199400,
+  "certified_zero": 63544,
+  "extremal_nonzero": 16,
+  "unresolved": 135840,
+  "extremal_train": 8,
+  "extremal_test": 8,
+  "certified_labels": 63560,
+  "reference_calibration": 22,
+  "period4_signs": [
+    1,
+    1,
+    -1,
+    -1
+  ]
+}

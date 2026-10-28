@@ -1,0 +1,74 @@
+{
+  "model": "Newton quadratic on absolute integer + period-four phase",
+  "training": "k=1,2,3 independently for residues d mod 5 =1,2,3,4",
+  "holdout": "k=4,5 independently, genera above 53",
+  "fitted_parameters": {
+    "1": {
+      "phase_cos": 1,
+      "phase_sin": -1,
+      "newton_m0": 34500,
+      "newton_d1": 51750,
+      "newton_d2": 43125
+    },
+    "2": {
+      "phase_cos": 1,
+      "phase_sin": 1,
+      "newton_m0": 4874000,
+      "newton_d1": 8529500,
+      "newton_d2": 6092500
+    },
+    "3": {
+      "phase_cos": 1,
+      "phase_sin": -1,
+      "newton_m0": 6092500,
+      "newton_d1": 9748000,
+      "newton_d2": 6092500
+    },
+    "4": {
+      "phase_cos": 1,
+      "phase_sin": 1,
+      "newton_m0": 60375,
+      "newton_d1": 77625,
+      "newton_d2": 43125
+    }
+  },
+  "scores": {
+    "fourier_newton": {
+      "exact_matches": 8,
+      "total": 8,
+      "integer_mae": 0,
+      "max_abs_error": 0
+    },
+    "zero": {
+      "exact_matches": 0,
+      "total": 8,
+      "integer_mae": 32676515,
+      "max_abs_error": 81639500
+    },
+    "signed_quadratic": {
+      "exact_matches": 0,
+      "total": 8,
+      "integer_mae": 84606937,
+      "max_abs_error": 380172000
+    },
+    "nearest": {
+      "exact_matches": 0,
+      "total": 8,
+      "integer_mae": 39747578,
+      "max_abs_error": 113320500
+    }
+  },
+  "degree21_genus54_prediction": 319125,
+  "genus54_step_factor_exponent5": 107,
+  "unit_step_rational_coefficient": "319125*5**107",
+  "PT_neighborhood_checks": {
+    "Q20_PT_m_minus49": 27200,
+    "Q21_PT_m_minus52": 40986000
+  },
+  "limitations": [
+    "Period-four phase is a motivated feature family; not a proof of all-genus continuation.",
+    "All held-out values are conditional on published modularity reconstruction.",
+    "Rank-one PT is determined by GV, not an independent prediction.",
+    "No full BCOV genus54 ambiguity has been independently recomputed."
+  ]
+}

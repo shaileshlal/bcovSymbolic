@@ -1,0 +1,386 @@
+{
+  "training_max_degree": 40,
+  "reference_in_training": false,
+  "period": 4,
+  "profile_equation": "A=B+(-1)^t*(P+Q/W)",
+  "front": "K=t-1 (s=0), K=t+3-s (s>0)",
+  "B": [
+    {
+      "class": 0,
+      "shell": 0,
+      "rational": "5/2",
+      "source": "observed_mature"
+    },
+    {
+      "class": 0,
+      "shell": 1,
+      "rational": "400",
+      "source": "observed_mature"
+    },
+    {
+      "class": 0,
+      "shell": 2,
+      "rational": "29250",
+      "source": "observed_mature"
+    },
+    {
+      "class": 0,
+      "shell": 3,
+      "rational": "-5817125/2",
+      "source": "observed_mature"
+    },
+    {
+      "class": 0,
+      "shell": 4,
+      "rational": "37737030050",
+      "source": "observed_mature"
+    },
+    {
+      "class": 0,
+      "shell": 5,
+      "rational": "-28096675153255/2",
+      "source": "observed_mature"
+    },
+    {
+      "class": 0,
+      "shell": 6,
+      "rational": "3756542229485475/2",
+      "source": "observed_mature"
+    },
+    {
+      "class": 0,
+      "shell": 7,
+      "rational": "-277591744202815875/2",
+      "source": "observed_mature"
+    },
+    {
+      "class": 0,
+      "shell": 8,
+      "rational": "6805492507354944375",
+      "source": "observed_mature"
+    },
+    {
+      "class": 0,
+      "shell": 9,
+      "rational": "-490353109065219393125/2",
+      "source": "observed_mature"
+    },
+    {
+      "class": 0,
+      "shell": 10,
+      "rational": "13849043820700300032135/2",
+      "source": "inferred_from_(0, 10, 8)"
+    },
+    {
+      "class": 1,
+      "shell": 0,
+      "rational": "8625/2",
+      "source": "observed_mature"
+    },
+    {
+      "class": 1,
+      "shell": 1,
+      "rational": "569250",
+      "source": "observed_mature"
+    },
+    {
+      "class": 1,
+      "shell": 2,
+      "rational": "1888737000",
+      "source": "observed_mature"
+    },
+    {
+      "class": 1,
+      "shell": 3,
+      "rational": "-3102750380125/2",
+      "source": "observed_mature"
+    },
+    {
+      "class": 1,
+      "shell": 4,
+      "rational": "288863607561500",
+      "source": "observed_mature"
+    },
+    {
+      "class": 1,
+      "shell": 6,
+      "rational": "2990604504777589125/2",
+      "source": "observed_mature"
+    },
+    {
+      "class": 1,
+      "shell": 7,
+      "rational": "-120746115900491315125/2",
+      "source": "observed_mature"
+    },
+    {
+      "class": 1,
+      "shell": 8,
+      "rational": "1867777794427065287875",
+      "source": "observed_mature"
+    },
+    {
+      "class": 1,
+      "shell": 9,
+      "rational": "-93223898283337092833125/2",
+      "source": "inferred_from_(4, 9, 7)"
+    },
+    {
+      "class": 1,
+      "shell": 10,
+      "rational": "1946542598372675739531625/2",
+      "source": "inferred_from_(4, 10, 7)"
+    },
+    {
+      "class": 2,
+      "shell": 0,
+      "rational": "609250",
+      "source": "observed_mature"
+    },
+    {
+      "class": 2,
+      "shell": 1,
+      "rational": "220984625",
+      "source": "observed_mature"
+    },
+    {
+      "class": 2,
+      "shell": 2,
+      "rational": "-476856255625",
+      "source": "observed_mature"
+    },
+    {
+      "class": 2,
+      "shell": 3,
+      "rational": "108785625011875",
+      "source": "observed_mature"
+    },
+    {
+      "class": 2,
+      "shell": 6,
+      "rational": "-29494318545969505625",
+      "source": "observed_mature"
+    },
+    {
+      "class": 2,
+      "shell": 7,
+      "rational": "1915688802209096108125/2",
+      "source": "observed_mature"
+    },
+    {
+      "class": 2,
+      "shell": 8,
+      "rational": "-24871149507996236152375",
+      "source": "inferred_from_(3, 8, 7)"
+    },
+    {
+      "class": 2,
+      "shell": 9,
+      "rational": "1073740788585832173083375/2",
+      "source": "inferred_from_(3, 9, 7)"
+    }
+  ],
+  "profiles": [
+    {
+      "residue": 0,
+      "front_distance": 1,
+      "P": "24796875/2",
+      "Q": "0",
+      "min_t": 7,
+      "support": 3,
+      "total": 6,
+      "origin": "constant_r1"
+    },
+    {
+      "residue": 0,
+      "front_distance": 2,
+      "P": "-1611796875",
+      "Q": "49593750",
+      "min_t": 9,
+      "support": 2,
+      "total": 4,
+      "origin": "r2_anti_pair_verified"
+    },
+    {
+      "residue": 1,
+      "front_distance": 1,
+      "P": "14375/2",
+      "Q": "0",
+      "min_t": 1,
+      "support": 5,
+      "total": 6,
+      "origin": "constant_r1"
+    },
+    {
+      "residue": 1,
+      "front_distance": 2,
+      "P": "-1135625",
+      "Q": "28750",
+      "min_t": 2,
+      "support": 5,
+      "total": 7,
+      "origin": "affine_consensus"
+    },
+    {
+      "residue": 1,
+      "front_distance": 3,
+      "P": "163630625/2",
+      "Q": "-4513750",
+      "min_t": 3,
+      "support": 5,
+      "total": 6,
+      "origin": "affine_consensus"
+    },
+    {
+      "residue": 1,
+      "front_distance": 4,
+      "P": "17053766875/2",
+      "Q": "322747500",
+      "min_t": 8,
+      "support": 2,
+      "total": 4,
+      "origin": "r4_two_point_extrapolation"
+    },
+    {
+      "residue": 2,
+      "front_distance": 1,
+      "P": "-24796875/2",
+      "Q": "0",
+      "min_t": 3,
+      "support": 3,
+      "total": 6,
+      "origin": "constant_r1"
+    },
+    {
+      "residue": 2,
+      "front_distance": 2,
+      "P": "1611796875",
+      "Q": "-49593750",
+      "min_t": 7,
+      "support": 2,
+      "total": 4,
+      "origin": "r2_anti_pair_verified"
+    },
+    {
+      "residue": 3,
+      "front_distance": 1,
+      "P": "1751593750",
+      "Q": "0",
+      "min_t": 6,
+      "support": 2,
+      "total": 5,
+      "origin": "constant_r1"
+    },
+    {
+      "residue": 3,
+      "front_distance": 2,
+      "P": "-631827609375",
+      "Q": "7006375000",
+      "min_t": 8,
+      "support": 1,
+      "total": 1,
+      "origin": "antisym_pair_3_4_two_joint_points"
+    },
+    {
+      "residue": 4,
+      "front_distance": 1,
+      "P": "-1751593750",
+      "Q": "0",
+      "min_t": 7,
+      "support": 2,
+      "total": 5,
+      "origin": "constant_r1"
+    },
+    {
+      "residue": 4,
+      "front_distance": 2,
+      "P": "631827609375",
+      "Q": "-7006375000",
+      "min_t": 9,
+      "support": 1,
+      "total": 1,
+      "origin": "antisym_pair_3_4_two_joint_points"
+    }
+  ],
+  "audit": [
+    {
+      "type": "inferred_B",
+      "group": [
+        0,
+        10
+      ],
+      "source": [
+        0,
+        10,
+        8
+      ]
+    },
+    {
+      "type": "inferred_B",
+      "group": [
+        1,
+        9
+      ],
+      "source": [
+        4,
+        9,
+        7
+      ]
+    },
+    {
+      "type": "inferred_B",
+      "group": [
+        2,
+        8
+      ],
+      "source": [
+        3,
+        8,
+        7
+      ]
+    },
+    {
+      "type": "r2_anti_pair_verified",
+      "pair": "0-2",
+      "two_independent_fits_agree": true
+    },
+    {
+      "type": "r2_anti_pair_extrapolation",
+      "pair": "3-4",
+      "total_calibration_points": 2
+    },
+    {
+      "type": "inferred_B",
+      "group": [
+        1,
+        10
+      ],
+      "source": [
+        4,
+        10,
+        7
+      ]
+    },
+    {
+      "type": "inferred_B",
+      "group": [
+        2,
+        9
+      ],
+      "source": [
+        3,
+        9,
+        7
+      ]
+    },
+    {
+      "type": "two_point_extrapolation",
+      "s": 1,
+      "r": 4,
+      "calibration_t": [
+        8,
+        9
+      ]
+    }
+  ]
+}

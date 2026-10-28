@@ -1,0 +1,22 @@
+{
+  "conditional_reference_only": true,
+  "uses_exact_B_oracle": true,
+  "training_depth_max": 15,
+  "test_depths": [
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "sites": 123,
+  "exact": 123,
+  "errors": [],
+  "by_depth": {
+    "16": 23,
+    "17": 25,
+    "18": 25,
+    "19": 25,
+    "20": 25
+  }
+}

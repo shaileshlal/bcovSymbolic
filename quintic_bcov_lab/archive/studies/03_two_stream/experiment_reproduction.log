@@ -1,0 +1,21 @@
+exact GV/MUM check 4 good
+exact GV/MUM check 5 good
+exact GV/MUM check 6 good
+exact GV/MUM check 7 good
+exact GV/MUM check 8 good
+exact GV/MUM check 9 good
+exact GV/MUM check 10 good
+exact GV/MUM check 11 good
+exact GV/MUM check 12 good
+
+STRICT HELDOUT: [10, 11, 12]
+base2            median=0.017296804 p90=0.91674786 val=0.042644763 alpha=1.0
+base3            median=0.0033354559 p90=0.82572934 val=0.0063674902 alpha=1.0
+yy               median=0.0012469371 p90=0.55951978 val=0.0025776169 alpha=10.0
+gv               median=0.0032940203 p90=0.8178817 val=0.0065836678 alpha=100.0
+yy+gv            median=0.0028247112 p90=0.12319979 val=0.0029529015 alpha=0.001
+yy+phase         median=0.0012469371 p90=0.55951978 val=0.0025776169 alpha=10.0
+gv+phase         median=0.0032940203 p90=0.8178817 val=0.0065836678 alpha=100.0
+yy+gv+phase      median=0.0028247112 p90=0.12319979 val=0.0029529015 alpha=0.001
+GV/Fourier character identity max error 1.4210854715202004e-14
+wrote /mnt/data/Quintic_Two_Stream_GV_YY_Experiment/results.json

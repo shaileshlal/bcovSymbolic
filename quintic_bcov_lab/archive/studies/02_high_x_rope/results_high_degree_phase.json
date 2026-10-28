@@ -1,0 +1,150 @@
+{
+  "schema": "quintic-high-X-phase-v1",
+  "reference_genera": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "train_genera": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "heldout_genera": [
+    10,
+    11,
+    12
+  ],
+  "tail_coefficients_k": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "normalization": "b[g,k]=a[g,3g-3-k]/a[g,3g-3]; c[g,k]=[y^k] log sum b[g,k]y^k",
+  "predicted_target": "b[g,k] given exact a[g,top] for shape only",
+  "models": [
+    {
+      "model": "linear (index-aligned)",
+      "median_relative_error": 0.4094479477844538,
+      "mean_relative_error": 0.5988518473709229,
+      "p90_relative_error": 1.2599218398364675,
+      "max_relative_error": 1.8623330939543115,
+      "sign_accuracy": 1.0
+    },
+    {
+      "model": "inverse-g^2 (index-aligned)",
+      "median_relative_error": 0.0016920049397335637,
+      "mean_relative_error": 0.008048914997276462,
+      "p90_relative_error": 0.031169445686505877,
+      "max_relative_error": 0.03470531292981052,
+      "sign_accuracy": 1.0
+    },
+    {
+      "model": "inverse-g^3 (index-aligned)",
+      "median_relative_error": 0.00022878938123129688,
+      "mean_relative_error": 0.0014543794952333712,
+      "p90_relative_error": 0.005140458759591578,
+      "max_relative_error": 0.007375447669832655,
+      "sign_accuracy": 1.0
+    },
+    {
+      "model": "polynomial index / inverse-g^2",
+      "median_relative_error": 0.15687171359850846,
+      "mean_relative_error": 0.22869971943198897,
+      "p90_relative_error": 0.5138854120170097,
+      "max_relative_error": 0.7429976820924475,
+      "sign_accuracy": 1.0
+    },
+    {
+      "model": "RoPE-like phases / inverse-g^2",
+      "median_relative_error": 0.03973339639600845,
+      "mean_relative_error": 0.08547339107207741,
+      "p90_relative_error": 0.21161907166302188,
+      "max_relative_error": 0.40981159277102364,
+      "sign_accuracy": 1.0
+    },
+    {
+      "model": "GV-character phases / inverse-g^2",
+      "median_relative_error": 0.16417954613059896,
+      "mean_relative_error": 0.27962861546806694,
+      "p90_relative_error": 0.6443827697096535,
+      "max_relative_error": 1.1250066341533493,
+      "sign_accuracy": 0.9444444444444444
+    },
+    {
+      "model": "RoPE full rank / inverse-g^3",
+      "median_relative_error": 0.0002287893811887137,
+      "mean_relative_error": 0.0014543794953468785,
+      "p90_relative_error": 0.005140458759705422,
+      "max_relative_error": 0.0073754476705497,
+      "sign_accuracy": 1.0
+    },
+    {
+      "model": "GV character full rank / inverse-g^3",
+      "median_relative_error": 0.0002287893811083894,
+      "mean_relative_error": 0.0014543794959751442,
+      "p90_relative_error": 0.0051404587610505694,
+      "max_relative_error": 0.0073754476730443835,
+      "sign_accuracy": 1.0
+    },
+    {
+      "model": "RoPE-like phases / inverse-g^3",
+      "median_relative_error": 0.028333236975284115,
+      "mean_relative_error": 0.07634525718316804,
+      "p90_relative_error": 0.19476113204787376,
+      "max_relative_error": 0.40395937550327937,
+      "sign_accuracy": 1.0
+    },
+    {
+      "model": "GV-character phases / inverse-g^3",
+      "median_relative_error": 0.18980114346217453,
+      "mean_relative_error": 0.29401686001558724,
+      "p90_relative_error": 0.6715385377327484,
+      "max_relative_error": 1.1307264275920614,
+      "sign_accuracy": 0.9444444444444444
+    }
+  ],
+  "full_absolute_forecast": {
+    "a0_oracle": true,
+    "a_top_predicted": true,
+    "median_relative_error": 0.0008112614745284079,
+    "p90_relative_error": 0.004045324002009309,
+    "by_genus": {
+      "10": {
+        "median_relative_error": 0.00045950076429478436,
+        "max_relative_error": 0.004045324002009309,
+        "top_scale_relative_error": 0.00045505595299899504
+      },
+      "11": {
+        "median_relative_error": 0.0008112614745284079,
+        "max_relative_error": 0.005879325802404948,
+        "top_scale_relative_error": 0.0007645018235611367
+      },
+      "12": {
+        "median_relative_error": 0.0012116724647414216,
+        "max_relative_error": 0.006307191549125225,
+        "top_scale_relative_error": 0.001076193529768732
+      }
+    }
+  },
+  "gv_fourier_identity_max_errors": {
+    "1": 8.881784197001252e-16,
+    "2": 3.5596458096434965e-15,
+    "3": 1.4358514849620235e-14,
+    "4": 5.687116766346677e-14,
+    "5": 1.1564756855666564e-13
+  },
+  "note": "GV-character dictionary on X-position is heuristic; no identification of curve degree with X exponent. Small g sample, phase results not proof of optimality."
+}

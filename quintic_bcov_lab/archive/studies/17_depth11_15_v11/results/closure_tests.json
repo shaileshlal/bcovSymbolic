@@ -1,0 +1,323 @@
+{
+  "0": {
+    "hankel_ranks": {
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8
+    },
+    "recurrence_tests": [
+      {
+        "order": 1,
+        "degree": 0,
+        "equations": 15,
+        "null_dim": 0,
+        "rank": 2
+      },
+      {
+        "order": 2,
+        "degree": 0,
+        "equations": 14,
+        "null_dim": 0,
+        "rank": 3
+      },
+      {
+        "order": 3,
+        "degree": 0,
+        "equations": 13,
+        "null_dim": 0,
+        "rank": 4
+      },
+      {
+        "order": 4,
+        "degree": 0,
+        "equations": 12,
+        "null_dim": 0,
+        "rank": 5
+      },
+      {
+        "order": 5,
+        "degree": 0,
+        "equations": 11,
+        "null_dim": 0,
+        "rank": 6
+      },
+      {
+        "order": 6,
+        "degree": 0,
+        "equations": 10,
+        "null_dim": 0,
+        "rank": 7
+      },
+      {
+        "order": 7,
+        "degree": 0,
+        "equations": 9,
+        "null_dim": 0,
+        "rank": 8
+      },
+      {
+        "order": 1,
+        "degree": 1,
+        "equations": 15,
+        "null_dim": 0,
+        "rank": 4
+      },
+      {
+        "order": 2,
+        "degree": 1,
+        "equations": 14,
+        "null_dim": 0,
+        "rank": 6
+      },
+      {
+        "order": 3,
+        "degree": 1,
+        "equations": 13,
+        "null_dim": 0,
+        "rank": 8
+      },
+      {
+        "order": 1,
+        "degree": 2,
+        "equations": 15,
+        "null_dim": 0,
+        "rank": 6
+      },
+      {
+        "order": 2,
+        "degree": 2,
+        "equations": 14,
+        "null_dim": 0,
+        "rank": 9
+      },
+      {
+        "order": 3,
+        "degree": 2,
+        "equations": 13,
+        "null_dim": 0,
+        "rank": 12
+      }
+    ],
+    "digits_t15": 29,
+    "B_0": "5/2",
+    "B_15": "-10828362669146202554438495945"
+  },
+  "1": {
+    "hankel_ranks": {
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8
+    },
+    "recurrence_tests": [
+      {
+        "order": 1,
+        "degree": 0,
+        "equations": 15,
+        "null_dim": 0,
+        "rank": 2
+      },
+      {
+        "order": 2,
+        "degree": 0,
+        "equations": 14,
+        "null_dim": 0,
+        "rank": 3
+      },
+      {
+        "order": 3,
+        "degree": 0,
+        "equations": 13,
+        "null_dim": 0,
+        "rank": 4
+      },
+      {
+        "order": 4,
+        "degree": 0,
+        "equations": 12,
+        "null_dim": 0,
+        "rank": 5
+      },
+      {
+        "order": 5,
+        "degree": 0,
+        "equations": 11,
+        "null_dim": 0,
+        "rank": 6
+      },
+      {
+        "order": 6,
+        "degree": 0,
+        "equations": 10,
+        "null_dim": 0,
+        "rank": 7
+      },
+      {
+        "order": 7,
+        "degree": 0,
+        "equations": 9,
+        "null_dim": 0,
+        "rank": 8
+      },
+      {
+        "order": 1,
+        "degree": 1,
+        "equations": 15,
+        "null_dim": 0,
+        "rank": 4
+      },
+      {
+        "order": 2,
+        "degree": 1,
+        "equations": 14,
+        "null_dim": 0,
+        "rank": 6
+      },
+      {
+        "order": 3,
+        "degree": 1,
+        "equations": 13,
+        "null_dim": 0,
+        "rank": 8
+      },
+      {
+        "order": 1,
+        "degree": 2,
+        "equations": 15,
+        "null_dim": 0,
+        "rank": 6
+      },
+      {
+        "order": 2,
+        "degree": 2,
+        "equations": 14,
+        "null_dim": 0,
+        "rank": 9
+      },
+      {
+        "order": 3,
+        "degree": 2,
+        "equations": 13,
+        "null_dim": 0,
+        "rank": 12
+      }
+    ],
+    "digits_t15": 30,
+    "B_0": "8625/2",
+    "B_15": "-572152356817406876487758344625"
+  },
+  "2": {
+    "hankel_ranks": {
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8
+    },
+    "recurrence_tests": [
+      {
+        "order": 1,
+        "degree": 0,
+        "equations": 15,
+        "null_dim": 0,
+        "rank": 2
+      },
+      {
+        "order": 2,
+        "degree": 0,
+        "equations": 14,
+        "null_dim": 0,
+        "rank": 3
+      },
+      {
+        "order": 3,
+        "degree": 0,
+        "equations": 13,
+        "null_dim": 0,
+        "rank": 4
+      },
+      {
+        "order": 4,
+        "degree": 0,
+        "equations": 12,
+        "null_dim": 0,
+        "rank": 5
+      },
+      {
+        "order": 5,
+        "degree": 0,
+        "equations": 11,
+        "null_dim": 0,
+        "rank": 6
+      },
+      {
+        "order": 6,
+        "degree": 0,
+        "equations": 10,
+        "null_dim": 0,
+        "rank": 7
+      },
+      {
+        "order": 7,
+        "degree": 0,
+        "equations": 9,
+        "null_dim": 0,
+        "rank": 8
+      },
+      {
+        "order": 1,
+        "degree": 1,
+        "equations": 15,
+        "null_dim": 0,
+        "rank": 4
+      },
+      {
+        "order": 2,
+        "degree": 1,
+        "equations": 14,
+        "null_dim": 0,
+        "rank": 6
+      },
+      {
+        "order": 3,
+        "degree": 1,
+        "equations": 13,
+        "null_dim": 0,
+        "rank": 8
+      },
+      {
+        "order": 1,
+        "degree": 2,
+        "equations": 15,
+        "null_dim": 0,
+        "rank": 6
+      },
+      {
+        "order": 2,
+        "degree": 2,
+        "equations": 14,
+        "null_dim": 0,
+        "rank": 9
+      },
+      {
+        "order": 3,
+        "degree": 2,
+        "equations": 13,
+        "null_dim": 0,
+        "rank": 12
+      }
+    ],
+    "digits_t15": 31,
+    "B_0": "609250",
+    "B_15": "7679928180758078673142937071875/2"
+  }
+}

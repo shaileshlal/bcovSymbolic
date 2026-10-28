@@ -1,0 +1,12 @@
+{
+  "id": "06_intermediate_ml",
+  "title": "Intermediate-only magnitude/shape/sign baselines",
+  "version": "intermediate ML",
+  "run": [
+    "run_experiment.py"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_Intermediate_Only_ML_Experiment.zip"
+}

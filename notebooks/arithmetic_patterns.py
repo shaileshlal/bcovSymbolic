@@ -20,8 +20,8 @@ def _(mo):
 
     Explore exact pure-$X$ coefficients from the supplied genus 2–15 free energies.
     The constant and linear Bernoulli recurrences are source-verified identities;
-    they do not determine all holomorphic ambiguities. Higher-depth formulas from
-    the separate AI framework are not included until their source is available.
+    they do not determine all holomorphic ambiguities. The later empirical pulse and nested-residual studies are available in
+    `quintic_bcov_lab`; open `notebooks/research_overview.py` to explore them.
     """)
     genus = mo.ui.slider(2, 15, value=3, label="Genus", show_value=True)
     depth = mo.ui.slider(1, 15, value=4, label="Inclusive jet depth", show_value=True)

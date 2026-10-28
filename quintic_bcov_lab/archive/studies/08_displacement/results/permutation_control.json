@@ -1,0 +1,13 @@
+{
+  "conditioned_sign_pattern": {
+    "balanced_sign_sequences": 70,
+    "period4_repetitions": 6,
+    "fraction": 0.08571428571428572
+  },
+  "quadratic_pattern": {
+    "permutations_of_observed_magnitudes": 40320,
+    "exact_quadratic_sequences": 2,
+    "fraction": 4.96031746031746e-05
+  },
+  "interpretation": "Illustrative combinatorial null. Not a blind discovery significance assessment; labels come from an analytic theorem and hypothesis was prefigured."
+}

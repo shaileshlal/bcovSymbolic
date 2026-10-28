@@ -1,4 +1,7 @@
 include Quintic_BCOV_Tutorial.py run_all_checks.py
 recursive-include notebooks *.py
 recursive-include tests *.py
-recursive-include docs *.tex *.svg *.dot *.txt
+recursive-include docs *.tex *.svg *.dot *.txt *.md *.json
+recursive-include quintic_bcov_lab/archive *
+include quintic_bcov_lab/IMPORT_MANIFEST.json quintic_bcov_lab/py.typed
+global-exclude *.pyc

@@ -1,0 +1,30 @@
+{
+  "algorithm": "inverse-genus log-series multioutput least squares",
+  "degree": 2,
+  "training_window": [
+    40,
+    53
+  ],
+  "coefficients": [
+    [
+      -0.9229347529100972,
+      -0.44512910119810595,
+      -0.2904342454435722,
+      -0.21471526473081512
+    ],
+    [
+      -5.100288738684294,
+      -5.365340905570006,
+      -5.235725643497032,
+      -5.056752949001073
+    ],
+    [
+      76.26202704928302,
+      62.52710968007742,
+      52.36286556501529,
+      44.246861966580795
+    ]
+  ],
+  "output": "a[g,j]/a[g,0], approximate floating point, j=0..4",
+  "normalization": "a[g,0] is known independently from the Bernoulli constant map"
+}

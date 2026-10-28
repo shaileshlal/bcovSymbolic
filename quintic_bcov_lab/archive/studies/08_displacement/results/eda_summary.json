@@ -1,0 +1,366 @@
+{
+  "counts_by_max_genus": {
+    "12": {
+      "certified_zero": 22,
+      "extremal_nonzero": 0,
+      "unresolved": 0
+    },
+    "50": {
+      "certified_zero": 470,
+      "extremal_nonzero": 0,
+      "unresolved": 0
+    },
+    "53": {
+      "certified_zero": 529,
+      "extremal_nonzero": 1,
+      "unresolved": 0
+    },
+    "54": {
+      "certified_zero": 549,
+      "extremal_nonzero": 1,
+      "unresolved": 1
+    },
+    "60": {
+      "certified_zero": 674,
+      "extremal_nonzero": 1,
+      "unresolved": 9
+    },
+    "100": {
+      "certified_zero": 1683,
+      "extremal_nonzero": 2,
+      "unresolved": 255
+    },
+    "200": {
+      "certified_zero": 5238,
+      "extremal_nonzero": 5,
+      "unresolved": 2637
+    },
+    "500": {
+      "certified_zero": 21946,
+      "extremal_nonzero": 10,
+      "unresolved": 27744
+    },
+    "1000": {
+      "certified_zero": 63544,
+      "extremal_nonzero": 16,
+      "unresolved": 135840
+    }
+  },
+  "first_unresolved": {
+    "g": 54,
+    "D": 21,
+    "unknown_count": 1,
+    "min_unknown_d": 21,
+    "first_10_unknown_d": [
+      21
+    ],
+    "proven_extremal_degrees": []
+  },
+  "neighborhood_examples": [
+    {
+      "g": 50,
+      "D": 19,
+      "unknown_count": 0,
+      "min_unknown_d": null,
+      "first_10_unknown_d": [],
+      "proven_extremal_degrees": []
+    },
+    {
+      "g": 51,
+      "D": 20,
+      "unknown_count": 0,
+      "min_unknown_d": null,
+      "first_10_unknown_d": [],
+      "proven_extremal_degrees": [
+        20
+      ]
+    },
+    {
+      "g": 52,
+      "D": 20,
+      "unknown_count": 0,
+      "min_unknown_d": null,
+      "first_10_unknown_d": [],
+      "proven_extremal_degrees": []
+    },
+    {
+      "g": 53,
+      "D": 20,
+      "unknown_count": 0,
+      "min_unknown_d": null,
+      "first_10_unknown_d": [],
+      "proven_extremal_degrees": []
+    },
+    {
+      "g": 54,
+      "D": 21,
+      "unknown_count": 1,
+      "min_unknown_d": 21,
+      "first_10_unknown_d": [
+        21
+      ],
+      "proven_extremal_degrees": []
+    },
+    {
+      "g": 55,
+      "D": 21,
+      "unknown_count": 1,
+      "min_unknown_d": 21,
+      "first_10_unknown_d": [
+        21
+      ],
+      "proven_extremal_degrees": []
+    },
+    {
+      "g": 56,
+      "D": 22,
+      "unknown_count": 1,
+      "min_unknown_d": 22,
+      "first_10_unknown_d": [
+        22
+      ],
+      "proven_extremal_degrees": []
+    },
+    {
+      "g": 57,
+      "D": 22,
+      "unknown_count": 1,
+      "min_unknown_d": 22,
+      "first_10_unknown_d": [
+        22
+      ],
+      "proven_extremal_degrees": []
+    },
+    {
+      "g": 60,
+      "D": 23,
+      "unknown_count": 2,
+      "min_unknown_d": 22,
+      "first_10_unknown_d": [
+        22,
+        23
+      ],
+      "proven_extremal_degrees": []
+    },
+    {
+      "g": 75,
+      "D": 29,
+      "unknown_count": 5,
+      "min_unknown_d": 25,
+      "first_10_unknown_d": [
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "proven_extremal_degrees": []
+    },
+    {
+      "g": 76,
+      "D": 30,
+      "unknown_count": 5,
+      "min_unknown_d": 26,
+      "first_10_unknown_d": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "proven_extremal_degrees": [
+        25
+      ]
+    },
+    {
+      "g": 100,
+      "D": 39,
+      "unknown_count": 10,
+      "min_unknown_d": 30,
+      "first_10_unknown_d": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "proven_extremal_degrees": []
+    }
+  ],
+  "top_family": {
+    "n_positive": 8,
+    "n_negative": 8,
+    "g_mod5_values": [
+      1
+    ],
+    "r_mod5_values": [
+      4
+    ],
+    "signs_in_order": [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "sign_classes_by_modulus": {
+      "2": {
+        "0": [
+          -1,
+          1
+        ],
+        "1": [
+          -1,
+          1
+        ]
+      },
+      "3": {
+        "0": [
+          -1,
+          1
+        ],
+        "1": [
+          -1,
+          1
+        ],
+        "2": [
+          -1,
+          1
+        ]
+      },
+      "4": {
+        "0": [
+          1
+        ],
+        "1": [
+          1
+        ],
+        "2": [
+          -1
+        ],
+        "3": [
+          -1
+        ]
+      },
+      "5": {
+        "0": [
+          -1,
+          1
+        ],
+        "1": [
+          -1,
+          1
+        ],
+        "2": [
+          -1,
+          1
+        ],
+        "3": [
+          -1,
+          1
+        ],
+        "4": [
+          -1,
+          1
+        ]
+      },
+      "6": {
+        "0": [
+          -1,
+          1
+        ],
+        "1": [
+          -1,
+          1
+        ],
+        "2": [
+          -1,
+          1
+        ],
+        "3": [
+          -1,
+          1
+        ],
+        "4": [
+          -1,
+          1
+        ],
+        "5": [
+          -1,
+          1
+        ]
+      },
+      "7": {
+        "0": [
+          -1
+        ],
+        "1": [
+          -1,
+          1
+        ],
+        "2": [
+          1
+        ],
+        "3": [
+          -1,
+          1
+        ],
+        "4": [
+          -1,
+          1
+        ],
+        "5": [
+          -1,
+          1
+        ],
+        "6": [
+          -1,
+          1
+        ]
+      },
+      "8": {
+        "0": [
+          1
+        ],
+        "1": [
+          1
+        ],
+        "2": [
+          -1
+        ],
+        "3": [
+          -1
+        ],
+        "4": [
+          1
+        ],
+        "5": [
+          1
+        ],
+        "6": [
+          -1
+        ],
+        "7": [
+          -1
+        ]
+      }
+    }
+  },
+  "not_trainable_claim": "No reference labels for the interior (positive margin10), so no empirical g-neighborhood law can be validated there."
+}

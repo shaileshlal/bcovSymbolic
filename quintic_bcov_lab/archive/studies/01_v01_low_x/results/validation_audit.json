@@ -1,0 +1,106 @@
+{
+  "max_genus": 1000,
+  "computed_pure_X_coefficients": 4994,
+  "seed_pure_X_coefficients": 14,
+  "new_coefficients_after_seed_genera": 4980,
+  "mathematical_scope": "amplitudes modulo (v1,v2,v3,X)^5, not full free energies",
+  "no_airy_inputs_in_direct_solver": true,
+  "tests": {
+    "original_Python_J4_to_100": {
+      "max_genus": 100,
+      "coefficients_compared": 494,
+      "pass": true
+    },
+    "common_denominator_Python": {
+      "max_genus": 510,
+      "coefficients_compared": 2544,
+      "pass": true
+    },
+    "first_native_implementation": {
+      "max_genus": 410,
+      "coefficients_compared": 2044,
+      "pass": true
+    },
+    "independent_scalar_formulas": {
+      "max_genus": 1000,
+      "coefficients_checked_in_solver": 1998,
+      "pass": true
+    },
+    "full_reference_through_g12": {
+      "seed_genera": [
+        2,
+        3,
+        4
+      ],
+      "computed_holdout_genera": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "holdout_pure_X_coefficients": 40,
+      "retained_anomaly_comparison": true,
+      "pass": true
+    },
+    "leading_airy_vs_full_highest_v1_coefficient": {
+      "genera": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "pass": true
+    }
+  },
+  "highest_genus_coefficient_sizes": {
+    "0": {
+      "numerator_digits": 10736,
+      "denominator_digits": 5402,
+      "numerator_sha256": "a7fced0a0d7f5b5e15e487452cbb14bfc7442b82550af6c0e3e49bcb5742047d",
+      "denominator_sha256": "877e3f84b033d5cc68cc46912222c76036bc3ebb07e70b6d97ce331f7609b693"
+    },
+    "1": {
+      "numerator_digits": 10738,
+      "denominator_digits": 5401,
+      "numerator_sha256": "fc9301092071dfdebf684dbaf3ca73021ca9bd17116a9265c3e68c7731a33049",
+      "denominator_sha256": "de7bed2b785081a9e30aca0958368fbb169647bf82901707516b4e7f803ad70d"
+    },
+    "2": {
+      "numerator_digits": 10742,
+      "denominator_digits": 5403,
+      "numerator_sha256": "28cb634005a70c067bd0af2136a1b8182771e051c236eb91078f68e317e05fdb",
+      "denominator_sha256": "9f664af234b8ed0b3d2f43163d85cccbf45308bb5b737907180e9a05a22d7f1c"
+    },
+    "3": {
+      "numerator_digits": 10743,
+      "denominator_digits": 5402,
+      "numerator_sha256": "02f7abe5a8cb13440ee74e43ade395f75bb33620e6407be96d041088d1a45094",
+      "denominator_sha256": "215b018c22b4b54a06d98a71a59b58f9653d7895e018b96a0eef68a29300ef2a"
+    },
+    "4": {
+      "numerator_digits": 10753,
+      "denominator_digits": 5409,
+      "numerator_sha256": "ea894d309830ad82d61af88cca2c215fa559fb680d470e22e96f7ae2505a9f0a",
+      "denominator_sha256": "7d800bb69da77a4a9fb9a2cfde0676a34d586cb4da41d5e2c7bae22ecfb0d549"
+    }
+  },
+  "direct_elapsed_seconds": 1454.484359899,
+  "input_output_sha256": {
+    "reference_amplitudes.json": "9202c60808596447bd29e19461f538069c7d1af1e559b8e2dea5d9fca7455293",
+    "direct_jet.py": "c907eef2779da43da4e02d4e76a2685cf9c6ee0398c7ea4c09a3f8dca0170d47",
+    "integer_source.cpp": "6be8d7c0a7ac100c7972aafa0f7babbb5ce8aab2ca547b7a7b5ede33800ff6a7",
+    "leading_only.py": "2f41136e7770604ca993ae81e2ccf1622699a7b64d70fefa207c4d49497836ae",
+    "results/gmp/direct_J4_exact.json.gz": "1478bbb1dc5135eb4324871e209ab07e18f32bb90aefcddfe9112610f99aba6f"
+  }
+}

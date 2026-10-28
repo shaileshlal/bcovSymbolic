@@ -1,0 +1,32 @@
+{
+  "scale": "deltaP51=X^20(1-X)^30; physical n51,20=5^-100",
+  "alpha_52": "15625/6",
+  "beta_52": "-46675/2",
+  "n52_anomaly_terms": 157,
+  "n52_full_perturbation_terms": 189,
+  "g52_orbifold_val": 31,
+  "g52_conifold_val": 0,
+  "g52_mum_first_nonzero": 20,
+  "g52_mum_coefficient": "-1/1893266172530428332988148556678686951215695444261655211448669433593750",
+  "g52_expected": "-1/1893266172530428332988148556678686951215695444261655211448669433593750",
+  "g53_anomaly_terms": 679,
+  "g53_orbifold_val": 30,
+  "g53_conifold_val": -2,
+  "g53_mum_coeff_20": "0",
+  "g53_mum_target20": "83/75730646901217133319525942267147478048627817770466208457946777343750000",
+  "genus53_ambiguity_coeffs_basis_X20(1-X)^30 * poly_4": [
+    "162109375/48",
+    "-4573065625/72",
+    "40994061325/144",
+    "-46375/18",
+    "-3125/3"
+  ],
+  "genus53_exact_BCOV_source_terms": 1063,
+  "genus53_exact_anomaly_terms": 679,
+  "genus53_complete_sensitivity_terms": 714,
+  "genus53_pure_X_terms": 35,
+  "genus53_conifold_gap_difference_pass": true,
+  "genus53_orbifold_difference_pass": true,
+  "genus53_MUM_GW_degree0to20_difference_pass": true,
+  "convention": "All displayed sensitivity polys scaled by c51=1; multiply by 175*5**100 for actual n51,20=175"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "13_recursive_v07",
+  "title": "Sparse Newton pulses, mirrored curvature and locking fronts",
+  "version": "recursive v0.7",
+  "run": [
+    "recursive_defects.py"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_PT_Recursive_Defects_v07.zip"
+}

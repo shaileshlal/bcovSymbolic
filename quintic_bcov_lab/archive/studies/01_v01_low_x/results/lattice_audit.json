@@ -1,0 +1,148 @@
+{
+  "inputs": {
+    "seed": "genus-one vertex and PF/MUM period data",
+    "denominator_caps": {
+      "2": 144,
+      "3": 36288
+    },
+    "selection": "minimum absolute GV representative; empirical, no uniqueness theorem"
+  },
+  "smith_invariants": [
+    24,
+    60480
+  ],
+  "rows": [
+    {
+      "g": 2,
+      "degree": 1,
+      "cap": 144,
+      "intercept": "143975/144",
+      "response": "5",
+      "chosen_coefficient": "-28795/144",
+      "chosen_GV": "0",
+      "GV_lattice_step": "5"
+    },
+    {
+      "g": 2,
+      "degree": 2,
+      "cap": 144,
+      "intercept": "3203125/144",
+      "response": "-15625",
+      "chosen_coefficient": "205/144",
+      "chosen_GV": "0",
+      "GV_lattice_step": "-15625"
+    },
+    {
+      "g": 2,
+      "degree": 3,
+      "cap": 144,
+      "intercept": "-1220703125/48",
+      "response": "48828125",
+      "chosen_coefficient": "25/48",
+      "chosen_GV": "0",
+      "GV_lattice_step": "48828125"
+    },
+    {
+      "g": 3,
+      "degree": 1,
+      "cap": 36288,
+      "intercept": "138415/9072",
+      "response": "-1/125",
+      "chosen_coefficient": "17301875/9072",
+      "chosen_GV": "0",
+      "GV_lattice_step": "-1"
+    },
+    {
+      "g": 3,
+      "degree": 2,
+      "cap": 36288,
+      "intercept": "7051750375/36288",
+      "response": "25",
+      "chosen_coefficient": "-282070015/36288",
+      "chosen_GV": "0",
+      "GV_lattice_step": "25"
+    },
+    {
+      "g": 3,
+      "degree": 3,
+      "cap": 36288,
+      "intercept": "20385546875/1134",
+      "response": "-78125",
+      "chosen_coefficient": "260935/1134",
+      "chosen_GV": "0",
+      "GV_lattice_step": "-78125"
+    },
+    {
+      "g": 3,
+      "degree": 4,
+      "cap": 36288,
+      "intercept": "-57525617377625/2016",
+      "response": "244140625",
+      "chosen_coefficient": "235625/2016",
+      "chosen_GV": "8625",
+      "GV_lattice_step": "244140625"
+    },
+    {
+      "g": 3,
+      "degree": 5,
+      "cap": 36288,
+      "intercept": "25272353595705625/1008",
+      "response": "-762939453125",
+      "chosen_coefficient": "33125/1008",
+      "chosen_GV": "-15663750",
+      "GV_lattice_step": "-762939453125"
+    },
+    {
+      "g": 3,
+      "degree": 6,
+      "cap": 36288,
+      "intercept": "-37249721286886962625/1008",
+      "response": "2384185791015625",
+      "chosen_coefficient": "15625/1008",
+      "chosen_GV": "3156446162875",
+      "GV_lattice_step": "2384185791015625"
+    }
+  ],
+  "coefficients": {
+    "2": [
+      "3125/144",
+      "-28795/144",
+      "205/144",
+      "25/48"
+    ],
+    "3": [
+      "1953125/36288",
+      "17301875/9072",
+      "-282070015/36288",
+      "260935/1134",
+      "235625/2016",
+      "33125/1008",
+      "15625/1008"
+    ]
+  },
+  "GV": {
+    "2": {
+      "1": "0",
+      "2": "0",
+      "3": "0",
+      "4": "534750",
+      "5": "75478987900",
+      "6": "871708139638250",
+      "7": "5185462556617269625",
+      "8": "22516841063105917766750",
+      "9": "81464921786839566502560125"
+    },
+    "3": {
+      "1": "0",
+      "2": "0",
+      "3": "0",
+      "4": "8625",
+      "5": "-15663750",
+      "6": "3156446162875",
+      "7": "111468926053022750",
+      "8": "1303464598408583455000",
+      "9": "9523213659169217568991500"
+    }
+  },
+  "normalization_invariance": "Multiplying the entire candidate lattice by a known nonzero scalar does not select a different minimum-absolute-GV member."
+}

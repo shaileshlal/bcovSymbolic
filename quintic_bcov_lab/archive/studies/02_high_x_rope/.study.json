@@ -1,0 +1,12 @@
+{
+  "id": "02_high_x_rope",
+  "title": "High-X reverse cumulants and GV/RoPE phase controls",
+  "version": "high-X",
+  "run": [
+    "high_degree_phase_study.py"
+  ],
+  "test": [
+    "verify_phases_and_digits.py"
+  ],
+  "original_archive": "Quintic_High_X_GV_RoPE_Study.zip"
+}

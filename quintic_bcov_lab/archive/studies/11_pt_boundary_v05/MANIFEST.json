@@ -1,0 +1,21 @@
+{
+  "project": "Quintic near-Castelnuovo empirical recurrence (no modular predictive input)",
+  "version": "0.5-exploratory",
+  "date": "2026-10-28",
+  "predictor_inputs": ["data/calibration.csv", "data/sites_unlabeled.csv"],
+  "heldout_reference": "data/reference_only_Q21_Q30.csv",
+  "model_family_selection": "exploratory, informed by prior project research; numerical fitting is physically isolated",
+  "training_degrees": [1,20],
+  "magnitude_training_degrees": [6,20],
+  "test_degrees": [21,30],
+  "holdout_PT_exact": [28,48],
+  "holdout_PT_sign": [48,48],
+  "holdout_GV_first_three_shells_exact": [26,30],
+  "future_Q31_Q40_recurrence_active": [38,48],
+  "future_status": "unverified except known geometric extremal Q35 Q40",
+  "reference": "https://arxiv.org/html/2301.08066",
+  "reference_status": "published higher-degree PT/GV values conditional on modularity; validation only",
+  "no_modular_predictor_inputs": true,
+  "no_wall_crossing_predictor_inputs": true,
+  "no_BCOV_solver_oracle_predictor_inputs": true
+}

@@ -1,0 +1,196 @@
+{
+  "protocol": {
+    "purpose": "Arithmetic trend discovery on analytically known extremal integer displacements, not unknown interior",
+    "origin": "unrestricted integral GV charge, minimum height n=0",
+    "train_k": "4..11",
+    "test_k": "12..19",
+    "test_genus": [
+      391,
+      456,
+      526,
+      601,
+      681,
+      766,
+      856,
+      951
+    ],
+    "synthetic_truth_warning": "All extremal labels are generated from the same independent geometric theorem; model success is rediscovery and extrapolation of that theorem, not new GV computation."
+  },
+  "learned": {
+    "sign_period": 4,
+    "sign_map_by_k_mod4": {
+      "0": 1,
+      "1": 1,
+      "2": -1,
+      "3": -1
+    },
+    "minimum_polynomial_degree": 2,
+    "absolute_magnitude_polynomial": "25*k**2/2 - 25*k/2 + 25",
+    "rotary_phase_angle": "pi*k/2",
+    "fourier_identity_on_integers": "cos(pi*k/2)+sin(pi*k/2) equals the period-four sign pattern",
+    "phase_coefficients": [
+      24.999999999999968,
+      24.9999999999919,
+      -12.500000000000139,
+      -12.499999999997568,
+      12.50000000000002,
+      12.49999999999983
+    ]
+  },
+  "preholdout_phase_selection_top5": [
+    {
+      "period": 4,
+      "degree": 2,
+      "validation_mae": 6.139089236967266e-12,
+      "parameter_count": 6
+    },
+    {
+      "period": 4,
+      "degree": 1,
+      "validation_mae": 166.6666666666656,
+      "parameter_count": 4
+    },
+    {
+      "period": 5,
+      "degree": 1,
+      "validation_mae": 489.98792511326883,
+      "parameter_count": 4
+    },
+    {
+      "period": 5,
+      "degree": 2,
+      "validation_mae": 674.1389536562667,
+      "parameter_count": 6
+    },
+    {
+      "period": 3,
+      "degree": 2,
+      "validation_mae": 675.0000000000955,
+      "parameter_count": 6
+    }
+  ],
+  "metrics": {
+    "zero_origin": {
+      "mae": 2900.0,
+      "median_ae": 2837.5,
+      "exact_integers": 0,
+      "sign_accuracy": 0.0,
+      "max_abs_error": 4300.0
+    },
+    "last_observed_integer": {
+      "mae": 2900.0,
+      "median_ae": 2987.5,
+      "exact_integers": 0,
+      "sign_accuracy": 0.5,
+      "max_abs_error": 4825.0
+    },
+    "ridge_quadratic_raw": {
+      "mae": 5561.899714179204,
+      "median_ae": 5070.232965936684,
+      "exact_integers": 0,
+      "sign_accuracy": 0.5,
+      "max_abs_error": 11079.755176405131
+    },
+    "kNN_k3_raw": {
+      "mae": 2900.0,
+      "median_ae": 2912.5,
+      "exact_integers": 0,
+      "sign_accuracy": 0.5,
+      "max_abs_error": 3966.6666666666665
+    },
+    "random_forest_raw": {
+      "mae": 2900.0,
+      "median_ae": 2987.5,
+      "exact_integers": 0,
+      "sign_accuracy": 0.5,
+      "max_abs_error": 4611.1328125
+    },
+    "extra_trees_raw": {
+      "mae": 2900.0,
+      "median_ae": 2987.5,
+      "exact_integers": 0,
+      "sign_accuracy": 0.5,
+      "max_abs_error": 4825.0
+    },
+    "mod4_plus_quadratic_abs": {
+      "mae": 0.0,
+      "median_ae": 0.0,
+      "exact_integers": 8,
+      "sign_accuracy": 1.0,
+      "max_abs_error": 0.0
+    },
+    "rotary_phase4_poly2": {
+      "mae": 5.059064278611913e-12,
+      "median_ae": 1.5916157281026244e-12,
+      "exact_integers": 8,
+      "sign_accuracy": 1.0,
+      "max_abs_error": 1.864464138634503e-11
+    }
+  },
+  "heldout": [
+    {
+      "k": "12",
+      "g": "391",
+      "d": "60",
+      "n": "1675",
+      "symbolic_prediction": 1675,
+      "rotary_phase_prediction": 1675.0
+    },
+    {
+      "k": "13",
+      "g": "456",
+      "d": "65",
+      "n": "1975",
+      "symbolic_prediction": 1975,
+      "rotary_phase_prediction": 1974.9999999999927
+    },
+    {
+      "k": "14",
+      "g": "526",
+      "d": "70",
+      "n": "-2300",
+      "symbolic_prediction": -2300,
+      "rotary_phase_prediction": -2300.0
+    },
+    {
+      "k": "15",
+      "g": "601",
+      "d": "75",
+      "n": "-2650",
+      "symbolic_prediction": -2650,
+      "rotary_phase_prediction": -2649.9999999999973
+    },
+    {
+      "k": "16",
+      "g": "681",
+      "d": "80",
+      "n": "3025",
+      "symbolic_prediction": 3025,
+      "rotary_phase_prediction": 3024.9999999999995
+    },
+    {
+      "k": "17",
+      "g": "766",
+      "d": "85",
+      "n": "3425",
+      "symbolic_prediction": 3425,
+      "rotary_phase_prediction": 3424.9999999999814
+    },
+    {
+      "k": "18",
+      "g": "856",
+      "d": "90",
+      "n": "-3850",
+      "symbolic_prediction": -3850,
+      "rotary_phase_prediction": -3849.9999999999995
+    },
+    {
+      "k": "19",
+      "g": "951",
+      "d": "95",
+      "n": "-4300",
+      "symbolic_prediction": -4300,
+      "rotary_phase_prediction": -4299.999999999989
+    }
+  ]
+}

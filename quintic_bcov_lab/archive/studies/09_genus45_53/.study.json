@@ -1,0 +1,12 @@
+{
+  "id": "09_genus45_53",
+  "title": "Genus 45-53 charge bootstrap and BCOV delta-g51-53 sensitivity",
+  "version": "genus 45-53",
+  "run": [
+    "code/near_extremal_benchmark.py"
+  ],
+  "test": [
+    "code/tests.py"
+  ],
+  "original_archive": "Quintic_GV_Bootstrap_45_53_and_PT_DT_Periodicity.zip"
+}

@@ -1,0 +1,5 @@
+This archive integrates code and datasets from prior research calculations in
+this conversation. No additional license or third-party redistribution rights
+are granted or implied for external code, mathematical publications, or data.
+The bundled BCOV engine and study source were generated in the research context.
+Please inspect data provenance and original publication licenses before redistributing.

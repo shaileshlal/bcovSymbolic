@@ -1,0 +1,43 @@
+{
+  "terminal_pulses": {
+    "predicted": 18,
+    "exact": 18
+  },
+  "diagonal_pulses": {
+    "attempted": 24,
+    "scored": 19,
+    "exact": 17,
+    "unscored": 5,
+    "failures": [
+      {
+        "site": [
+          "3",
+          "2",
+          "10"
+        ],
+        "error": "-158405000",
+        "actual": "-339192874502531250"
+      },
+      {
+        "site": [
+          "3",
+          "2",
+          "11"
+        ],
+        "error": "-475215000",
+        "actual": "-433782103153781250"
+      }
+    ]
+  },
+  "r6_normalized": {
+    "scored": 32,
+    "old_affine_exact": 0,
+    "latest_two_affine_exact": 32,
+    "latest_three_exact": 32,
+    "nonzero_corrections": 32
+  },
+  "terminal_Z": {
+    "scored": 18,
+    "exact": 18
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "10_dtpt_v04",
+  "title": "DT/PT residue normalization, blind integer holdout, BCOV response",
+  "version": "DT/PT v0.4",
+  "run": [
+    "blind_predict.py"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_DT_PT_Empirical_v04.zip"
+}

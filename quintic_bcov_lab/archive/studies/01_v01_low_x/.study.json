@@ -1,0 +1,14 @@
+{
+  "id": "01_v01_low_x",
+  "title": "BCOV exact jets, Bernoulli/Airy seeds, low-X and mixed-YY ML",
+  "version": "v0.1",
+  "run": [
+    "-m",
+    "hybrid.tests"
+  ],
+  "test": [
+    "-m",
+    "hybrid.tests"
+  ],
+  "original_archive": "Quintic_Holomorphic_Ambiguity_AI_Prototype.zip"
+}

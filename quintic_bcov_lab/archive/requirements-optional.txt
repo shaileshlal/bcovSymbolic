@@ -1,0 +1,8 @@
+numpy>=1.24
+scipy
+scikit-learn
+sympy
+pandas
+matplotlib
+marimo>=0.9
+pytest>=7

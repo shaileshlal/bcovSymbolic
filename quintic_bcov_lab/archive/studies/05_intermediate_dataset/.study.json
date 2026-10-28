@@ -1,0 +1,16 @@
+{
+  "id": "05_intermediate_dataset",
+  "title": "Exact X(1-X)^m and x(1-x) intermediate-only dataset",
+  "version": "intermediate",
+  "run": [
+    "intermediate.py",
+    "--source",
+    "data/reference_amplitudes.json",
+    "--output",
+    "data"
+  ],
+  "test": [
+    "tests_intermediate.py"
+  ],
+  "original_archive": "Quintic_BCOV_Intermediate_Marimo_v02.zip"
+}

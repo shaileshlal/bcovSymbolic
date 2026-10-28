@@ -1,0 +1,15 @@
+{
+  "training_samples": 15,
+  "withheld_sites": 20,
+  "learned_small_integers": {
+    "1": "8625",
+    "2": "-1218500",
+    "0": "5"
+  },
+  "used_inputs": {
+    "calibration_Q6_Q20.csv": "dc4a6c2b6a1fa334198b90c3ed2cb4a70c06a7b4b32358f658a0b7f62dc1df34",
+    "withheld_sites_Q21_Q40.csv": "36661e574d6f51b6b7459e1cb30185ee6b94290ec654ed81bfa82ffdf7e0f37c"
+  },
+  "output_sha256": "4170b942c3a31afd5ec8c5a455164cbe226a013352c7d376a40e3a850e36b926",
+  "note": "No held-out integer labels read by this program."
+}

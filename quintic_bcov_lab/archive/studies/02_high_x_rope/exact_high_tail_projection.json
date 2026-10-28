@@ -1,0 +1,43 @@
+[
+  {
+    "g": 7,
+    "rank": 17,
+    "total": 19,
+    "free": [
+      5,
+      6
+    ],
+    "high_exact_start": 7,
+    "higher_exact_count": 12,
+    "all_constraints_satisfied": true,
+    "seconds": 2.43
+  },
+  {
+    "g": 9,
+    "rank": 22,
+    "total": 25,
+    "free": [
+      6,
+      7,
+      8
+    ],
+    "high_exact_start": 9,
+    "higher_exact_count": 16,
+    "all_constraints_satisfied": true,
+    "seconds": 8.87
+  },
+  {
+    "g": 10,
+    "rank": 25,
+    "total": 28,
+    "free": [
+      7,
+      8,
+      9
+    ],
+    "high_exact_start": 10,
+    "higher_exact_count": 18,
+    "all_constraints_satisfied": true,
+    "seconds": 18.2
+  }
+]

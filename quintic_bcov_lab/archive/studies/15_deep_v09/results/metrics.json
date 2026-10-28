@@ -1,0 +1,29 @@
+{
+  "train_scope": "shallow models Q<=30; deep scale calibration Q<=40",
+  "test_scope": "Q41..53 and new shell depths 6..10",
+  "reference_assumptions": "conditional rank-zero DT modular ansatz and PT wall-crossing; not predictor inputs",
+  "shallow_reference_rechecked": 109,
+  "deep_reference_safe_Q31_Q53": 106,
+  "deep_reference_incomplete_Q31_Q40": 9,
+  "deep_reference_safe_Q41_Q53": 65,
+  "frozen_gated_exact": 32,
+  "frozen_gated_predictions": 32,
+  "frozen_gated_abstentions": 33,
+  "frozen_ungated_exact": 28,
+  "frozen_ungated_total": 65,
+  "quotient_defect_activity_accuracy": "91/91",
+  "quotient_defect_holdout_accuracy": "64/64",
+  "quotient_defect_nonzero": 47,
+  "third_defect_activity_accuracy": "41/41",
+  "third_defect_holdout_accuracy": "39/39",
+  "third_defect_nonzero": 28,
+  "mature_scales_total": 66,
+  "mature_scales_sequences": 22,
+  "mature_scales_repeated_sequences": 18,
+  "equal_mature_paired_scales": 7,
+  "persistent_quotient_defects": {
+    "count": 24,
+    "shrink": 24,
+    "sign_reverse": 19
+  }
+}

@@ -4,30 +4,37 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bcov-symbolic"
-version = "0.3.0"
+version = "0.4.0"
 description = "Exact quintic BCOV recursion, arithmetic patterns, and enumerative verification"
 readme = "README.md"
 requires-python = ">=3.10"
 
 [project.optional-dependencies]
-notebooks = ["marimo>=0.25.1,<1"]
+notebooks = ["marimo>=0.25.1,<1", "pandas", "matplotlib"]
+science = ["numpy>=1.24", "scipy", "scikit-learn", "sympy", "pandas", "matplotlib"]
 dev = ["pytest>=8", "mypy>=1.10", "build>=1", "sympy>=1.12"]
 
 [project.scripts]
 bcov = "bcov.cli:main"
+quintic-bcov = "quintic_bcov_lab.__main__:main"
 
-[tool.setuptools.packages.find]
-include = ["bcov"]
+[tool.setuptools]
+packages = ["bcov", "quintic_bcov_lab"]
 
 [tool.setuptools.package-data]
 bcov = ["py.typed", "CONVENTIONS.json", "data/*"]
+quintic_bcov_lab = ["py.typed", "IMPORT_MANIFEST.json", "archive/**/*", "archive/studies/*/.study.json"]
+
+[tool.setuptools.exclude-package-data]
+quintic_bcov_lab = ["**/__pycache__/*", "**/*.pyc"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
 [tool.mypy]
 python_version = "3.10"
-files = ["bcov/patterns.py", "bcov/datasets.py", "bcov/cli.py", "bcov/verify_physical_qseries.py"]
+files = ["bcov/patterns.py", "bcov/datasets.py", "bcov/cli.py", "bcov/verify_physical_qseries.py", "quintic_bcov_lab"]
+exclude = ["quintic_bcov_lab/archive/"]
 check_untyped_defs = true
 disallow_untyped_defs = true
 follow_imports = "silent"

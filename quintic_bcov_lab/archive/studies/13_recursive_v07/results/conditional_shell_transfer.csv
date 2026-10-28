@@ -1,0 +1,3 @@
+residue,shell,shell_shift,linear_coefficient,extra_y_coefficient,actual_defect,predicted_defect,exact,relative_error
+1,3,0,-45/128,-23675/16384,1264928125,-27818497139375/16384,False,2.3422947011648834
+1,4,0,-45/128,-23675/16384,-67808585625,-5094276875620146875/16384,False,4584.407322957084

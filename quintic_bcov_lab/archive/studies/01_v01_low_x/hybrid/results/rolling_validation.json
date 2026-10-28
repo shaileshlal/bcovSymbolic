@@ -1,0 +1,44 @@
+[
+  {
+    "trained": "40-53",
+    "holdout": "54-153",
+    "median_error": 8.073915189027447e-05,
+    "p90_error": 0.0002516388299709793,
+    "binomial_median_error": 0.08122064550588692
+  },
+  {
+    "trained": "67-80",
+    "holdout": "81-180",
+    "median_error": 1.3188118145657235e-05,
+    "p90_error": 4.5832847777904645e-05,
+    "binomial_median_error": 0.10554744867397914
+  },
+  {
+    "trained": "107-120",
+    "holdout": "121-220",
+    "median_error": 1.81846165175914e-06,
+    "p90_error": 6.978723908435127e-06,
+    "binomial_median_error": 0.1264231881661686
+  },
+  {
+    "trained": "187-200",
+    "holdout": "201-300",
+    "median_error": 1.2481696520794117e-07,
+    "p90_error": 5.463289740159639e-07,
+    "binomial_median_error": 0.15690697006320153
+  },
+  {
+    "trained": "387-400",
+    "holdout": "401-500",
+    "median_error": 2.693159362188169e-09,
+    "p90_error": 1.3237560292367338e-08,
+    "binomial_median_error": 0.18561769564010844
+  },
+  {
+    "trained": "687-700",
+    "holdout": "701-800",
+    "median_error": 1.08518527497381e-10,
+    "p90_error": 5.670157454673588e-10,
+    "binomial_median_error": 0.20006494398287966
+  }
+]

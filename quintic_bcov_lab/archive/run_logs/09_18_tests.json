@@ -1,0 +1,122 @@
+[
+  {
+    "stage": "09_genus45_53",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 0.807,
+    "command": "/opt/pyvenv/bin/python code/tests.py",
+    "stdout_tail": "ALL 49 integer predictions/training checks and all exact YY anomaly identities passed\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_GV_Bootstrap_45_53_and_PT_DT_Periodicity.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "10_dtpt_v04",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 1.147,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": "Learned rank0 DT coefficients from five early PT values: {1: 8625, 2: -1218500, 0: 5}\nHeldout: {'frontier_holdout': {'n': 10, 'exact': 10}, 'forward_pre_54': {'n': 10, 'exact': 10}, 'calibration': {'n': 5, 'exact': 5}}\nQ 21 g 54 expected 319125 pred 319125 wall-applicable True nonvacuum candidates 0\nQ 22 g 58 expected 48740000 pred 48740000 wall-applicable True nonvacuum candidates 0\nQ 23 g 63 expected 53614000 pred 53614000 wall-applicable True nonvacuum candidates 0\nQ 24 g 69 expected 422625 pred 422625 wall-applicable True nonvacuum candidates 0\nQ 25 g 76 expected 275 pred 275 wall-applicable True nonvacuum candidates 0\nQ 26 g 80 expected -500250 pred -500250 wall-applicable True nonvacuum candidates 0\nQ 27 g 85 expected 75547000 pred 75547000 wall-applicable True nonvacuum candidates 0\nQ 28 g 91 expected -81639500 pred -81639500 wall-applicable True nonvacuum candidates 0\nQ 29 g 98 expected 629625 pred 629625 wall-applicable True nonvacuum candidates 0\nQ 30 g 106 expected -400 pred -400 wall-applicable True nonvacuum candidates 0\nForecast:\n31 111 -724500 True\n32 117 -108446500 True\n33 124 -115757500 True\n34 132 -879750 True\n35 141 -550 True\n36 147 991875 True\n37 154 -147438500 True\n38 162 155968000 True\n39 171 -1173000 True\n40 181 725 True\n{\n  \"g\": 54,\n  \"degree\": 21,\n  \"n_predicted\": 319125,\n  \"YY_homogeneous_difference\": \"319125*5^107*X^21*(1-X)^32\",\n  \"reduced_section_difference\": \"319125*5^107*x^21\",\n  \"physical_MUM_q_response\": \"Delta F_g = n*q^D * omega0(z(q))^(2g-2) * (z(q)/q)^D\",\n  \"q_shifts_per_unit_charge\": [\n    \"1\",\n    \"-3450\",\n    \"4790625\",\n    \"-3685910000\",\n    \"1751393550000\"\n  ],\n  \"q_shifts_for_predicted_319125\": [\n    \"319125\",\n    \"-1100981250\",\n    \"1528808203125\",\n    \"-1176266028750000\",\n    \"558913466643750000\"\n  ],\n  \"limitation\": \"This certifies the ambiguity response/section and MUM behavior, NOT full physical BCOV genus54; the charge is not fixed by the anomaly alone.\"\n}\nPASS: exact rank-zero DT polar reconstruction, 25 leading PT fits (20 withheld),\n      five degree-21 PT values, five PT->GV integers, wall optimality,\n      first disconnected product, BCOV genus-54 homogeneous response.\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_DT_PT_Empirical_v04.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "11_pt_boundary_v05",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 1.45,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": "PASS: 4-period signs, 28/48 PT, 26/30 GV, 12 DT fingerprints, 38 forecasts, isolated predictor.\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_Empirical_PT_DT_Boundary_v05.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "12_defects_v06",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 3.146,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": "All exact, model, provenance and clean-without-holdout reproduction tests PASS.\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_PT_Defect_Empirical_v06.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "13_recursive_v07",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 1.366,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": " \"zero_prev_correct\": 11,\n    \"persistent_5adic\": 9,\n    \"persistent_count\": 9,\n    \"persistent_attenuation\": 9,\n    \"sign_flips\": 8\n  },\n  \"model_scores\": {\n    \"quadratic_PT\": {\n      \"total\": 24,\n      \"exact\": 15,\n      \"sum_relative_error\": 0.002101907095357089,\n      \"max_relative_error\": 0.001993620414673046,\n      \"mean_relative_error\": 8.757946230654538e-05,\n      \"by_shell\": {\n        \"0\": [\n          5,\n          5\n        ],\n        \"1\": [\n          4,\n          5\n        ],\n        \"2\": [\n          3,\n          5\n        ],\n        \"3\": [\n          2,\n          5\n        ],\n        \"4\": [\n          1,\n          3\n        ],\n        \"5\": [\n          0,\n          1\n        ]\n      }\n    },\n    \"cubic_PT\": {\n      \"total\": 24,\n      \"exact\": 11,\n      \"sum_relative_error\": 0.03918311249462469,\n      \"max_relative_error\": 0.028350883000308375,\n      \"mean_relative_error\": 0.0016326296872760286,\n      \"by_shell\": {\n        \"0\": [\n          5,\n          5\n        ],\n        \"1\": [\n          3,\n          5\n        ],\n        \"2\": [\n          2,\n          5\n        ],\n        \"3\": [\n          1,\n          5\n        ],\n        \"4\": [\n          0,\n          3\n        ],\n        \"5\": [\n          0,\n          1\n        ]\n      }\n    },\n    \"linear_times_quadratic_PT\": {\n      \"total\": 19,\n      \"exact\": 10,\n      \"sum_relative_error\": 0.0041411116034947935,\n      \"max_relative_error\": 0.0039307491389871255,\n      \"mean_relative_error\": 0.00021795324228919967,\n      \"by_shell\": {\n        \"1\": [\n          4,\n          5\n        ],\n        \"2\": [\n          3,\n          5\n        ],\n        \"3\": [\n          2,\n          5\n        ],\n        \"4\": [\n          1,\n          3\n        ],\n        \"5\": [\n          0,\n          1\n        ]\n      }\n    },\n    \"mirror_PT\": {\n      \"total\": 24,\n      \"exact\": 17,\n      \"sum_relative_error\": 1.560830041333921e-05,\n      \"max_relative_error\": 7.4123568976540214e-06,\n      \"mean_relative_error\": 6.503458505558005e-07,\n      \"by_shell\": {\n        \"0\": [\n          5,\n          5\n        ],\n        \"1\": [\n          5,\n          5\n        ],\n        \"2\": [\n          4,\n          5\n        ],\n        \"3\": [\n          2,\n          5\n        ],\n        \"4\": [\n          1,\n          3\n        ],\n        \"5\": [\n          0,\n          1\n        ]\n      }\n    }\n  },\n  \"validation_has_access_to_reference\": true,\n  \"predictor_has_access_to_reference\": false\n}\nAll no-oracle replay, exact pulse reconstruction and benchmark tests passed.\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_PT_Recursive_Defects_v07.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "14_survival_v08",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 1.591,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": "PASS: pinned code, autonomous no-oracle recreation, 109-site scores, defects, geometry\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_PT_Recursive_Survival_v08.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "15_deep_v09",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 6.05,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": "}\nCounter({'mature_recurrence': 32, 'active_front': 19, 'needs_mature_anchor': 14})\nown_last predicted 62 of 65\npaired_last predicted 65 of 65\npaired_repeated predicted 65 of 65\nAll exact tests and no-oracle replay PASSED.\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_PT_Deep_Shell_v09.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "16_pulses_v10",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 1.381,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": "PASS exact 59/59; abstentions 6; antisymmetry; one concrete PT reconstruction; isolated no-oracle replay\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_PT_Pulse_Recurrence_v10.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "17_depth11_15_v11",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 3.793,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": "PASS: 116 cross-reference checks; 25+49 exact predictions; 8-anchor rank; 123 conditional profile checks; no low-order closure; isolated no-oracle rerun\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_PT_Depth11_15_v11.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "18_nested_v12",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 2.757,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": "Predictor-only isolated run: byte-identical predictions, no validator files\nMature-PT integer normalization reproduced\nAll exact validation checks passed\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_PT_Nested_Residuals_v12.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  }
+]

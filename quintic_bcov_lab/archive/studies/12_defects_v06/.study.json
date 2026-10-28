@@ -1,0 +1,12 @@
+{
+  "id": "12_defects_v06",
+  "title": "Third differences and moving-defect classifier",
+  "version": "defects v0.6",
+  "run": [
+    "train_and_forecast.py"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_PT_Defect_Empirical_v06.zip"
+}

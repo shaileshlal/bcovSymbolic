@@ -1,0 +1,18 @@
+{
+  "id": "11_pt_boundary_v05",
+  "title": "PT/GV finite differences and DT fingerprint",
+  "version": "PT boundary v0.5",
+  "run": [
+    "run_experiments.py",
+    "--train",
+    "data/calibration.csv",
+    "--sites",
+    "data/sites_unlabeled.csv",
+    "--out",
+    "results/pt_predictions.csv"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_Empirical_PT_DT_Boundary_v05.zip"
+}

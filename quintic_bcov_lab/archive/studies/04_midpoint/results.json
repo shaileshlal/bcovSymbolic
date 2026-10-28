@@ -1,0 +1,197 @@
+{
+  "boundary_kernels": [
+    {
+      "genus": 4,
+      "rank": 9,
+      "free_indices": [
+        3
+      ],
+      "m_orbifold": 2,
+      "D_MUM": 1,
+      "factorization_verified": true,
+      "physical_midpoint_section_coefficient": "-146267933005/1741824",
+      "physical_first_x_derivative": "-119042836265/290304",
+      "midpoint_responses_by_kernel_direction": [
+        [
+          "1/2"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "number_of_new_equations_from_coordinate_gluing": 0,
+      "meaning": "The midpoint response need not vanish along admissible kernel directions. Coordinate gluing is an identity for all of them; a measured, externally supplied midpoint observable could reduce the kernel, but the involution supplies no such value."
+    },
+    {
+      "genus": 5,
+      "rank": 12,
+      "free_indices": [
+        4
+      ],
+      "m_orbifold": 3,
+      "D_MUM": 1,
+      "factorization_verified": true,
+      "physical_midpoint_section_coefficient": "-264212634694055/76640256",
+      "physical_first_x_derivative": "-354685157141945/16422912",
+      "midpoint_responses_by_kernel_direction": [
+        [
+          "-1/2"
+        ],
+        [
+          "-1"
+        ]
+      ],
+      "number_of_new_equations_from_coordinate_gluing": 0,
+      "meaning": "The midpoint response need not vanish along admissible kernel directions. Coordinate gluing is an identity for all of them; a measured, externally supplied midpoint observable could reduce the kernel, but the involution supplies no such value."
+    },
+    {
+      "genus": 6,
+      "rank": 14,
+      "free_indices": [
+        4,
+        5
+      ],
+      "m_orbifold": 3,
+      "D_MUM": 2,
+      "factorization_verified": true,
+      "physical_midpoint_section_coefficient": "-73846498981088798365/502146957312",
+      "physical_first_x_derivative": "-597670447184996036035/753220435968",
+      "midpoint_responses_by_kernel_direction": [
+        [
+          "1/4",
+          "-1/4"
+        ],
+        [
+          "0",
+          "-1"
+        ]
+      ],
+      "number_of_new_equations_from_coordinate_gluing": 0,
+      "meaning": "The midpoint response need not vanish along admissible kernel directions. Coordinate gluing is an identity for all of them; a measured, externally supplied midpoint observable could reduce the kernel, but the involution supplies no such value.",
+      "value_and_first_derivative_independent": true,
+      "midpoint_jet_rank": 2
+    },
+    {
+      "genus": 7,
+      "rank": 17,
+      "free_indices": [
+        5,
+        6
+      ],
+      "m_orbifold": 4,
+      "D_MUM": 2,
+      "factorization_verified": true,
+      "physical_midpoint_section_coefficient": "-11289055300543863950075/6025763487744",
+      "physical_first_x_derivative": "1980630893832291494306675/9038645231616",
+      "midpoint_responses_by_kernel_direction": [
+        [
+          "-1/4",
+          "1/4"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "number_of_new_equations_from_coordinate_gluing": 0,
+      "meaning": "The midpoint response need not vanish along admissible kernel directions. Coordinate gluing is an identity for all of them; a measured, externally supplied midpoint observable could reduce the kernel, but the involution supplies no such value.",
+      "value_and_first_derivative_independent": true,
+      "midpoint_jet_rank": 2
+    },
+    {
+      "genus": 8,
+      "rank": 20,
+      "free_indices": [
+        6,
+        7
+      ],
+      "m_orbifold": 5,
+      "D_MUM": 2,
+      "factorization_verified": true,
+      "physical_midpoint_section_coefficient": "113881324024255488843995786225/29502138035994624",
+      "physical_first_x_derivative": "3588245805813776292070671123475/14751069017997312",
+      "midpoint_responses_by_kernel_direction": [
+        [
+          "1/4",
+          "-1/4"
+        ],
+        [
+          "0",
+          "-1"
+        ]
+      ],
+      "number_of_new_equations_from_coordinate_gluing": 0,
+      "meaning": "The midpoint response need not vanish along admissible kernel directions. Coordinate gluing is an identity for all of them; a measured, externally supplied midpoint observable could reduce the kernel, but the involution supplies no such value.",
+      "value_and_first_derivative_independent": true,
+      "midpoint_jet_rank": 2
+    },
+    {
+      "genus": 9,
+      "rank": 22,
+      "free_indices": [
+        6,
+        7,
+        8
+      ],
+      "m_orbifold": 5,
+      "D_MUM": 3,
+      "factorization_verified": true,
+      "physical_midpoint_section_coefficient": "262936930384631357920725394842674425/60538387249860968448",
+      "physical_first_x_derivative": "1552002569020508008019739607543726775/5432932189090086912",
+      "midpoint_responses_by_kernel_direction": [
+        [
+          "-1/8",
+          "1/8",
+          "-1/8"
+        ],
+        [
+          "1/4",
+          "1/4",
+          "-3/4"
+        ]
+      ],
+      "number_of_new_equations_from_coordinate_gluing": 0,
+      "meaning": "The midpoint response need not vanish along admissible kernel directions. Coordinate gluing is an identity for all of them; a measured, externally supplied midpoint observable could reduce the kernel, but the involution supplies no such value.",
+      "midpoint_jet_rank": 2
+    }
+  ],
+  "genus2_no_involution_symmetry": {
+    "a2_at_X_minus_one": "16025/72",
+    "f2_at_x_half": "-16025/144",
+    "f2_at_x_third": "-140515/1728",
+    "f2_at_x_two_thirds": "-60935/432",
+    "not_x_to_one_minus_x_invariant": true
+  },
+  "collocation_with_oracle_reference": [
+    {
+      "genus": 7,
+      "midpoint_derivative_orders_used": 2,
+      "oracle_provenance": "computed from held-out physical reference, NOT independent input",
+      "oracle_jet": [
+        "7889128658353328868425/71735279616",
+        "-11891560485972343002725/53801459712"
+      ],
+      "recovered_kernel_coordinates": [
+        "-6105588334655276375/9237888",
+        "-11891560485972343002725/53801459712"
+      ],
+      "all_ambiguity_coefficients_exactly_reconstructed": true
+    },
+    {
+      "genus": 9,
+      "midpoint_derivative_orders_used": 3,
+      "oracle_provenance": "computed from held-out physical reference, NOT independent input",
+      "oracle_jet": [
+        "-34754003629338918528764013163375025/23542706152723709952",
+        "2574024486568909455186103031002175/560540622683897856",
+        "729610880649633898609828820983525/173108133475909632"
+      ],
+      "recovered_kernel_coordinates": [
+        "49991913588216794106935319208874125/2942838269090463744",
+        "20825564623451661141270536847162875/2942838269090463744",
+        "2090405785474667251440041452175/1100949595619328"
+      ],
+      "all_ambiguity_coefficients_exactly_reconstructed": true
+    }
+  ]
+}

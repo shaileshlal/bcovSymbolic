@@ -1,0 +1,1442 @@
+[
+  {
+    "split": "train_to_8",
+    "model": "genus__majority",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -2,
+      6580
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "genus__majority",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3151
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "genus__majority",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -342,
+      1291206
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "genus__majority",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -51,
+      166005
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "genus__mod3_diagnostic",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -2,
+      6580
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "genus__mod3_diagnostic",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 2,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      143
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "genus__mod3_diagnostic",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -342,
+      1291206
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "genus__mod3_diagnostic",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -51,
+      166005
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed__majority",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3441
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed__majority",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3223
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed__majority",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -423,
+      1574826
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed__majority",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -30,
+      95796
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed__mod3_diagnostic",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3441
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed__mod3_diagnostic",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 2,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      71
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed__mod3_diagnostic",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -423,
+      1574826
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed__mod3_diagnostic",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -30,
+      95796
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_plus_genus__majority",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3400
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_plus_genus__majority",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3231
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_plus_genus__majority",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -435,
+      1615850
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_plus_genus__majority",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -27,
+      85821
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_plus_genus__mod3_diagnostic",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3400
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_plus_genus__mod3_diagnostic",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 2,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      63
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_plus_genus__mod3_diagnostic",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -435,
+      1615850
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_plus_genus__mod3_diagnostic",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -27,
+      85821
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_residual__majority",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3400
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_residual__majority",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3231
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_residual__majority",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -435,
+      1615777
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_residual__majority",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -27,
+      85847
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_residual__mod3_diagnostic",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3400
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_residual__mod3_diagnostic",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 2,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      63
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_residual__mod3_diagnostic",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -435,
+      1615777
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "mixed_residual__mod3_diagnostic",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -27,
+      85847
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "v01_trees__combined_v01",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -3,
+      10697
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "v01_trees__combined_v01",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      2900
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "v01_trees__combined_v01",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -297,
+      1101745
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "train_to_8",
+    "model": "v01_trees__combined_v01",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -59,
+      197878
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "genus__majority",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -2,
+      6580
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "genus__majority",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3379
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "genus__majority",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -401,
+      1526520
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "genus__majority",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -100,
+      355906
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "genus__mod3_diagnostic",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -2,
+      6580
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "genus__mod3_diagnostic",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 2,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -85
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "genus__mod3_diagnostic",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -401,
+      1526520
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "genus__mod3_diagnostic",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -18,
+      39850
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed__majority",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3441
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed__majority",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3357
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed__majority",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -486,
+      1802414
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed__majority",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -125,
+      426953
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed__mod3_diagnostic",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3441
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed__mod3_diagnostic",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 2,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -63
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed__mod3_diagnostic",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -486,
+      1802414
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed__mod3_diagnostic",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      7,
+      -31197
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_plus_genus__majority",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3400
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_plus_genus__majority",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3337
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_plus_genus__majority",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 1,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      1,
+      -5963,
+      11154280
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_plus_genus__majority",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -143,
+      477807
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_plus_genus__mod3_diagnostic",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3400
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_plus_genus__mod3_diagnostic",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 2,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -43
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_plus_genus__mod3_diagnostic",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 1,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      1,
+      -5963,
+      11154280
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_plus_genus__mod3_diagnostic",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      25,
+      -82051
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_residual__majority",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3400
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_residual__majority",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3354
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_residual__majority",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -493,
+      1824941
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_residual__majority",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -126,
+      429752
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_residual__mod3_diagnostic",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      3400
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_residual__mod3_diagnostic",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 2,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -60
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_residual__mod3_diagnostic",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -493,
+      1824941
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "mixed_residual__mod3_diagnostic",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      8,
+      -33996
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "v01_trees__combined_v01",
+    "g": 9,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -3,
+      10697
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "v01_trees__combined_v01",
+    "g": 10,
+    "independent_particular": true,
+    "n_exact": 1,
+    "n_total": 3,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      -1,
+      2913
+    ],
+    "label_GV": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "v01_trees__combined_v01",
+    "g": 11,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -295,
+      1091597
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "split": "expanding_9_to_12",
+    "model": "v01_trees__combined_v01",
+    "g": 12,
+    "independent_particular": false,
+    "n_exact": 2,
+    "n_total": 4,
+    "exact_all": false,
+    "predicted_GV": [
+      0,
+      0,
+      -60,
+      203921
+    ],
+    "label_GV": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+]

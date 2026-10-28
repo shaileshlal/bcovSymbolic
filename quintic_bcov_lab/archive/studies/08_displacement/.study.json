@@ -1,0 +1,12 @@
+{
+  "id": "08_displacement",
+  "title": "Integer displacement, extremal phases and neighborhood transport",
+  "version": "displacement",
+  "run": [
+    "learn_top.py"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_GV_Displacement_AI_v03.zip"
+}

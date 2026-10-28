@@ -1,0 +1,18 @@
+{
+  "train_genera": [
+    2,
+    8
+  ],
+  "test_genera": [
+    9,
+    12
+  ],
+  "train_coefficients": 84,
+  "test_coefficients": 114,
+  "target": "signed log10(1+|a_gj/a_g0|)",
+  "model_mae": 3.031036055579774,
+  "constant_baseline_mae": 4.5981952397447525,
+  "model_sign_accuracy": 0.8070175438596491,
+  "constant_sign_accuracy": 0.5964912280701754,
+  "important_note": "The held-out anomaly polynomial already contains lower-genus physically fixed data; this is a conditional, not a generative BCOV predictor."
+}

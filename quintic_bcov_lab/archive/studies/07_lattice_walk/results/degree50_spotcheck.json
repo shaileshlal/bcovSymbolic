@@ -1,0 +1,12 @@
+{
+  "genera": [
+    4,
+    6,
+    9,
+    12
+  ],
+  "through_degree": 50,
+  "unit_charge_response_entries": 500,
+  "all_integral": true,
+  "status": "observed exact finite-degree verification; independently tested in Python; not an all-degree proof"
+}

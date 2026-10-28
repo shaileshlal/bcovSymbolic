@@ -1,0 +1,30 @@
+{
+  "DT0_rank1_MacMahon_coefficients": [
+    "1",
+    "200",
+    "19500",
+    "1234000",
+    "56923950",
+    "2037791040",
+    "58836898000"
+  ],
+  "g51_Q20_n175": {
+    "PT_c0_c1_c2": [
+      175,
+      17500,
+      866250
+    ],
+    "DT_rank1_response_c0_c1_c2": [
+      175,
+      52500,
+      7778750
+    ],
+    "PT_at_m_minus49_with_g50_input": 27200
+  },
+  "g54_Q21_modularity_n319125": {
+    "PT_m_minus53": 319125,
+    "PT_m_minus52_including_n53_21": 40986000,
+    "rank1_DT_m_minus52_including_DT0": 104811000
+  },
+  "qualification": "PT/rank1 DT leading terms are algebraically determined by the GV input; they are not independent lattice-selection equations. Rank0 DT modularity is different."
+}

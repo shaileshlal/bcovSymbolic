@@ -1,0 +1,66 @@
+degree,shell,residue,k,front_distance,prediction,status,source,B_origin,profile_support,profile_origin
+41,6,1,8,0,433637653192750423125,predicted,mature_scale,observed_mature,,
+41,7,1,8,1,-17387440689670751448000,predicted,constant_r1,observed_mature,5,constant_r1
+41,8,1,8,2,534184449206140347572250,predicted,affine_consensus,observed_mature,5,affine_consensus
+41,9,1,8,3,-13237793556233890413338750,predicted,affine_consensus,"inferred_from_(4, 9, 7)",5,affine_consensus
+41,10,1,8,4,274462506370549684177836000,predicted,r4_two_point_extrapolation,"inferred_from_(4, 10, 7)",2,r4_two_point_extrapolation
+42,6,2,8,-1,-8966272837974729710000,predicted,mature_scale,observed_mature,,
+42,7,2,8,0,289269009133573512326875,predicted,mature_scale,observed_mature,,
+42,8,2,8,1,-7461344852398874565243750,predicted,constant_r1,"inferred_from_(3, 8, 7)",3,constant_r1
+42,9,2,8,2,159987377499288513523547875,predicted,r2_anti_pair_verified,"inferred_from_(3, 9, 7)",2,r2_anti_pair_verified
+42,10,2,8,3,,abstain,,,,
+43,6,3,8,-2,-9438181934710241800000,predicted,mature_scale,observed_mature,,
+43,7,3,8,-1,304594519551246281191875,predicted,mature_scale,observed_mature,,
+43,8,3,8,0,-7859283244526810624150500,predicted,mature_scale,"inferred_from_(3, 8, 7)",,
+43,9,3,8,1,168577303807975101173652375,predicted,constant_r1,"inferred_from_(3, 9, 7)",2,constant_r1
+43,10,3,8,2,,abstain,,,1,antisym_pair_3_4_two_joint_points
+44,6,4,8,-3,505412161307412562125,predicted,mature_scale,observed_mature,,
+44,7,4,8,-2,-20285347471282540941000,predicted,mature_scale,observed_mature,,
+44,8,4,8,-1,623837783338639806150250,predicted,mature_scale,observed_mature,,
+44,9,4,8,0,-15475167115033957410298750,predicted,mature_scale,"inferred_from_(4, 9, 7)",,
+44,10,4,8,1,321179528731490918996780625,predicted,constant_r1,"inferred_from_(4, 10, 7)",2,constant_r1
+45,6,0,9,-4,672421059077900025,predicted,mature_scale,observed_mature,,
+45,7,0,9,-3,-49411330468101225750,predicted,mature_scale,observed_mature,,
+45,8,0,9,-2,2409144347603650308750,predicted,mature_scale,observed_mature,,
+45,9,0,9,-1,-86302147195478613190000,predicted,mature_scale,observed_mature,,
+45,10,0,9,0,2423582668622552505623625,predicted,mature_scale,"inferred_from_(0, 10, 8)",,
+46,6,1,9,-1,-556252437888631577250,predicted,mature_scale,observed_mature,,
+46,7,1,9,0,22338031441590893298125,predicted,mature_scale,observed_mature,,
+46,8,1,9,1,-687342228349160028583000,predicted,constant_r1,observed_mature,5,constant_r1
+46,9,1,9,2,17059973385850687572851875,predicted,affine_consensus,"inferred_from_(4, 9, 7)",5,affine_consensus
+46,10,1,9,3,-354270752903827014371015750,predicted,affine_consensus,"inferred_from_(4, 10, 7)",5,affine_consensus
+47,6,2,9,-2,-11443795595836168182500,predicted,mature_scale,observed_mature,,
+47,7,2,9,-1,369727938826355548868125,predicted,mature_scale,observed_mature,,
+47,8,2,9,0,-9550521411070554682512000,predicted,mature_scale,"inferred_from_(3, 8, 7)",,
+47,9,2,9,1,205084490619893949795127750,predicted,constant_r1,"inferred_from_(3, 9, 7)",3,constant_r1
+47,10,2,9,2,,abstain,,,2,r2_anti_pair_verified
+48,6,3,9,-3,11974693329663619283750,predicted,mature_scale,observed_mature,,
+48,7,3,9,-2,-386969138046237413841250,predicted,mature_scale,observed_mature,,
+48,8,3,9,-1,9998202102214486933254750,predicted,mature_scale,"inferred_from_(3, 8, 7)",,
+48,9,3,9,0,-214748157717166434616675000,predicted,mature_scale,"inferred_from_(3, 9, 7)",,
+48,10,3,9,1,,abstain,,,2,constant_r1
+49,6,4,9,-4,636998759517626483625,predicted,mature_scale,observed_mature,,
+49,7,4,9,-3,-25598176570904158806500,predicted,mature_scale,observed_mature,,
+49,8,4,9,-2,788202229248221551483250,predicted,mature_scale,observed_mature,,
+49,9,4,9,-1,-19577018639500789494956250,predicted,mature_scale,"inferred_from_(4, 9, 7)",,
+49,10,4,9,0,406827403059889229562109625,predicted,mature_scale,"inferred_from_(4, 10, 7)",,
+50,6,0,10,-5,-841465459404746400,predicted,mature_scale,observed_mature,,
+50,7,0,10,-4,61902958957227940125,predicted,mature_scale,observed_mature,,
+50,8,0,10,-3,-3021638673265595302500,predicted,mature_scale,observed_mature,,
+50,9,0,10,-2,108368037103413485880625,predicted,mature_scale,observed_mature,,
+50,10,0,10,-1,-3046789640554066007069700,predicted,mature_scale,"inferred_from_(0, 10, 8)",,
+51,6,1,10,-2,-693820245108400677000,predicted,mature_scale,observed_mature,,
+51,7,1,10,-1,27892352773013493793875,predicted,mature_scale,observed_mature,,
+51,8,1,10,0,-859177785436450032422500,predicted,mature_scale,observed_mature,,
+51,9,1,10,1,21348272706884194262077500,predicted,constant_r1,"inferred_from_(4, 9, 7)",5,constant_r1
+51,10,1,10,2,-443811712428970068095394250,predicted,affine_consensus,"inferred_from_(4, 10, 7)",5,affine_consensus
+52,6,2,10,-3,14216261539157301711250,predicted,mature_scale,observed_mature,,
+52,7,2,10,-2,-459765312530183065950000,predicted,mature_scale,observed_mature,,
+52,8,2,10,-1,11888409464822200880835250,predicted,mature_scale,"inferred_from_(3, 8, 7)",,
+52,9,2,10,0,-255550307683428057193843250,predicted,mature_scale,"inferred_from_(3, 9, 7)",,
+52,10,2,10,1,,abstain,,,3,constant_r1
+53,6,3,10,-4,14806147910076691823750,predicted,mature_scale,observed_mature,,
+53,7,3,10,-3,-478922200552274027031250,predicted,mature_scale,observed_mature,,
+53,8,3,10,-2,12385832454982125603882750,predicted,mature_scale,"inferred_from_(3, 8, 7)",,
+53,9,3,10,-1,-266287715569286378924677000,predicted,mature_scale,"inferred_from_(3, 9, 7)",,
+53,10,3,10,0,,abstain,,,,

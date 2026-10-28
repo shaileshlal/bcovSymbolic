@@ -1,0 +1,12 @@
+{
+  "id": "03_two_stream",
+  "title": "YY-vs-GV streams and exact high-X boundary holdout",
+  "version": "two-stream",
+  "run": [
+    "run_experiment.py"
+  ],
+  "test": [
+    "exact_response_audit.py"
+  ],
+  "original_archive": "Quintic_Two_Stream_GV_YY_Experiment.zip"
+}

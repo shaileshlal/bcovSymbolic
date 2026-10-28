@@ -1,0 +1,60 @@
+{
+  "training_rank": 22,
+  "by_depth": {
+    "11": {
+      "eligible": 13,
+      "new_independent_anchors": 2
+    },
+    "12": {
+      "eligible": 12,
+      "new_independent_anchors": 0
+    },
+    "13": {
+      "eligible": 10,
+      "new_independent_anchors": 1
+    },
+    "14": {
+      "eligible": 7,
+      "new_independent_anchors": 2
+    },
+    "15": {
+      "eligible": 4,
+      "new_independent_anchors": 3
+    }
+  },
+  "new_anchor_count": 8,
+  "greedy_anchor_sites": [
+    [
+      41,
+      11
+    ],
+    [
+      43,
+      11
+    ],
+    [
+      43,
+      13
+    ],
+    [
+      44,
+      14
+    ],
+    [
+      48,
+      14
+    ],
+    [
+      45,
+      15
+    ],
+    [
+      49,
+      15
+    ],
+    [
+      53,
+      15
+    ]
+  ]
+}

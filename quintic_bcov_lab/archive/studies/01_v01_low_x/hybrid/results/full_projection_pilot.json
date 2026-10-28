@@ -1,0 +1,19 @@
+{
+  "target_genus": 9,
+  "train_genera": [
+    2,
+    8
+  ],
+  "constraint_type": "conifold + orbifold + MUM constant map, not degree>=1 GV",
+  "partial_rank": 22,
+  "free_slots": [
+    6,
+    7,
+    8
+  ],
+  "relative_error_median": 0.0,
+  "relative_error_max": 15546.347004239835,
+  "exact_true_coefficients": 17,
+  "total_coefficients": 25,
+  "verified_exact_boundary_constraints": true
+}

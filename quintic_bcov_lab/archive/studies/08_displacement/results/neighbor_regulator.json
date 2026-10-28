@@ -1,0 +1,116 @@
+{
+  "period_mirror_first_coeffs": {
+    "period_omega0_z1": 120,
+    "mirror_q_z2": 770
+  },
+  "observations": [
+    {
+      "g": 4,
+      "d": 1,
+      "observed_exact": -82,
+      "predicted_formula": -82,
+      "exception_double_cover": true
+    },
+    {
+      "g": 5,
+      "d": 1,
+      "observed_exact": 62,
+      "predicted_formula": 62,
+      "exception_double_cover": true
+    },
+    {
+      "g": 6,
+      "d": 2,
+      "observed_exact": -340,
+      "predicted_formula": -340,
+      "exception_double_cover": false
+    },
+    {
+      "g": 7,
+      "d": 2,
+      "observed_exact": -100,
+      "predicted_formula": -100,
+      "exception_double_cover": false
+    },
+    {
+      "g": 8,
+      "d": 2,
+      "observed_exact": 140,
+      "predicted_formula": 140,
+      "exception_double_cover": false
+    },
+    {
+      "g": 9,
+      "d": 3,
+      "observed_exact": -390,
+      "predicted_formula": -390,
+      "exception_double_cover": false
+    },
+    {
+      "g": 10,
+      "d": 3,
+      "observed_exact": -150,
+      "predicted_formula": -150,
+      "exception_double_cover": false
+    },
+    {
+      "g": 11,
+      "d": 4,
+      "observed_exact": -680,
+      "predicted_formula": -680,
+      "exception_double_cover": false
+    },
+    {
+      "g": 12,
+      "d": 4,
+      "observed_exact": -440,
+      "predicted_formula": -440,
+      "exception_double_cover": false
+    }
+  ],
+  "checked": 9,
+  "formula": "240(g-1)-770D-1_(D=1)*2^(2g-3)",
+  "higher_genus_structural_responses": [
+    {
+      "g": 51,
+      "d_terminal": 20,
+      "coefficient": -3400,
+      "predicted_change_per_unit_charge": "exact structural response, not physical charge prediction"
+    },
+    {
+      "g": 54,
+      "d_terminal": 21,
+      "coefficient": -3450,
+      "predicted_change_per_unit_charge": "exact structural response, not physical charge prediction"
+    },
+    {
+      "g": 55,
+      "d_terminal": 21,
+      "coefficient": -3210,
+      "predicted_change_per_unit_charge": "exact structural response, not physical charge prediction"
+    },
+    {
+      "g": 56,
+      "d_terminal": 22,
+      "coefficient": -3740,
+      "predicted_change_per_unit_charge": "exact structural response, not physical charge prediction"
+    },
+    {
+      "g": 76,
+      "d_terminal": 30,
+      "coefficient": -5100,
+      "predicted_change_per_unit_charge": "exact structural response, not physical charge prediction"
+    }
+  ],
+  "first_actual_nonzero_case": {
+    "g": 51,
+    "d": 20,
+    "physical_charge": 175,
+    "exact_change_next_degree": -595000
+  },
+  "frontier_unknown_template": {
+    "g": 54,
+    "d": 21,
+    "delta_n_54_22_per_delta_n_54_21": -3450
+  }
+}

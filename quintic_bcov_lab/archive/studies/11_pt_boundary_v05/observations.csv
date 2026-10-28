@@ -1,0 +1,181 @@
+degree,residue,k,delta,genus,m,gv,pt,split,provenance
+1,1,0,0,1,0,0,0,train,2024 table (g<=53 for some entries)
+1,1,0,1,0,1,2875,2875,train,2024 table (g<=53 for some entries)
+1,1,0,2,-1,2,,-5750,train,2024 table (g<=53 for some entries)
+1,1,0,3,-2,3,,8625,train,2024 table (g<=53 for some entries)
+1,1,0,4,-3,4,,-11500,train,2024 table (g<=53 for some entries)
+1,1,0,5,-4,5,,14375,train,2024 table (g<=53 for some entries)
+2,2,0,0,2,-1,0,0,train,2024 table (g<=53 for some entries)
+2,2,0,1,1,0,0,0,train,2024 table (g<=53 for some entries)
+2,2,0,2,0,1,609250,609250,train,2024 table (g<=53 for some entries)
+2,2,0,3,-1,2,,2912875,train,2024 table (g<=53 for some entries)
+2,2,0,4,-2,3,,-14703500,train,2024 table (g<=53 for some entries)
+2,2,0,5,-3,4,,38888250,train,2024 table (g<=53 for some entries)
+3,3,0,0,3,-2,0,0,train,2024 table (g<=53 for some entries)
+3,3,0,1,2,-1,0,0,train,2024 table (g<=53 for some entries)
+3,3,0,2,1,0,609250,609250,train,2024 table (g<=53 for some entries)
+3,3,0,3,0,1,317206375,317206375,train,2024 table (g<=53 for some entries)
+3,3,0,4,-1,2,,1117181000,train,2024 table (g<=53 for some entries)
+3,3,0,5,-2,3,,-2098275750,train,2024 table (g<=53 for some entries)
+4,4,0,0,4,-3,0,0,train,2024 table (g<=53 for some entries)
+4,4,0,1,3,-2,8625,8625,train,2024 table (g<=53 for some entries)
+4,4,0,2,2,-1,534750,569250,train,2024 table (g<=53 for some entries)
+4,4,0,3,1,0,3721431625,3722552875,train,2024 table (g<=53 for some entries)
+4,4,0,4,0,1,242467530000,244219693000,train,2024 table (g<=53 for some entries)
+4,4,0,5,-1,2,,609122565875,train,2024 table (g<=53 for some entries)
+5,0,1,0,6,-5,10,10,train,2024 table (g<=53 for some entries)
+5,0,1,1,5,-4,1100,1200,train,2024 table (g<=53 for some entries)
+5,0,1,2,4,-3,49250,58500,train,2024 table (g<=53 for some entries)
+5,0,1,3,3,-2,-15663750,-15336250,train,2024 table (g<=53 for some entries)
+5,0,1,4,2,-1,75478987900,75441932225,train,2024 table (g<=53 for some entries)
+5,0,1,5,1,0,12129909700200,12282361758020,train,2024 table (g<=53 for some entries)
+6,1,1,0,7,-6,0,0,train,2024 table (g<=53 for some entries)
+6,1,1,1,6,-5,-34500,-34500,train,2024 table (g<=53 for some entries)
+6,1,1,2,5,-4,-3079125,-3395375,train,2024 table (g<=53 for some entries)
+6,1,1,3,4,-3,-7529331750,-7552124750,train,2024 table (g<=53 for some entries)
+6,1,1,4,3,-2,3156446162875,3111341190625,train,2024 table (g<=53 for some entries)
+6,1,1,5,2,-1,871708139638250,884181641560000,train,2024 table (g<=53 for some entries)
+7,2,1,0,9,-8,0,0,train,2024 table (g<=53 for some entries)
+7,2,1,1,8,-7,0,0,train,2024 table (g<=53 for some entries)
+7,2,1,2,7,-6,4874000,4874000,train,2024 table (g<=53 for some entries)
+7,2,1,3,6,-5,1300955250,1359443250,train,2024 table (g<=53 for some entries)
+7,2,1,4,5,-4,-1917984531500,-1904746390000,train,2024 table (g<=53 for some entries)
+7,2,1,5,4,-3,245477430615250,230184283873875,train,2024 table (g<=53 for some entries)
+8,3,1,0,11,-10,0,0,train,2024 table (g<=53 for some entries)
+8,3,1,1,10,-9,0,0,train,2024 table (g<=53 for some entries)
+8,3,1,2,9,-8,-6092500,-6092500,train,2024 table (g<=53 for some entries)
+8,3,1,3,8,-7,-1670397000,-1767877000,train,2024 table (g<=53 for some entries)
+8,3,1,4,7,-6,2876330661125,2852214003125,train,2024 table (g<=53 for some entries)
+8,3,1,5,6,-5,-471852100909500,-437477532060500,train,2024 table (g<=53 for some entries)
+9,4,1,0,13,-12,0,0,train,2024 table (g<=53 for some entries)
+9,4,1,1,12,-11,60375,60375,train,2024 table (g<=53 for some entries)
+9,4,1,2,11,-10,5502750,6831000,train,2024 table (g<=53 for some entries)
+9,4,1,3,10,-9,18763368375,18887370000,train,2024 table (g<=53 for some entries)
+9,4,1,4,9,-8,-12735865055000,-12396985924250,train,2024 table (g<=53 for some entries)
+9,4,1,5,8,-7,1937652290971125,1736738444379375,train,2024 table (g<=53 for some entries)
+10,0,2,0,16,-15,-50,-50,train,2024 table (g<=53 for some entries)
+10,0,2,1,15,-14,-5700,-7200,train,2024 table (g<=53 for some entries)
+10,0,2,2,14,-13,-286650,-468000,train,2024 table (g<=53 for some entries)
+10,0,2,3,13,-12,50530375,40719875,train,2024 table (g<=53 for some entries)
+10,0,2,4,12,-11,-454092663150,-452993138850,train,2024 table (g<=53 for some entries)
+10,0,2,5,11,-10,150444095741780,140467307991350,train,2024 table (g<=53 for some entries)
+11,1,2,0,18,-17,0,0,train,2024 table (g<=53 for some entries)
+11,1,2,1,17,-16,-86250,-86250,train,2024 table (g<=53 for some entries)
+11,1,2,2,16,-15,-7357125,-10117125,train,2024 table (g<=53 for some entries)
+11,1,2,3,15,-14,-29938013250,-30201650750,train,2024 table (g<=53 for some entries)
+11,1,2,4,14,-13,22562306494375,21720393561500,train,2024 table (g<=53 for some entries)
+11,1,2,5,13,-12,-4041708780324500,-3466439656488000,train,2024 table (g<=53 for some entries)
+12,2,2,0,21,-20,0,0,train,2024 table (g<=53 for some entries)
+12,2,2,1,20,-19,0,0,train,2024 table (g<=53 for some entries)
+12,2,2,2,19,-18,-13403500,-13403500,train,2024 table (g<=53 for some entries)
+12,2,2,3,18,-17,-3937166500,-4419692500,train,2024 table (g<=53 for some entries)
+12,2,2,4,17,-16,8725919269125,8583611403125,train,2024 table (g<=53 for some entries)
+12,2,2,5,16,-15,-2017472506595500,-1740547789348750,train,2024 table (g<=53 for some entries)
+13,3,2,0,24,-23,0,0,train,2024 table (g<=53 for some entries)
+13,3,2,1,23,-22,0,0,train,2024 table (g<=53 for some entries)
+13,3,2,2,22,-21,-15840500,-15840500,train,2024 table (g<=53 for some entries)
+13,3,2,3,21,-20,-4638330000,-5303631000,train,2024 table (g<=53 for some entries)
+13,3,2,4,20,-19,10690009494250,10490837623750,train,2024 table (g<=53 for some entries)
+13,3,2,5,19,-18,-2578098061480250,-2175677447038750,train,2024 table (g<=53 for some entries)
+14,4,2,0,27,-26,0,0,train,2024 table (g<=53 for some entries)
+14,4,2,1,26,-25,-138000,-138000,train,2024 table (g<=53 for some entries)
+14,4,2,2,25,-24,-10177500,-17077500,train,2024 table (g<=53 for some entries)
+14,4,2,3,24,-23,-52227066000,-52884636000,train,2024 table (g<=53 for some entries)
+14,4,2,4,23,-22,42752384997625,40335754941625,train,2024 table (g<=53 for some entries)
+14,4,2,5,22,-21,-8759526658670500,-6932684543525000,train,2024 table (g<=53 for some entries)
+15,0,3,0,31,-30,-100,-100,train,2024 table (g<=53 for some entries)
+15,0,3,1,30,-29,-9200,-15200,train,2024 table (g<=53 for some entries)
+15,0,3,2,29,-28,-342400,-1053000,train,2024 table (g<=53 for some entries)
+15,0,3,3,28,-27,136695125,98891125,train,2024 table (g<=53 for some entries)
+15,0,3,4,27,-26,-1214106563650,-1207584961600,train,2024 table (g<=53 for some entries)
+15,0,3,5,26,-25,484402370601245,421450499252120,train,2024 table (g<=53 for some entries)
+16,1,3,0,34,-33,0,0,train,2024 table (g<=53 for some entries)
+16,1,3,1,33,-32,181125,181125,train,2024 table (g<=53 for some entries)
+16,1,3,2,32,-31,11178000,22770000,train,2024 table (g<=53 for some entries)
+16,1,3,3,31,-30,70714095125,71772279125,train,2024 table (g<=53 for some entries)
+16,1,3,4,30,-29,-60120995398500,-55849465988500,train,2024 table (g<=53 for some entries)
+16,1,3,5,29,-28,13182681427726625,9821365434297875,train,2024 table (g<=53 for some entries)
+17,2,3,0,38,-37,0,0,train,2024 table (g<=53 for some entries)
+17,2,3,1,37,-36,0,0,train,2024 table (g<=53 for some entries)
+17,2,3,2,36,-35,-28025500,-28025500,train,2024 table (g<=53 for some entries)
+17,2,3,3,35,-34,-7761538500,-9723323500,train,2024 table (g<=53 for some entries)
+17,2,3,4,34,-33,20623428936750,20027962736250,train,2024 table (g<=53 for some entries)
+17,2,3,5,33,-32,-5693356905665000,-4351425496412500,train,2024 table (g<=53 for some entries)
+18,3,3,0,42,-41,0,0,train,2024 table (g<=53 for some entries)
+18,3,3,1,41,-40,0,0,train,2024 table (g<=53 for some entries)
+18,3,3,2,40,-39,31681000,31681000,train,2024 table (g<=53 for some entries)
+18,3,3,3,39,-38,8578113250,11049231250,train,2024 table (g<=53 for some entries)
+18,3,3,4,38,-37,-23636174920000,-22889100270000,train,2024 table (g<=53 for some entries)
+18,3,3,5,37,-36,6726357908107750,5004138750546250,train,2024 table (g<=53 for some entries)
+19,4,3,0,46,-45,0,0,train,2024 table (g<=53 for some entries)
+19,4,3,1,45,-44,-258750,-258750,train,2024 table (g<=53 for some entries)
+19,4,3,2,44,-43,-10246500,-33016500,train,2024 table (g<=53 for some entries)
+19,4,3,3,43,-42,-103897578000,-105769272000,train,2024 table (g<=53 for some entries)
+19,4,3,4,42,-41,92567501962875,83774260263375,train,2024 table (g<=53 for some entries)
+19,4,3,5,41,-40,-22247603793898250,-15020907593198000,train,2024 table (g<=53 for some entries)
+20,0,4,0,51,-50,175,175,train,2024 table (g<=53 for some entries)
+20,0,4,1,50,-49,9700,27200,train,2024 table (g<=53 for some entries)
+20,0,4,2,49,-48,113650,1930500,train,2024 table (g<=53 for some entries)
+20,0,4,3,48,-47,-271460000,-186148000,train,2024 table (g<=53 for some entries)
+20,0,4,4,47,-46,2362533313525,2339695863100,train,2024 table (g<=53 for some entries)
+20,0,4,5,46,-45,-1059131220525950,-842900254597650,train,2024 table (g<=53 for some entries)
+21,1,4,0,55,-54,0,0,holdout,2024 table; holdout modularity-conditional
+21,1,4,1,54,-53,319125,319125,holdout,2024 table; holdout modularity-conditional
+21,1,4,2,53,-52,7158750,40986000,holdout,2024 table; holdout modularity-conditional
+21,1,4,3,52,-51,129691149375,132211590000,holdout,2024 table; holdout modularity-conditional
+21,1,4,4,51,-50,-118821918509250,-105493513413000,holdout,2024 table; holdout modularity-conditional
+21,1,4,5,50,-49,30276261813046500,19064998024136500,holdout,2024 table; holdout modularity-conditional
+22,2,4,0,60,-59,0,0,holdout,2024 table; holdout modularity-conditional
+22,2,4,1,59,-58,0,0,holdout,2024 table; holdout modularity-conditional
+22,2,4,2,58,-57,48740000,48740000,holdout,2024 table; holdout modularity-conditional
+22,2,4,3,57,-56,11680440750,17236800750,holdout,2024 table; holdout modularity-conditional
+22,2,4,4,56,-55,-37863219131500,-36241075427500,holdout,2024 table; holdout modularity-conditional
+22,2,4,5,55,-54,12130764520281750,8050136250878750,holdout,2024 table; holdout modularity-conditional
+23,3,4,0,65,-64,0,0,holdout,2024 table; holdout modularity-conditional
+23,3,4,1,64,-63,0,0,holdout,2024 table; holdout modularity-conditional
+23,3,4,2,63,-62,53614000,53614000,holdout,2024 table; holdout modularity-conditional
+23,3,4,3,62,-61,12356541750,19004677750,holdout,2024 table; holdout modularity-conditional
+23,3,4,4,61,-60,-41972283930000,-40055925472500,holdout,2024 table; holdout modularity-conditional
+23,3,4,5,60,-59,13849264699781000,8920421250973750,holdout,2024 table; holdout modularity-conditional
+24,4,4,0,70,-69,0,0,holdout,2024 table; holdout modularity-conditional
+24,4,4,1,69,-68,422625,422625,holdout,2024 table; holdout modularity-conditional
+24,4,4,2,68,-67,-2829000,54648000,holdout,2024 table; holdout modularity-conditional
+24,4,4,3,67,-66,174040666500,177541278000,holdout,2024 table; holdout modularity-conditional
+24,4,4,4,66,-65,-165847969399750,-142726517485750,holdout,2024 table; holdout modularity-conditional
+24,4,4,5,65,-64,46048552308175750,25997724680535000,holdout,2024 table; holdout modularity-conditional
+25,0,5,0,76,-75,275,275,holdout,2024 table; holdout modularity-conditional
+25,0,5,1,75,-74,1950,43200,holdout,2024 table; holdout modularity-conditional
+25,0,5,2,74,-73,-261225,3100500,holdout,2024 table; holdout modularity-conditional
+25,0,5,3,73,-72,-437171250,-302490500,holdout,2024 table; holdout modularity-conditional
+25,0,5,4,72,-71,3908290893900,3849177065100,holdout,2024 table; holdout modularity-conditional
+25,0,5,5,71,-70,-1955377337896550,-1404833757662750,holdout,2024 table; holdout modularity-conditional
+26,1,5,0,81,-80,0,0,holdout,2024 table; holdout modularity-conditional
+26,1,5,1,80,-79,-500250,-500250,holdout,2024 table; holdout modularity-conditional
+26,1,5,2,79,-78,14145000,-64894500,holdout,2024 table; holdout modularity-conditional
+26,1,5,3,78,-77,-207540563250,-211538544000,holdout,2024 table; holdout modularity-conditional
+26,1,5,4,77,-76,202764143836375,170651270906875,holdout,2024 table; holdout modularity-conditional
+26,1,5,5,76,-75,-59568660504287750,-31197269617418250,holdout,2024 table; holdout modularity-conditional
+27,2,5,0,87,-86,0,0,holdout,2024 table; holdout modularity-conditional
+27,2,5,1,86,-85,0,0,holdout,2024 table; holdout modularity-conditional
+27,2,5,2,85,-84,75547000,75547000,holdout,2024 table; holdout modularity-conditional
+27,2,5,3,84,-83,14268228250,26960124250,holdout,2024 table; holdout modularity-conditional
+27,2,5,4,83,-82,-60651049880500,-57222750675000,holdout,2024 table; holdout modularity-conditional
+27,2,5,5,82,-81,22529431755767500,12836703751401250,holdout,2024 table; holdout modularity-conditional
+28,3,5,0,93,-92,0,0,holdout,2024 table; holdout modularity-conditional
+28,3,5,1,92,-91,0,0,holdout,2024 table; holdout modularity-conditional
+28,3,5,2,91,-90,-81639500,-81639500,holdout,2024 table; holdout modularity-conditional
+28,3,5,3,90,-89,-14474860500,-29169970500,holdout,2024 table; holdout modularity-conditional
+28,3,5,4,89,-88,65883050745250,61991313231250,holdout,2024 table; holdout modularity-conditional
+28,3,5,5,88,-87,-25213918522757500,-13924560001520000,holdout,2024 table; holdout modularity-conditional
+29,4,5,0,99,-98,0,0,holdout,2024 table; holdout modularity-conditional
+29,4,5,1,98,-97,629625,629625,holdout,2024 table; holdout modularity-conditional
+29,4,5,2,97,-96,-40175250,81972000,holdout,2024 table; holdout modularity-conditional
+29,4,5,3,96,-95,264127092375,268200654000,holdout,2024 table; holdout modularity-conditional
+29,4,5,4,95,-94,-267394402192000,-217192526608750,holdout,2024 table; holdout modularity-conditional
+29,4,5,5,94,-93,85401556513695875,39863177843487000,holdout,2024 table; holdout modularity-conditional
+30,0,6,0,106,-105,-400,-400,holdout,2024 table; holdout modularity-conditional
+30,0,6,1,105,-104,20800,-63200,holdout,2024 table; holdout modularity-conditional
+30,0,6,2,104,-103,-111400,-4563000,holdout,2024 table; holdout modularity-conditional
+30,0,6,3,103,-102,631692625,447918625,holdout,2024 table; holdout modularity-conditional
+30,0,6,4,102,-101,-5861793912900,-5736028567600,holdout,2024 table; holdout modularity-conditional
+30,0,6,5,101,-100,3278134921975475,2107250636494125,holdout,2024 table; holdout modularity-conditional

@@ -1,0 +1,12 @@
+{
+  "id": "17_depth11_15_v11",
+  "title": "Shells 11-15, finite-rank anchors and no-closure tests",
+  "version": "depth v1.1",
+  "run": [
+    "predictor/linear_extension_pairs.py"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_PT_Depth11_15_v11.zip"
+}

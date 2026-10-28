@@ -1,0 +1,72 @@
+[
+  {
+    "genus": 6,
+    "MUM_q_degree": 4,
+    "response_jacobian_rank": 5,
+    "zero_columns_for_j_greater_than": 4,
+    "number_high_tail_columns_with_exact_zero_response": 11,
+    "diagonal": [
+      "-1/95367431640625",
+      "1/30517578125",
+      "-1/9765625",
+      "1/3125",
+      "-1"
+    ]
+  },
+  {
+    "genus": 9,
+    "MUM_q_degree": 4,
+    "response_jacobian_rank": 5,
+    "zero_columns_for_j_greater_than": 4,
+    "number_high_tail_columns_with_exact_zero_response": 20,
+    "diagonal": [
+      "1/23283064365386962890625",
+      "-1/7450580596923828125",
+      "1/2384185791015625",
+      "-1/762939453125",
+      "1/244140625"
+    ]
+  },
+  {
+    "genus": 10,
+    "MUM_q_degree": 4,
+    "response_jacobian_rank": 5,
+    "zero_columns_for_j_greater_than": 4,
+    "number_high_tail_columns_with_exact_zero_response": 23,
+    "diagonal": [
+      "-1/14551915228366851806640625",
+      "1/4656612873077392578125",
+      "-1/1490116119384765625",
+      "1/476837158203125",
+      "-1/152587890625"
+    ]
+  },
+  {
+    "genus": 11,
+    "MUM_q_degree": 4,
+    "response_jacobian_rank": 5,
+    "zero_columns_for_j_greater_than": 4,
+    "number_high_tail_columns_with_exact_zero_response": 26,
+    "diagonal": [
+      "1/9094947017729282379150390625",
+      "-1/2910383045673370361328125",
+      "1/931322574615478515625",
+      "-1/298023223876953125",
+      "1/95367431640625"
+    ]
+  },
+  {
+    "genus": 12,
+    "MUM_q_degree": 4,
+    "response_jacobian_rank": 5,
+    "zero_columns_for_j_greater_than": 4,
+    "number_high_tail_columns_with_exact_zero_response": 29,
+    "diagonal": [
+      "-1/5684341886080801486968994140625",
+      "1/1818989403545856475830078125",
+      "-1/582076609134674072265625",
+      "1/186264514923095703125",
+      "-1/59604644775390625"
+    ]
+  }
+]

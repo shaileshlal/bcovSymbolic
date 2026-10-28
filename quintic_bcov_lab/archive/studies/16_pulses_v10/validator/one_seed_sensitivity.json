@@ -1,0 +1,37 @@
+{
+  "seed_degree": 43,
+  "seed_shell": 10,
+  "seed_PT": "-3093483704226144962136138500",
+  "inferred_B_23_shell10": "-19830023745038127172617875/2",
+  "new_predicted_exact": 4,
+  "new_predictions": [
+    {
+      "degree": 47,
+      "shell": 10,
+      "prediction": "-3767704511557243550364177500",
+      "exact": true
+    },
+    {
+      "degree": 48,
+      "shell": 10,
+      "prediction": "3946174725262586610216644625",
+      "exact": true
+    },
+    {
+      "degree": 52,
+      "shell": 10,
+      "prediction": "4699715627574036145787295750",
+      "exact": true
+    },
+    {
+      "degree": 53,
+      "shell": 10,
+      "prediction": "4898015865024417411636615125",
+      "exact": true
+    }
+  ],
+  "remaining_unknown_without_second_seed": {
+    "degree": 42,
+    "shell": 10
+  }
+}

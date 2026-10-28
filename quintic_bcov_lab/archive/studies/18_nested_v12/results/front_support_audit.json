@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "terminal_scored": 13,
+    "terminal_active": 13,
+    "postterminal_scored": 33,
+    "postterminal_zero": 33
+  },
+  "anomalies": []
+}

@@ -5,7 +5,7 @@ from .bcov_yy import (
 )
 from .quintic_frames import Frame, FramedPolynomial
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 __all__ = [
     "Amplitude", "BCOV", "Poly", "Recipe", "RecipeArena", "YYRing",
     "YY_GENUS2_AMBIGUITY", "X", "integrate_gradient", "reference_genus2",

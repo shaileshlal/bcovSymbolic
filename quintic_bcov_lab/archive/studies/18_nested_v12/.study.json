@@ -1,0 +1,12 @@
+{
+  "id": "18_nested_v12",
+  "title": "Second-order residual hierarchy and terminal-pulse extrapolation",
+  "version": "nested v1.2",
+  "run": [
+    "run.py"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_PT_Nested_Residuals_v12.zip"
+}

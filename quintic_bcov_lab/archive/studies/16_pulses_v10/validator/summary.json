@@ -1,0 +1,100 @@
+{
+  "reference_status": "conditional modular DT / wall-crossing, scorer only",
+  "hypothesis_status": "exploratory; feature class selected with inspection of extended data",
+  "train_cutoff_degree": 40,
+  "test_degree_range": [
+    41,
+    53
+  ],
+  "sites": 65,
+  "v09_frozen_exact": 32,
+  "v09_frozen_abstentions": 33,
+  "v10_predicted": 59,
+  "v10_exact": 59,
+  "v10_abstentions": 6,
+  "new_exact_sites": 27,
+  "by_depth": {
+    "6": {
+      "predicted": 13,
+      "exact": 13,
+      "total": 13
+    },
+    "7": {
+      "predicted": 13,
+      "exact": 13,
+      "total": 13
+    },
+    "8": {
+      "predicted": 13,
+      "exact": 13,
+      "total": 13
+    },
+    "9": {
+      "predicted": 13,
+      "exact": 13,
+      "total": 13
+    },
+    "10": {
+      "predicted": 7,
+      "exact": 7,
+      "total": 13
+    }
+  },
+  "unresolved": [
+    {
+      "degree": 42,
+      "shell": 10
+    },
+    {
+      "degree": 43,
+      "shell": 10
+    },
+    {
+      "degree": 47,
+      "shell": 10
+    },
+    {
+      "degree": 48,
+      "shell": 10
+    },
+    {
+      "degree": 52,
+      "shell": 10
+    },
+    {
+      "degree": 53,
+      "shell": 10
+    }
+  ],
+  "calibration_diagonal": {
+    "nonzero_pairs": 6,
+    "on_front": 4,
+    "on_front_exact": 4,
+    "off_front_exact": 0
+  },
+  "full_diagonal": {
+    "nonzero_pairs": 32,
+    "on_front": 15,
+    "on_front_exact": 15,
+    "off_front_exact": 0
+  },
+  "closed_secondary_residual": {
+    "exact": 14,
+    "tested": 14,
+    "independence": "algebraic consequence of fitted profile"
+  },
+  "secondary_pulse_teacher_forced": {
+    "count": 8,
+    "zero_baseline_mean_relative_error": 1.0,
+    "rational_ratio_mean_relative_error": 0.008718663064681489,
+    "not_an_autonomous_test": true
+  },
+  "source_tiers": {
+    "mature_scale": 45,
+    "constant_r1": 7,
+    "affine_consensus": 5,
+    "r4_two_point_extrapolation": 1,
+    "r2_anti_pair_verified": 1,
+    "abstain": 6
+  }
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "Q": 35,
+    "genus": 141,
+    "predicted": -550,
+    "geometric_formula": -550,
+    "independent_exact_match": true
+  },
+  {
+    "Q": 40,
+    "genus": 181,
+    "predicted": 725,
+    "geometric_formula": 725,
+    "independent_exact_match": true
+  }
+]

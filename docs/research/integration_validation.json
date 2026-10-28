@@ -1,0 +1,243 @@
+{
+  "date": "2026-10-28",
+  "scope": "Fresh integration checks; imported benchmark snapshots remain unchanged",
+  "archive": "8b9776290c6dbf8b837ef32192cb8d27d5ee7e77d64193ac4bdf5c170b993485",
+  "backend": {
+    "backend": "bcov.bcov_yy",
+    "convention": "YY2004-quintic-psi-X=1/(1-psi^5)-v3-unscaled-v1",
+    "genus_two_terms": 14,
+    "bcov_residual_zero": true
+  },
+  "import_audit": {
+    "matching": 528,
+    "changed": 0,
+    "missing": 0
+  },
+  "source_audit": {
+    "matching": 480,
+    "changed_after_reproduction": 0,
+    "missing": 0,
+    "shared": 10,
+    "optional": 2
+  },
+  "package_tests": {
+    "command": "python -m pytest -q tests",
+    "passed": 21
+  },
+  "reference_overlap": {
+    "genera": [
+      2,
+      12
+    ],
+    "exact_matches": 11
+  },
+  "stage_tests": [
+    {
+      "stage": "01_v01_low_x",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 8.653,
+      "arguments": [
+        "-m",
+        "hybrid.tests"
+      ]
+    },
+    {
+      "stage": "02_high_x_rope",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 0.28,
+      "arguments": [
+        "verify_phases_and_digits.py"
+      ]
+    },
+    {
+      "stage": "03_two_stream",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 0.37,
+      "arguments": [
+        "exact_response_audit.py"
+      ]
+    },
+    {
+      "stage": "04_midpoint",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 43.381,
+      "arguments": [
+        "midpoint_test.py"
+      ]
+    },
+    {
+      "stage": "05_intermediate_dataset",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 0.289,
+      "arguments": [
+        "tests_intermediate.py"
+      ]
+    },
+    {
+      "stage": "06_intermediate_ml",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 2.351,
+      "arguments": [
+        "tests.py"
+      ]
+    },
+    {
+      "stage": "07_lattice_walk",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 0.146,
+      "arguments": [
+        "tests.py"
+      ]
+    },
+    {
+      "stage": "08_displacement",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 1.016,
+      "arguments": [
+        "tests.py"
+      ]
+    },
+    {
+      "stage": "09_genus45_53",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 0.211,
+      "arguments": [
+        "code/tests.py"
+      ]
+    },
+    {
+      "stage": "10_dtpt_v04",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 1.078,
+      "arguments": [
+        "tests.py"
+      ]
+    },
+    {
+      "stage": "11_pt_boundary_v05",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 0.372,
+      "arguments": [
+        "tests.py"
+      ]
+    },
+    {
+      "stage": "12_defects_v06",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 2.908,
+      "arguments": [
+        "tests.py"
+      ]
+    },
+    {
+      "stage": "13_recursive_v07",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 0.242,
+      "arguments": [
+        "tests.py"
+      ]
+    },
+    {
+      "stage": "14_survival_v08",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 0.23,
+      "arguments": [
+        "tests.py"
+      ]
+    },
+    {
+      "stage": "15_deep_v09",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 2.222,
+      "arguments": [
+        "tests.py"
+      ]
+    },
+    {
+      "stage": "16_pulses_v10",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 0.171,
+      "arguments": [
+        "tests.py"
+      ]
+    },
+    {
+      "stage": "17_depth11_15_v11",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 1.583,
+      "arguments": [
+        "tests.py"
+      ]
+    },
+    {
+      "stage": "18_nested_v12",
+      "action": "test",
+      "status": "passed",
+      "returncode": 0,
+      "elapsed_s": 0.251,
+      "arguments": [
+        "tests.py"
+      ]
+    }
+  ],
+  "environment": {
+    "python": "3.14",
+    "conda_environment": "jax"
+  },
+  "limits": [
+    "Optional genus-1000 exact dataset not supplied",
+    "Historical empirical benchmarks retain their original conditioning, misses and abstentions"
+  ],
+  "type_check": {
+    "command": "python -m mypy",
+    "source_files": 11,
+    "status": "passed"
+  },
+  "notebook": {
+    "path": "notebooks/research_overview.py",
+    "headless_execution": "passed"
+  },
+  "wheel_smoke": {
+    "outside_checkout": true,
+    "imported_files_verified": 528,
+    "stage_18_test": "passed"
+  },
+  "core_regressions": {
+    "status": "passed",
+    "physical_gv_comparisons": 84
+  }
+}

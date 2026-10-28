@@ -1,0 +1,72 @@
+{
+  "logit_positional": {
+    "accuracy": 0.875,
+    "balanced_accuracy": 0.8777777777777778,
+    "precision": 0.8,
+    "recall": 0.8888888888888888,
+    "auc": 0.9703703703703704,
+    "brier": 0.09730477793999799,
+    "active_predicted": 10,
+    "active_actual": 9
+  },
+  "logit_engineered": {
+    "accuracy": 0.7916666666666666,
+    "balanced_accuracy": 0.7222222222222222,
+    "precision": 1.0,
+    "recall": 0.4444444444444444,
+    "auc": 0.9333333333333333,
+    "brier": 0.12593388832579724,
+    "active_predicted": 4,
+    "active_actual": 9
+  },
+  "extratrees_engineered": {
+    "accuracy": 0.7916666666666666,
+    "balanced_accuracy": 0.788888888888889,
+    "precision": 0.7,
+    "recall": 0.7777777777777778,
+    "auc": 0.8888888888888888,
+    "brier": 0.13649122133867955,
+    "active_predicted": 10,
+    "active_actual": 9
+  },
+  "randomforest_engineered": {
+    "accuracy": 0.7916666666666666,
+    "balanced_accuracy": 0.788888888888889,
+    "precision": 0.7,
+    "recall": 0.7777777777777778,
+    "auc": 0.8592592592592593,
+    "brier": 0.1524008386370743,
+    "active_predicted": 10,
+    "active_actual": 9
+  },
+  "persistent_front": {
+    "accuracy": 0.8333333333333334,
+    "balanced_accuracy": 0.8666666666666667,
+    "precision": 0.6923076923076923,
+    "recall": 1.0,
+    "auc": 0.8666666666666667,
+    "brier": 0.16666666666666666,
+    "active_predicted": 13,
+    "active_actual": 9
+  },
+  "unit_speed_front": {
+    "accuracy": 0.9583333333333334,
+    "balanced_accuracy": 0.9444444444444444,
+    "precision": 1.0,
+    "recall": 0.8888888888888888,
+    "auc": 0.9444444444444444,
+    "brier": 0.041666666666666664,
+    "active_predicted": 8,
+    "active_actual": 9
+  },
+  "stable_absorbing": {
+    "accuracy": 0.8333333333333334,
+    "balanced_accuracy": 0.8666666666666667,
+    "precision": 0.6923076923076923,
+    "recall": 1.0,
+    "auc": 0.8666666666666667,
+    "brier": 0.16666666666666666,
+    "active_predicted": 13,
+    "active_actual": 9
+  }
+}

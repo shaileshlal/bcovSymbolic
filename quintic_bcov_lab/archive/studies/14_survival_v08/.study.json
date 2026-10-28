@@ -1,0 +1,12 @@
+{
+  "id": "14_survival_v08",
+  "title": "Frozen 31-53 survival: teacher-forced and autonomous holdouts",
+  "version": "survival v0.8",
+  "run": [
+    "predictor/rollout.py"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_PT_Recursive_Survival_v08.zip"
+}

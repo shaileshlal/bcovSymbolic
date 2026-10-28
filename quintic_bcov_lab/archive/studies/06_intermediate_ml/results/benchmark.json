@@ -1,0 +1,1637 @@
+{
+  "schema": "quintic-yy-restricted-ml-v1",
+  "provenance": "reference derived canonical YY residual labels, mixed terms from exact anomaly",
+  "features_allowed": [
+    "genus",
+    "residual index",
+    "kernel dimensions",
+    "mixed anomaly features at same X degree"
+  ],
+  "forbidden_features": [
+    "physical YY ambiguity pivot coefficients",
+    "reference-derived anchor",
+    "reference-derived midpoint value",
+    "target-genus GV invariant"
+  ],
+  "conditioning": "held-out genus anomaly is known, hence its lower-genus physical ambiguities are available; not a sequential bootstrap",
+  "dataset": {
+    "n_reference_genera": 11,
+    "n_nonzero_genera": 9,
+    "n_coefficients": 22,
+    "g_range": [
+      4,
+      12
+    ],
+    "sign_uniform_within_genus": true
+  },
+  "experiments": {
+    "train_to_8": {
+      "genus__majority": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.6021538494345735,
+          "median_abs_log10_magnitude": 0.5591486100541463,
+          "p90_abs_log10_magnitude": 0.9244086384493262,
+          "median_magnitude_factor": 3.6236697457890905,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.5401121750846093,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -2.5749409848855116,
+              "coefficients": [
+                2.050842913248657,
+                -0.427195504820809
+              ]
+            }
+          }
+        ]
+      },
+      "genus__v01_trees": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.6021538494345735,
+          "median_abs_log10_magnitude": 0.5591486100541463,
+          "p90_abs_log10_magnitude": 0.9244086384493262,
+          "median_magnitude_factor": 3.6236697457890905,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.5401121750846093,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -2.5749409848855116,
+              "coefficients": [
+                2.050842913248657,
+                -0.427195504820809
+              ]
+            }
+          }
+        ]
+      },
+      "genus__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.6021538494345735,
+          "median_abs_log10_magnitude": 0.5591486100541463,
+          "p90_abs_log10_magnitude": 0.9244086384493262,
+          "median_magnitude_factor": 3.6236697457890905,
+          "sign_accuracy_by_coefficient": 0.7142857142857143,
+          "sign_accuracy_by_genus": 0.75,
+          "MAE_unseen_position": 0.5401121750846093,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -2.5749409848855116,
+              "coefficients": [
+                2.050842913248657,
+                -0.427195504820809
+              ]
+            }
+          }
+        ]
+      },
+      "mixed__majority": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.280122359384528,
+          "median_abs_log10_magnitude": 0.2678054540593333,
+          "p90_abs_log10_magnitude": 0.44778126351827024,
+          "median_magnitude_factor": 1.8527015039589092,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.24190160128807894,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -0.006385398948026477,
+              "coefficients": [
+                0.9168748258135089,
+                -0.32308620386443787
+              ]
+            }
+          }
+        ]
+      },
+      "mixed__v01_trees": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.280122359384528,
+          "median_abs_log10_magnitude": 0.2678054540593333,
+          "p90_abs_log10_magnitude": 0.44778126351827024,
+          "median_magnitude_factor": 1.8527015039589092,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.24190160128807894,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -0.006385398948026477,
+              "coefficients": [
+                0.9168748258135089,
+                -0.32308620386443787
+              ]
+            }
+          }
+        ]
+      },
+      "mixed__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.280122359384528,
+          "median_abs_log10_magnitude": 0.2678054540593333,
+          "p90_abs_log10_magnitude": 0.44778126351827024,
+          "median_magnitude_factor": 1.8527015039589092,
+          "sign_accuracy_by_coefficient": 0.7142857142857143,
+          "sign_accuracy_by_genus": 0.75,
+          "MAE_unseen_position": 0.24190160128807894,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -0.006385398948026477,
+              "coefficients": [
+                0.9168748258135089,
+                -0.32308620386443787
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_plus_genus__majority": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.2505515500565004,
+          "median_abs_log10_magnitude": 0.23136881464162862,
+          "p90_abs_log10_magnitude": 0.405232366215055,
+          "median_magnitude_factor": 1.7036046414825727,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.21450323003106764,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.23027854329419029,
+              "coefficients": [
+                1.0013021348600661,
+                -0.31347511668134465,
+                -0.1888694501450079
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_plus_genus__v01_trees": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.2505515500565004,
+          "median_abs_log10_magnitude": 0.23136881464162862,
+          "p90_abs_log10_magnitude": 0.405232366215055,
+          "median_magnitude_factor": 1.7036046414825727,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.21450323003106764,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.23027854329419029,
+              "coefficients": [
+                1.0013021348600661,
+                -0.31347511668134465,
+                -0.1888694501450079
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_plus_genus__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.2505515500565004,
+          "median_abs_log10_magnitude": 0.23136881464162862,
+          "p90_abs_log10_magnitude": 0.405232366215055,
+          "median_magnitude_factor": 1.7036046414825727,
+          "sign_accuracy_by_coefficient": 0.7142857142857143,
+          "sign_accuracy_by_genus": 0.75,
+          "MAE_unseen_position": 0.21450323003106764,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.23027854329419029,
+              "coefficients": [
+                1.0013021348600661,
+                -0.31347511668134465,
+                -0.1888694501450079
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_residual__majority": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.25100878828157036,
+          "median_abs_log10_magnitude": 0.2319321683312019,
+          "p90_abs_log10_magnitude": 0.4058903713156437,
+          "median_magnitude_factor": 1.705815939892449,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.2149266654191934,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.22663051937553003,
+              "coefficients": [
+                -0.1859568352175437,
+                -0.31362300339459626
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_residual__v01_trees": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.25100878828157036,
+          "median_abs_log10_magnitude": 0.2319321683312019,
+          "p90_abs_log10_magnitude": 0.4058903713156437,
+          "median_magnitude_factor": 1.705815939892449,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.2149266654191934,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.22663051937553003,
+              "coefficients": [
+                -0.1859568352175437,
+                -0.31362300339459626
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_residual__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.25100878828157036,
+          "median_abs_log10_magnitude": 0.2319321683312019,
+          "p90_abs_log10_magnitude": 0.4058903713156437,
+          "median_magnitude_factor": 1.705815939892449,
+          "sign_accuracy_by_coefficient": 0.7142857142857143,
+          "sign_accuracy_by_genus": 0.75,
+          "MAE_unseen_position": 0.2149266654191934,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.22663051937553003,
+              "coefficients": [
+                -0.1859568352175437,
+                -0.31362300339459626
+              ]
+            }
+          }
+        ]
+      },
+      "v01_trees__combined_v01": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 5.993936819436121,
+          "median_abs_log10_magnitude": 6.302912461921391,
+          "p90_abs_log10_magnitude": 9.099548645273213,
+          "median_magnitude_factor": 2008687.8928864014,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 5.874993742559339,
+          "n_unseen_position": 6
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {}
+          }
+        ]
+      }
+    },
+    "train_to_9": {
+      "genus__majority": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.3393645787948649,
+          "median_abs_log10_magnitude": 0.43342568817059046,
+          "p90_abs_log10_magnitude": 0.5385807972735996,
+          "median_magnitude_factor": 2.7128494186406225,
+          "sign_accuracy_by_coefficient": 0.36363636363636365,
+          "sign_accuracy_by_genus": 0.3333333333333333,
+          "MAE_unseen_position": 0.18171778923977122,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -2.9501000012784697,
+              "coefficients": [
+                2.1165455902572896,
+                -0.4281924876181236
+              ]
+            }
+          }
+        ]
+      },
+      "genus__v01_trees": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.3393645787948649,
+          "median_abs_log10_magnitude": 0.43342568817059046,
+          "p90_abs_log10_magnitude": 0.5385807972735996,
+          "median_magnitude_factor": 2.7128494186406225,
+          "sign_accuracy_by_coefficient": 0.36363636363636365,
+          "sign_accuracy_by_genus": 0.3333333333333333,
+          "MAE_unseen_position": 0.18171778923977122,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -2.9501000012784697,
+              "coefficients": [
+                2.1165455902572896,
+                -0.4281924876181236
+              ]
+            }
+          }
+        ]
+      },
+      "genus__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.3393645787948649,
+          "median_abs_log10_magnitude": 0.43342568817059046,
+          "p90_abs_log10_magnitude": 0.5385807972735996,
+          "median_magnitude_factor": 2.7128494186406225,
+          "sign_accuracy_by_coefficient": 0.6363636363636364,
+          "sign_accuracy_by_genus": 0.6666666666666666,
+          "MAE_unseen_position": 0.18171778923977122,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -2.9501000012784697,
+              "coefficients": [
+                2.1165455902572896,
+                -0.4281924876181236
+              ]
+            }
+          }
+        ]
+      },
+      "mixed__majority": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.1283981336658742,
+          "median_abs_log10_magnitude": 0.12833409202817236,
+          "p90_abs_log10_magnitude": 0.24548677112102624,
+          "median_magnitude_factor": 1.3437983145037362,
+          "sign_accuracy_by_coefficient": 0.36363636363636365,
+          "sign_accuracy_by_genus": 0.3333333333333333,
+          "MAE_unseen_position": 0.09345632507966961,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -0.1668990966865831,
+              "coefficients": [
+                0.932982516163206,
+                -0.3245073178516864
+              ]
+            }
+          }
+        ]
+      },
+      "mixed__v01_trees": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.1283981336658742,
+          "median_abs_log10_magnitude": 0.12833409202817236,
+          "p90_abs_log10_magnitude": 0.24548677112102624,
+          "median_magnitude_factor": 1.3437983145037362,
+          "sign_accuracy_by_coefficient": 0.36363636363636365,
+          "sign_accuracy_by_genus": 0.3333333333333333,
+          "MAE_unseen_position": 0.09345632507966961,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -0.1668990966865831,
+              "coefficients": [
+                0.932982516163206,
+                -0.3245073178516864
+              ]
+            }
+          }
+        ]
+      },
+      "mixed__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.1283981336658742,
+          "median_abs_log10_magnitude": 0.12833409202817236,
+          "p90_abs_log10_magnitude": 0.24548677112102624,
+          "median_magnitude_factor": 1.3437983145037362,
+          "sign_accuracy_by_coefficient": 0.6363636363636364,
+          "sign_accuracy_by_genus": 0.6666666666666666,
+          "MAE_unseen_position": 0.09345632507966961,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -0.1668990966865831,
+              "coefficients": [
+                0.932982516163206,
+                -0.3245073178516864
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_plus_genus__majority": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.1198132149523523,
+          "median_abs_log10_magnitude": 0.12041661331833353,
+          "p90_abs_log10_magnitude": 0.22995393291469313,
+          "median_magnitude_factor": 1.319521932666356,
+          "sign_accuracy_by_coefficient": 0.36363636363636365,
+          "sign_accuracy_by_genus": 0.3333333333333333,
+          "MAE_unseen_position": 0.12860760435114038,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 2.249958966026197,
+              "coefficients": [
+                1.7405399520538924,
+                -0.2333653906541382,
+                -1.8332182889615332
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_plus_genus__v01_trees": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.1198132149523523,
+          "median_abs_log10_magnitude": 0.12041661331833353,
+          "p90_abs_log10_magnitude": 0.22995393291469313,
+          "median_magnitude_factor": 1.319521932666356,
+          "sign_accuracy_by_coefficient": 0.36363636363636365,
+          "sign_accuracy_by_genus": 0.3333333333333333,
+          "MAE_unseen_position": 0.12860760435114038,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 2.249958966026197,
+              "coefficients": [
+                1.7405399520538924,
+                -0.2333653906541382,
+                -1.8332182889615332
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_plus_genus__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.1198132149523523,
+          "median_abs_log10_magnitude": 0.12041661331833353,
+          "p90_abs_log10_magnitude": 0.22995393291469313,
+          "median_magnitude_factor": 1.319521932666356,
+          "sign_accuracy_by_coefficient": 0.6363636363636364,
+          "sign_accuracy_by_genus": 0.6666666666666666,
+          "MAE_unseen_position": 0.12860760435114038,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 2.249958966026197,
+              "coefficients": [
+                1.7405399520538924,
+                -0.2333653906541382,
+                -1.8332182889615332
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_residual__majority": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.1171468775326642,
+          "median_abs_log10_magnitude": 0.10120738379461258,
+          "p90_abs_log10_magnitude": 0.22828221183472053,
+          "median_magnitude_factor": 1.2624302248902342,
+          "sign_accuracy_by_coefficient": 0.36363636363636365,
+          "sign_accuracy_by_genus": 0.3333333333333333,
+          "MAE_unseen_position": 0.09607618221304115,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 0.03751252733281185,
+              "coefficients": [
+                -0.15272945543067556,
+                -0.3162576269824439
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_residual__v01_trees": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.1171468775326642,
+          "median_abs_log10_magnitude": 0.10120738379461258,
+          "p90_abs_log10_magnitude": 0.22828221183472053,
+          "median_magnitude_factor": 1.2624302248902342,
+          "sign_accuracy_by_coefficient": 0.36363636363636365,
+          "sign_accuracy_by_genus": 0.3333333333333333,
+          "MAE_unseen_position": 0.09607618221304115,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 0.03751252733281185,
+              "coefficients": [
+                -0.15272945543067556,
+                -0.3162576269824439
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_residual__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 0.1171468775326642,
+          "median_abs_log10_magnitude": 0.10120738379461258,
+          "p90_abs_log10_magnitude": 0.22828221183472053,
+          "median_magnitude_factor": 1.2624302248902342,
+          "sign_accuracy_by_coefficient": 0.6363636363636364,
+          "sign_accuracy_by_genus": 0.6666666666666666,
+          "MAE_unseen_position": 0.09607618221304115,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 0.03751252733281185,
+              "coefficients": [
+                -0.15272945543067556,
+                -0.3162576269824439
+              ]
+            }
+          }
+        ]
+      },
+      "v01_trees__combined_v01": {
+        "scores": {
+          "n_coefficients": 11,
+          "n_genera": 3,
+          "MAE_log10_magnitude": 4.471059663149623,
+          "median_abs_log10_magnitude": 4.610603018132611,
+          "p90_abs_log10_magnitude": 6.773752100256253,
+          "median_magnitude_factor": 40794.63184321053,
+          "sign_accuracy_by_coefficient": 0.36363636363636365,
+          "sign_accuracy_by_genus": 0.3333333333333333,
+          "MAE_unseen_position": 4.492415740616094,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 9,
+            "parameters": {}
+          }
+        ]
+      }
+    },
+    "expanding_9_to_12": {
+      "genus__majority": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.2543299747431847,
+          "median_abs_log10_magnitude": 0.23641254890962138,
+          "p90_abs_log10_magnitude": 0.4212280234343645,
+          "median_magnitude_factor": 1.723505004949989,
+          "sign_accuracy_by_coefficient": 0.21428571428571427,
+          "sign_accuracy_by_genus": 0.25,
+          "MAE_unseen_position": 0.2570159994383836,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -2.5749409848855116,
+              "coefficients": [
+                2.050842913248657,
+                -0.427195504820809
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -2.9501000012784697,
+              "coefficients": [
+                2.1165455902572896,
+                -0.4281924876181236
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": -3.0601079377794616,
+              "coefficients": [
+                2.137325173966621,
+                -0.47770112148610144
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": -3.351130360624138,
+              "coefficients": [
+                2.1803026388151965,
+                -0.4664664925722428
+              ]
+            }
+          }
+        ]
+      },
+      "genus__v01_trees": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.2543299747431847,
+          "median_abs_log10_magnitude": 0.23641254890962138,
+          "p90_abs_log10_magnitude": 0.4212280234343645,
+          "median_magnitude_factor": 1.723505004949989,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.2570159994383836,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -2.5749409848855116,
+              "coefficients": [
+                2.050842913248657,
+                -0.427195504820809
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -2.9501000012784697,
+              "coefficients": [
+                2.1165455902572896,
+                -0.4281924876181236
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": -3.0601079377794616,
+              "coefficients": [
+                2.137325173966621,
+                -0.47770112148610144
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": -3.351130360624138,
+              "coefficients": [
+                2.1803026388151965,
+                -0.4664664925722428
+              ]
+            }
+          }
+        ]
+      },
+      "genus__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.2543299747431847,
+          "median_abs_log10_magnitude": 0.23641254890962138,
+          "p90_abs_log10_magnitude": 0.4212280234343645,
+          "median_magnitude_factor": 1.723505004949989,
+          "sign_accuracy_by_coefficient": 0.7142857142857143,
+          "sign_accuracy_by_genus": 0.75,
+          "MAE_unseen_position": 0.2570159994383836,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -2.5749409848855116,
+              "coefficients": [
+                2.050842913248657,
+                -0.427195504820809
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -2.9501000012784697,
+              "coefficients": [
+                2.1165455902572896,
+                -0.4281924876181236
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": -3.0601079377794616,
+              "coefficients": [
+                2.137325173966621,
+                -0.47770112148610144
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": -3.351130360624138,
+              "coefficients": [
+                2.1803026388151965,
+                -0.4664664925722428
+              ]
+            }
+          }
+        ]
+      },
+      "mixed__majority": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.1255258590466292,
+          "median_abs_log10_magnitude": 0.1368318130018471,
+          "p90_abs_log10_magnitude": 0.20093815629214548,
+          "median_magnitude_factor": 1.3703509745944378,
+          "sign_accuracy_by_coefficient": 0.21428571428571427,
+          "sign_accuracy_by_genus": 0.25,
+          "MAE_unseen_position": 0.17011881292974795,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -0.006385398948026477,
+              "coefficients": [
+                0.9168748258135089,
+                -0.32308620386443787
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -0.1668990966865831,
+              "coefficients": [
+                0.932982516163206,
+                -0.3245073178516864
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": -0.17965195787043875,
+              "coefficients": [
+                0.9348970160647304,
+                -0.34695935541975514
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": -0.3124969953515482,
+              "coefficients": [
+                0.9457608461065422,
+                -0.343992830792694
+              ]
+            }
+          }
+        ]
+      },
+      "mixed__v01_trees": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.1255258590466292,
+          "median_abs_log10_magnitude": 0.1368318130018471,
+          "p90_abs_log10_magnitude": 0.20093815629214548,
+          "median_magnitude_factor": 1.3703509745944378,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.17011881292974795,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -0.006385398948026477,
+              "coefficients": [
+                0.9168748258135089,
+                -0.32308620386443787
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -0.1668990966865831,
+              "coefficients": [
+                0.932982516163206,
+                -0.3245073178516864
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": -0.17965195787043875,
+              "coefficients": [
+                0.9348970160647304,
+                -0.34695935541975514
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": -0.3124969953515482,
+              "coefficients": [
+                0.9457608461065422,
+                -0.343992830792694
+              ]
+            }
+          }
+        ]
+      },
+      "mixed__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.1255258590466292,
+          "median_abs_log10_magnitude": 0.1368318130018471,
+          "p90_abs_log10_magnitude": 0.20093815629214548,
+          "median_magnitude_factor": 1.3703509745944378,
+          "sign_accuracy_by_coefficient": 0.7142857142857143,
+          "sign_accuracy_by_genus": 0.75,
+          "MAE_unseen_position": 0.17011881292974795,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": -0.006385398948026477,
+              "coefficients": [
+                0.9168748258135089,
+                -0.32308620386443787
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": -0.1668990966865831,
+              "coefficients": [
+                0.932982516163206,
+                -0.3245073178516864
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": -0.17965195787043875,
+              "coefficients": [
+                0.9348970160647304,
+                -0.34695935541975514
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": -0.3124969953515482,
+              "coefficients": [
+                0.9457608461065422,
+                -0.343992830792694
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_plus_genus__majority": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.11602273285410776,
+          "median_abs_log10_magnitude": 0.13451239782349855,
+          "p90_abs_log10_magnitude": 0.1843279286651912,
+          "median_magnitude_factor": 1.3630519167548945,
+          "sign_accuracy_by_coefficient": 0.21428571428571427,
+          "sign_accuracy_by_genus": 0.25,
+          "MAE_unseen_position": 0.14396313303774821,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.23027854329419029,
+              "coefficients": [
+                1.0013021348600661,
+                -0.31347511668134465,
+                -0.1888694501450079
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 2.249958966026197,
+              "coefficients": [
+                1.7405399520538924,
+                -0.2333653906541382,
+                -1.8332182889615332
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": 1.6917530588352463,
+              "coefficients": [
+                1.5406021403113026,
+                -0.26136445835171074,
+                -1.3854880235614146
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": 1.316234840348736,
+              "coefficients": [
+                1.4505073556780756,
+                -0.2775007230357791,
+                -1.1645577614612792
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_plus_genus__v01_trees": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.11602273285410776,
+          "median_abs_log10_magnitude": 0.13451239782349855,
+          "p90_abs_log10_magnitude": 0.1843279286651912,
+          "median_magnitude_factor": 1.3630519167548945,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.14396313303774821,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.23027854329419029,
+              "coefficients": [
+                1.0013021348600661,
+                -0.31347511668134465,
+                -0.1888694501450079
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 2.249958966026197,
+              "coefficients": [
+                1.7405399520538924,
+                -0.2333653906541382,
+                -1.8332182889615332
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": 1.6917530588352463,
+              "coefficients": [
+                1.5406021403113026,
+                -0.26136445835171074,
+                -1.3854880235614146
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": 1.316234840348736,
+              "coefficients": [
+                1.4505073556780756,
+                -0.2775007230357791,
+                -1.1645577614612792
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_plus_genus__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.11602273285410776,
+          "median_abs_log10_magnitude": 0.13451239782349855,
+          "p90_abs_log10_magnitude": 0.1843279286651912,
+          "median_magnitude_factor": 1.3630519167548945,
+          "sign_accuracy_by_coefficient": 0.7142857142857143,
+          "sign_accuracy_by_genus": 0.75,
+          "MAE_unseen_position": 0.14396313303774821,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.23027854329419029,
+              "coefficients": [
+                1.0013021348600661,
+                -0.31347511668134465,
+                -0.1888694501450079
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 2.249958966026197,
+              "coefficients": [
+                1.7405399520538924,
+                -0.2333653906541382,
+                -1.8332182889615332
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": 1.6917530588352463,
+              "coefficients": [
+                1.5406021403113026,
+                -0.26136445835171074,
+                -1.3854880235614146
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": 1.316234840348736,
+              "coefficients": [
+                1.4505073556780756,
+                -0.2775007230357791,
+                -1.1645577614612792
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_residual__majority": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.12019385645510614,
+          "median_abs_log10_magnitude": 0.13101266969102454,
+          "p90_abs_log10_magnitude": 0.19216431673366438,
+          "median_magnitude_factor": 1.352112007838883,
+          "sign_accuracy_by_coefficient": 0.21428571428571427,
+          "sign_accuracy_by_genus": 0.25,
+          "MAE_unseen_position": 0.16306476675142623,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.22663051937553003,
+              "coefficients": [
+                -0.1859568352175437,
+                -0.31362300339459626
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 0.03751252733281185,
+              "coefficients": [
+                -0.15272945543067556,
+                -0.3162576269824439
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": 0.024310077928674012,
+              "coefficients": [
+                -0.14932178396646026,
+                -0.33727767439762973
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": -0.13338369929058547,
+              "coefficients": [
+                -0.12569076906575827,
+                -0.33619085570852836
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_residual__v01_trees": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.12019385645510614,
+          "median_abs_log10_magnitude": 0.13101266969102454,
+          "p90_abs_log10_magnitude": 0.19216431673366438,
+          "median_magnitude_factor": 1.352112007838883,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 0.16306476675142623,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.22663051937553003,
+              "coefficients": [
+                -0.1859568352175437,
+                -0.31362300339459626
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 0.03751252733281185,
+              "coefficients": [
+                -0.15272945543067556,
+                -0.3162576269824439
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": 0.024310077928674012,
+              "coefficients": [
+                -0.14932178396646026,
+                -0.33727767439762973
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": -0.13338369929058547,
+              "coefficients": [
+                -0.12569076906575827,
+                -0.33619085570852836
+              ]
+            }
+          }
+        ]
+      },
+      "mixed_residual__mod3_diagnostic": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 0.12019385645510614,
+          "median_abs_log10_magnitude": 0.13101266969102454,
+          "p90_abs_log10_magnitude": 0.19216431673366438,
+          "median_magnitude_factor": 1.352112007838883,
+          "sign_accuracy_by_coefficient": 0.7142857142857143,
+          "sign_accuracy_by_genus": 0.75,
+          "MAE_unseen_position": 0.16306476675142623,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {
+              "intercept": 0.22663051937553003,
+              "coefficients": [
+                -0.1859568352175437,
+                -0.31362300339459626
+              ]
+            }
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {
+              "intercept": 0.03751252733281185,
+              "coefficients": [
+                -0.15272945543067556,
+                -0.3162576269824439
+              ]
+            }
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {
+              "intercept": 0.024310077928674012,
+              "coefficients": [
+                -0.14932178396646026,
+                -0.33727767439762973
+              ]
+            }
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {
+              "intercept": -0.13338369929058547,
+              "coefficients": [
+                -0.12569076906575827,
+                -0.33619085570852836
+              ]
+            }
+          }
+        ]
+      },
+      "v01_trees__combined_v01": {
+        "scores": {
+          "n_coefficients": 14,
+          "n_genera": 4,
+          "MAE_log10_magnitude": 2.2507145304915697,
+          "median_abs_log10_magnitude": 2.2908094693711014,
+          "p90_abs_log10_magnitude": 2.8882064060578148,
+          "median_magnitude_factor": 195.3482249724828,
+          "sign_accuracy_by_coefficient": 0.5,
+          "sign_accuracy_by_genus": 0.5,
+          "MAE_unseen_position": 1.8294986086447818,
+          "n_unseen_position": 2
+        },
+        "fit_parameters": [
+          {
+            "training_max_genus": 8,
+            "parameters": {}
+          },
+          {
+            "training_max_genus": 9,
+            "parameters": {}
+          },
+          {
+            "training_max_genus": 10,
+            "parameters": {}
+          },
+          {
+            "training_max_genus": 11,
+            "parameters": {}
+          }
+        ]
+      }
+    }
+  },
+  "shape_log_ratios": [
+    {
+      "genus": 6,
+      "r": 1,
+      "log10_abs_c_r_over_c0": -0.33966424753563196
+    },
+    {
+      "genus": 7,
+      "r": 1,
+      "log10_abs_c_r_over_c0": -0.4757100359959896
+    },
+    {
+      "genus": 8,
+      "r": 1,
+      "log10_abs_c_r_over_c0": -0.5835500836898593
+    },
+    {
+      "genus": 9,
+      "r": 1,
+      "log10_abs_c_r_over_c0": -0.3803029761294354
+    },
+    {
+      "genus": 9,
+      "r": 2,
+      "log10_abs_c_r_over_c0": -0.9516702035304547
+    },
+    {
+      "genus": 10,
+      "r": 1,
+      "log10_abs_c_r_over_c0": -0.45901567583376135
+    },
+    {
+      "genus": 10,
+      "r": 2,
+      "log10_abs_c_r_over_c0": -1.1277673394831176
+    },
+    {
+      "genus": 11,
+      "r": 1,
+      "log10_abs_c_r_over_c0": -0.35982528914003
+    },
+    {
+      "genus": 11,
+      "r": 2,
+      "log10_abs_c_r_over_c0": -0.8189852686154175
+    },
+    {
+      "genus": 11,
+      "r": 3,
+      "log10_abs_c_r_over_c0": -1.4841385071497761
+    },
+    {
+      "genus": 12,
+      "r": 1,
+      "log10_abs_c_r_over_c0": -0.418376906376686
+    },
+    {
+      "genus": 12,
+      "r": 2,
+      "log10_abs_c_r_over_c0": -0.9458752314246439
+    },
+    {
+      "genus": 12,
+      "r": 3,
+      "log10_abs_c_r_over_c0": -1.693587325523616
+    }
+  ],
+  "shape_tests": {
+    "8": {
+      "n_train_shape": 3,
+      "n_test_shape": 10,
+      "slope_per_index": -0.4663081224071603,
+      "MAE_dex": 0.09686837565733164,
+      "median_abs_error_dex": 0.08560964310301009,
+      "requires_oracle_c0_at_test_genus": true,
+      "predictions": [
+        {
+          "genus": 9,
+          "r": 1,
+          "true_shape_log10": -0.3803029761294354,
+          "pred_shape_log10": -0.4663081224071603,
+          "abs_error_dex": 0.08600514627772488
+        },
+        {
+          "genus": 9,
+          "r": 2,
+          "true_shape_log10": -0.9516702035304547,
+          "pred_shape_log10": -0.9326162448143206,
+          "abs_error_dex": 0.019053958716134134
+        },
+        {
+          "genus": 10,
+          "r": 1,
+          "true_shape_log10": -0.45901567583376135,
+          "pred_shape_log10": -0.4663081224071603,
+          "abs_error_dex": 0.007292446573398947
+        },
+        {
+          "genus": 10,
+          "r": 2,
+          "true_shape_log10": -1.1277673394831176,
+          "pred_shape_log10": -0.9326162448143206,
+          "abs_error_dex": 0.195151094668797
+        },
+        {
+          "genus": 11,
+          "r": 1,
+          "true_shape_log10": -0.35982528914003,
+          "pred_shape_log10": -0.4663081224071603,
+          "abs_error_dex": 0.10648283326713032
+        },
+        {
+          "genus": 11,
+          "r": 2,
+          "true_shape_log10": -0.8189852686154175,
+          "pred_shape_log10": -0.9326162448143206,
+          "abs_error_dex": 0.11363097619890306
+        },
+        {
+          "genus": 11,
+          "r": 3,
+          "true_shape_log10": -1.4841385071497761,
+          "pred_shape_log10": -1.3989243672214808,
+          "abs_error_dex": 0.0852141399282953
+        },
+        {
+          "genus": 12,
+          "r": 1,
+          "true_shape_log10": -0.418376906376686,
+          "pred_shape_log10": -0.4663081224071603,
+          "abs_error_dex": 0.04793121603047429
+        },
+        {
+          "genus": 12,
+          "r": 2,
+          "true_shape_log10": -0.9458752314246439,
+          "pred_shape_log10": -0.9326162448143206,
+          "abs_error_dex": 0.01325898661032332
+        },
+        {
+          "genus": 12,
+          "r": 3,
+          "true_shape_log10": -1.693587325523616,
+          "pred_shape_log10": -1.3989243672214808,
+          "abs_error_dex": 0.2946629583021352
+        }
+      ]
+    },
+    "9": {
+      "n_train_shape": 5,
+      "n_test_shape": 8,
+      "slope_per_index": -0.4603209688014782,
+      "MAE_dex": 0.11169505245098346,
+      "median_abs_error_dex": 0.10107617432449356,
+      "requires_oracle_c0_at_test_genus": true,
+      "predictions": [
+        {
+          "genus": 10,
+          "r": 1,
+          "true_shape_log10": -0.45901567583376135,
+          "pred_shape_log10": -0.4603209688014782,
+          "abs_error_dex": 0.0013052929677168645
+        },
+        {
+          "genus": 10,
+          "r": 2,
+          "true_shape_log10": -1.1277673394831176,
+          "pred_shape_log10": -0.9206419376029564,
+          "abs_error_dex": 0.20712540188016115
+        },
+        {
+          "genus": 11,
+          "r": 1,
+          "true_shape_log10": -0.35982528914003,
+          "pred_shape_log10": -0.4603209688014782,
+          "abs_error_dex": 0.10049567966144823
+        },
+        {
+          "genus": 11,
+          "r": 2,
+          "true_shape_log10": -0.8189852686154175,
+          "pred_shape_log10": -0.9206419376029564,
+          "abs_error_dex": 0.10165666898753889
+        },
+        {
+          "genus": 11,
+          "r": 3,
+          "true_shape_log10": -1.4841385071497761,
+          "pred_shape_log10": -1.3809629064044346,
+          "abs_error_dex": 0.10317560074534149
+        },
+        {
+          "genus": 12,
+          "r": 1,
+          "true_shape_log10": -0.418376906376686,
+          "pred_shape_log10": -0.4603209688014782,
+          "abs_error_dex": 0.041944062424792206
+        },
+        {
+          "genus": 12,
+          "r": 2,
+          "true_shape_log10": -0.9458752314246439,
+          "pred_shape_log10": -0.9206419376029564,
+          "abs_error_dex": 0.025233293821687486
+        },
+        {
+          "genus": 12,
+          "r": 3,
+          "true_shape_log10": -1.693587325523616,
+          "pred_shape_log10": -1.3809629064044346,
+          "abs_error_dex": 0.3126244191191814
+        }
+      ]
+    }
+  },
+  "warning": "Sign period-three is a post-hoc exploratory diagnostic, not an established law; only four held-out genera."
+}

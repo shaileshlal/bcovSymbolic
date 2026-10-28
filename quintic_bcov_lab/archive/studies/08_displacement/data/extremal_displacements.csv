@@ -1,0 +1,17 @@
+k,g,d,r,n,phase,abs_n,split,source
+4,51,20,19,175,0,175,train,proven_extremal_theorem
+5,76,25,24,275,1,275,train,proven_extremal_theorem
+6,106,30,29,-400,2,400,train,proven_extremal_theorem
+7,141,35,34,-550,3,550,train,proven_extremal_theorem
+8,181,40,39,725,0,725,train,proven_extremal_theorem
+9,226,45,44,925,1,925,train,proven_extremal_theorem
+10,276,50,49,-1150,2,1150,train,proven_extremal_theorem
+11,331,55,54,-1400,3,1400,train,proven_extremal_theorem
+12,391,60,59,1675,0,1675,test,proven_extremal_theorem
+13,456,65,64,1975,1,1975,test,proven_extremal_theorem
+14,526,70,69,-2300,2,2300,test,proven_extremal_theorem
+15,601,75,74,-2650,3,2650,test,proven_extremal_theorem
+16,681,80,79,3025,0,3025,test,proven_extremal_theorem
+17,766,85,84,3425,1,3425,test,proven_extremal_theorem
+18,856,90,89,-3850,2,3850,test,proven_extremal_theorem
+19,951,95,94,-4300,3,4300,test,proven_extremal_theorem

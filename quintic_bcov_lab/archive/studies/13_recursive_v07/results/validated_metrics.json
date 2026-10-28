@@ -1,0 +1,212 @@
+{
+  "n_streams": 24,
+  "defect_pulses": {
+    "zero": 11,
+    "one": 4,
+    "two": 9
+  },
+  "support": {
+    "0,5": [
+      4,
+      5
+    ],
+    "0,6": [
+      5
+    ],
+    "1,4": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "1,5": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "2,4": [
+      1,
+      2,
+      3
+    ],
+    "2,5": [
+      2,
+      3
+    ],
+    "3,4": [
+      2,
+      3
+    ],
+    "3,5": [
+      3
+    ],
+    "4,4": [
+      3,
+      4
+    ],
+    "4,5": [
+      4
+    ]
+  },
+  "pair_locks": {
+    "1<->4:update": [
+      0
+    ],
+    "1<->4:test": [
+      0,
+      1
+    ],
+    "2<->3:update": [
+      0,
+      1
+    ],
+    "2<->3:test": [
+      0,
+      1,
+      2
+    ]
+  },
+  "defect_interval": {
+    "covered": 24,
+    "total": 24,
+    "zero_prev_count": 11,
+    "zero_prev_correct": 11,
+    "persistent_5adic": 9,
+    "persistent_count": 9,
+    "persistent_attenuation": 9,
+    "sign_flips": 8
+  },
+  "model_scores": {
+    "quadratic_PT": {
+      "total": 24,
+      "exact": 15,
+      "sum_relative_error": 0.002101907095357089,
+      "max_relative_error": 0.001993620414673046,
+      "mean_relative_error": 8.757946230654538e-05,
+      "by_shell": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          4,
+          5
+        ],
+        "2": [
+          3,
+          5
+        ],
+        "3": [
+          2,
+          5
+        ],
+        "4": [
+          1,
+          3
+        ],
+        "5": [
+          0,
+          1
+        ]
+      }
+    },
+    "cubic_PT": {
+      "total": 24,
+      "exact": 11,
+      "sum_relative_error": 0.03918311249462469,
+      "max_relative_error": 0.028350883000308375,
+      "mean_relative_error": 0.0016326296872760286,
+      "by_shell": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          3,
+          5
+        ],
+        "2": [
+          2,
+          5
+        ],
+        "3": [
+          1,
+          5
+        ],
+        "4": [
+          0,
+          3
+        ],
+        "5": [
+          0,
+          1
+        ]
+      }
+    },
+    "linear_times_quadratic_PT": {
+      "total": 19,
+      "exact": 10,
+      "sum_relative_error": 0.0041411116034947935,
+      "max_relative_error": 0.0039307491389871255,
+      "mean_relative_error": 0.00021795324228919967,
+      "by_shell": {
+        "1": [
+          4,
+          5
+        ],
+        "2": [
+          3,
+          5
+        ],
+        "3": [
+          2,
+          5
+        ],
+        "4": [
+          1,
+          3
+        ],
+        "5": [
+          0,
+          1
+        ]
+      }
+    },
+    "mirror_PT": {
+      "total": 24,
+      "exact": 17,
+      "sum_relative_error": 1.560830041333921e-05,
+      "max_relative_error": 7.4123568976540214e-06,
+      "mean_relative_error": 6.503458505558005e-07,
+      "by_shell": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          4,
+          5
+        ],
+        "3": [
+          2,
+          5
+        ],
+        "4": [
+          1,
+          3
+        ],
+        "5": [
+          0,
+          1
+        ]
+      }
+    }
+  },
+  "validation_has_access_to_reference": true,
+  "predictor_has_access_to_reference": false
+}

@@ -1,0 +1,201 @@
+{
+  "method": "Single-calibration-per-residue, learned polar rank-zero DT coefficient * chi*parity",
+  "Q6_to_Q10_calibration": {
+    "6": -34500,
+    "7": 4874000,
+    "8": -6092500,
+    "9": 60375,
+    "10": -50
+  },
+  "learned_rankzero_coefficients": {
+    "1": 8625,
+    "2": -1218500,
+    "0": 5
+  },
+  "scores": {
+    "frontier_holdout": {
+      "n": 10,
+      "exact": 10
+    },
+    "calibration": {
+      "n": 5,
+      "exact": 5
+    },
+    "forward_pre_54": {
+      "n": 10,
+      "exact": 10
+    }
+  },
+  "range_without_any_leading_PT_labels": "11..30",
+  "Q21_prediction": {
+    "degree": 21,
+    "residue": 1,
+    "genus": 54,
+    "m": -53,
+    "delta": 1,
+    "chi": -37,
+    "kinematic_multiplier": 37,
+    "rankzero_mu": 1,
+    "rankzero_qhat": "83/120",
+    "wall_inequality_pass": true,
+    "nonvacuum_candidate_count": 0,
+    "split": "frontier_holdout",
+    "reference_PT_leading": 319125,
+    "prediction_PT": 319125,
+    "error": 0,
+    "independent_modular_prediction": 319125,
+    "nonvacuum_summands_possible": false
+  },
+  "Q31_to_Q40_unchecked_predictions": [
+    {
+      "degree": 31,
+      "residue": 1,
+      "genus": 111,
+      "m": -110,
+      "delta": 1,
+      "chi": -84,
+      "kinematic_multiplier": -84,
+      "rankzero_mu": 1,
+      "rankzero_qhat": "83/120",
+      "wall_inequality_pass": true,
+      "nonvacuum_candidate_count": 0,
+      "predicted_PT_leading": -724500,
+      "theorem_single_wall_certified": true
+    },
+    {
+      "degree": 32,
+      "residue": 2,
+      "genus": 117,
+      "m": -116,
+      "delta": 2,
+      "chi": -89,
+      "kinematic_multiplier": 89,
+      "rankzero_mu": 2,
+      "rankzero_qhat": "-13/120",
+      "wall_inequality_pass": true,
+      "nonvacuum_candidate_count": 0,
+      "predicted_PT_leading": -108446500,
+      "theorem_single_wall_certified": true
+    },
+    {
+      "degree": 33,
+      "residue": 3,
+      "genus": 124,
+      "m": -123,
+      "delta": 2,
+      "chi": -95,
+      "kinematic_multiplier": 95,
+      "rankzero_mu": 2,
+      "rankzero_qhat": "-13/120",
+      "wall_inequality_pass": true,
+      "nonvacuum_candidate_count": 0,
+      "predicted_PT_leading": -115757500,
+      "theorem_single_wall_certified": true
+    },
+    {
+      "degree": 34,
+      "residue": 4,
+      "genus": 132,
+      "m": -131,
+      "delta": 1,
+      "chi": -102,
+      "kinematic_multiplier": -102,
+      "rankzero_mu": 1,
+      "rankzero_qhat": "83/120",
+      "wall_inequality_pass": true,
+      "nonvacuum_candidate_count": 0,
+      "predicted_PT_leading": -879750,
+      "theorem_single_wall_certified": true
+    },
+    {
+      "degree": 35,
+      "residue": 0,
+      "genus": 141,
+      "m": -140,
+      "delta": 0,
+      "chi": -110,
+      "kinematic_multiplier": -110,
+      "rankzero_mu": 0,
+      "rankzero_qhat": "55/24",
+      "wall_inequality_pass": true,
+      "nonvacuum_candidate_count": 0,
+      "predicted_PT_leading": -550,
+      "theorem_single_wall_certified": true
+    },
+    {
+      "degree": 36,
+      "residue": 1,
+      "genus": 147,
+      "m": -146,
+      "delta": 1,
+      "chi": -115,
+      "kinematic_multiplier": 115,
+      "rankzero_mu": 1,
+      "rankzero_qhat": "83/120",
+      "wall_inequality_pass": true,
+      "nonvacuum_candidate_count": 0,
+      "predicted_PT_leading": 991875,
+      "theorem_single_wall_certified": true
+    },
+    {
+      "degree": 37,
+      "residue": 2,
+      "genus": 154,
+      "m": -153,
+      "delta": 2,
+      "chi": -121,
+      "kinematic_multiplier": 121,
+      "rankzero_mu": 2,
+      "rankzero_qhat": "-13/120",
+      "wall_inequality_pass": true,
+      "nonvacuum_candidate_count": 0,
+      "predicted_PT_leading": -147438500,
+      "theorem_single_wall_certified": true
+    },
+    {
+      "degree": 38,
+      "residue": 3,
+      "genus": 162,
+      "m": -161,
+      "delta": 2,
+      "chi": -128,
+      "kinematic_multiplier": -128,
+      "rankzero_mu": 2,
+      "rankzero_qhat": "-13/120",
+      "wall_inequality_pass": true,
+      "nonvacuum_candidate_count": 0,
+      "predicted_PT_leading": 155968000,
+      "theorem_single_wall_certified": true
+    },
+    {
+      "degree": 39,
+      "residue": 4,
+      "genus": 171,
+      "m": -170,
+      "delta": 1,
+      "chi": -136,
+      "kinematic_multiplier": -136,
+      "rankzero_mu": 1,
+      "rankzero_qhat": "83/120",
+      "wall_inequality_pass": true,
+      "nonvacuum_candidate_count": 0,
+      "predicted_PT_leading": -1173000,
+      "theorem_single_wall_certified": true
+    },
+    {
+      "degree": 40,
+      "residue": 0,
+      "genus": 181,
+      "m": -180,
+      "delta": 0,
+      "chi": -145,
+      "kinematic_multiplier": 145,
+      "rankzero_mu": 0,
+      "rankzero_qhat": "55/24",
+      "wall_inequality_pass": true,
+      "nonvacuum_candidate_count": 0,
+      "predicted_PT_leading": 725,
+      "theorem_single_wall_certified": true
+    }
+  ]
+}

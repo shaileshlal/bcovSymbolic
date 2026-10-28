@@ -1,0 +1,98 @@
+[
+  {
+    "stage": "01_v01_low_x",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 4.726,
+    "command": "/opt/pyvenv/bin/python -m hybrid.tests",
+    "stdout_tail": "PASS: token roundtrip, rank, exact physics, lattice, low-X holdout, anti-holo benchmark\nmodel median 0.00045578355405845317 anti sign 0.8070175438596491\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_Holomorphic_Ambiguity_AI_Prototype.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "02_high_x_rope",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 0.778,
+    "command": "/opt/pyvenv/bin/python verify_phases_and_digits.py",
+    "stdout_tail": "PASS exact Laurent identity for h=1..14 and exact digit round-trip for 209 rational coefficients\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_High_X_GV_RoPE_Study.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "03_two_stream",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 0.887,
+    "command": "/opt/pyvenv/bin/python exact_response_audit.py",
+    "stdout_tail": "[\n  {\n    \"genus\": 6,\n    \"MUM_q_degree\": 4,\n    \"response_jacobian_rank\": 5,\n    \"zero_columns_for_j_greater_than\": 4,\n    \"number_high_tail_columns_with_exact_zero_response\": 11,\n    \"diagonal\": [\n      \"-1/95367431640625\",\n      \"1/30517578125\",\n      \"-1/9765625\",\n      \"1/3125\",\n      \"-1\"\n    ]\n  },\n  {\n    \"genus\": 9,\n    \"MUM_q_degree\": 4,\n    \"response_jacobian_rank\": 5,\n    \"zero_columns_for_j_greater_than\": 4,\n    \"number_high_tail_columns_with_exact_zero_response\": 20,\n    \"diagonal\": [\n      \"1/23283064365386962890625\",\n      \"-1/7450580596923828125\",\n      \"1/2384185791015625\",\n      \"-1/762939453125\",\n      \"1/244140625\"\n    ]\n  },\n  {\n    \"genus\": 10,\n    \"MUM_q_degree\": 4,\n    \"response_jacobian_rank\": 5,\n    \"zero_columns_for_j_greater_than\": 4,\n    \"number_high_tail_columns_with_exact_zero_response\": 23,\n    \"diagonal\": [\n      \"-1/14551915228366851806640625\",\n      \"1/4656612873077392578125\",\n      \"-1/1490116119384765625\",\n      \"1/476837158203125\",\n      \"-1/152587890625\"\n    ]\n  },\n  {\n    \"genus\": 11,\n    \"MUM_q_degree\": 4,\n    \"response_jacobian_rank\": 5,\n    \"zero_columns_for_j_greater_than\": 4,\n    \"number_high_tail_columns_with_exact_zero_response\": 26,\n    \"diagonal\": [\n      \"1/9094947017729282379150390625\",\n      \"-1/2910383045673370361328125\",\n      \"1/931322574615478515625\",\n      \"-1/298023223876953125\",\n      \"1/95367431640625\"\n    ]\n  },\n  {\n    \"genus\": 12,\n    \"MUM_q_degree\": 4,\n    \"response_jacobian_rank\": 5,\n    \"zero_columns_for_j_greater_than\": 4,\n    \"number_high_tail_columns_with_exact_zero_response\": 29,\n    \"diagonal\": [\n      \"-1/5684341886080801486968994140625\",\n      \"1/1818989403545856475830078125\",\n      \"-1/582076609134674072265625\",\n      \"1/186264514923095703125\",\n      \"-1/59604644775390625\"\n    ]\n  }\n]\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_Two_Stream_GV_YY_Experiment.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "04_midpoint",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 22.62,
+    "command": "/opt/pyvenv/bin/python midpoint_test.py",
+    "stdout_tail": "g=7: rank=17, free=[5, 6], midpoint jet rank=2\n  sensitivity: [['-1/4', '1/4'], ['0', '1']]\ng=9: rank=22, free=[6, 7, 8], midpoint jet rank=2\n  sensitivity: [['-1/8', '1/8', '-1/8'], ['1/4', '1/4', '-3/4']]\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_Midpoint_Involution_Exact_Test.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "05_intermediate_dataset",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 0.683,
+    "command": "/opt/pyvenv/bin/python tests_intermediate.py",
+    "stdout_tail": "fast tests passed: 11 genera, 22 residual targets, exact section identities\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_BCOV_Intermediate_Marimo_v02.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "06_intermediate_ml",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 1.51,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": "All exact label/basis, feature-leakage, and chronological holdout checks passed.\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_Intermediate_Only_ML_Experiment.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "07_lattice_walk",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 0.621,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": "All exact audits and held-out projection reproducibility tests pass.\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_GV_Lattice_Walk_Residual_Test.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  },
+  {
+    "stage": "08_displacement",
+    "action": "test",
+    "status": "passed",
+    "returncode": 0,
+    "elapsed_s": 1.15,
+    "command": "/opt/pyvenv/bin/python tests.py",
+    "stdout_tail": "PASS: data partition, no unknown/zero leakage, 8/8 extremal holdouts, 22 exact rational calibration, 9 neighborhood laws.\n",
+    "stderr_tail": "",
+    "original_archive": "Quintic_GV_Displacement_AI_v03.zip",
+    "comparison": "historical archived study; refer to its model/validator split"
+  }
+]

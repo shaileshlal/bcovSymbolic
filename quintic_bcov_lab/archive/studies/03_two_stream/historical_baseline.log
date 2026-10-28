@@ -1,0 +1,14 @@
+TRAIN [6, 7, 8, 9] TEST [10, 11, 12]
+linear (index-aligned) median 0.4094479 p90 1.2599218 sign 1.0
+inverse-g^2 (index-aligned) median 0.001692 p90 0.0311694 sign 1.0
+inverse-g^3 (index-aligned) median 0.0002288 p90 0.0051405 sign 1.0
+polynomial index / inverse-g^2 median 0.1568717 p90 0.5138854 sign 1.0
+RoPE-like phases / inverse-g^2 median 0.0397334 p90 0.2116191 sign 1.0
+GV-character phases / inverse-g^2 median 0.1641795 p90 0.6443828 sign 0.9444444444444444
+RoPE full rank / inverse-g^3 median 0.0002288 p90 0.0051405 sign 1.0
+GV character full rank / inverse-g^3 median 0.0002288 p90 0.0051405 sign 1.0
+RoPE-like phases / inverse-g^3 median 0.0283332 p90 0.1947611 sign 1.0
+GV-character phases / inverse-g^3 median 0.1898011 p90 0.6715385 sign 0.9444444444444444
+FULL using known a0, learned atop and tail {'a0_oracle': True, 'a_top_predicted': True, 'median_relative_error': 0.0008112614745284079, 'p90_relative_error': 0.004045324002009309, 'by_genus': {'10': {'median_relative_error': 0.00045950076429478436, 'max_relative_error': 0.004045324002009309, 'top_scale_relative_error': 0.00045505595299899504}, '11': {'median_relative_error': 0.0008112614745284079, 'max_relative_error': 0.005879325802404948, 'top_scale_relative_error': 0.0007645018235611367}, '12': {'median_relative_error': 0.0012116724647414216, 'max_relative_error': 0.006307191549125225, 'top_scale_relative_error': 0.001076193529768732}}}
+GV identity residual {'1': 8.881784197001252e-16, '2': 3.5596458096434965e-15, '3': 1.4358514849620235e-14, '4': 5.687116766346677e-14, '5': 1.1564756855666564e-13}
+wrote /mnt/data/Quintic_Two_Stream_GV_YY_Experiment/results_high_degree_phase.json

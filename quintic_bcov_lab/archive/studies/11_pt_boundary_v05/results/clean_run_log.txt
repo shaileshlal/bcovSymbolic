@@ -1,0 +1,213 @@
+count 180 known 170
+train 86 test 48
+Predicted 48 PT integers; selected sign period 4; no holdout reference file opened.
+Transfer models: [('1,1', 'mirror_affine'), ('1,2', 'mirror_affine'), ('2,1', 'mirror_affine')]
+TRAINING-ONLY fingerprint:
+0 0 5
+0 1 -800
+0 2 58500
+0 3 5817125
+0 4 75503815750
+0 5 28093312816952
+4 1 8625
+4 2 -1138500
+4 3 3777474000
+4 4 3099947260875
+4 5 578455390105475
+3 2 -1218500
+3 3 441969250
+3 4 951927805125
+3 5 218052277705850
+R1 h=3,4,5,6: ['4', '6', '8', '10'] support 14/15
+R2: ['6', '15', '28', '45'] support 12/15
+outliers [(6, '-5/6')] [(6, '-295/3'), (7, '-93095/4874'), (11, '5/3')]
+{
+  "holdout_sites": 48,
+  "degree_range": [
+    21,
+    30
+  ],
+  "independent_PT_quadratic": {
+    "exact": 22,
+    "total": 48
+  },
+  "mirror_PT": {
+    "exact": 28,
+    "total": 48,
+    "by_shell": {
+      "0": {
+        "exact": 10,
+        "total": 10,
+        "median_relative_error": 0.0
+      },
+      "1": {
+        "exact": 10,
+        "total": 10,
+        "median_relative_error": 0.0
+      },
+      "2": {
+        "exact": 6,
+        "total": 10,
+        "median_relative_error": 0.0
+      },
+      "3": {
+        "exact": 2,
+        "total": 10,
+        "median_relative_error": 0.0001458956046728148
+      },
+      "4": {
+        "exact": 0,
+        "total": 6,
+        "median_relative_error": 0.00020888743192636568
+      },
+      "5": {
+        "exact": 0,
+        "total": 2,
+        "median_relative_error": 1.825943293533193e-05
+      }
+    },
+    "by_model": {
+      "quadratic": {
+        "exact": 22,
+        "total": 42
+      },
+      "mirror_affine": {
+        "exact": 6,
+        "total": 6
+      }
+    }
+  },
+  "PT_signs": 48,
+  "PT_median_relative_error": 0.0,
+  "PT_median_relative_error_misses": 0.0001809087557368411,
+  "PT_median_abs_log10_error": 0.0,
+  "PT_exact_by_degree_block": {
+    "(21, 25)": {
+      "exact": 14,
+      "total": 24
+    },
+    "(26, 30)": {
+      "exact": 14,
+      "total": 24
+    }
+  },
+  "empirical_PT_GV_transform": {
+    "r1_support": "14/15",
+    "r2_support": "12/15",
+    "r1_values": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "r2_values": [
+      "6",
+      "15",
+      "28",
+      "45"
+    ],
+    "r1_outliers": [
+      [
+        6,
+        "-5/6"
+      ]
+    ],
+    "r2_outliers": [
+      [
+        6,
+        "-295/3"
+      ],
+      [
+        7,
+        "-93095/4874"
+      ],
+      [
+        11,
+        "5/3"
+      ]
+    ]
+  },
+  "GV_recovery_using_predicted_PT": {
+    "exact": 26,
+    "total": 30,
+    "by_shell": {
+      "0": {
+        "exact": 10,
+        "total": 10
+      },
+      "1": {
+        "exact": 10,
+        "total": 10
+      },
+      "2": {
+        "exact": 6,
+        "total": 10
+      }
+    }
+  }
+}
+PT-second-difference to DT comparison:
+{'residue': 0, 'q_index': 0, 'train_PT_curvature_estimate': 5, 'published_DT_reference': 5, 'train_error': 0, 'train_relative_error': 0.0, 'stabilized_with_extra_PT_data': 5, 'late_exact': True}
+{'residue': 0, 'q_index': 1, 'train_PT_curvature_estimate': -800, 'published_DT_reference': -800, 'train_error': 0, 'train_relative_error': 0.0, 'stabilized_with_extra_PT_data': -800, 'late_exact': True}
+{'residue': 0, 'q_index': 2, 'train_PT_curvature_estimate': 58500, 'published_DT_reference': 58500, 'train_error': 0, 'train_relative_error': 0.0, 'stabilized_with_extra_PT_data': 58500, 'late_exact': True}
+{'residue': 0, 'q_index': 3, 'train_PT_curvature_estimate': 5817125, 'published_DT_reference': 5817125, 'train_error': 0, 'train_relative_error': 0.0, 'stabilized_with_extra_PT_data': 5817125, 'late_exact': True}
+{'residue': 0, 'q_index': 4, 'train_PT_curvature_estimate': 75503815750, 'published_DT_reference': 75474060100, 'train_error': 29755650, 'train_relative_error': 0.00039425002392312006, 'stabilized_with_extra_PT_data': 75474060100, 'late_exact': True}
+{'residue': 4, 'q_index': 1, 'train_PT_curvature_estimate': 8625, 'published_DT_reference': 8625, 'train_error': 0, 'train_relative_error': 0.0, 'stabilized_with_extra_PT_data': 8625, 'late_exact': True}
+{'residue': 4, 'q_index': 2, 'train_PT_curvature_estimate': -1138500, 'published_DT_reference': -1138500, 'train_error': 0, 'train_relative_error': 0.0, 'stabilized_with_extra_PT_data': -1138500, 'late_exact': True}
+{'residue': 4, 'q_index': 3, 'train_PT_curvature_estimate': 3777474000, 'published_DT_reference': 3777474000, 'train_error': 0, 'train_relative_error': 0.0, 'stabilized_with_extra_PT_data': 3777474000, 'late_exact': True}
+{'residue': 4, 'q_index': 4, 'train_PT_curvature_estimate': 3099947260875, 'published_DT_reference': 3102750380125, 'train_error': -2803119250, 'train_relative_error': 0.0009034304750893532, 'stabilized_with_extra_PT_data': 3102750380125, 'late_exact': True}
+{'residue': 3, 'q_index': 2, 'train_PT_curvature_estimate': -1218500, 'published_DT_reference': -1218500, 'train_error': 0, 'train_relative_error': 0.0, 'stabilized_with_extra_PT_data': -1218500, 'late_exact': True}
+{'residue': 3, 'q_index': 3, 'train_PT_curvature_estimate': 441969250, 'published_DT_reference': 441969250, 'train_error': 0, 'train_relative_error': 0.0, 'stabilized_with_extra_PT_data': 441969250, 'late_exact': True}
+{'residue': 3, 'q_index': 4, 'train_PT_curvature_estimate': 951927805125, 'published_DT_reference': 953712511250, 'train_error': -1784706125, 'train_relative_error': 0.0018713250627915572, 'stabilized_with_extra_PT_data': 953712511250, 'late_exact': True}
+train exact 9 late exact 12
+usable forecasts 38 of 48
+{'degree': 31, 'genus': 111, 'PT_m': -110, 'residue': 1, 'shell': 0, 'predicted_PT': '-724500', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 31, 'genus': 110, 'PT_m': -109, 'residue': 1, 'shell': 1, 'predicted_PT': '-94495500', 'method': 'mirror_affine_recent_exact', 'verification_status': 'UNVERIFIED'}
+{'degree': 31, 'genus': 109, 'PT_m': -108, 'residue': 1, 'shell': 2, 'predicted_PT': '-309752868000', 'method': 'mirror_affine_recent_exact', 'verification_status': 'UNVERIFIED'}
+{'degree': 32, 'genus': 117, 'PT_m': -116, 'residue': 2, 'shell': 0, 'predicted_PT': '-108446500', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 33, 'genus': 124, 'PT_m': -123, 'residue': 3, 'shell': 0, 'predicted_PT': '-115757500', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 34, 'genus': 132, 'PT_m': -131, 'residue': 4, 'shell': 0, 'predicted_PT': '-879750', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 35, 'genus': 141, 'PT_m': -140, 'residue': 0, 'shell': 0, 'predicted_PT': '-550', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 35, 'genus': 140, 'PT_m': -139, 'residue': 0, 'shell': 1, 'predicted_PT': '-87200', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 35, 'genus': 139, 'PT_m': -138, 'residue': 0, 'shell': 2, 'predicted_PT': '-6318000', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 36, 'genus': 147, 'PT_m': -146, 'residue': 1, 'shell': 0, 'predicted_PT': '991875', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 37, 'genus': 154, 'PT_m': -153, 'residue': 2, 'shell': 0, 'predicted_PT': '-147438500', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 38, 'genus': 162, 'PT_m': -161, 'residue': 3, 'shell': 0, 'predicted_PT': '155968000', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 39, 'genus': 171, 'PT_m': -170, 'residue': 4, 'shell': 0, 'predicted_PT': '-1173000', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 40, 'genus': 181, 'PT_m': -180, 'residue': 0, 'shell': 0, 'predicted_PT': '725', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 40, 'genus': 180, 'PT_m': -179, 'residue': 0, 'shell': 1, 'predicted_PT': '115200', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+{'degree': 40, 'genus': 179, 'PT_m': -178, 'residue': 0, 'shell': 2, 'predicted_PT': '8365500', 'method': 'stabilized_second_difference', 'verification_status': 'UNVERIFIED'}
+PASS: 4-period signs, 28/48 PT, 26/30 GV, 12 DT fingerprints, 38 forecasts, isolated predictor.
+{
+  "RandomForest": {
+    "median_abs_dex": 0.3541330783999195,
+    "mean_abs_dex": 0.35116766401689575,
+    "median_multiplicative_factor": 2.2601282224219963,
+    "exact_integer_predictions": 0
+  },
+  "ExtraTrees": {
+    "median_abs_dex": 0.2671207472693746,
+    "mean_abs_dex": 0.2640448080684131,
+    "median_multiplicative_factor": 1.8497828442091029,
+    "exact_integer_predictions": 0
+  },
+  "KNN5": {
+    "median_abs_dex": 2.158630157850002,
+    "mean_abs_dex": 2.3716753209959465,
+    "median_multiplicative_factor": 144.08877789258506,
+    "exact_integer_predictions": 0
+  },
+  "Ridge-polynomial": {
+    "median_abs_dex": 0.988673631623656,
+    "mean_abs_dex": 1.346659743878364,
+    "median_multiplicative_factor": 9.742572170585293,
+    "exact_integer_predictions": 0
+  },
+  "Periodic quadratic+mirror": {
+    "median_abs_dex": 0.0,
+    "mean_abs_dex": 0.0012995025339084254,
+    "median_multiplicative_factor": 1.0,
+    "exact_integer_predictions": 28
+  }
+}
+plots saved

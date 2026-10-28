@@ -1,0 +1,56 @@
+{
+  "training_degrees": "6-20",
+  "holdout_degrees": "21-30",
+  "scores": {
+    "Minimum-height zero": {
+      "exact": 0,
+      "count": 10,
+      "MAE": 26141280.0,
+      "median_abs_error": 564937.5,
+      "max_abs_error": 81639500.0
+    },
+    "Nearest same-residue": {
+      "exact": 0,
+      "count": 10,
+      "MAE": 31798130.0,
+      "median_abs_error": 784875.0,
+      "max_abs_error": 113320500.0
+    },
+    "Signed quadratic by residue": {
+      "exact": 0,
+      "count": 10,
+      "MAE": 67685810.0,
+      "median_abs_error": 1535250.0,
+      "max_abs_error": 380172000.0
+    },
+    "Random forest": {
+      "exact": 0,
+      "count": 10,
+      "MAE": 27257556.8,
+      "median_abs_error": 2890198.0,
+      "max_abs_error": 81721195.0
+    },
+    "ExtraTrees": {
+      "exact": 0,
+      "count": 10,
+      "MAE": 27793708.0,
+      "median_abs_error": 887480.0,
+      "max_abs_error": 86929613.0
+    },
+    "KNN-3": {
+      "exact": 0,
+      "count": 10,
+      "MAE": 30056606.8,
+      "median_abs_error": 10724467.0,
+      "max_abs_error": 92113642.0
+    },
+    "DT-charge normalization": {
+      "exact": 10,
+      "count": 10,
+      "MAE": 0.0,
+      "median_abs_error": 0.0,
+      "max_abs_error": 0.0
+    }
+  },
+  "warning": "small dataset, feature family was selected retrospectively; published Q21-30 values are comparison-only"
+}

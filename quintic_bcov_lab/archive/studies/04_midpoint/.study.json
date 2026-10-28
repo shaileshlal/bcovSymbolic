@@ -1,0 +1,12 @@
+{
+  "id": "04_midpoint",
+  "title": "Section transformation x -> 1-x and midpoint kernel",
+  "version": "midpoint",
+  "run": [
+    "midpoint_test.py"
+  ],
+  "test": [
+    "midpoint_test.py"
+  ],
+  "original_archive": "Quintic_Midpoint_Involution_Exact_Test.zip"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "16_pulses_v10",
+  "title": "Front pulse transfer, affine 1/W profiles and rank checks",
+  "version": "pulses v1.0",
+  "run": [
+    "predictor/pulse_profile.py"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_PT_Pulse_Recurrence_v10.zip"
+}

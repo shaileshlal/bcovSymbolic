@@ -1,0 +1,34 @@
+{
+  "train_degrees": "<=25 (24 target events)",
+  "test_features": "<=25 only",
+  "reference_labels_read": false,
+  "features": {
+    "positional": [
+      "shell",
+      "t_minus_k"
+    ],
+    "engineered": [
+      "shell",
+      "t_minus_k",
+      "absolute_C_log",
+      "absolute_PT_log",
+      "relative_curvature_log",
+      "local_ratio_log",
+      "v2_C",
+      "v5_C",
+      "v5_PT",
+      "peer_gap_ratio",
+      "peer_gap_log",
+      "prior_defect_ratio",
+      "curvature_stable",
+      "mirror_bracket"
+    ]
+  },
+  "fronts_from_training": {
+    "0": 4,
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 3
+  }
+}

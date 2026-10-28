@@ -1,0 +1,106 @@
+[
+  {
+    "genus": 10,
+    "exact_boundary_rank": 25,
+    "total_coefficients": 28,
+    "free_indices": [
+      7,
+      8,
+      9
+    ],
+    "high_coefficients_fixed": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "all_fixed_match": true,
+    "seconds": 16.7
+  },
+  {
+    "genus": 11,
+    "exact_boundary_rank": 27,
+    "total_coefficients": 31,
+    "free_indices": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "high_coefficients_fixed": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "all_fixed_match": true,
+    "seconds": 27.7
+  },
+  {
+    "genus": 12,
+    "exact_boundary_rank": 30,
+    "total_coefficients": 34,
+    "free_indices": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "high_coefficients_fixed": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "all_fixed_match": true,
+    "seconds": 46.0
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "RandomForest": {
+    "median_abs_dex": 0.3541330783999195,
+    "mean_abs_dex": 0.35116766401689575,
+    "median_multiplicative_factor": 2.2601282224219963,
+    "exact_integer_predictions": 0
+  },
+  "ExtraTrees": {
+    "median_abs_dex": 0.2671207472693746,
+    "mean_abs_dex": 0.2640448080684131,
+    "median_multiplicative_factor": 1.8497828442091029,
+    "exact_integer_predictions": 0
+  },
+  "KNN5": {
+    "median_abs_dex": 2.158630157850002,
+    "mean_abs_dex": 2.3716753209959465,
+    "median_multiplicative_factor": 144.08877789258506,
+    "exact_integer_predictions": 0
+  },
+  "Ridge-polynomial": {
+    "median_abs_dex": 0.988673631623656,
+    "mean_abs_dex": 1.346659743878364,
+    "median_multiplicative_factor": 9.742572170585293,
+    "exact_integer_predictions": 0
+  },
+  "Periodic quadratic+mirror": {
+    "median_abs_dex": 0.0,
+    "mean_abs_dex": 0.0012995025339084254,
+    "median_multiplicative_factor": 1.0,
+    "exact_integer_predictions": 28
+  }
+}

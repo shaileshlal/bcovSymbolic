@@ -1,0 +1,12 @@
+{
+  "id": "15_deep_v09",
+  "title": "Deep shells 6-10, quadratic envelope and gated recurrence",
+  "version": "deep v0.9",
+  "run": [
+    "predictor/gated_recurrence.py"
+  ],
+  "test": [
+    "tests.py"
+  ],
+  "original_archive": "Quintic_PT_Deep_Shell_v09.zip"
+}
