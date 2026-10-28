@@ -12,7 +12,10 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Callable, Literal, get_args
 
-from bcov_yy import Poly, YYRing, u, v1, v2, v3, X
+if __package__:
+    from .bcov_yy import Poly, YYRing, u, v1, v2, v3, X
+else:  # Preserve direct execution of the historical scripts.
+    from bcov_yy import Poly, YYRing, u, v1, v2, v3, X
 
 Frame = Literal["yy", "hkq", "small_z"]
 FRAMES: tuple[str, ...] = get_args(Frame)

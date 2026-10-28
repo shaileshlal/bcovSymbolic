@@ -1,155 +1,184 @@
-# bcovSymbolic toolkit
+# bcovSymbolic
 
-Exact-arithmetic quintic BCOV recursion, extracted from the `pypackage` branch.
-The core modules are pruned, fully type-annotated and documented; the public names
-the tutorial imports are unchanged. Standard library only, Python 3.10+, except
-`test_gu_gauge.py` and `verify_yy_qseries_legacy.py`, which need SymPy.
+An installable, exact-arithmetic toolkit for quintic BCOV recursion, coordinate
+frames, source-amplitude analysis, and GW/GV verification. Distribution name:
+`bcov-symbolic`; Python import: `bcov`. Python 3.10 or newer is required.
+Core calculations use `fractions.Fraction` and have no external dependencies.
 
-## Layout
-
-```
-Quintic_BCOV_Tutorial.py   marimo tutorial (run from this directory)
-run_all_checks.py          full regression suite, runs the checks inside bcov/
-bcov/                      modules, scripts, tests and data
-docs/notes/                technical notes v2 (LaTeX source and PDF)
-docs/callgraph/            call graph (.dot sources and rendered .svg)
-```
-
-| `bcov/` file | Contents |
-|---|---|
-| `bcov_yy.py` | Sparse rational ring `Poly` in `u, v1, v2, v3, X`; `YYRing` (Euler derivation `theta`, covariant derivative); lazy `Recipe`/`RecipeArena` DAG; `Amplitude`; `integrate_gradient`; `BCOV` recursion solver with exact JSON checkpoints; `reference_genus2`, `YY_GENUS2_AMBIGUITY`; `demo` CLI |
-| `quintic_frames.py` | Frame maps `yy_to_hkq`, `hkq_to_yy`, `hkq_to_z`, `z_to_hkq`, `yy_to_z`, `z_to_yy`; Euler derivations `theta_hkq`, `theta_z`; `GU_GAUGE`; frame-tagged `FramedPolynomial` |
-| `CONVENTIONS.json` | Conventions ledger (frames, generators, normalization, gauge) |
-| `test_frames.py` | Frame-change regression test against `CONVENTIONS.json` |
-| `test_gu_gauge.py` | Gu/Klemm propagator differential identities (SymPy) |
-| `bcov_sparse_converter.py` | Parses raw `ff_g` free energies into sparse z-frame atomic terms |
-| `bcov_reconcile_frames.py` | Converts the z-frame atomic file to the HKQ frame |
-| `quintic_invariant_extract.py` | Extracts `GVTab` and related integer tables from `quinticGVDTPT.m` without evaluating it |
-| `audit_coefficients.py` | Bernoulli constant and linear pure-`X` coefficients, genera 2–15 → `low_x_reaudit_genus_2_15.csv` |
-| `audit_denominators.py` | Denominator-lattice invariance of the pure-`X` polynomials → `denominator_invariants.csv` |
-| `verify_physical_qseries.py` | Physical A-model `q`-series vs `GVTab` multicover prediction → `qseries_gv_residuals.json` |
-| `verify_yy_qseries_legacy.py` | Older SymPy-based `q`-series check from the raw `ff_g` files (genus 2–3 GV assertions) |
-| `tools/callgraph.py` | Builds the call graph below into `docs/callgraph/` |
-| `data/` | Raw free energies `ff_2..ff_15.txt`, `quinticGVDTPT.m`, extracted `GVTab.csv.gz`, HKQ atomic data `bcov_hkq_atomic_genus_2_15.jsonl.gz`, propagators, GV manifest and conflicts |
-
-The pipeline, audit and verification scripts still use their own polynomial and
-series code rather than `Poly`; that is unchanged for now.
-
-## Running
-
-From the repository root:
+## Install
 
 ```bash
-marimo edit Quintic_BCOV_Tutorial.py   # or: python Quintic_BCOV_Tutorial.py
-python run_all_checks.py               # test_frames, test_gu_gauge, demo, audits, q-series
+conda activate sage-env                       # optional; ordinary Python also works
+python -m pip install -e '.[notebooks,dev]'
 ```
 
-Individual scripts run from inside `bcov/`:
+Sage is available for future symbolic extensions but is not required by the
+current algorithms. The `notebooks` extra installs marimo; `dev` installs the
+optional validation tools and SymPy needed by the historical gauge check.
+For a minimal offline installation with setuptools already installed:
 
 ```bash
-cd bcov
-python bcov_yy.py --genus 3
-python verify_yy_qseries_legacy.py
+python -m pip install --no-build-isolation --no-deps -e .
 ```
 
-Rebuild the derived data from the raw inputs (the output matches `data/` exactly):
+## Solve the anomaly with explicit boundary data
+
+```python
+from bcov import BCOV, YY_GENUS2_AMBIGUITY, reference_genus2
+
+solver = BCOV()
+solver.integrate(2)
+solver.set_ambiguity(2, YY_GENUS2_AMBIGUITY)
+assert solver.amplitudes[2].polynomial() == reference_genus2()
+
+amplitude3 = solver.integrate(3)
+assert solver.residual(3, amplitude3.anomaly) == 0
+# amplitude3.polynomial() raises: its holomorphic ambiguity is unresolved.
+solver.save("checkpoint.json")
+restored = BCOV.load("checkpoint.json")
+```
+
+`None` means unresolved ambiguity; `()` explicitly chooses all coefficients to
+be zero. A formal zero choice is not a physical boundary condition. Checkpoints
+preserve exact rational coefficients and unresolved status.
+
+## Work in explicit frames
+
+```python
+from bcov import FramedPolynomial, reference_genus2
+
+p = FramedPolynomial(reference_genus2(), genus=2, frame="yy")
+assert p.to("hkq").to("small_z").to("yy") == p
+```
+
+Frame labels are `yy`, `hkq`, and `small_z`. The wrapper rejects mixed-frame or
+mixed-genus addition. Transformations include generator substitutions **and**
+the genus-dependent Yukawa normalization. YY/HKQ share the discriminant
+coordinate; small-z uses its complement. See
+[the conventions ledger](bcov/CONVENTIONS.json) and
+[the derivation notes](docs/notes/bcov_yy_conventions_and_derivations_v2.tex).
+
+## Extract and audit arithmetic patterns
+
+```python
+from bcov.datasets import load_amplitude
+from bcov.patterns import audit_patterns, pure_x, low_x_predictions
+
+source = load_amplitude(3)
+yy = pure_x(source, depth=6, frame="yy")  # inclusive X^0,...,X^6
+report = audit_patterns(source, depth=4)
+assert report.low_x_matches and report.denominator_matches
+assert yy[:2] == low_x_predictions(3)[3]
+print(report.ratios)  # YY/HKQ ratios to the constant coefficient
+```
+
+Extraction sets all propagators to zero and uses the atomic valuation `n+ell`
+to avoid expanding the multivariate polynomial. `depth=None` returns the whole
+pure-X vector. Small-z extraction transforms the **full** HKQ vector before
+truncation: inversion and truncation do not commute. Use `source.expand("yy")`
+only at small genus when a full polynomial is needed.
+
+| Pattern or check | API | Evidence / limitation |
+|---|---|---|
+| Sparse YY differential ring, anomaly integration and recipe DAG | `BCOV`, `Poly`, `YYRing`, `RecipeArena` | Exact algebra; physical ambiguities remain external inputs |
+| YY/HKQ/small-z changes and Gu gauge identities | `FramedPolynomial`, `bcov.quintic_frames`; historical gauge test | Whole-amplitude transformations and convention ledger |
+| Bernoulli absolute-value convolution | `bernoulli_abs` | Exact rational recurrence |
+| Constant and linear pure-X formulas | `low_x_predictions`, `audit_patterns` | Compared with all 14 supplied genera 2–15; not a formula for all ambiguity coefficients |
+| Pure-X jets and normalized ratios | `pure_x`, `PatternReport.ratios` | Source-derived, frame-aware; arbitrary requested depth |
+| HKQ/small-z denominator lattice; YY agreement away from 5 | `invert_x`, `denominator_lcm`, `audit_patterns` | Full coefficient vectors; integral inverse binomial transformation |
+| Periods, mirror map and physical multicover residuals | `bcov.verify_physical_qseries` | Default 84 comparisons: genera 2–15, degrees 1–6 |
+
+The separate **Develop AI Quintic Framework** chat contains newer shelf-depth,
+scale-change-pulse, and residual-recurrence work. Its generated code and formulas
+were not accessible through the chat reader during this reorganization. Those
+extensions are **pending source import**, not implemented or claimed verified
+here. The older notes mention low-X checks through genus 53; this repository's
+bundled source amplitudes stop at genus 15.
+
+## Command line
+
+Commands work from any directory after installation. Reports are written only
+when an output path is supplied.
 
 ```bash
-cd bcov
-python bcov_sparse_converter.py --input-dir data --output /tmp/source_z.jsonl.gz --manifest /tmp/source_manifest.json
-python bcov_reconcile_frames.py /tmp/source_z.jsonl.gz --output /tmp/source_hkq.jsonl.gz
-python quintic_invariant_extract.py data/quinticGVDTPT.m --out /tmp/gv_tables
-python verify_physical_qseries.py --atomic /tmp/source_hkq.jsonl.gz --gv /tmp/gv_tables/GVTab.csv.gz --genus 15 --degree 6
+bcov recursion --genus 3 --checkpoint checkpoint.json
+bcov patterns --genus 15 --depth 4 --output patterns.json
+bcov verify --genus 15 --degree 6 --output residuals.json
+# Equivalent: python -m bcov ...
 ```
 
-Result files the scripts write (`bcov/*.csv`, `bcov/qseries_gv_residuals.json`,
-`bcov/notebook_output/`) are ignored by git.
+Pattern audits check the complete denominator vector even when displaying a
+short jet. Verification rejects missing or duplicate requested genera and
+missing GV cells; unknown entries are never silently substituted with zero.
+A nonzero residual produces a nonzero command exit status. Constant maps are
+reported separately, not compared to positive-degree GV invariants.
 
-## Call graph
-
-Rendered with Graphviz from two sources. **pyan3** (static) guesses edges by name,
-so it both invents calls and misses calls on objects other than `self`. A
-**runtime trace** of `test_frames.py`, `bcov_yy.py --genus 4` and the tutorial
-records the calls that actually happen. Edge styles:
-
-- solid grey: found by pyan3 **and** observed at runtime
-- dashed blue: observed at runtime only (pyan3 missed it)
-- dotted red: real call (checked by reading the code) that the traced runs do not exercise
-
-The pyan3 edges rejected as false positives are listed in
-[`docs/callgraph/pyan3_false_positives.txt`](docs/callgraph/pyan3_false_positives.txt).
-
-### Overview by class and module
-
-![Call graph overview](docs/callgraph/overview.svg)
-
-### BCOV solver
-
-Calls from the solver into `Poly` are omitted here; the overview shows which
-classes use `Poly`, and the next graph shows `Poly` itself.
-
-![BCOV solver call graph](docs/callgraph/solver.svg)
-
-### `Poly` and helpers
-
-![Poly call graph](docs/callgraph/poly.svg)
-
-### Frame conversions
-
-![Frame conversion call graph](docs/callgraph/frames.svg)
-
-To regenerate (needs Graphviz's `dot` on `PATH`):
+## Marimo demonstrations
 
 ```bash
-cd bcov
-pyan3 bcov_yy.py quintic_frames.py --uses --no-defines --dot > /tmp/cg.dot
-python tools/callgraph.py /tmp/cg.dot ../docs/callgraph \
-    test_frames.py "bcov_yy.py --genus 4" ../Quintic_BCOV_Tutorial.py
+marimo edit Quintic_BCOV_Tutorial.py
+marimo edit notebooks/arithmetic_patterns.py
+marimo edit notebooks/physical_verification.py
 ```
 
-## Changes from `pypackage`
+The original guided laboratory covers recursion, frames, source extraction and
+checkpoints. The arithmetic notebook adds interactive genus/depth controls and
+exact coefficient tables; the physical notebook compares GW/GV coefficients.
+Run a notebook headlessly with `python path/to/notebook.py`, or export it with
+`marimo export html path/to/notebook.py -o /tmp/demo.html`.
+The tutorial writes its generated reports to `notebook_output/` in the working
+directory; package data are never modified by the new APIs or demonstrations.
 
-Removed (unused by the tutorial, tests, demo, or any other script on `pypackage`,
-and not mentioned in the notes):
+## Validation and development
 
-- `Poly.homogeneous_part`
-- `Recipe.__neg__`
+```bash
+python -m unittest discover -s tests -v     # dependency-free package regressions
+python run_all_checks.py                   # historical full suite; needs SymPy
+python -m bcov patterns --genus 15          # low-X and full denominator audits
+python -m bcov verify --genus 15 --degree 6 # complete physical comparison
+python -m mypy                            # typed public analysis modules
+python -m build                          # wheel and source distribution
+```
 
-`YYRing.theta_z`, `YYRing.clear_cache` and `BCOV.compact_recipes` are not called
-anywhere either, but the notes document them as API, so they are kept.
-`YYRing.theta_z` (−θ/5 on YY-frame generators) is unrelated to
-`quintic_frames.theta_z` (θ_z on small-z frame generators).
+Tests compare atomic jets with independently expanded polynomials in every
+frame, exercise unresolved ambiguities and checkpoint round trips, check the
+inverse mirror map, and ensure incomplete data fail explicitly.
 
-Refactored without changing behaviour:
+```
+bcov/
+  __init__.py, cli.py       public imports and command line
+  bcov_yy.py               exact ring, lazy recipes, BCOV solver
+  quintic_frames.py        frame maps and tagged amplitudes
+  datasets.py              typed, streaming bundled-data access
+  patterns.py              exact jets, recurrences and arithmetic reports
+  verify_physical_qseries.py  periods and GW/GV verification
+  data/                    raw and derived research data, packaged in wheels
+  *.py                     historical conversion/audit/verification scripts
+notebooks/                 focused interactive demonstrations
+tests/                     package-level regressions
+Quintic_BCOV_Tutorial.py   extended guided laboratory
+```
 
-- Every function and method has type hints and a docstring; type aliases `Scalar`, `Variable`, `RecipeSpec`.
-- `bcov_yy._weight` replaces three copies of the weighted-degree sum.
-- `quintic_frames`: the generator substitutions are named constants
-  (`_HKQ_IN_YY`, `_YY_IN_HKQ`, `_HKQ_Z_SWAP`); the frame-label check is `_frame`;
-  the conversion table `_CONVERSIONS` is built once at import; `FRAMES` is derived from `Frame`.
+Historical scripts remain available for reproducing earlier outputs; direct
+execution from `bcov/` is preserved. Their older helpers are not the typed
+public analysis API. The existing call graphs in `docs/callgraph/` describe the
+pre-packaging core and do not include the new analysis modules.
 
-Kept as is: all input-validation guards, and every name the tutorial imports.
+## Data provenance and rebuilding
 
-All other scripts and `data/` are copied unchanged, except:
+The bundled free energies `ff_2.txt`–`ff_15.txt` and `quinticGVDTPT.m` are the
+existing supplied research inputs. The source data have not been changed.
+`GVTab.csv.gz` is the reference table for physical checks. Extended tables
+contain unknown entries and 29 conflicting overlaps; see `gv_manifest.json`
+and `GVTab_vs_GVTabExt_disagreements.csv`. These conflicts are not resolved by
+this package. Source-amplitude versus GV agreement is an independent algebraic
+check, not independent provenance or an all-genus proof.
 
-- `verify_yy_qseries_legacy.py` reads `data/ff_{g}.txt` next to the script
-  instead of the hard-coded `/mnt/data/ff_{g}.txt`.
-- `run_all_checks.py` runs its checks inside `bcov/`.
-- The tutorial looks for the modules in `bcov/`, runs `run_all_checks.py` from the
-  repository root, and its "how to run" text describes this layout.
+To rebuild derived data from the existing raw inputs:
 
-Verified against `pypackage`: the `bcov_yy.py --genus 4` checkpoint is
-byte-identical; `run_all_checks.py` passes; the tutorial runs (also with
-`RUN_FULL_SUITE=True`) with output identical apart from the printed package path;
-the audit and q-series result files are byte-identical; and rebuilding the HKQ
-atomic data, `GVTab` and the disagreements table from the raw inputs reproduces
-the files in `data/` exactly.
-
-## Notes
-
-`docs/notes/` holds the v2 technical notes:
-`bcov_yy_conventions_and_derivations_v2.tex` (which `\input`s
-`bcov_convention_reconciliation_v2.tex`) and the compiled PDF, copied unchanged
-from `pypackage`. Building the PDF needs a LaTeX install with `mathtools` and
-`mathrsfs`. Two references in the notes have no counterpart in this repository:
-the audit script `verify_bcov_notes.py`, and "the 25 tests" of the core library.
+```bash
+python -m bcov.bcov_sparse_converter --input-dir bcov/data --output /tmp/source_z.jsonl.gz --manifest /tmp/source_manifest.json
+python -m bcov.bcov_reconcile_frames /tmp/source_z.jsonl.gz --output /tmp/source_hkq.jsonl.gz
+python -m bcov.quintic_invariant_extract bcov/data/quinticGVDTPT.m --out /tmp/gv_tables
+python -m bcov.verify_physical_qseries --atomic /tmp/source_hkq.jsonl.gz --gv /tmp/gv_tables/GVTab.csv.gz --genus 15 --degree 6 --output /tmp/rebuilt_residuals.json
+```

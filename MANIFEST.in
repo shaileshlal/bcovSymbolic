@@ -1,0 +1,4 @@
+include Quintic_BCOV_Tutorial.py run_all_checks.py
+recursive-include notebooks *.py
+recursive-include tests *.py
+recursive-include docs *.tex *.svg *.dot *.txt

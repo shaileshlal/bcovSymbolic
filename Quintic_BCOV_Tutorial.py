@@ -16,7 +16,7 @@ def _(mo):
     mo.md(r"""
     # Exact BCOV on the quintic: a guided laboratory
 
-    **A reproducible tutorial for the `BCOV_conventions_v2` package**
+    **A reproducible tutorial for the `bcov-symbolic` package**
     Canonical recursion: **original Yamaguchi–Yau (YY, 2004)**. Other frames: **Huang–Klemm–Quackenbush (HKQ)** and **Gu/Klemm small-$z$**.
 
     ### What we will learn
@@ -40,7 +40,7 @@ def _(mo):
     mo.md(r"""
     ## 0. Locate the package and read its convention ledger
 
-    The package is a collection of modules, not an installed PyPI project. The setup below locates `bcov_yy.py` in the `bcov/` folder beside the notebook (or in the working directory itself), adds it to the import path, and **does not** alter the module's definitions.
+    Install the package with `python -m pip install -e ".[notebooks]"`. Imports use the installed package; generated files go into `notebook_output/` in the current directory.
     """)
     return
 
@@ -52,18 +52,15 @@ def _():
     from fractions import Fraction as Q
     from math import comb, lcm
 
-    candidates = [Path.cwd() / 'bcov', Path.cwd(), Path.cwd().parent / 'bcov']
-    PACKAGE = next((p.resolve() for p in candidates if (p / 'bcov_yy.py').is_file()), None)
-    if PACKAGE is None:
-        raise FileNotFoundError('Run the notebook from the repository root, beside the bcov/ folder')
-    sys.path.insert(0, str(PACKAGE))
+    import bcov
+    PACKAGE = Path(bcov.__file__).resolve().parent
     DATA = PACKAGE / 'data'
     conventions = json.loads((PACKAGE / 'CONVENTIONS.json').read_text())
     print('Package:', PACKAGE)
     print('Convention version:', conventions['schema_version'])
     print('Canonical frame:', conventions['canonical_ring_frame'])
     print('Available data:', sorted(p.name for p in DATA.glob('ff_*.txt'))[:4], '...')
-    return DATA, PACKAGE, Q, comb, conventions, csv, gzip, json, sys
+    return DATA, PACKAGE, Path, Q, comb, conventions, csv, gzip, json, sys
 
 
 @app.cell(hide_code=True)
@@ -104,9 +101,9 @@ def _(mo):
 
 @app.cell
 def _():
-    from bcov_yy import (Poly, YYRing, BCOV, u, v1, v2, v3, X,
+    from bcov.bcov_yy import (Poly, YYRing, BCOV, u, v1, v2, v3, X,
                          YY_GENUS2_AMBIGUITY, reference_genus2)
-    from quintic_frames import (FramedPolynomial, yy_to_hkq, hkq_to_yy,
+    from bcov.quintic_frames import (FramedPolynomial, yy_to_hkq, hkq_to_yy,
                                 hkq_to_z, z_to_hkq, yy_to_z,
                                 theta_hkq, theta_z, GU_GAUGE)
 
@@ -552,7 +549,7 @@ def _(mo):
 
 @app.cell
 def _(load_genus_atomic, pure_X_coeffs_atomic_hkq):
-    from audit_coefficients import bernoulli_abs, constant as bernoulli_constant, linear as bernoulli_linear
+    from bcov.audit_coefficients import bernoulli_abs, constant as bernoulli_constant, linear as bernoulli_linear
     b_abs = bernoulli_abs(15)
     expected_a0 = {g: bernoulli_constant(g, b_abs) for g in range(2, 16)}
     summary = []
@@ -581,8 +578,8 @@ def _(mo):
 
 
 @app.cell
-def _(PACKAGE, csv, load_genus_atomic, pure_X_coeffs_atomic_hkq):
-    EXPORT_DIR = PACKAGE / 'notebook_output'
+def _(Path, csv, load_genus_atomic, pure_X_coeffs_atomic_hkq):
+    EXPORT_DIR = Path.cwd() / 'notebook_output'
     EXPORT_DIR.mkdir(exist_ok=True)
     EXPORT_CSV = EXPORT_DIR / 'low_X_coefficients_YY_genus_2_15.csv'
     with EXPORT_CSV.open('w', newline='', encoding='utf8') as stream:
@@ -614,7 +611,7 @@ def _(mo):
 
 @app.cell
 def _(obj3):
-    from audit_denominators import coeff_H as all_coeffs_hkq, invert_X, lcd, other_than_five
+    from bcov.audit_denominators import coeff_H as all_coeffs_hkq, invert_X, lcd, other_than_five
     _g = 3
     hkq_coeffs = all_coeffs_hkq(obj3)
     small_z_coeffs = invert_X(hkq_coeffs, _g)
@@ -653,7 +650,7 @@ def _(mo):
 
 @app.cell
 def _(ATOMIC, DATA, Q):
-    from verify_physical_qseries import verify as verify_gv_qseries
+    from bcov.verify_physical_qseries import verify as verify_gv_qseries
     GV_FILE = DATA / 'GVTab.csv.gz'
     checks = verify_gv_qseries(ATOMIC, GV_FILE, N=4, gmax=3)
     for result in checks:
@@ -678,8 +675,8 @@ def _(mo):
 
 
 @app.cell
-def _(BCOV, P3, PACKAGE, solver):
-    OUTPUT = PACKAGE / 'notebook_output'
+def _(BCOV, P3, Path, solver):
+    OUTPUT = Path.cwd() / 'notebook_output'
     OUTPUT.mkdir(exist_ok=True)
     checkpoint = OUTPUT / 'bcov_genus3_YY.json'
     solver.save(checkpoint)

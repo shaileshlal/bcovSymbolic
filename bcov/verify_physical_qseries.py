@@ -10,46 +10,116 @@ from fractions import Fraction as Q
 from functools import lru_cache
 from math import factorial
 from pathlib import Path
+from typing import TypeAlias, TypedDict
+
+Vector: TypeAlias = list[Q]
+AtomicRow: TypeAlias = tuple[int, int, int, int, int, str, str]
+
+class VerificationResult(TypedDict):
+    """Exact physical coefficients and GV residuals for a source genus."""
+    genus: int
+    relevant_atomic_terms: int
+    F_constant: str
+    coefficients: list[str]
+    GV_residuals: list[str]
 
 class Series:
-    def __init__(self,N):self.N=N
-    def c(self,x):return [Q(x)]+[Q(0)]*self.N
-    def trunc(self,a):return (list(a)+[Q(0)]*(self.N+1))[:self.N+1]
-    def add(self,a,b):return [x+y for x,y in zip(a,b)]
-    def neg(self,a):return [-x for x in a]
-    def sub(self,a,b):return [x-y for x,y in zip(a,b)]
-    def scale(self,a,x):return [Q(x)*t for t in a]
-    def mul(self,a,b):return [sum((a[j]*b[i-j] for j in range(i+1)),Q(0)) for i in range(self.N+1)]
-    def pow(self,a,n):
-        if n<0:return self.pow(self.inv(a),-n)
-        r=self.c(1)
+    """Exact Q[[z]]/(z^(N+1)) arithmetic on coefficient vectors."""
+
+    def __init__(self, N: int) -> None:
+        """Set an inclusive nonnegative truncation order."""
+        if type(N) is not int or N < 0:
+            raise ValueError("Series order must be a nonnegative integer")
+        self.N = N
+
+    def c(self, x: int | Q) -> Vector:
+        """Create a constant series."""
+        return [Q(x)] + [Q(0)]*self.N
+
+    def trunc(self, a: list[int] | Vector) -> Vector:
+        """Normalize and pad a vector to the ring's precision."""
+        return ([Q(x) for x in a] + [Q(0)]*(self.N+1))[:self.N+1]
+
+    def add(self, a: Vector, b: Vector) -> Vector:
+        """Add two series at the same precision."""
+        return [x+y for x, y in zip(a, b)]
+
+    def neg(self, a: Vector) -> Vector:
+        """Negate every coefficient."""
+        return [-x for x in a]
+
+    def sub(self, a: Vector, b: Vector) -> Vector:
+        """Subtract series at the same precision."""
+        return [x-y for x, y in zip(a, b)]
+
+    def scale(self, a: Vector, x: int | Q) -> Vector:
+        """Multiply a series by an exact scalar."""
+        return [Q(x)*t for t in a]
+
+    def mul(self, a: Vector, b: Vector) -> Vector:
+        """Multiply by truncated convolution."""
+        return [sum((a[j]*b[i-j] for j in range(i+1)), Q(0)) for i in range(self.N+1)]
+
+    def pow(self, a: Vector, n: int) -> Vector:
+        """Raise a series to an integer power, inverting for negative powers."""
+        if type(n) is not int:
+            raise ValueError("Series powers must be integers")
+        if n < 0:
+            return self.pow(self.inv(a), -n)
+        result = self.c(1)
         while n:
-            if n&1:r=self.mul(r,a)
-            n>>=1
-            if n:a=self.mul(a,a)
-        return r
-    def inv(self,a):
-        assert a[0]!=0
-        result=[Q(0)]*(self.N+1);result[0]=1/a[0]
-        for n in range(1,self.N+1):result[n]=-sum((a[k]*result[n-k] for k in range(1,n+1)),Q(0))/a[0]
+            if n & 1:
+                result = self.mul(result, a)
+            n >>= 1
+            if n:
+                a = self.mul(a, a)
         return result
-    def div(self,a,b):return self.mul(a,self.inv(b))
-    def theta(self,a):return [i*x for i,x in enumerate(a)]
-    def exp(self,a):
-        assert a[0]==0
-        out=[Q(0)]*(self.N+1);out[0]=Q(1)
-        for n in range(1,self.N+1):out[n]=sum((k*a[k]*out[n-k] for k in range(1,n+1)),Q(0))/n
+
+    def inv(self, a: Vector) -> Vector:
+        """Invert a series with nonzero constant term."""
+        if a[0] == 0:
+            raise ValueError("Cannot invert a series with zero constant")
+        result = self.c(0)
+        result[0] = Q(1)/a[0]
+        for n in range(1, self.N+1):
+            result[n] = -sum((a[k]*result[n-k] for k in range(1, n+1)), Q(0))/a[0]
+        return result
+
+    def div(self, a: Vector, b: Vector) -> Vector:
+        """Divide by an invertible series."""
+        return self.mul(a, self.inv(b))
+
+    def theta(self, a: Vector) -> Vector:
+        """Apply the Euler derivative z d/dz."""
+        return [i*x for i, x in enumerate(a)]
+
+    def exp(self, a: Vector) -> Vector:
+        """Exponentiate a series whose constant term is zero."""
+        if a[0] != 0:
+            raise ValueError("Formal rational exponential requires zero constant")
+        out = self.c(1)
+        for n in range(1, self.N+1):
+            out[n] = sum((k*a[k]*out[n-k] for k in range(1, n+1)), Q(0))/n
         return out
-    def comp(self,a,b):
-        result=self.c(0);p=self.c(1)
-        for ai in a:result=self.add(result,self.scale(p,ai));p=self.mul(p,b)
+
+    def comp(self, a: Vector, b: Vector) -> Vector:
+        """Compose formal series; the inner series must have zero constant."""
+        if b[0] != 0:
+            raise ValueError("Formal composition requires zero inner constant")
+        result, power = self.c(0), self.c(1)
+        for coefficient in a:
+            result = self.add(result, self.scale(power, coefficient))
+            power = self.mul(power, b)
         return result
 
 
-def periods(N):
+def periods(N: int) -> tuple[Series, Vector, tuple[Vector, ...], Vector]:
+    """Construct periods, inverse mirror map, HKQ atomic bases and normalization."""
     s=Series(N)
     w=[Q(factorial(5*n),factorial(n)**5) for n in range(N+1)]
-    def H(n):return sum((Q(1,i) for i in range(1,n+1)),Q(0))
+    def H(n: int) -> Q:
+        """Return the nth harmonic number exactly."""
+        return sum((Q(1,i) for i in range(1,n+1)),Q(0))
     sig=[Q(0)]+[w[n]*5*(H(5*n)-H(n)) for n in range(1,N+1)]
     f=s.div(sig,w);t=s.add(s.c(1),s.theta(f))
     qz=s.trunc([Q(0)]+s.exp(f)[:N]);zq=s.trunc([0,1])
@@ -71,16 +141,18 @@ def periods(N):
     return s,zq,(s.sub(s.c(1),X),X,alpha,beta,gamma),scale
 
 
-def coeff_poly_pow(base,exponent,N):
+def coeff_poly_pow(base: Vector, exponent: int, N: int) -> Vector:
+    """Raise a truncated series to an integer power."""
     # finite polynomial in t, handles negative powers if constant is 1
     s=Series(N)
     return s.pow(base,exponent)
 
 @lru_cache(None)
-def sine_coefficient(g,h):
+def sine_coefficient(g: int, h: int) -> Q:
+    """Extract the GV multicover sine coefficient exactly."""
     # coeff of t^(2g-2) in (2sin(t/2))^(2h-2)
     # extract y^(g-h) of (2sin(sqrt(y)/2)/sqrt(y))^(2h-2)
-    assert g>=2 and 0<=h<=g
+    if not (g >= 2 and 0 <= h <= g): raise ValueError("Require g >= 2 and 0 <= h <= g")
     order=g-h if h>0 else g
     s=Series(order)
     A=[Q((-1)**j, 4**j*factorial(2*j+1)) for j in range(order+1)]
@@ -90,32 +162,44 @@ def sine_coefficient(g,h):
     return s.pow(A,2*h-2)[g-h]
 
 
-def read_gv(path):
+def read_gv(path: str | Path) -> list[dict[int, int]]:
+    """Read genus-indexed GV rows; retain missing entries as missing."""
     with gzip.open(path,'rt',newline='') as fh:rows=list(csv.DictReader(fh))
+    if [int(row['genus']) for row in rows] != list(range(len(rows))):
+        raise ValueError('GV rows must have unique contiguous genera starting at zero')
     return [{int(k.split('_')[1]):int(v) for k,v in row.items() if k.startswith('degree_') and v.strip()}
             for row in rows]
 
 
-def expected_gv(g,N,gv):
+def expected_gv(g: int, N: int, gv: list[dict[int, int]]) -> Vector:
+    """Compute positive-degree multicover coefficients, requiring full coverage."""
+    if g < 2 or N < 1 or len(gv) <= g:
+        raise ValueError("Require genus >= 2, degree >= 1, and GV genus coverage")
+    if any(d not in gv[h] for h in range(g+1) for d in range(1, N+1)):
+        raise ValueError("Missing GV entries cannot be interpreted as zero")
     result=[Q(0)]*(N+1)
     for d in range(1,N+1):
         for m in range(1,N//d+1):
-            v=sum((Q(gv[h].get(d,0))*sine_coefficient(g,h) for h in range(g+1)),Q(0))
+            v=sum((Q(gv[h][d])*sine_coefficient(g,h) for h in range(g+1)),Q(0))
             result[d*m]+=m**(2*g-3)*v
     return result
 
 
-def evaluate_atomic(g,terms,tools):
+def evaluate_atomic(
+    g: int, terms: list[AtomicRow],
+    tools: tuple[Series, Vector, tuple[Vector, ...], Vector],
+) -> tuple[Vector, int]:
+    """Evaluate factored HKQ data in the physical q coordinate."""
     s,zq,bases,scale=tools
-    nontriv=[(r,n,j,k,ell,Q(int(num),int(den))) for r,n,j,k,ell,num,den in terms if n+ell<=s.N]
-    degrees=[max((item[k] for item in nontriv),default=0) for k in range(5)]
+    nontriv=[((r,n,j,k,ell),Q(int(num),int(den))) for r,n,j,k,ell,num,den in terms if n+ell<=s.N]
+    degrees=[max((item[0][k] for item in nontriv),default=0) for k in range(5)]
     powers=[]
     for base,d in zip(bases,degrees):
         p=[s.c(1)]
         for i in range(d):p.append(s.mul(p[-1],base))
         powers.append(p)
     pz=s.c(0)
-    for r,n,j,k,ell,coeff in nontriv:
+    for (r,n,j,k,ell),coeff in nontriv:
         # multiplication starts with X^n gamma^ell to exploit valuation
         val=s.scale(s.mul(powers[1][n],powers[4][ell]),coeff)
         for pos,i in ((0,r),(2,j),(3,k)):
@@ -125,12 +209,19 @@ def evaluate_atomic(g,terms,tools):
     return fq,len(nontriv)
 
 
-def verify(atomic,gvfile,N=6,gmax=8,output=None):
-    gv=read_gv(gvfile); tools=periods(N);results=[]
+def verify(
+    atomic: str | Path, gvfile: str | Path, N: int = 6,
+    gmax: int = 8, output: str | Path | None = None,
+) -> list[VerificationResult]:
+    """Compare every requested source genus and degree to independent GV data."""
+    if type(N) is not int or N < 1 or type(gmax) is not int or gmax < 2:
+        raise ValueError("Require positive integer degree and integer genus >= 2")
+    gv=read_gv(gvfile); tools=periods(N)
+    results: list[VerificationResult] = []
     with gzip.open(atomic,'rt') as fh:
         for line in fh:
             obj=json.loads(line);g=obj['genus']
-            if g>gmax:break
+            if g>gmax:continue
             actual,terms=evaluate_atomic(g,obj['terms'],tools)
             expected=expected_gv(g,N,gv)
             diff=[actual[i]-expected[i] for i in range(1,N+1)]
@@ -138,7 +229,9 @@ def verify(atomic,gvfile,N=6,gmax=8,output=None):
             results.append({'genus':g,'relevant_atomic_terms':terms,
                             'F_constant':str(actual[0]),'coefficients':[str(x) for x in actual[1:]],
                             'GV_residuals':[str(x) for x in diff]})
-            if any(diff):print('  residuals',diff);break
+            if any(diff):print('  residuals',diff)
+    if sorted(r["genus"] for r in results) != list(range(2, gmax+1)):
+        raise ValueError("Missing or duplicate atomic genera in requested range")
     if output:Path(output).write_text(json.dumps({'degree':N,'results':results},indent=2)+'\n')
     return results
 

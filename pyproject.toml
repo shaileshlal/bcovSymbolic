@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bcov-symbolic"
+version = "0.3.0"
+description = "Exact quintic BCOV recursion, arithmetic patterns, and enumerative verification"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+notebooks = ["marimo>=0.25.1,<1"]
+dev = ["pytest>=8", "mypy>=1.10", "build>=1", "sympy>=1.12"]
+
+[project.scripts]
+bcov = "bcov.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["bcov"]
+
+[tool.setuptools.package-data]
+bcov = ["py.typed", "CONVENTIONS.json", "data/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["bcov/patterns.py", "bcov/datasets.py", "bcov/cli.py", "bcov/verify_physical_qseries.py"]
+check_untyped_defs = true
+disallow_untyped_defs = true
+follow_imports = "silent"
