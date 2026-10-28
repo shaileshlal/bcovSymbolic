@@ -12,463 +12,463 @@
 <text xml:space="preserve" text-anchor="middle" x="458.25" y="-924.65" font-family="Helvetica,sans-Serif" font-size="18.00">Poly and helpers</text>
 <g id="clust1" class="cluster">
 <title>cluster_0</title>
-<path fill="#eef3fb" stroke="#999999" d="M20,-206C20,-206 755.88,-206 755.88,-206 761.88,-206 767.88,-212 767.88,-218 767.88,-218 767.88,-896 767.88,-896 767.88,-902 761.88,-908 755.88,-908 755.88,-908 20,-908 20,-908 14,-908 8,-902 8,-896 8,-896 8,-218 8,-218 8,-212 14,-206 20,-206"/>
-<text xml:space="preserve" text-anchor="middle" x="387.94" y="-886.9" font-family="Helvetica,sans-Serif" font-size="18.00">Poly</text>
+<path fill="#eef3fb" stroke="#999999" d="M686,-8C686,-8 896.5,-8 896.5,-8 902.5,-8 908.5,-14 908.5,-20 908.5,-20 908.5,-186 908.5,-186 908.5,-192 902.5,-198 896.5,-198 896.5,-198 686,-198 686,-198 680,-198 674,-192 674,-186 674,-186 674,-20 674,-20 674,-14 680,-8 686,-8"/>
+<text xml:space="preserve" text-anchor="middle" x="791.25" y="-176.9" font-family="Helvetica,sans-Serif" font-size="18.00">bcov_yy</text>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_1</title>
-<path fill="#fdf1e6" stroke="#999999" d="M686,-8C686,-8 896.5,-8 896.5,-8 902.5,-8 908.5,-14 908.5,-20 908.5,-20 908.5,-186 908.5,-186 908.5,-192 902.5,-198 896.5,-198 896.5,-198 686,-198 686,-198 680,-198 674,-192 674,-186 674,-186 674,-20 674,-20 674,-14 680,-8 686,-8"/>
-<text xml:space="preserve" text-anchor="middle" x="791.25" y="-176.9" font-family="Helvetica,sans-Serif" font-size="18.00">bcov_yy</text>
+<path fill="#fdf1e6" stroke="#999999" d="M20,-206C20,-206 755.88,-206 755.88,-206 761.88,-206 767.88,-212 767.88,-218 767.88,-218 767.88,-896 767.88,-896 767.88,-902 761.88,-908 755.88,-908 755.88,-908 20,-908 20,-908 14,-908 8,-902 8,-896 8,-896 8,-218 8,-218 8,-212 14,-206 20,-206"/>
+<text xml:space="preserve" text-anchor="middle" x="387.94" y="-886.9" font-family="Helvetica,sans-Serif" font-size="18.00">bcov_yy.Poly</text>
 </g>
-<!-- bcov_yy.Poly.__add__ -->
+<!-- bcov.bcov_yy._product -->
 <g id="node1" class="node">
-<title>bcov_yy.Poly.__add__</title>
-<path fill="#ffffff" stroke="black" d="M324.88,-574C324.88,-574 291.62,-574 291.62,-574 285.62,-574 279.62,-568 279.62,-562 279.62,-562 279.62,-550 279.62,-550 279.62,-544 285.62,-538 291.62,-538 291.62,-538 324.88,-538 324.88,-538 330.88,-538 336.88,-544 336.88,-550 336.88,-550 336.88,-562 336.88,-562 336.88,-568 330.88,-574 324.88,-574"/>
-<text xml:space="preserve" text-anchor="middle" x="308.25" y="-552.3" font-family="Helvetica,sans-Serif" font-size="11.00">__add__</text>
-</g>
-<!-- bcov_yy.Poly.__init__ -->
-<g id="node4" class="node">
-<title>bcov_yy.Poly.__init__</title>
-<path fill="#ffffff" stroke="black" d="M744.88,-628C744.88,-628 714.62,-628 714.62,-628 708.62,-628 702.62,-622 702.62,-616 702.62,-616 702.62,-604 702.62,-604 702.62,-598 708.62,-592 714.62,-592 714.62,-592 744.88,-592 744.88,-592 750.88,-592 756.88,-598 756.88,-604 756.88,-604 756.88,-616 756.88,-616 756.88,-622 750.88,-628 744.88,-628"/>
-<text xml:space="preserve" text-anchor="middle" x="729.75" y="-606.3" font-family="Helvetica,sans-Serif" font-size="11.00">__init__</text>
-</g>
-<!-- bcov_yy.Poly.__add__&#45;&gt;bcov_yy.Poly.__init__ -->
-<g id="edge1" class="edge">
-<title>bcov_yy.Poly.__add__&#45;&gt;bcov_yy.Poly.__init__</title>
-<path fill="none" stroke="#555555" d="M323.46,-574.38C340.05,-594.19 369.54,-624.55 403,-637 504.19,-674.66 634.91,-641.43 695.36,-621.88"/>
-<polygon fill="#555555" stroke="#555555" points="695.9,-623.91 700.94,-620.04 694.59,-619.92 695.9,-623.91"/>
-</g>
-<!-- bcov_yy.Poly.coerce -->
-<g id="node15" class="node">
-<title>bcov_yy.Poly.coerce</title>
-<path fill="#ffffff" stroke="black" d="M456,-554C456,-554 426,-554 426,-554 420,-554 414,-548 414,-542 414,-542 414,-530 414,-530 414,-524 420,-518 426,-518 426,-518 456,-518 456,-518 462,-518 468,-524 468,-530 468,-530 468,-542 468,-542 468,-548 462,-554 456,-554"/>
-<text xml:space="preserve" text-anchor="middle" x="441" y="-532.3" font-family="Helvetica,sans-Serif" font-size="11.00">coerce</text>
-</g>
-<!-- bcov_yy.Poly.__add__&#45;&gt;bcov_yy.Poly.coerce -->
-<g id="edge2" class="edge">
-<title>bcov_yy.Poly.__add__&#45;&gt;bcov_yy.Poly.coerce</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M337.3,-551.71C357.57,-548.61 385.04,-544.41 406.47,-541.13"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="406.67,-543.22 412.28,-540.24 406.03,-539.07 406.67,-543.22"/>
-</g>
-<!-- bcov_yy.Poly.__bool__ -->
-<g id="node2" class="node">
-<title>bcov_yy.Poly.__bool__</title>
-<path fill="#ffffff" stroke="black" d="M747.88,-828C747.88,-828 711.62,-828 711.62,-828 705.62,-828 699.62,-822 699.62,-816 699.62,-816 699.62,-804 699.62,-804 699.62,-798 705.62,-792 711.62,-792 711.62,-792 747.88,-792 747.88,-792 753.88,-792 759.88,-798 759.88,-804 759.88,-804 759.88,-816 759.88,-816 759.88,-822 753.88,-828 747.88,-828"/>
-<text xml:space="preserve" text-anchor="middle" x="729.75" y="-806.3" font-family="Helvetica,sans-Serif" font-size="11.00">__bool__</text>
-</g>
-<!-- bcov_yy.Poly.__eq__ -->
-<g id="node3" class="node">
-<title>bcov_yy.Poly.__eq__</title>
-<path fill="#ffffff" stroke="black" d="M456,-628C456,-628 426,-628 426,-628 420,-628 414,-622 414,-616 414,-616 414,-604 414,-604 414,-598 420,-592 426,-592 426,-592 456,-592 456,-592 462,-592 468,-598 468,-604 468,-604 468,-616 468,-616 468,-622 462,-628 456,-628"/>
-<text xml:space="preserve" text-anchor="middle" x="441" y="-606.3" font-family="Helvetica,sans-Serif" font-size="11.00">__eq__</text>
-</g>
-<!-- bcov_yy.Poly.constant -->
-<g id="node16" class="node">
-<title>bcov_yy.Poly.constant</title>
-<path fill="#ffffff" stroke="black" d="M600.5,-628C600.5,-628 560.5,-628 560.5,-628 554.5,-628 548.5,-622 548.5,-616 548.5,-616 548.5,-604 548.5,-604 548.5,-598 554.5,-592 560.5,-592 560.5,-592 600.5,-592 600.5,-592 606.5,-592 612.5,-598 612.5,-604 612.5,-604 612.5,-616 612.5,-616 612.5,-622 606.5,-628 600.5,-628"/>
-<text xml:space="preserve" text-anchor="middle" x="580.5" y="-606.3" font-family="Helvetica,sans-Serif" font-size="11.00">constant</text>
-</g>
-<!-- bcov_yy.Poly.__eq__&#45;&gt;bcov_yy.Poly.constant -->
-<g id="edge3" class="edge">
-<title>bcov_yy.Poly.__eq__&#45;&gt;bcov_yy.Poly.constant</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M468.19,-610C488.72,-610 517.6,-610 540.79,-610"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="540.59,-612.1 546.59,-610 540.59,-607.9 540.59,-612.1"/>
-</g>
-<!-- bcov_yy.rational -->
-<g id="node27" class="node">
-<title>bcov_yy.rational</title>
-<path fill="#ffffff" stroke="black" d="M888.5,-160C888.5,-160 854.5,-160 854.5,-160 848.5,-160 842.5,-154 842.5,-148 842.5,-148 842.5,-136 842.5,-136 842.5,-130 848.5,-124 854.5,-124 854.5,-124 888.5,-124 888.5,-124 894.5,-124 900.5,-130 900.5,-136 900.5,-136 900.5,-148 900.5,-148 900.5,-154 894.5,-160 888.5,-160"/>
-<text xml:space="preserve" text-anchor="middle" x="871.5" y="-138.3" font-family="Helvetica,sans-Serif" font-size="11.00">rational</text>
-</g>
-<!-- bcov_yy.Poly.__init__&#45;&gt;bcov_yy.rational -->
-<g id="edge4" class="edge">
-<title>bcov_yy.Poly.__init__&#45;&gt;bcov_yy.rational</title>
-<path fill="none" stroke="#555555" d="M738.27,-591.55C747.99,-567.33 765.15,-523.38 777.5,-485 815.21,-367.8 850.64,-224.92 864.43,-167.59"/>
-<polygon fill="#555555" stroke="#555555" points="866.44,-168.19 865.8,-161.87 862.36,-167.21 866.44,-168.19"/>
-</g>
-<!-- bcov_yy.Poly.__len__ -->
-<g id="node5" class="node">
-<title>bcov_yy.Poly.__len__</title>
-<path fill="#ffffff" stroke="black" d="M595.5,-722C595.5,-722 565.5,-722 565.5,-722 559.5,-722 553.5,-716 553.5,-710 553.5,-710 553.5,-698 553.5,-698 553.5,-692 559.5,-686 565.5,-686 565.5,-686 595.5,-686 595.5,-686 601.5,-686 607.5,-692 607.5,-698 607.5,-698 607.5,-710 607.5,-710 607.5,-716 601.5,-722 595.5,-722"/>
-<text xml:space="preserve" text-anchor="middle" x="580.5" y="-700.3" font-family="Helvetica,sans-Serif" font-size="11.00">__len__</text>
-</g>
-<!-- bcov_yy.Poly.__mul__ -->
-<g id="node6" class="node">
-<title>bcov_yy.Poly.__mul__</title>
-<path fill="#ffffff" stroke="black" d="M457.62,-748C457.62,-748 424.38,-748 424.38,-748 418.38,-748 412.38,-742 412.38,-736 412.38,-736 412.38,-724 412.38,-724 412.38,-718 418.38,-712 424.38,-712 424.38,-712 457.62,-712 457.62,-712 463.62,-712 469.62,-718 469.62,-724 469.62,-724 469.62,-736 469.62,-736 469.62,-742 463.62,-748 457.62,-748"/>
-<text xml:space="preserve" text-anchor="middle" x="441" y="-726.3" font-family="Helvetica,sans-Serif" font-size="11.00">__mul__</text>
-</g>
-<!-- bcov_yy.Poly.__mul__&#45;&gt;bcov_yy.Poly.__bool__ -->
-<g id="edge5" class="edge">
-<title>bcov_yy.Poly.__mul__&#45;&gt;bcov_yy.Poly.__bool__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M461.64,-748.44C480.94,-765.28 512.08,-789.14 544,-800 593.18,-816.72 653.95,-816.31 692.04,-813.73"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="692.01,-815.84 697.84,-813.31 691.7,-811.65 692.01,-815.84"/>
-</g>
-<!-- bcov_yy.Poly.__mul__&#45;&gt;bcov_yy.Poly.__init__ -->
-<g id="edge6" class="edge">
-<title>bcov_yy.Poly.__mul__&#45;&gt;bcov_yy.Poly.__init__</title>
-<path fill="none" stroke="#555555" d="M464.96,-748.32C499.53,-773.52 566.31,-812.78 617,-785 675.48,-752.96 707.8,-675.85 721.22,-635.53"/>
-<polygon fill="#555555" stroke="#555555" points="723.2,-636.25 723.05,-629.89 719.2,-634.95 723.2,-636.25"/>
-</g>
-<!-- bcov_yy.Poly.__mul__&#45;&gt;bcov_yy.Poly.__len__ -->
-<g id="edge7" class="edge">
-<title>bcov_yy.Poly.__mul__&#45;&gt;bcov_yy.Poly.__len__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M469.83,-724.74C491.78,-720.59 522.48,-714.78 545.82,-710.37"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="546.12,-712.45 551.63,-709.27 545.34,-708.32 546.12,-712.45"/>
-</g>
-<!-- bcov_yy.Poly.scale -->
-<g id="node22" class="node">
-<title>bcov_yy.Poly.scale</title>
-<path fill="#ffffff" stroke="black" d="M595.5,-870C595.5,-870 565.5,-870 565.5,-870 559.5,-870 553.5,-864 553.5,-858 553.5,-858 553.5,-846 553.5,-846 553.5,-840 559.5,-834 565.5,-834 565.5,-834 595.5,-834 595.5,-834 601.5,-834 607.5,-840 607.5,-846 607.5,-846 607.5,-858 607.5,-858 607.5,-864 601.5,-870 595.5,-870"/>
-<text xml:space="preserve" text-anchor="middle" x="580.5" y="-848.3" font-family="Helvetica,sans-Serif" font-size="11.00">scale</text>
-</g>
-<!-- bcov_yy.Poly.__mul__&#45;&gt;bcov_yy.Poly.scale -->
-<g id="edge8" class="edge">
-<title>bcov_yy.Poly.__mul__&#45;&gt;bcov_yy.Poly.scale</title>
-<path fill="none" stroke="#555555" d="M462.59,-748.26C486.79,-769.74 526.99,-805.41 553.37,-828.81"/>
-<polygon fill="#555555" stroke="#555555" points="551.76,-830.19 557.64,-832.61 554.55,-827.05 551.76,-830.19"/>
-</g>
-<!-- bcov_yy.Poly.__neg__ -->
-<g id="node7" class="node">
-<title>bcov_yy.Poly.__neg__</title>
-<path fill="#ffffff" stroke="black" d="M324.88,-791C324.88,-791 291.62,-791 291.62,-791 285.62,-791 279.62,-785 279.62,-779 279.62,-779 279.62,-767 279.62,-767 279.62,-761 285.62,-755 291.62,-755 291.62,-755 324.88,-755 324.88,-755 330.88,-755 336.88,-761 336.88,-767 336.88,-767 336.88,-779 336.88,-779 336.88,-785 330.88,-791 324.88,-791"/>
-<text xml:space="preserve" text-anchor="middle" x="308.25" y="-769.3" font-family="Helvetica,sans-Serif" font-size="11.00">__neg__</text>
-</g>
-<!-- bcov_yy.Poly.__neg__&#45;&gt;bcov_yy.Poly.scale -->
-<g id="edge9" class="edge">
-<title>bcov_yy.Poly.__neg__&#45;&gt;bcov_yy.Poly.scale</title>
-<path fill="none" stroke="#555555" d="M337.15,-781.16C387.36,-795.83 492.68,-826.62 546.43,-842.33"/>
-<polygon fill="#555555" stroke="#555555" points="545.54,-844.26 551.89,-843.93 546.72,-840.23 545.54,-844.26"/>
-</g>
-<!-- bcov_yy.Poly.__pow__ -->
-<g id="node8" class="node">
-<title>bcov_yy.Poly.__pow__</title>
-<path fill="#ffffff" stroke="black" d="M326,-648C326,-648 290.5,-648 290.5,-648 284.5,-648 278.5,-642 278.5,-636 278.5,-636 278.5,-624 278.5,-624 278.5,-618 284.5,-612 290.5,-612 290.5,-612 326,-612 326,-612 332,-612 338,-618 338,-624 338,-624 338,-636 338,-636 338,-642 332,-648 326,-648"/>
-<text xml:space="preserve" text-anchor="middle" x="308.25" y="-626.3" font-family="Helvetica,sans-Serif" font-size="11.00">__pow__</text>
-</g>
-<!-- bcov_yy.Poly.__pow__&#45;&gt;bcov_yy.Poly.__mul__ -->
-<g id="edge10" class="edge">
-<title>bcov_yy.Poly.__pow__&#45;&gt;bcov_yy.Poly.__mul__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M333.23,-648.34C354.98,-664.98 387.11,-689.55 410.44,-707.39"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="408.93,-708.88 414.97,-710.86 411.48,-705.54 408.93,-708.88"/>
-</g>
-<!-- bcov_yy.Poly.__pow__&#45;&gt;bcov_yy.Poly.constant -->
-<g id="edge11" class="edge">
-<title>bcov_yy.Poly.__pow__&#45;&gt;bcov_yy.Poly.constant</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M337.06,-611.74C355.05,-601.04 379.44,-588.58 403,-583 450.09,-571.86 505.37,-584.34 541.35,-595.78"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="540.49,-597.71 546.84,-597.58 541.79,-593.72 540.49,-597.71"/>
-</g>
-<!-- bcov_yy.Poly.__repr__ -->
-<g id="node9" class="node">
-<title>bcov_yy.Poly.__repr__</title>
-<path fill="#ffffff" stroke="black" d="M458.75,-304C458.75,-304 423.25,-304 423.25,-304 417.25,-304 411.25,-298 411.25,-292 411.25,-292 411.25,-280 411.25,-280 411.25,-274 417.25,-268 423.25,-268 423.25,-268 458.75,-268 458.75,-268 464.75,-268 470.75,-274 470.75,-280 470.75,-280 470.75,-292 470.75,-292 470.75,-298 464.75,-304 458.75,-304"/>
-<text xml:space="preserve" text-anchor="middle" x="441" y="-282.3" font-family="Helvetica,sans-Serif" font-size="11.00">__repr__</text>
-</g>
-<!-- bcov_yy.Poly.degree -->
-<g id="node17" class="node">
-<title>bcov_yy.Poly.degree</title>
-<path fill="#ffffff" stroke="black" d="M595.62,-304C595.62,-304 565.38,-304 565.38,-304 559.38,-304 553.38,-298 553.38,-292 553.38,-292 553.38,-280 553.38,-280 553.38,-274 559.38,-268 565.38,-268 565.38,-268 595.62,-268 595.62,-268 601.62,-268 607.62,-274 607.62,-280 607.62,-280 607.62,-292 607.62,-292 607.62,-298 601.62,-304 595.62,-304"/>
-<text xml:space="preserve" text-anchor="middle" x="580.5" y="-282.3" font-family="Helvetica,sans-Serif" font-size="11.00">degree</text>
-</g>
-<!-- bcov_yy.Poly.__repr__&#45;&gt;bcov_yy.Poly.degree -->
-<g id="edge12" class="edge">
-<title>bcov_yy.Poly.__repr__&#45;&gt;bcov_yy.Poly.degree</title>
-<path fill="none" stroke="#d62728" stroke-width="1.6" stroke-dasharray="1,5" d="M471.16,-286C492.69,-286 522.08,-286 544.81,-286"/>
-<polygon fill="#d62728" stroke="#d62728" stroke-width="1.6" points="544.75,-288.1 550.75,-286 544.75,-283.9 544.75,-288.1"/>
-</g>
-<!-- bcov_yy.Poly.__rsub__ -->
-<g id="node10" class="node">
-<title>bcov_yy.Poly.__rsub__</title>
-<path fill="#ffffff" stroke="black" d="M65,-564C65,-564 28,-564 28,-564 22,-564 16,-558 16,-552 16,-552 16,-540 16,-540 16,-534 22,-528 28,-528 28,-528 65,-528 65,-528 71,-528 77,-534 77,-540 77,-540 77,-552 77,-552 77,-558 71,-564 65,-564"/>
-<text xml:space="preserve" text-anchor="middle" x="46.5" y="-542.3" font-family="Helvetica,sans-Serif" font-size="11.00">__rsub__</text>
-</g>
-<!-- bcov_yy.Poly.__sub__ -->
-<g id="node12" class="node">
-<title>bcov_yy.Poly.__sub__</title>
-<path fill="#ffffff" stroke="black" d="M194,-611C194,-611 161.5,-611 161.5,-611 155.5,-611 149.5,-605 149.5,-599 149.5,-599 149.5,-587 149.5,-587 149.5,-581 155.5,-575 161.5,-575 161.5,-575 194,-575 194,-575 200,-575 206,-581 206,-587 206,-587 206,-599 206,-599 206,-605 200,-611 194,-611"/>
-<text xml:space="preserve" text-anchor="middle" x="177.75" y="-589.3" font-family="Helvetica,sans-Serif" font-size="11.00">__sub__</text>
-</g>
-<!-- bcov_yy.Poly.__rsub__&#45;&gt;bcov_yy.Poly.__sub__ -->
-<g id="edge13" class="edge">
-<title>bcov_yy.Poly.__rsub__&#45;&gt;bcov_yy.Poly.__sub__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M77.48,-556.9C96.82,-563.94 122.05,-573.11 142.23,-580.45"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="141.36,-582.37 147.72,-582.44 142.8,-578.42 141.36,-582.37"/>
-</g>
-<!-- bcov_yy.Poly.__rsub__&#45;&gt;bcov_yy.Poly.coerce -->
-<g id="edge14" class="edge">
-<title>bcov_yy.Poly.__rsub__&#45;&gt;bcov_yy.Poly.coerce</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M77.41,-532.23C95.65,-524.6 119.67,-515.89 142,-512 237.18,-495.4 351.5,-515.63 406.8,-527.91"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="406.1,-529.9 412.41,-529.17 407.02,-525.8 406.1,-529.9"/>
-</g>
-<!-- bcov_yy.Poly.__str__ -->
-<g id="node11" class="node">
-<title>bcov_yy.Poly.__str__</title>
-<path fill="#ffffff" stroke="black" d="M595.5,-250C595.5,-250 565.5,-250 565.5,-250 559.5,-250 553.5,-244 553.5,-238 553.5,-238 553.5,-226 553.5,-226 553.5,-220 559.5,-214 565.5,-214 565.5,-214 595.5,-214 595.5,-214 601.5,-214 607.5,-220 607.5,-226 607.5,-226 607.5,-238 607.5,-238 607.5,-244 601.5,-250 595.5,-250"/>
-<text xml:space="preserve" text-anchor="middle" x="580.5" y="-228.3" font-family="Helvetica,sans-Serif" font-size="11.00">__str__</text>
-</g>
-<!-- bcov_yy._weight -->
-<g id="node26" class="node">
-<title>bcov_yy._weight</title>
-<path fill="#ffffff" stroke="black" d="M746.75,-52C746.75,-52 712.75,-52 712.75,-52 706.75,-52 700.75,-46 700.75,-40 700.75,-40 700.75,-28 700.75,-28 700.75,-22 706.75,-16 712.75,-16 712.75,-16 746.75,-16 746.75,-16 752.75,-16 758.75,-22 758.75,-28 758.75,-28 758.75,-40 758.75,-40 758.75,-46 752.75,-52 746.75,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="729.75" y="-30.3" font-family="Helvetica,sans-Serif" font-size="11.00">_weight</text>
-</g>
-<!-- bcov_yy.Poly.__str__&#45;&gt;bcov_yy._weight -->
-<g id="edge15" class="edge">
-<title>bcov_yy.Poly.__str__&#45;&gt;bcov_yy._weight</title>
-<path fill="none" stroke="#555555" d="M587.2,-213.71C598.63,-179.66 627.32,-105.95 674,-61 679.73,-55.48 686.8,-50.88 693.94,-47.13"/>
-<polygon fill="#555555" stroke="#555555" points="694.66,-49.12 699.12,-44.59 692.81,-45.35 694.66,-49.12"/>
-</g>
-<!-- bcov_yy.Poly.__sub__&#45;&gt;bcov_yy.Poly.__add__ -->
-<g id="edge16" class="edge">
-<title>bcov_yy.Poly.__sub__&#45;&gt;bcov_yy.Poly.__add__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M206.32,-585.06C225.58,-579.52 251.46,-572.06 272.19,-566.1"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="272.65,-568.15 277.83,-564.47 271.48,-564.11 272.65,-568.15"/>
-</g>
-<!-- bcov_yy.Poly.__sub__&#45;&gt;bcov_yy.Poly.__neg__ -->
-<g id="edge17" class="edge">
-<title>bcov_yy.Poly.__sub__&#45;&gt;bcov_yy.Poly.__neg__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M191.78,-611.25C215.06,-643.86 263.81,-712.15 289.9,-748.69"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="288.11,-749.81 293.31,-753.47 291.53,-747.37 288.11,-749.81"/>
-</g>
-<!-- bcov_yy.Poly.__sub__&#45;&gt;bcov_yy.Poly.coerce -->
-<g id="edge18" class="edge">
-<title>bcov_yy.Poly.__sub__&#45;&gt;bcov_yy.Poly.coerce</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M206.27,-594.31C238.39,-595.14 292.88,-594.39 338,-583 362.18,-576.9 387.67,-565.16 407.11,-554.94"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="408.09,-556.8 412.39,-552.11 406.11,-553.09 408.09,-556.8"/>
-</g>
-<!-- bcov_yy.Poly.__truediv__ -->
-<g id="node13" class="node">
-<title>bcov_yy.Poly.__truediv__</title>
-<path fill="#ffffff" stroke="black" d="M467,-870C467,-870 415,-870 415,-870 409,-870 403,-864 403,-858 403,-858 403,-846 403,-846 403,-840 409,-834 415,-834 415,-834 467,-834 467,-834 473,-834 479,-840 479,-846 479,-846 479,-858 479,-858 479,-864 473,-870 467,-870"/>
-<text xml:space="preserve" text-anchor="middle" x="441" y="-848.3" font-family="Helvetica,sans-Serif" font-size="11.00">__truediv__</text>
-</g>
-<!-- bcov_yy.Poly.__truediv__&#45;&gt;bcov_yy.Poly.scale -->
-<g id="edge19" class="edge">
-<title>bcov_yy.Poly.__truediv__&#45;&gt;bcov_yy.Poly.scale</title>
-<path fill="none" stroke="#555555" d="M479.21,-852C499.94,-852 525.56,-852 545.72,-852"/>
-<polygon fill="#555555" stroke="#555555" points="545.64,-854.1 551.64,-852 545.64,-849.9 545.64,-854.1"/>
-</g>
-<!-- bcov_yy.Poly.__truediv__&#45;&gt;bcov_yy.rational -->
-<g id="edge20" class="edge">
-<title>bcov_yy.Poly.__truediv__&#45;&gt;bcov_yy.rational</title>
-<path fill="none" stroke="#555555" d="M479.46,-868.9C548.55,-897.2 696.38,-943.93 777.5,-867 829.53,-817.66 862.18,-290.32 869.11,-167.47"/>
-<polygon fill="#555555" stroke="#555555" points="871.19,-167.92 869.43,-161.81 867,-167.68 871.19,-167.92"/>
-</g>
-<!-- bcov_yy.Poly.coefficient -->
-<g id="node14" class="node">
-<title>bcov_yy.Poly.coefficient</title>
-<path fill="#ffffff" stroke="black" d="M605,-520C605,-520 556,-520 556,-520 550,-520 544,-514 544,-508 544,-508 544,-496 544,-496 544,-490 550,-484 556,-484 556,-484 605,-484 605,-484 611,-484 617,-490 617,-496 617,-496 617,-508 617,-508 617,-514 611,-520 605,-520"/>
-<text xml:space="preserve" text-anchor="middle" x="580.5" y="-498.3" font-family="Helvetica,sans-Serif" font-size="11.00">coefficient</text>
-</g>
-<!-- bcov_yy.Poly.coefficient&#45;&gt;bcov_yy.Poly.__init__ -->
-<g id="edge21" class="edge">
-<title>bcov_yy.Poly.coefficient&#45;&gt;bcov_yy.Poly.__init__</title>
-<path fill="none" stroke="#555555" d="M606.48,-520.32C631.65,-538.78 670.56,-567.32 697.7,-587.23"/>
-<polygon fill="#555555" stroke="#555555" points="696.35,-588.84 702.43,-590.69 698.83,-585.45 696.35,-588.84"/>
-</g>
-<!-- bcov_yy.variable_index -->
-<g id="node28" class="node">
-<title>bcov_yy.variable_index</title>
-<path fill="#ffffff" stroke="black" d="M765.5,-160C765.5,-160 694,-160 694,-160 688,-160 682,-154 682,-148 682,-148 682,-136 682,-136 682,-130 688,-124 694,-124 694,-124 765.5,-124 765.5,-124 771.5,-124 777.5,-130 777.5,-136 777.5,-136 777.5,-148 777.5,-148 777.5,-154 771.5,-160 765.5,-160"/>
-<text xml:space="preserve" text-anchor="middle" x="729.75" y="-138.3" font-family="Helvetica,sans-Serif" font-size="11.00">variable_index</text>
-</g>
-<!-- bcov_yy.Poly.coefficient&#45;&gt;bcov_yy.variable_index -->
-<g id="edge22" class="edge">
-<title>bcov_yy.Poly.coefficient&#45;&gt;bcov_yy.variable_index</title>
-<path fill="none" stroke="#555555" d="M609.79,-483.72C612.53,-481.06 615.02,-478.14 617,-475 683.18,-370.19 617.56,-312.35 674,-202 680.89,-188.53 691.62,-175.81 701.77,-165.58"/>
-<polygon fill="#555555" stroke="#555555" points="703.09,-167.22 705.91,-161.52 700.15,-164.22 703.09,-167.22"/>
-</g>
-<!-- bcov_yy.Poly.coerce&#45;&gt;bcov_yy.Poly.constant -->
-<g id="edge23" class="edge">
-<title>bcov_yy.Poly.coerce&#45;&gt;bcov_yy.Poly.constant</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M468.19,-550.09C488.98,-561.29 518.35,-577.09 541.69,-589.65"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="540.5,-591.39 546.78,-592.39 542.49,-587.7 540.5,-591.39"/>
-</g>
-<!-- bcov_yy.Poly.constant&#45;&gt;bcov_yy.Poly.__init__ -->
-<g id="edge24" class="edge">
-<title>bcov_yy.Poly.constant&#45;&gt;bcov_yy.Poly.__init__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M612.73,-610C636.9,-610 670.33,-610 695.1,-610"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="694.97,-612.1 700.97,-610 694.97,-607.9 694.97,-612.1"/>
-</g>
-<!-- bcov_yy.Poly.constant&#45;&gt;bcov_yy.rational -->
-<g id="edge25" class="edge">
-<title>bcov_yy.Poly.constant&#45;&gt;bcov_yy.rational</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M608.14,-591.65C611.3,-588.93 614.34,-586.02 617,-583 738.76,-444.49 830.56,-238.5 860.25,-167.29"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="862.16,-168.19 862.51,-161.84 858.28,-166.58 862.16,-168.19"/>
-</g>
-<!-- bcov_yy.Poly.degree&#45;&gt;bcov_yy._weight -->
-<g id="edge26" class="edge">
-<title>bcov_yy.Poly.degree&#45;&gt;bcov_yy._weight</title>
-<path fill="none" stroke="#555555" d="M607.81,-269.18C611.25,-266.12 614.46,-262.71 617,-259 668.74,-183.44 615.25,-131.25 674,-61 679.26,-54.71 686.33,-49.76 693.65,-45.91"/>
-<polygon fill="#555555" stroke="#555555" points="694.53,-47.82 699.03,-43.33 692.71,-44.03 694.53,-47.82"/>
-</g>
-<!-- bcov_yy.Poly.degree&#45;&gt;bcov_yy.variable_index -->
-<g id="edge27" class="edge">
-<title>bcov_yy.Poly.degree&#45;&gt;bcov_yy.variable_index</title>
-<path fill="none" stroke="#555555" d="M606.73,-267.6C610.25,-264.81 613.77,-261.89 617,-259 635.14,-242.79 679.89,-194.95 706.94,-165.7"/>
-<polygon fill="#555555" stroke="#555555" points="708.22,-167.42 710.75,-161.58 705.14,-164.57 708.22,-167.42"/>
-</g>
-<!-- bcov_yy.Poly.evaluate -->
-<g id="node18" class="node">
-<title>bcov_yy.Poly.evaluate</title>
-<path fill="#ffffff" stroke="black" d="M600.5,-358C600.5,-358 560.5,-358 560.5,-358 554.5,-358 548.5,-352 548.5,-346 548.5,-346 548.5,-334 548.5,-334 548.5,-328 554.5,-322 560.5,-322 560.5,-322 600.5,-322 600.5,-322 606.5,-322 612.5,-328 612.5,-334 612.5,-334 612.5,-346 612.5,-346 612.5,-352 606.5,-358 600.5,-358"/>
-<text xml:space="preserve" text-anchor="middle" x="580.5" y="-336.3" font-family="Helvetica,sans-Serif" font-size="11.00">evaluate</text>
-</g>
-<!-- bcov_yy._product -->
-<g id="node25" class="node">
-<title>bcov_yy._product</title>
+<title>bcov.bcov_yy._product</title>
 <path fill="#ffffff" stroke="black" d="M749.38,-106C749.38,-106 710.12,-106 710.12,-106 704.12,-106 698.12,-100 698.12,-94 698.12,-94 698.12,-82 698.12,-82 698.12,-76 704.12,-70 710.12,-70 710.12,-70 749.38,-70 749.38,-70 755.38,-70 761.38,-76 761.38,-82 761.38,-82 761.38,-94 761.38,-94 761.38,-100 755.38,-106 749.38,-106"/>
 <text xml:space="preserve" text-anchor="middle" x="729.75" y="-84.3" font-family="Helvetica,sans-Serif" font-size="11.00">_product</text>
 </g>
-<!-- bcov_yy.Poly.evaluate&#45;&gt;bcov_yy._product -->
-<g id="edge28" class="edge">
-<title>bcov_yy.Poly.evaluate&#45;&gt;bcov_yy._product</title>
-<path fill="none" stroke="#555555" d="M609.56,-321.57C612.34,-318.93 614.9,-316.07 617,-313 668.74,-237.44 615.25,-185.25 674,-115 678.69,-109.39 684.83,-104.84 691.3,-101.19"/>
-<polygon fill="#555555" stroke="#555555" points="692.11,-103.14 696.49,-98.53 690.19,-99.4 692.11,-103.14"/>
+<!-- bcov.bcov_yy._weight -->
+<g id="node2" class="node">
+<title>bcov.bcov_yy._weight</title>
+<path fill="#ffffff" stroke="black" d="M746.75,-52C746.75,-52 712.75,-52 712.75,-52 706.75,-52 700.75,-46 700.75,-40 700.75,-40 700.75,-28 700.75,-28 700.75,-22 706.75,-16 712.75,-16 712.75,-16 746.75,-16 746.75,-16 752.75,-16 758.75,-22 758.75,-28 758.75,-28 758.75,-40 758.75,-40 758.75,-46 752.75,-52 746.75,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="729.75" y="-30.3" font-family="Helvetica,sans-Serif" font-size="11.00">_weight</text>
 </g>
-<!-- bcov_yy.Poly.evaluate&#45;&gt;bcov_yy.rational -->
-<g id="edge29" class="edge">
-<title>bcov_yy.Poly.evaluate&#45;&gt;bcov_yy.rational</title>
-<path fill="none" stroke="#d62728" stroke-width="1.6" stroke-dasharray="1,5" d="M608.43,-321.55C661.35,-285.3 778.78,-204.84 836.77,-165.11"/>
-<polygon fill="#d62728" stroke="#d62728" stroke-width="1.6" points="837.77,-166.97 841.54,-161.84 835.4,-163.5 837.77,-166.97"/>
+<!-- bcov.bcov_yy.rational -->
+<g id="node3" class="node">
+<title>bcov.bcov_yy.rational</title>
+<path fill="#ffffff" stroke="black" d="M888.5,-160C888.5,-160 854.5,-160 854.5,-160 848.5,-160 842.5,-154 842.5,-148 842.5,-148 842.5,-136 842.5,-136 842.5,-130 848.5,-124 854.5,-124 854.5,-124 888.5,-124 888.5,-124 894.5,-124 900.5,-130 900.5,-136 900.5,-136 900.5,-148 900.5,-148 900.5,-154 894.5,-160 888.5,-160"/>
+<text xml:space="preserve" text-anchor="middle" x="871.5" y="-138.3" font-family="Helvetica,sans-Serif" font-size="11.00">rational</text>
 </g>
-<!-- bcov_yy.Poly.evaluate&#45;&gt;bcov_yy.variable_index -->
-<g id="edge30" class="edge">
-<title>bcov_yy.Poly.evaluate&#45;&gt;bcov_yy.variable_index</title>
-<path fill="none" stroke="#d62728" stroke-width="1.6" stroke-dasharray="1,5" d="M608.27,-321.77C611.41,-319.03 614.41,-316.09 617,-313 652.62,-270.49 642.36,-247.55 674,-202 682.74,-189.41 693.93,-176.7 703.91,-166.24"/>
-<polygon fill="#d62728" stroke="#d62728" stroke-width="1.6" points="705.26,-167.86 707.93,-162.09 702.24,-164.94 705.26,-167.86"/>
+<!-- bcov.bcov_yy.variable_index -->
+<g id="node4" class="node">
+<title>bcov.bcov_yy.variable_index</title>
+<path fill="#ffffff" stroke="black" d="M765.5,-160C765.5,-160 694,-160 694,-160 688,-160 682,-154 682,-148 682,-148 682,-136 682,-136 682,-130 688,-124 694,-124 694,-124 765.5,-124 765.5,-124 771.5,-124 777.5,-130 777.5,-136 777.5,-136 777.5,-148 777.5,-148 777.5,-154 771.5,-160 765.5,-160"/>
+<text xml:space="preserve" text-anchor="middle" x="729.75" y="-138.3" font-family="Helvetica,sans-Serif" font-size="11.00">variable_index</text>
 </g>
-<!-- bcov_yy.Poly.from_data -->
+<!-- bcov.bcov_yy.Poly.__add__ -->
+<g id="node5" class="node">
+<title>bcov.bcov_yy.Poly.__add__</title>
+<path fill="#ffffff" stroke="black" d="M324.88,-574C324.88,-574 291.62,-574 291.62,-574 285.62,-574 279.62,-568 279.62,-562 279.62,-562 279.62,-550 279.62,-550 279.62,-544 285.62,-538 291.62,-538 291.62,-538 324.88,-538 324.88,-538 330.88,-538 336.88,-544 336.88,-550 336.88,-550 336.88,-562 336.88,-562 336.88,-568 330.88,-574 324.88,-574"/>
+<text xml:space="preserve" text-anchor="middle" x="308.25" y="-552.3" font-family="Helvetica,sans-Serif" font-size="11.00">__add__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__init__ -->
+<g id="node8" class="node">
+<title>bcov.bcov_yy.Poly.__init__</title>
+<path fill="#ffffff" stroke="black" d="M744.88,-628C744.88,-628 714.62,-628 714.62,-628 708.62,-628 702.62,-622 702.62,-616 702.62,-616 702.62,-604 702.62,-604 702.62,-598 708.62,-592 714.62,-592 714.62,-592 744.88,-592 744.88,-592 750.88,-592 756.88,-598 756.88,-604 756.88,-604 756.88,-616 756.88,-616 756.88,-622 750.88,-628 744.88,-628"/>
+<text xml:space="preserve" text-anchor="middle" x="729.75" y="-606.3" font-family="Helvetica,sans-Serif" font-size="11.00">__init__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__add__&#45;&gt;bcov.bcov_yy.Poly.__init__ -->
+<g id="edge1" class="edge">
+<title>bcov.bcov_yy.Poly.__add__&#45;&gt;bcov.bcov_yy.Poly.__init__</title>
+<path fill="none" stroke="#555555" d="M323.46,-574.38C340.05,-594.19 369.54,-624.55 403,-637 504.19,-674.66 634.91,-641.43 695.36,-621.88"/>
+<polygon fill="#555555" stroke="#555555" points="695.9,-623.91 700.94,-620.04 694.59,-619.92 695.9,-623.91"/>
+</g>
+<!-- bcov.bcov_yy.Poly.coerce -->
 <g id="node19" class="node">
-<title>bcov_yy.Poly.from_data</title>
-<path fill="#ffffff" stroke="black" d="M604.25,-776C604.25,-776 556.75,-776 556.75,-776 550.75,-776 544.75,-770 544.75,-764 544.75,-764 544.75,-752 544.75,-752 544.75,-746 550.75,-740 556.75,-740 556.75,-740 604.25,-740 604.25,-740 610.25,-740 616.25,-746 616.25,-752 616.25,-752 616.25,-764 616.25,-764 616.25,-770 610.25,-776 604.25,-776"/>
-<text xml:space="preserve" text-anchor="middle" x="580.5" y="-754.3" font-family="Helvetica,sans-Serif" font-size="11.00">from_data</text>
+<title>bcov.bcov_yy.Poly.coerce</title>
+<path fill="#ffffff" stroke="black" d="M456,-554C456,-554 426,-554 426,-554 420,-554 414,-548 414,-542 414,-542 414,-530 414,-530 414,-524 420,-518 426,-518 426,-518 456,-518 456,-518 462,-518 468,-524 468,-530 468,-530 468,-542 468,-542 468,-548 462,-554 456,-554"/>
+<text xml:space="preserve" text-anchor="middle" x="441" y="-532.3" font-family="Helvetica,sans-Serif" font-size="11.00">coerce</text>
 </g>
-<!-- bcov_yy.Poly.from_data&#45;&gt;bcov_yy.Poly.__init__ -->
-<g id="edge31" class="edge">
-<title>bcov_yy.Poly.from_data&#45;&gt;bcov_yy.Poly.__init__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M606.77,-739.65C610.29,-736.85 613.79,-733.92 617,-731 651.63,-699.53 687.64,-658.86 709.12,-633.6"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="710.49,-635.24 712.76,-629.3 707.29,-632.52 710.49,-635.24"/>
+<!-- bcov.bcov_yy.Poly.__add__&#45;&gt;bcov.bcov_yy.Poly.coerce -->
+<g id="edge2" class="edge">
+<title>bcov.bcov_yy.Poly.__add__&#45;&gt;bcov.bcov_yy.Poly.coerce</title>
+<path fill="none" stroke="#555555" d="M337.3,-551.71C357.57,-548.61 385.04,-544.41 406.47,-541.13"/>
+<polygon fill="#555555" stroke="#555555" points="406.67,-543.22 412.28,-540.24 406.03,-539.07 406.67,-543.22"/>
 </g>
-<!-- bcov_yy.Poly.integrate -->
+<!-- bcov.bcov_yy.Poly.__bool__ -->
+<g id="node6" class="node">
+<title>bcov.bcov_yy.Poly.__bool__</title>
+<path fill="#ffffff" stroke="black" d="M747.88,-828C747.88,-828 711.62,-828 711.62,-828 705.62,-828 699.62,-822 699.62,-816 699.62,-816 699.62,-804 699.62,-804 699.62,-798 705.62,-792 711.62,-792 711.62,-792 747.88,-792 747.88,-792 753.88,-792 759.88,-798 759.88,-804 759.88,-804 759.88,-816 759.88,-816 759.88,-822 753.88,-828 747.88,-828"/>
+<text xml:space="preserve" text-anchor="middle" x="729.75" y="-806.3" font-family="Helvetica,sans-Serif" font-size="11.00">__bool__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__eq__ -->
+<g id="node7" class="node">
+<title>bcov.bcov_yy.Poly.__eq__</title>
+<path fill="#ffffff" stroke="black" d="M456,-628C456,-628 426,-628 426,-628 420,-628 414,-622 414,-616 414,-616 414,-604 414,-604 414,-598 420,-592 426,-592 426,-592 456,-592 456,-592 462,-592 468,-598 468,-604 468,-604 468,-616 468,-616 468,-622 462,-628 456,-628"/>
+<text xml:space="preserve" text-anchor="middle" x="441" y="-606.3" font-family="Helvetica,sans-Serif" font-size="11.00">__eq__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.constant -->
 <g id="node20" class="node">
-<title>bcov_yy.Poly.integrate</title>
-<path fill="#ffffff" stroke="black" d="M601.62,-412C601.62,-412 559.38,-412 559.38,-412 553.38,-412 547.38,-406 547.38,-400 547.38,-400 547.38,-388 547.38,-388 547.38,-382 553.38,-376 559.38,-376 559.38,-376 601.62,-376 601.62,-376 607.62,-376 613.62,-382 613.62,-388 613.62,-388 613.62,-400 613.62,-400 613.62,-406 607.62,-412 601.62,-412"/>
-<text xml:space="preserve" text-anchor="middle" x="580.5" y="-390.3" font-family="Helvetica,sans-Serif" font-size="11.00">integrate</text>
+<title>bcov.bcov_yy.Poly.constant</title>
+<path fill="#ffffff" stroke="black" d="M600.5,-628C600.5,-628 560.5,-628 560.5,-628 554.5,-628 548.5,-622 548.5,-616 548.5,-616 548.5,-604 548.5,-604 548.5,-598 554.5,-592 560.5,-592 560.5,-592 600.5,-592 600.5,-592 606.5,-592 612.5,-598 612.5,-604 612.5,-604 612.5,-616 612.5,-616 612.5,-622 606.5,-628 600.5,-628"/>
+<text xml:space="preserve" text-anchor="middle" x="580.5" y="-606.3" font-family="Helvetica,sans-Serif" font-size="11.00">constant</text>
 </g>
-<!-- bcov_yy.Poly.integrate&#45;&gt;bcov_yy.Poly.__init__ -->
-<g id="edge32" class="edge">
-<title>bcov_yy.Poly.integrate&#45;&gt;bcov_yy.Poly.__init__</title>
-<path fill="none" stroke="#555555" d="M608.1,-412.38C611.27,-415.09 614.32,-417.99 617,-421 663.17,-472.87 700.21,-546.62 717.74,-584.85"/>
-<polygon fill="#555555" stroke="#555555" points="715.77,-585.58 720.16,-590.18 719.6,-583.85 715.77,-585.58"/>
+<!-- bcov.bcov_yy.Poly.__eq__&#45;&gt;bcov.bcov_yy.Poly.constant -->
+<g id="edge3" class="edge">
+<title>bcov.bcov_yy.Poly.__eq__&#45;&gt;bcov.bcov_yy.Poly.constant</title>
+<path fill="none" stroke="#555555" d="M468.19,-610C488.72,-610 517.6,-610 540.79,-610"/>
+<polygon fill="#555555" stroke="#555555" points="540.59,-612.1 546.59,-610 540.59,-607.9 540.59,-612.1"/>
 </g>
-<!-- bcov_yy.Poly.integrate&#45;&gt;bcov_yy.variable_index -->
-<g id="edge33" class="edge">
-<title>bcov_yy.Poly.integrate&#45;&gt;bcov_yy.variable_index</title>
-<path fill="none" stroke="#555555" d="M609.06,-375.78C611.99,-373.08 614.73,-370.14 617,-367 662.5,-304.15 634.37,-268.7 674,-202 681.85,-188.79 692.94,-175.95 703.09,-165.56"/>
-<polygon fill="#555555" stroke="#555555" points="704.46,-167.16 707.22,-161.43 701.49,-164.19 704.46,-167.16"/>
+<!-- bcov.bcov_yy.Poly.__init__&#45;&gt;bcov.bcov_yy.rational -->
+<g id="edge4" class="edge">
+<title>bcov.bcov_yy.Poly.__init__&#45;&gt;bcov.bcov_yy.rational</title>
+<path fill="none" stroke="#555555" d="M738.27,-591.55C747.99,-567.33 765.15,-523.38 777.5,-485 815.21,-367.8 850.64,-224.92 864.43,-167.59"/>
+<polygon fill="#555555" stroke="#555555" points="866.44,-168.19 865.8,-161.87 862.36,-167.21 866.44,-168.19"/>
 </g>
-<!-- bcov_yy.Poly.partial -->
+<!-- bcov.bcov_yy.Poly.__len__ -->
+<g id="node9" class="node">
+<title>bcov.bcov_yy.Poly.__len__</title>
+<path fill="#ffffff" stroke="black" d="M595.5,-722C595.5,-722 565.5,-722 565.5,-722 559.5,-722 553.5,-716 553.5,-710 553.5,-710 553.5,-698 553.5,-698 553.5,-692 559.5,-686 565.5,-686 565.5,-686 595.5,-686 595.5,-686 601.5,-686 607.5,-692 607.5,-698 607.5,-698 607.5,-710 607.5,-710 607.5,-716 601.5,-722 595.5,-722"/>
+<text xml:space="preserve" text-anchor="middle" x="580.5" y="-700.3" font-family="Helvetica,sans-Serif" font-size="11.00">__len__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__mul__ -->
+<g id="node10" class="node">
+<title>bcov.bcov_yy.Poly.__mul__</title>
+<path fill="#ffffff" stroke="black" d="M457.62,-748C457.62,-748 424.38,-748 424.38,-748 418.38,-748 412.38,-742 412.38,-736 412.38,-736 412.38,-724 412.38,-724 412.38,-718 418.38,-712 424.38,-712 424.38,-712 457.62,-712 457.62,-712 463.62,-712 469.62,-718 469.62,-724 469.62,-724 469.62,-736 469.62,-736 469.62,-742 463.62,-748 457.62,-748"/>
+<text xml:space="preserve" text-anchor="middle" x="441" y="-726.3" font-family="Helvetica,sans-Serif" font-size="11.00">__mul__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__mul__&#45;&gt;bcov.bcov_yy.Poly.__bool__ -->
+<g id="edge5" class="edge">
+<title>bcov.bcov_yy.Poly.__mul__&#45;&gt;bcov.bcov_yy.Poly.__bool__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M461.64,-748.44C480.94,-765.28 512.08,-789.14 544,-800 593.18,-816.72 653.95,-816.31 692.04,-813.73"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="692.01,-815.84 697.84,-813.31 691.7,-811.65 692.01,-815.84"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__mul__&#45;&gt;bcov.bcov_yy.Poly.__init__ -->
+<g id="edge6" class="edge">
+<title>bcov.bcov_yy.Poly.__mul__&#45;&gt;bcov.bcov_yy.Poly.__init__</title>
+<path fill="none" stroke="#555555" d="M464.96,-748.32C499.53,-773.52 566.31,-812.78 617,-785 675.48,-752.96 707.8,-675.85 721.22,-635.53"/>
+<polygon fill="#555555" stroke="#555555" points="723.2,-636.25 723.05,-629.89 719.2,-634.95 723.2,-636.25"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__mul__&#45;&gt;bcov.bcov_yy.Poly.__len__ -->
+<g id="edge7" class="edge">
+<title>bcov.bcov_yy.Poly.__mul__&#45;&gt;bcov.bcov_yy.Poly.__len__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M469.83,-724.74C491.78,-720.59 522.48,-714.78 545.82,-710.37"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="546.12,-712.45 551.63,-709.27 545.34,-708.32 546.12,-712.45"/>
+</g>
+<!-- bcov.bcov_yy.Poly.scale -->
+<g id="node26" class="node">
+<title>bcov.bcov_yy.Poly.scale</title>
+<path fill="#ffffff" stroke="black" d="M595.5,-870C595.5,-870 565.5,-870 565.5,-870 559.5,-870 553.5,-864 553.5,-858 553.5,-858 553.5,-846 553.5,-846 553.5,-840 559.5,-834 565.5,-834 565.5,-834 595.5,-834 595.5,-834 601.5,-834 607.5,-840 607.5,-846 607.5,-846 607.5,-858 607.5,-858 607.5,-864 601.5,-870 595.5,-870"/>
+<text xml:space="preserve" text-anchor="middle" x="580.5" y="-848.3" font-family="Helvetica,sans-Serif" font-size="11.00">scale</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__mul__&#45;&gt;bcov.bcov_yy.Poly.scale -->
+<g id="edge8" class="edge">
+<title>bcov.bcov_yy.Poly.__mul__&#45;&gt;bcov.bcov_yy.Poly.scale</title>
+<path fill="none" stroke="#555555" d="M462.59,-748.26C486.79,-769.74 526.99,-805.41 553.37,-828.81"/>
+<polygon fill="#555555" stroke="#555555" points="551.76,-830.19 557.64,-832.61 554.55,-827.05 551.76,-830.19"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__neg__ -->
+<g id="node11" class="node">
+<title>bcov.bcov_yy.Poly.__neg__</title>
+<path fill="#ffffff" stroke="black" d="M324.88,-791C324.88,-791 291.62,-791 291.62,-791 285.62,-791 279.62,-785 279.62,-779 279.62,-779 279.62,-767 279.62,-767 279.62,-761 285.62,-755 291.62,-755 291.62,-755 324.88,-755 324.88,-755 330.88,-755 336.88,-761 336.88,-767 336.88,-767 336.88,-779 336.88,-779 336.88,-785 330.88,-791 324.88,-791"/>
+<text xml:space="preserve" text-anchor="middle" x="308.25" y="-769.3" font-family="Helvetica,sans-Serif" font-size="11.00">__neg__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__neg__&#45;&gt;bcov.bcov_yy.Poly.scale -->
+<g id="edge9" class="edge">
+<title>bcov.bcov_yy.Poly.__neg__&#45;&gt;bcov.bcov_yy.Poly.scale</title>
+<path fill="none" stroke="#555555" d="M337.15,-781.16C387.36,-795.83 492.68,-826.62 546.43,-842.33"/>
+<polygon fill="#555555" stroke="#555555" points="545.54,-844.26 551.89,-843.93 546.72,-840.23 545.54,-844.26"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__pow__ -->
+<g id="node12" class="node">
+<title>bcov.bcov_yy.Poly.__pow__</title>
+<path fill="#ffffff" stroke="black" d="M326,-648C326,-648 290.5,-648 290.5,-648 284.5,-648 278.5,-642 278.5,-636 278.5,-636 278.5,-624 278.5,-624 278.5,-618 284.5,-612 290.5,-612 290.5,-612 326,-612 326,-612 332,-612 338,-618 338,-624 338,-624 338,-636 338,-636 338,-642 332,-648 326,-648"/>
+<text xml:space="preserve" text-anchor="middle" x="308.25" y="-626.3" font-family="Helvetica,sans-Serif" font-size="11.00">__pow__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__pow__&#45;&gt;bcov.bcov_yy.Poly.__mul__ -->
+<g id="edge10" class="edge">
+<title>bcov.bcov_yy.Poly.__pow__&#45;&gt;bcov.bcov_yy.Poly.__mul__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M333.23,-648.34C354.98,-664.98 387.11,-689.55 410.44,-707.39"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="408.93,-708.88 414.97,-710.86 411.48,-705.54 408.93,-708.88"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__pow__&#45;&gt;bcov.bcov_yy.Poly.constant -->
+<g id="edge11" class="edge">
+<title>bcov.bcov_yy.Poly.__pow__&#45;&gt;bcov.bcov_yy.Poly.constant</title>
+<path fill="none" stroke="#555555" d="M337.06,-611.74C355.05,-601.04 379.44,-588.58 403,-583 450.09,-571.86 505.37,-584.34 541.35,-595.78"/>
+<polygon fill="#555555" stroke="#555555" points="540.49,-597.71 546.84,-597.58 541.79,-593.72 540.49,-597.71"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__repr__ -->
+<g id="node13" class="node">
+<title>bcov.bcov_yy.Poly.__repr__</title>
+<path fill="#ffffff" stroke="black" d="M458.75,-304C458.75,-304 423.25,-304 423.25,-304 417.25,-304 411.25,-298 411.25,-292 411.25,-292 411.25,-280 411.25,-280 411.25,-274 417.25,-268 423.25,-268 423.25,-268 458.75,-268 458.75,-268 464.75,-268 470.75,-274 470.75,-280 470.75,-280 470.75,-292 470.75,-292 470.75,-298 464.75,-304 458.75,-304"/>
+<text xml:space="preserve" text-anchor="middle" x="441" y="-282.3" font-family="Helvetica,sans-Serif" font-size="11.00">__repr__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.degree -->
 <g id="node21" class="node">
-<title>bcov_yy.Poly.partial</title>
-<path fill="#ffffff" stroke="black" d="M595.5,-466C595.5,-466 565.5,-466 565.5,-466 559.5,-466 553.5,-460 553.5,-454 553.5,-454 553.5,-442 553.5,-442 553.5,-436 559.5,-430 565.5,-430 565.5,-430 595.5,-430 595.5,-430 601.5,-430 607.5,-436 607.5,-442 607.5,-442 607.5,-454 607.5,-454 607.5,-460 601.5,-466 595.5,-466"/>
-<text xml:space="preserve" text-anchor="middle" x="580.5" y="-444.3" font-family="Helvetica,sans-Serif" font-size="11.00">partial</text>
+<title>bcov.bcov_yy.Poly.degree</title>
+<path fill="#ffffff" stroke="black" d="M595.62,-304C595.62,-304 565.38,-304 565.38,-304 559.38,-304 553.38,-298 553.38,-292 553.38,-292 553.38,-280 553.38,-280 553.38,-274 559.38,-268 565.38,-268 565.38,-268 595.62,-268 595.62,-268 601.62,-268 607.62,-274 607.62,-280 607.62,-280 607.62,-292 607.62,-292 607.62,-298 601.62,-304 595.62,-304"/>
+<text xml:space="preserve" text-anchor="middle" x="580.5" y="-282.3" font-family="Helvetica,sans-Serif" font-size="11.00">degree</text>
 </g>
-<!-- bcov_yy.Poly.partial&#45;&gt;bcov_yy.Poly.__init__ -->
-<g id="edge34" class="edge">
-<title>bcov_yy.Poly.partial&#45;&gt;bcov_yy.Poly.__init__</title>
+<!-- bcov.bcov_yy.Poly.__repr__&#45;&gt;bcov.bcov_yy.Poly.degree -->
+<g id="edge12" class="edge">
+<title>bcov.bcov_yy.Poly.__repr__&#45;&gt;bcov.bcov_yy.Poly.degree</title>
+<path fill="none" stroke="#d62728" stroke-width="1.6" stroke-dasharray="1,5" d="M471.16,-286C492.69,-286 522.08,-286 544.81,-286"/>
+<polygon fill="#d62728" stroke="#d62728" stroke-width="1.6" points="544.75,-288.1 550.75,-286 544.75,-283.9 544.75,-288.1"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__rsub__ -->
+<g id="node14" class="node">
+<title>bcov.bcov_yy.Poly.__rsub__</title>
+<path fill="#ffffff" stroke="black" d="M65,-564C65,-564 28,-564 28,-564 22,-564 16,-558 16,-552 16,-552 16,-540 16,-540 16,-534 22,-528 28,-528 28,-528 65,-528 65,-528 71,-528 77,-534 77,-540 77,-540 77,-552 77,-552 77,-558 71,-564 65,-564"/>
+<text xml:space="preserve" text-anchor="middle" x="46.5" y="-542.3" font-family="Helvetica,sans-Serif" font-size="11.00">__rsub__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__sub__ -->
+<g id="node16" class="node">
+<title>bcov.bcov_yy.Poly.__sub__</title>
+<path fill="#ffffff" stroke="black" d="M194,-611C194,-611 161.5,-611 161.5,-611 155.5,-611 149.5,-605 149.5,-599 149.5,-599 149.5,-587 149.5,-587 149.5,-581 155.5,-575 161.5,-575 161.5,-575 194,-575 194,-575 200,-575 206,-581 206,-587 206,-587 206,-599 206,-599 206,-605 200,-611 194,-611"/>
+<text xml:space="preserve" text-anchor="middle" x="177.75" y="-589.3" font-family="Helvetica,sans-Serif" font-size="11.00">__sub__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__rsub__&#45;&gt;bcov.bcov_yy.Poly.__sub__ -->
+<g id="edge13" class="edge">
+<title>bcov.bcov_yy.Poly.__rsub__&#45;&gt;bcov.bcov_yy.Poly.__sub__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M77.48,-556.9C96.82,-563.94 122.05,-573.11 142.23,-580.45"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="141.36,-582.37 147.72,-582.44 142.8,-578.42 141.36,-582.37"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__rsub__&#45;&gt;bcov.bcov_yy.Poly.coerce -->
+<g id="edge14" class="edge">
+<title>bcov.bcov_yy.Poly.__rsub__&#45;&gt;bcov.bcov_yy.Poly.coerce</title>
+<path fill="none" stroke="#555555" d="M77.41,-532.23C95.65,-524.6 119.67,-515.89 142,-512 237.18,-495.4 351.5,-515.63 406.8,-527.91"/>
+<polygon fill="#555555" stroke="#555555" points="406.1,-529.9 412.41,-529.17 407.02,-525.8 406.1,-529.9"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__str__ -->
+<g id="node15" class="node">
+<title>bcov.bcov_yy.Poly.__str__</title>
+<path fill="#ffffff" stroke="black" d="M595.5,-250C595.5,-250 565.5,-250 565.5,-250 559.5,-250 553.5,-244 553.5,-238 553.5,-238 553.5,-226 553.5,-226 553.5,-220 559.5,-214 565.5,-214 565.5,-214 595.5,-214 595.5,-214 601.5,-214 607.5,-220 607.5,-226 607.5,-226 607.5,-238 607.5,-238 607.5,-244 601.5,-250 595.5,-250"/>
+<text xml:space="preserve" text-anchor="middle" x="580.5" y="-228.3" font-family="Helvetica,sans-Serif" font-size="11.00">__str__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__str__&#45;&gt;bcov.bcov_yy._weight -->
+<g id="edge15" class="edge">
+<title>bcov.bcov_yy.Poly.__str__&#45;&gt;bcov.bcov_yy._weight</title>
+<path fill="none" stroke="#555555" d="M587.2,-213.71C598.63,-179.66 627.32,-105.95 674,-61 679.73,-55.48 686.8,-50.88 693.94,-47.13"/>
+<polygon fill="#555555" stroke="#555555" points="694.66,-49.12 699.12,-44.59 692.81,-45.35 694.66,-49.12"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__sub__&#45;&gt;bcov.bcov_yy.Poly.__add__ -->
+<g id="edge16" class="edge">
+<title>bcov.bcov_yy.Poly.__sub__&#45;&gt;bcov.bcov_yy.Poly.__add__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M206.32,-585.06C225.58,-579.52 251.46,-572.06 272.19,-566.1"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="272.65,-568.15 277.83,-564.47 271.48,-564.11 272.65,-568.15"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__sub__&#45;&gt;bcov.bcov_yy.Poly.__neg__ -->
+<g id="edge17" class="edge">
+<title>bcov.bcov_yy.Poly.__sub__&#45;&gt;bcov.bcov_yy.Poly.__neg__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M191.78,-611.25C215.06,-643.86 263.81,-712.15 289.9,-748.69"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="288.11,-749.81 293.31,-753.47 291.53,-747.37 288.11,-749.81"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__sub__&#45;&gt;bcov.bcov_yy.Poly.coerce -->
+<g id="edge18" class="edge">
+<title>bcov.bcov_yy.Poly.__sub__&#45;&gt;bcov.bcov_yy.Poly.coerce</title>
+<path fill="none" stroke="#555555" d="M206.27,-594.31C238.39,-595.14 292.88,-594.39 338,-583 362.18,-576.9 387.67,-565.16 407.11,-554.94"/>
+<polygon fill="#555555" stroke="#555555" points="408.09,-556.8 412.39,-552.11 406.11,-553.09 408.09,-556.8"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__truediv__ -->
+<g id="node17" class="node">
+<title>bcov.bcov_yy.Poly.__truediv__</title>
+<path fill="#ffffff" stroke="black" d="M467,-870C467,-870 415,-870 415,-870 409,-870 403,-864 403,-858 403,-858 403,-846 403,-846 403,-840 409,-834 415,-834 415,-834 467,-834 467,-834 473,-834 479,-840 479,-846 479,-846 479,-858 479,-858 479,-864 473,-870 467,-870"/>
+<text xml:space="preserve" text-anchor="middle" x="441" y="-848.3" font-family="Helvetica,sans-Serif" font-size="11.00">__truediv__</text>
+</g>
+<!-- bcov.bcov_yy.Poly.__truediv__&#45;&gt;bcov.bcov_yy.rational -->
+<g id="edge20" class="edge">
+<title>bcov.bcov_yy.Poly.__truediv__&#45;&gt;bcov.bcov_yy.rational</title>
+<path fill="none" stroke="#555555" d="M479.46,-868.9C548.55,-897.2 696.38,-943.93 777.5,-867 829.53,-817.66 862.18,-290.32 869.11,-167.47"/>
+<polygon fill="#555555" stroke="#555555" points="871.19,-167.92 869.43,-161.81 867,-167.68 871.19,-167.92"/>
+</g>
+<!-- bcov.bcov_yy.Poly.__truediv__&#45;&gt;bcov.bcov_yy.Poly.scale -->
+<g id="edge19" class="edge">
+<title>bcov.bcov_yy.Poly.__truediv__&#45;&gt;bcov.bcov_yy.Poly.scale</title>
+<path fill="none" stroke="#555555" d="M479.21,-852C499.94,-852 525.56,-852 545.72,-852"/>
+<polygon fill="#555555" stroke="#555555" points="545.64,-854.1 551.64,-852 545.64,-849.9 545.64,-854.1"/>
+</g>
+<!-- bcov.bcov_yy.Poly.coefficient -->
+<g id="node18" class="node">
+<title>bcov.bcov_yy.Poly.coefficient</title>
+<path fill="#ffffff" stroke="black" d="M605,-466C605,-466 556,-466 556,-466 550,-466 544,-460 544,-454 544,-454 544,-442 544,-442 544,-436 550,-430 556,-430 556,-430 605,-430 605,-430 611,-430 617,-436 617,-442 617,-442 617,-454 617,-454 617,-460 611,-466 605,-466"/>
+<text xml:space="preserve" text-anchor="middle" x="580.5" y="-444.3" font-family="Helvetica,sans-Serif" font-size="11.00">coefficient</text>
+</g>
+<!-- bcov.bcov_yy.Poly.coefficient&#45;&gt;bcov.bcov_yy.variable_index -->
+<g id="edge22" class="edge">
+<title>bcov.bcov_yy.Poly.coefficient&#45;&gt;bcov.bcov_yy.variable_index</title>
+<path fill="none" stroke="#555555" d="M609.64,-429.62C612.4,-426.98 614.94,-424.09 617,-421 672.76,-337.29 626.03,-290.4 674,-202 681.27,-188.6 692.17,-175.81 702.34,-165.51"/>
+<polygon fill="#555555" stroke="#555555" points="703.68,-167.13 706.48,-161.42 700.74,-164.14 703.68,-167.13"/>
+</g>
+<!-- bcov.bcov_yy.Poly.coefficient&#45;&gt;bcov.bcov_yy.Poly.__init__ -->
+<g id="edge21" class="edge">
+<title>bcov.bcov_yy.Poly.coefficient&#45;&gt;bcov.bcov_yy.Poly.__init__</title>
 <path fill="none" stroke="#555555" d="M607.29,-466.5C610.66,-469.23 613.98,-472.1 617,-475 653.94,-510.45 690.6,-557.62 711.39,-585.79"/>
 <polygon fill="#555555" stroke="#555555" points="709.69,-587.03 714.93,-590.63 713.08,-584.54 709.69,-587.03"/>
 </g>
-<!-- bcov_yy.Poly.partial&#45;&gt;bcov_yy.variable_index -->
+<!-- bcov.bcov_yy.Poly.coerce&#45;&gt;bcov.bcov_yy.Poly.constant -->
+<g id="edge23" class="edge">
+<title>bcov.bcov_yy.Poly.coerce&#45;&gt;bcov.bcov_yy.Poly.constant</title>
+<path fill="none" stroke="#555555" d="M468.19,-550.09C488.98,-561.29 518.35,-577.09 541.69,-589.65"/>
+<polygon fill="#555555" stroke="#555555" points="540.5,-591.39 546.78,-592.39 542.49,-587.7 540.5,-591.39"/>
+</g>
+<!-- bcov.bcov_yy.Poly.constant&#45;&gt;bcov.bcov_yy.rational -->
+<g id="edge25" class="edge">
+<title>bcov.bcov_yy.Poly.constant&#45;&gt;bcov.bcov_yy.rational</title>
+<path fill="none" stroke="#555555" d="M608.14,-591.65C611.3,-588.93 614.34,-586.02 617,-583 738.76,-444.49 830.56,-238.5 860.25,-167.29"/>
+<polygon fill="#555555" stroke="#555555" points="862.16,-168.19 862.51,-161.84 858.28,-166.58 862.16,-168.19"/>
+</g>
+<!-- bcov.bcov_yy.Poly.constant&#45;&gt;bcov.bcov_yy.Poly.__init__ -->
+<g id="edge24" class="edge">
+<title>bcov.bcov_yy.Poly.constant&#45;&gt;bcov.bcov_yy.Poly.__init__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M612.73,-610C636.9,-610 670.33,-610 695.1,-610"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="694.97,-612.1 700.97,-610 694.97,-607.9 694.97,-612.1"/>
+</g>
+<!-- bcov.bcov_yy.Poly.degree&#45;&gt;bcov.bcov_yy._weight -->
+<g id="edge26" class="edge">
+<title>bcov.bcov_yy.Poly.degree&#45;&gt;bcov.bcov_yy._weight</title>
+<path fill="none" stroke="#555555" d="M607.81,-269.18C611.25,-266.12 614.46,-262.71 617,-259 668.74,-183.44 615.25,-131.25 674,-61 679.26,-54.71 686.33,-49.76 693.65,-45.91"/>
+<polygon fill="#555555" stroke="#555555" points="694.53,-47.82 699.03,-43.33 692.71,-44.03 694.53,-47.82"/>
+</g>
+<!-- bcov.bcov_yy.Poly.degree&#45;&gt;bcov.bcov_yy.variable_index -->
+<g id="edge27" class="edge">
+<title>bcov.bcov_yy.Poly.degree&#45;&gt;bcov.bcov_yy.variable_index</title>
+<path fill="none" stroke="#555555" d="M606.73,-267.6C610.25,-264.81 613.77,-261.89 617,-259 635.14,-242.79 679.89,-194.95 706.94,-165.7"/>
+<polygon fill="#555555" stroke="#555555" points="708.22,-167.42 710.75,-161.58 705.14,-164.57 708.22,-167.42"/>
+</g>
+<!-- bcov.bcov_yy.Poly.evaluate -->
+<g id="node22" class="node">
+<title>bcov.bcov_yy.Poly.evaluate</title>
+<path fill="#ffffff" stroke="black" d="M600.5,-358C600.5,-358 560.5,-358 560.5,-358 554.5,-358 548.5,-352 548.5,-346 548.5,-346 548.5,-334 548.5,-334 548.5,-328 554.5,-322 560.5,-322 560.5,-322 600.5,-322 600.5,-322 606.5,-322 612.5,-328 612.5,-334 612.5,-334 612.5,-346 612.5,-346 612.5,-352 606.5,-358 600.5,-358"/>
+<text xml:space="preserve" text-anchor="middle" x="580.5" y="-336.3" font-family="Helvetica,sans-Serif" font-size="11.00">evaluate</text>
+</g>
+<!-- bcov.bcov_yy.Poly.evaluate&#45;&gt;bcov.bcov_yy._product -->
+<g id="edge28" class="edge">
+<title>bcov.bcov_yy.Poly.evaluate&#45;&gt;bcov.bcov_yy._product</title>
+<path fill="none" stroke="#d62728" stroke-width="1.6" stroke-dasharray="1,5" d="M609.56,-321.57C612.34,-318.93 614.9,-316.07 617,-313 668.74,-237.44 615.25,-185.25 674,-115 678.5,-109.62 684.32,-105.22 690.49,-101.65"/>
+<polygon fill="#d62728" stroke="#d62728" stroke-width="1.6" points="691.33,-103.59 695.68,-98.95 689.39,-99.86 691.33,-103.59"/>
+</g>
+<!-- bcov.bcov_yy.Poly.evaluate&#45;&gt;bcov.bcov_yy.rational -->
+<g id="edge29" class="edge">
+<title>bcov.bcov_yy.Poly.evaluate&#45;&gt;bcov.bcov_yy.rational</title>
+<path fill="none" stroke="#d62728" stroke-width="1.6" stroke-dasharray="1,5" d="M608.43,-321.55C661.35,-285.3 778.78,-204.84 836.77,-165.11"/>
+<polygon fill="#d62728" stroke="#d62728" stroke-width="1.6" points="837.77,-166.97 841.54,-161.84 835.4,-163.5 837.77,-166.97"/>
+</g>
+<!-- bcov.bcov_yy.Poly.evaluate&#45;&gt;bcov.bcov_yy.variable_index -->
+<g id="edge30" class="edge">
+<title>bcov.bcov_yy.Poly.evaluate&#45;&gt;bcov.bcov_yy.variable_index</title>
+<path fill="none" stroke="#d62728" stroke-width="1.6" stroke-dasharray="1,5" d="M608.27,-321.77C611.41,-319.03 614.41,-316.09 617,-313 652.62,-270.49 642.36,-247.55 674,-202 682.74,-189.41 693.93,-176.7 703.91,-166.24"/>
+<polygon fill="#d62728" stroke="#d62728" stroke-width="1.6" points="705.26,-167.86 707.93,-162.09 702.24,-164.94 705.26,-167.86"/>
+</g>
+<!-- bcov.bcov_yy.Poly.from_data -->
+<g id="node23" class="node">
+<title>bcov.bcov_yy.Poly.from_data</title>
+<path fill="#ffffff" stroke="black" d="M604.25,-776C604.25,-776 556.75,-776 556.75,-776 550.75,-776 544.75,-770 544.75,-764 544.75,-764 544.75,-752 544.75,-752 544.75,-746 550.75,-740 556.75,-740 556.75,-740 604.25,-740 604.25,-740 610.25,-740 616.25,-746 616.25,-752 616.25,-752 616.25,-764 616.25,-764 616.25,-770 610.25,-776 604.25,-776"/>
+<text xml:space="preserve" text-anchor="middle" x="580.5" y="-754.3" font-family="Helvetica,sans-Serif" font-size="11.00">from_data</text>
+</g>
+<!-- bcov.bcov_yy.Poly.from_data&#45;&gt;bcov.bcov_yy.Poly.__init__ -->
+<g id="edge31" class="edge">
+<title>bcov.bcov_yy.Poly.from_data&#45;&gt;bcov.bcov_yy.Poly.__init__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M606.77,-739.65C610.29,-736.85 613.79,-733.92 617,-731 651.63,-699.53 687.64,-658.86 709.12,-633.6"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="710.49,-635.24 712.76,-629.3 707.29,-632.52 710.49,-635.24"/>
+</g>
+<!-- bcov.bcov_yy.Poly.integrate -->
+<g id="node24" class="node">
+<title>bcov.bcov_yy.Poly.integrate</title>
+<path fill="#ffffff" stroke="black" d="M601.62,-574C601.62,-574 559.38,-574 559.38,-574 553.38,-574 547.38,-568 547.38,-562 547.38,-562 547.38,-550 547.38,-550 547.38,-544 553.38,-538 559.38,-538 559.38,-538 601.62,-538 601.62,-538 607.62,-538 613.62,-544 613.62,-550 613.62,-550 613.62,-562 613.62,-562 613.62,-568 607.62,-574 601.62,-574"/>
+<text xml:space="preserve" text-anchor="middle" x="580.5" y="-552.3" font-family="Helvetica,sans-Serif" font-size="11.00">integrate</text>
+</g>
+<!-- bcov.bcov_yy.Poly.integrate&#45;&gt;bcov.bcov_yy.variable_index -->
+<g id="edge33" class="edge">
+<title>bcov.bcov_yy.Poly.integrate&#45;&gt;bcov.bcov_yy.variable_index</title>
+<path fill="none" stroke="#555555" d="M609.9,-537.78C612.61,-535.11 615.07,-532.18 617,-529 693.68,-402.97 609.02,-334.44 674,-202 680.66,-188.42 691.36,-175.68 701.54,-165.47"/>
+<polygon fill="#555555" stroke="#555555" points="702.86,-167.11 705.7,-161.42 699.94,-164.09 702.86,-167.11"/>
+</g>
+<!-- bcov.bcov_yy.Poly.integrate&#45;&gt;bcov.bcov_yy.Poly.__init__ -->
+<g id="edge32" class="edge">
+<title>bcov.bcov_yy.Poly.integrate&#45;&gt;bcov.bcov_yy.Poly.__init__</title>
+<path fill="none" stroke="#555555" d="M613.81,-567.85C638.01,-576.72 671,-588.82 695.44,-597.78"/>
+<polygon fill="#555555" stroke="#555555" points="694.63,-599.72 700.98,-599.82 696.07,-595.78 694.63,-599.72"/>
+</g>
+<!-- bcov.bcov_yy.Poly.partial -->
+<g id="node25" class="node">
+<title>bcov.bcov_yy.Poly.partial</title>
+<path fill="#ffffff" stroke="black" d="M595.5,-412C595.5,-412 565.5,-412 565.5,-412 559.5,-412 553.5,-406 553.5,-400 553.5,-400 553.5,-388 553.5,-388 553.5,-382 559.5,-376 565.5,-376 565.5,-376 595.5,-376 595.5,-376 601.5,-376 607.5,-382 607.5,-388 607.5,-388 607.5,-400 607.5,-400 607.5,-406 601.5,-412 595.5,-412"/>
+<text xml:space="preserve" text-anchor="middle" x="580.5" y="-390.3" font-family="Helvetica,sans-Serif" font-size="11.00">partial</text>
+</g>
+<!-- bcov.bcov_yy.Poly.partial&#45;&gt;bcov.bcov_yy.variable_index -->
 <g id="edge35" class="edge">
-<title>bcov_yy.Poly.partial&#45;&gt;bcov_yy.variable_index</title>
-<path fill="none" stroke="#555555" d="M607.89,-431.24C611.33,-428.17 614.51,-424.74 617,-421 672.76,-337.29 626.03,-290.4 674,-202 681.27,-188.6 692.17,-175.81 702.34,-165.51"/>
-<polygon fill="#555555" stroke="#555555" points="703.68,-167.13 706.48,-161.42 700.74,-164.14 703.68,-167.13"/>
+<title>bcov.bcov_yy.Poly.partial&#45;&gt;bcov.bcov_yy.variable_index</title>
+<path fill="none" stroke="#555555" d="M607.99,-376.74C611.33,-373.78 614.46,-370.51 617,-367 662.5,-304.15 634.37,-268.7 674,-202 681.85,-188.79 692.94,-175.95 703.09,-165.56"/>
+<polygon fill="#555555" stroke="#555555" points="704.46,-167.16 707.22,-161.43 701.49,-164.19 704.46,-167.16"/>
 </g>
-<!-- bcov_yy.Poly.scale&#45;&gt;bcov_yy.Poly.__bool__ -->
-<g id="edge36" class="edge">
-<title>bcov_yy.Poly.scale&#45;&gt;bcov_yy.Poly.__bool__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M607.83,-844.49C631.34,-837.78 666.02,-827.89 692.22,-820.42"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="692.72,-822.46 697.91,-818.8 691.57,-818.42 692.72,-822.46"/>
+<!-- bcov.bcov_yy.Poly.partial&#45;&gt;bcov.bcov_yy.Poly.__init__ -->
+<g id="edge34" class="edge">
+<title>bcov.bcov_yy.Poly.partial&#45;&gt;bcov.bcov_yy.Poly.__init__</title>
+<path fill="none" stroke="#555555" d="M607.74,-412.07C611.03,-414.87 614.22,-417.88 617,-421 663.17,-472.87 700.21,-546.62 717.74,-584.85"/>
+<polygon fill="#555555" stroke="#555555" points="715.77,-585.58 720.16,-590.18 719.6,-583.85 715.77,-585.58"/>
 </g>
-<!-- bcov_yy.Poly.scale&#45;&gt;bcov_yy.Poly.__init__ -->
-<g id="edge37" class="edge">
-<title>bcov_yy.Poly.scale&#45;&gt;bcov_yy.Poly.__init__</title>
-<path fill="none" stroke="#555555" d="M594.29,-833.91C601.18,-824 609.74,-811.45 617,-800 653.96,-741.74 694.28,-671.31 714.9,-634.74"/>
-<polygon fill="#555555" stroke="#555555" points="716.66,-635.9 717.78,-629.64 713,-633.84 716.66,-635.9"/>
-</g>
-<!-- bcov_yy.Poly.scale&#45;&gt;bcov_yy.rational -->
+<!-- bcov.bcov_yy.Poly.scale&#45;&gt;bcov.bcov_yy.rational -->
 <g id="edge38" class="edge">
-<title>bcov_yy.Poly.scale&#45;&gt;bcov_yy.rational</title>
+<title>bcov.bcov_yy.Poly.scale&#45;&gt;bcov.bcov_yy.rational</title>
 <path fill="none" stroke="#555555" d="M607.78,-859.18C649.69,-868.89 731.61,-880.36 777.5,-837 827.34,-789.91 861.49,-287.39 868.96,-167.55"/>
 <polygon fill="#555555" stroke="#555555" points="871.04,-167.85 869.32,-161.73 866.85,-167.59 871.04,-167.85"/>
 </g>
-<!-- bcov_yy.Poly.substitute -->
-<g id="node23" class="node">
-<title>bcov_yy.Poly.substitute</title>
+<!-- bcov.bcov_yy.Poly.scale&#45;&gt;bcov.bcov_yy.Poly.__bool__ -->
+<g id="edge36" class="edge">
+<title>bcov.bcov_yy.Poly.scale&#45;&gt;bcov.bcov_yy.Poly.__bool__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M607.83,-844.49C631.34,-837.78 666.02,-827.89 692.22,-820.42"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="692.72,-822.46 697.91,-818.8 691.57,-818.42 692.72,-822.46"/>
+</g>
+<!-- bcov.bcov_yy.Poly.scale&#45;&gt;bcov.bcov_yy.Poly.__init__ -->
+<g id="edge37" class="edge">
+<title>bcov.bcov_yy.Poly.scale&#45;&gt;bcov.bcov_yy.Poly.__init__</title>
+<path fill="none" stroke="#555555" d="M594.29,-833.91C601.18,-824 609.74,-811.45 617,-800 653.96,-741.74 694.28,-671.31 714.9,-634.74"/>
+<polygon fill="#555555" stroke="#555555" points="716.66,-635.9 717.78,-629.64 713,-633.84 716.66,-635.9"/>
+</g>
+<!-- bcov.bcov_yy.Poly.substitute -->
+<g id="node27" class="node">
+<title>bcov.bcov_yy.Poly.substitute</title>
 <path fill="#ffffff" stroke="black" d="M201.5,-557C201.5,-557 154,-557 154,-557 148,-557 142,-551 142,-545 142,-545 142,-533 142,-533 142,-527 148,-521 154,-521 154,-521 201.5,-521 201.5,-521 207.5,-521 213.5,-527 213.5,-533 213.5,-533 213.5,-545 213.5,-545 213.5,-551 207.5,-557 201.5,-557"/>
 <text xml:space="preserve" text-anchor="middle" x="177.75" y="-535.3" font-family="Helvetica,sans-Serif" font-size="11.00">substitute</text>
 </g>
-<!-- bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.__add__ -->
-<g id="edge39" class="edge">
-<title>bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.__add__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M213.86,-543.65C232.1,-546.06 254.31,-549 272.5,-551.4"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="271.78,-553.43 278.01,-552.13 272.33,-549.26 271.78,-553.43"/>
-</g>
-<!-- bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.__init__ -->
-<g id="edge40" class="edge">
-<title>bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.__init__</title>
-<path fill="none" stroke="#555555" d="M204.18,-557.35C207.44,-560.1 210.64,-563.02 213.5,-566 247.93,-601.85 234.31,-634.26 278.5,-657 295.52,-665.76 419.22,-691.21 617,-653 644.44,-647.7 673.88,-636.11 695.65,-626.29"/>
-<polygon fill="#555555" stroke="#555555" points="696.49,-628.22 701.06,-623.81 694.74,-624.4 696.49,-628.22"/>
-</g>
-<!-- bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.__mul__ -->
-<g id="edge41" class="edge">
-<title>bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.__mul__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M204.73,-557.47C207.84,-560.17 210.85,-563.04 213.5,-566 250.36,-607.17 235.62,-637.13 278.5,-672 315.62,-702.18 369.71,-717.32 404.88,-724.41"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="404.31,-726.44 410.6,-725.52 405.11,-722.32 404.31,-726.44"/>
-</g>
-<!-- bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.__pow__ -->
-<g id="edge42" class="edge">
-<title>bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.__pow__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M204.75,-557.42C225.13,-571.85 253.58,-591.99 275.34,-607.4"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="273.94,-608.98 280.05,-610.74 276.37,-605.56 273.94,-608.98"/>
-</g>
-<!-- bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.coerce -->
-<g id="edge43" class="edge">
-<title>bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.coerce</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M213.77,-534.63C232.87,-532.46 256.95,-530.08 278.5,-529 322.8,-526.79 373.96,-529.97 406.62,-532.74"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="406.03,-534.79 412.19,-533.22 406.4,-530.61 406.03,-534.79"/>
-</g>
-<!-- bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.constant -->
-<g id="edge44" class="edge">
-<title>bcov_yy.Poly.substitute&#45;&gt;bcov_yy.Poly.constant</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M213.91,-524.49C271.95,-502.86 390.23,-468.82 479,-509 518.88,-527.05 511.97,-553.16 544,-583 545.49,-584.39 547.04,-585.77 548.64,-587.14"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="547.04,-588.54 553,-590.76 549.72,-585.31 547.04,-588.54"/>
-</g>
-<!-- bcov_yy.Poly.substitute&#45;&gt;bcov_yy.variable_index -->
+<!-- bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.variable_index -->
 <g id="edge45" class="edge">
-<title>bcov_yy.Poly.substitute&#45;&gt;bcov_yy.variable_index</title>
+<title>bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.variable_index</title>
 <path fill="none" stroke="#555555" d="M188.81,-520.51C216.52,-471.17 298.88,-335.02 403,-259 486.82,-197.8 605.8,-165.93 674.36,-151.66"/>
 <polygon fill="#555555" stroke="#555555" points="674.7,-153.74 680.16,-150.48 673.86,-149.62 674.7,-153.74"/>
 </g>
-<!-- bcov_yy.Poly.variable -->
-<g id="node24" class="node">
-<title>bcov_yy.Poly.variable</title>
-<path fill="#ffffff" stroke="black" d="M598.62,-574C598.62,-574 562.38,-574 562.38,-574 556.38,-574 550.38,-568 550.38,-562 550.38,-562 550.38,-550 550.38,-550 550.38,-544 556.38,-538 562.38,-538 562.38,-538 598.62,-538 598.62,-538 604.62,-538 610.62,-544 610.62,-550 610.62,-550 610.62,-562 610.62,-562 610.62,-568 604.62,-574 598.62,-574"/>
-<text xml:space="preserve" text-anchor="middle" x="580.5" y="-552.3" font-family="Helvetica,sans-Serif" font-size="11.00">variable</text>
+<!-- bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.__add__ -->
+<g id="edge39" class="edge">
+<title>bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.__add__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M213.86,-543.65C232.1,-546.06 254.31,-549 272.5,-551.4"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="271.78,-553.43 278.01,-552.13 272.33,-549.26 271.78,-553.43"/>
 </g>
-<!-- bcov_yy.Poly.variable&#45;&gt;bcov_yy.Poly.__init__ -->
-<g id="edge46" class="edge">
-<title>bcov_yy.Poly.variable&#45;&gt;bcov_yy.Poly.__init__</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M610.94,-566.8C635.34,-575.74 670.01,-588.46 695.42,-597.78"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="694.55,-599.69 700.9,-599.79 695.99,-595.75 694.55,-599.69"/>
+<!-- bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.__init__ -->
+<g id="edge40" class="edge">
+<title>bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.__init__</title>
+<path fill="none" stroke="#555555" d="M204.18,-557.35C207.44,-560.1 210.64,-563.02 213.5,-566 247.93,-601.85 234.31,-634.26 278.5,-657 295.52,-665.76 419.22,-691.21 617,-653 644.44,-647.7 673.88,-636.11 695.65,-626.29"/>
+<polygon fill="#555555" stroke="#555555" points="696.49,-628.22 701.06,-623.81 694.74,-624.4 696.49,-628.22"/>
 </g>
-<!-- bcov_yy.Poly.variable&#45;&gt;bcov_yy.variable_index -->
+<!-- bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.__mul__ -->
+<g id="edge41" class="edge">
+<title>bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.__mul__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M204.73,-557.47C207.84,-560.17 210.85,-563.04 213.5,-566 250.36,-607.17 235.62,-637.13 278.5,-672 315.62,-702.18 369.71,-717.32 404.88,-724.41"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="404.31,-726.44 410.6,-725.52 405.11,-722.32 404.31,-726.44"/>
+</g>
+<!-- bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.__pow__ -->
+<g id="edge42" class="edge">
+<title>bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.__pow__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M204.75,-557.42C225.13,-571.85 253.58,-591.99 275.34,-607.4"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="273.94,-608.98 280.05,-610.74 276.37,-605.56 273.94,-608.98"/>
+</g>
+<!-- bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.coerce -->
+<g id="edge43" class="edge">
+<title>bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.coerce</title>
+<path fill="none" stroke="#555555" d="M213.77,-534.63C232.87,-532.46 256.95,-530.08 278.5,-529 322.8,-526.79 373.96,-529.97 406.62,-532.74"/>
+<polygon fill="#555555" stroke="#555555" points="406.03,-534.79 412.19,-533.22 406.4,-530.61 406.03,-534.79"/>
+</g>
+<!-- bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.constant -->
+<g id="edge44" class="edge">
+<title>bcov.bcov_yy.Poly.substitute&#45;&gt;bcov.bcov_yy.Poly.constant</title>
+<path fill="none" stroke="#555555" d="M213.91,-524.49C271.95,-502.86 390.23,-468.82 479,-509 518.88,-527.05 511.97,-553.16 544,-583 545.49,-584.39 547.04,-585.77 548.64,-587.14"/>
+<polygon fill="#555555" stroke="#555555" points="547.04,-588.54 553,-590.76 549.72,-585.31 547.04,-588.54"/>
+</g>
+<!-- bcov.bcov_yy.Poly.variable -->
+<g id="node28" class="node">
+<title>bcov.bcov_yy.Poly.variable</title>
+<path fill="#ffffff" stroke="black" d="M598.62,-520C598.62,-520 562.38,-520 562.38,-520 556.38,-520 550.38,-514 550.38,-508 550.38,-508 550.38,-496 550.38,-496 550.38,-490 556.38,-484 562.38,-484 562.38,-484 598.62,-484 598.62,-484 604.62,-484 610.62,-490 610.62,-496 610.62,-496 610.62,-508 610.62,-508 610.62,-514 604.62,-520 598.62,-520"/>
+<text xml:space="preserve" text-anchor="middle" x="580.5" y="-498.3" font-family="Helvetica,sans-Serif" font-size="11.00">variable</text>
+</g>
+<!-- bcov.bcov_yy.Poly.variable&#45;&gt;bcov.bcov_yy.variable_index -->
 <g id="edge47" class="edge">
-<title>bcov_yy.Poly.variable&#45;&gt;bcov_yy.variable_index</title>
-<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M609.9,-537.78C612.61,-535.11 615.07,-532.18 617,-529 693.68,-402.97 609.02,-334.44 674,-202 680.66,-188.42 691.36,-175.68 701.54,-165.47"/>
-<polygon fill="#1f77b4" stroke="#1f77b4" points="702.86,-167.11 705.7,-161.42 699.94,-164.09 702.86,-167.11"/>
+<title>bcov.bcov_yy.Poly.variable&#45;&gt;bcov.bcov_yy.variable_index</title>
+<path fill="none" stroke="#555555" d="M609.79,-483.72C612.53,-481.06 615.02,-478.14 617,-475 683.18,-370.19 617.56,-312.35 674,-202 680.89,-188.53 691.62,-175.81 701.77,-165.58"/>
+<polygon fill="#555555" stroke="#555555" points="703.09,-167.22 705.91,-161.52 700.15,-164.22 703.09,-167.22"/>
+</g>
+<!-- bcov.bcov_yy.Poly.variable&#45;&gt;bcov.bcov_yy.Poly.__init__ -->
+<g id="edge46" class="edge">
+<title>bcov.bcov_yy.Poly.variable&#45;&gt;bcov.bcov_yy.Poly.__init__</title>
+<path fill="none" stroke="#1f77b4" stroke-dasharray="5,2" d="M606.48,-520.32C631.65,-538.78 670.56,-567.32 697.7,-587.23"/>
+<polygon fill="#1f77b4" stroke="#1f77b4" points="696.35,-588.84 702.43,-590.69 698.83,-585.45 696.35,-588.84"/>
 </g>
 </g>
 </svg>

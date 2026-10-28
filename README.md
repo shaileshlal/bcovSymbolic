@@ -235,8 +235,9 @@ Quintic_BCOV_Tutorial.py   extended guided laboratory
 
 Historical scripts remain available for reproducing earlier outputs; direct
 execution from `bcov/` is preserved. Their older helpers are not the typed
-public analysis API. The existing call graphs in `docs/callgraph/` describe the
-pre-packaging core and do not include the new analysis modules.
+public analysis API. [ARCHITECTURE.md](ARCHITECTURE.md) gives a module overview
+and Graphviz call graphs of every live module, regenerated with
+`python bcov/tools/callgraph.py`.
 
 ## Data provenance and rebuilding
 

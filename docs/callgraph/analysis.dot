@@ -1,0 +1,108 @@
+digraph "Data, patterns, physical verification and CLI (Poly primitives omitted)" {
+  graph [rankdir=LR, newrank=true, nodesep=0.25, ranksep=0.9, fontname="Helvetica", label="Data, patterns, physical verification and CLI (Poly primitives omitted)", labelloc=t, fontsize=18];
+  node [shape=box, style="rounded,filled", fillcolor="#ffffff", fontname="Helvetica", fontsize=11];
+  edge [color="#555555", arrowsize=0.6];
+  subgraph cluster_0 { label="bcov_yy"; style="rounded,filled"; fillcolor="#eef3fb"; color="#999999";
+    "bcov.bcov_yy.demo" [label="demo"];
+  }
+  subgraph cluster_1 { label="cli"; style="rounded,filled"; fillcolor="#fdf1e6"; color="#999999";
+    "bcov.cli.main" [label="main"];
+  }
+  subgraph cluster_2 { label="datasets"; style="rounded,filled"; fillcolor="#eaf6ec"; color="#999999";
+    "bcov.datasets.iter_amplitudes" [label="iter_amplitudes"];
+    "bcov.datasets.load_amplitude" [label="load_amplitude"];
+  }
+  subgraph cluster_3 { label="datasets.AtomicAmplitude"; style="rounded,filled"; fillcolor="#f6ecf6"; color="#999999";
+    "bcov.datasets.AtomicAmplitude.__post_init__" [label="__post_init__"];
+    "bcov.datasets.AtomicAmplitude.expand" [label="expand"];
+  }
+  subgraph cluster_4 { label="datasets.AtomicTerm"; style="rounded,filled"; fillcolor="#fbf8e3"; color="#999999";
+    "bcov.datasets.AtomicTerm.__post_init__" [label="__post_init__"];
+  }
+  subgraph cluster_5 { label="patterns"; style="rounded,filled"; fillcolor="#e8f4f6"; color="#999999";
+    "bcov.patterns.audit_patterns" [label="audit_patterns"];
+    "bcov.patterns.bernoulli_abs" [label="bernoulli_abs"];
+    "bcov.patterns.denominator_lcm" [label="denominator_lcm"];
+    "bcov.patterns.invert_x" [label="invert_x"];
+    "bcov.patterns.low_x_predictions" [label="low_x_predictions"];
+    "bcov.patterns.prime_free_part" [label="prime_free_part"];
+    "bcov.patterns.pure_x" [label="pure_x"];
+  }
+  subgraph cluster_6 { label="patterns.PatternReport"; style="rounded,filled"; fillcolor="#f3f0ea"; color="#999999";
+    "bcov.patterns.PatternReport.denominator_matches" [label="denominator_matches"];
+    "bcov.patterns.PatternReport.low_x_matches" [label="low_x_matches"];
+  }
+  subgraph cluster_7 { label="quintic_frames.FramedPolynomial"; style="rounded,filled"; fillcolor="#eef3fb"; color="#999999";
+    "bcov.quintic_frames.FramedPolynomial.__post_init__" [label="__post_init__"];
+    "bcov.quintic_frames.FramedPolynomial.to" [label="to"];
+  }
+  subgraph cluster_8 { label="verify_physical_qseries"; style="rounded,filled"; fillcolor="#fdf1e6"; color="#999999";
+    "bcov.verify_physical_qseries.coeff_poly_pow" [label="coeff_poly_pow"];
+    "bcov.verify_physical_qseries.evaluate_atomic" [label="evaluate_atomic"];
+    "bcov.verify_physical_qseries.expected_gv" [label="expected_gv"];
+    "bcov.verify_physical_qseries.periods" [label="periods"];
+    "bcov.verify_physical_qseries.read_gv" [label="read_gv"];
+    "bcov.verify_physical_qseries.sine_coefficient" [label="sine_coefficient"];
+    "bcov.verify_physical_qseries.verify" [label="verify"];
+  }
+  subgraph cluster_9 { label="verify_physical_qseries.Series"; style="rounded,filled"; fillcolor="#eaf6ec"; color="#999999";
+    "bcov.verify_physical_qseries.Series.__init__" [label="__init__"];
+    "bcov.verify_physical_qseries.Series.add" [label="add"];
+    "bcov.verify_physical_qseries.Series.c" [label="c"];
+    "bcov.verify_physical_qseries.Series.comp" [label="comp"];
+    "bcov.verify_physical_qseries.Series.div" [label="div"];
+    "bcov.verify_physical_qseries.Series.exp" [label="exp"];
+    "bcov.verify_physical_qseries.Series.mul" [label="mul"];
+    "bcov.verify_physical_qseries.Series.neg" [label="neg"];
+    "bcov.verify_physical_qseries.Series.pow" [label="pow"];
+    "bcov.verify_physical_qseries.Series.scale" [label="scale"];
+    "bcov.verify_physical_qseries.Series.sub" [label="sub"];
+    "bcov.verify_physical_qseries.Series.theta" [label="theta"];
+    "bcov.verify_physical_qseries.Series.trunc" [label="trunc"];
+  }
+  "bcov.cli.main" -> "bcov.bcov_yy.demo" [style=solid];
+  "bcov.cli.main" -> "bcov.datasets.iter_amplitudes" [style=solid];
+  "bcov.cli.main" -> "bcov.patterns.PatternReport.denominator_matches" [style=dashed, color="#1f77b4"];
+  "bcov.cli.main" -> "bcov.patterns.PatternReport.low_x_matches" [style=dashed, color="#1f77b4"];
+  "bcov.cli.main" -> "bcov.patterns.audit_patterns" [style=solid];
+  "bcov.cli.main" -> "bcov.verify_physical_qseries.verify" [style=solid];
+  "bcov.datasets.AtomicAmplitude.expand" -> "bcov.quintic_frames.FramedPolynomial.__post_init__" [style=solid];
+  "bcov.datasets.AtomicAmplitude.expand" -> "bcov.quintic_frames.FramedPolynomial.to" [style=dashed, color="#1f77b4"];
+  "bcov.datasets.iter_amplitudes" -> "bcov.datasets.AtomicAmplitude.__post_init__" [style=solid];
+  "bcov.datasets.iter_amplitudes" -> "bcov.datasets.AtomicTerm.__post_init__" [style=solid];
+  "bcov.datasets.load_amplitude" -> "bcov.datasets.iter_amplitudes" [style=solid];
+  "bcov.patterns.PatternReport.denominator_matches" -> "bcov.patterns.prime_free_part" [style=solid];
+  "bcov.patterns.audit_patterns" -> "bcov.patterns.denominator_lcm" [style=solid];
+  "bcov.patterns.audit_patterns" -> "bcov.patterns.invert_x" [style=solid];
+  "bcov.patterns.audit_patterns" -> "bcov.patterns.low_x_predictions" [style=solid];
+  "bcov.patterns.audit_patterns" -> "bcov.patterns.pure_x" [style=solid];
+  "bcov.patterns.low_x_predictions" -> "bcov.patterns.bernoulli_abs" [style=solid];
+  "bcov.patterns.pure_x" -> "bcov.patterns.invert_x" [style=solid];
+  "bcov.verify_physical_qseries.coeff_poly_pow" -> "bcov.verify_physical_qseries.Series.__init__" [style=dotted, color="#d62728", penwidth=1.6];
+  "bcov.verify_physical_qseries.evaluate_atomic" -> "bcov.verify_physical_qseries.Series.add" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.evaluate_atomic" -> "bcov.verify_physical_qseries.Series.c" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.evaluate_atomic" -> "bcov.verify_physical_qseries.Series.comp" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.evaluate_atomic" -> "bcov.verify_physical_qseries.Series.mul" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.evaluate_atomic" -> "bcov.verify_physical_qseries.Series.pow" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.evaluate_atomic" -> "bcov.verify_physical_qseries.Series.scale" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.expected_gv" -> "bcov.verify_physical_qseries.sine_coefficient" [style=solid];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.__init__" [style=solid];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.add" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.c" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.comp" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.div" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.exp" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.mul" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.neg" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.pow" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.scale" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.sub" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.theta" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.periods" -> "bcov.verify_physical_qseries.Series.trunc" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.sine_coefficient" -> "bcov.verify_physical_qseries.Series.__init__" [style=solid];
+  "bcov.verify_physical_qseries.sine_coefficient" -> "bcov.verify_physical_qseries.Series.pow" [style=dashed, color="#1f77b4"];
+  "bcov.verify_physical_qseries.verify" -> "bcov.verify_physical_qseries.evaluate_atomic" [style=solid];
+  "bcov.verify_physical_qseries.verify" -> "bcov.verify_physical_qseries.expected_gv" [style=solid];
+  "bcov.verify_physical_qseries.verify" -> "bcov.verify_physical_qseries.periods" [style=solid];
+  "bcov.verify_physical_qseries.verify" -> "bcov.verify_physical_qseries.read_gv" [style=solid];
+}

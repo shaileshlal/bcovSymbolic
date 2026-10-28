@@ -1,8 +1,0 @@
-bcov_yy.BCOV.save -> bcov_yy.BCOV.__init__
-bcov_yy.Recipe.__add__ -> bcov_yy.Recipe.__init__
-bcov_yy.Recipe.__mul__ -> bcov_yy.Recipe.__init__
-bcov_yy.Recipe.expand -> bcov_yy.Recipe.__init__
-bcov_yy.RecipeArena._make -> bcov_yy.RecipeArena.__init__
-bcov_yy.RecipeArena.clear_values -> bcov_yy.RecipeArena.__init__
-bcov_yy.YYRing.__init__ -> bcov_yy.YYRing._monomial_derivative
-bcov_yy.demo -> bcov_yy.integrate_gradient

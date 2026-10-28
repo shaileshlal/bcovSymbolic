@@ -1,0 +1,112 @@
+digraph "quintic_bcov_lab research adapter" {
+  graph [rankdir=LR, newrank=true, nodesep=0.25, ranksep=0.9, fontname="Helvetica", label="quintic_bcov_lab research adapter", labelloc=t, fontsize=18];
+  node [shape=box, style="rounded,filled", fillcolor="#ffffff", fontname="Helvetica", fontsize=11];
+  edge [color="#555555", arrowsize=0.6];
+  subgraph cluster_0 { label="__main__"; style="rounded,filled"; fillcolor="#eef3fb"; color="#999999";
+    "quintic_bcov_lab.__main__.main" [label="main"];
+  }
+  subgraph cluster_1 { label="arithmetic"; style="rounded,filled"; fillcolor="#fdf1e6"; color="#999999";
+    "quintic_bcov_lab.arithmetic.difference" [label="difference"];
+    "quintic_bcov_lab.arithmetic.fraction" [label="fraction"];
+    "quintic_bcov_lab.arithmetic.newton_forecast" [label="newton_forecast"];
+    "quintic_bcov_lab.arithmetic.second_difference_pulse" [label="second_difference_pulse"];
+    "quintic_bcov_lab.arithmetic.sparse_pulse_reconstruct" [label="sparse_pulse_reconstruct"];
+  }
+  subgraph cluster_2 { label="backend"; style="rounded,filled"; fillcolor="#eaf6ec"; color="#999999";
+    "quintic_bcov_lab.backend.api" [label="api"];
+    "quintic_bcov_lab.backend.module" [label="module"];
+    "quintic_bcov_lab.backend.validate_small" [label="validate_small"];
+  }
+  subgraph cluster_3 { label="bcov_yy"; style="rounded,filled"; fillcolor="#f6ecf6"; color="#999999";
+    "bcov.bcov_yy.reference_genus2" [label="reference_genus2"];
+  }
+  subgraph cluster_4 { label="bcov_yy.Amplitude"; style="rounded,filled"; fillcolor="#fbf8e3"; color="#999999";
+    "bcov.bcov_yy.Amplitude.polynomial" [label="polynomial"];
+  }
+  subgraph cluster_5 { label="bcov_yy.BCOV"; style="rounded,filled"; fillcolor="#e8f4f6"; color="#999999";
+    "bcov.bcov_yy.BCOV.__init__" [label="__init__"];
+    "bcov.bcov_yy.BCOV.integrate" [label="integrate"];
+    "bcov.bcov_yy.BCOV.residual" [label="residual"];
+    "bcov.bcov_yy.BCOV.set_ambiguity" [label="set_ambiguity"];
+  }
+  subgraph cluster_6 { label="datasets"; style="rounded,filled"; fillcolor="#f3f0ea"; color="#999999";
+    "quintic_bcov_lab.datasets.intermediate_labels" [label="intermediate_labels"];
+    "quintic_bcov_lab.datasets.provenance" [label="provenance"];
+    "quintic_bcov_lab.datasets.read_csv" [label="read_csv"];
+    "quintic_bcov_lab.datasets.read_reference" [label="read_reference"];
+    "quintic_bcov_lab.datasets.reference_digest" [label="reference_digest"];
+    "quintic_bcov_lab.datasets.write_intermediate" [label="write_intermediate"];
+  }
+  subgraph cluster_7 { label="runner"; style="rounded,filled"; fillcolor="#eef3fb"; color="#999999";
+    "quintic_bcov_lab.runner._output" [label="_output"];
+    "quintic_bcov_lab.runner.audit_import" [label="audit_import"];
+    "quintic_bcov_lab.runner.audit_sources" [label="audit_sources"];
+    "quintic_bcov_lab.runner.execute" [label="execute"];
+    "quintic_bcov_lab.runner.execute_all" [label="execute_all"];
+    "quintic_bcov_lab.runner.install_large_data" [label="install_large_data"];
+    "quintic_bcov_lab.runner.prepare" [label="prepare"];
+    "quintic_bcov_lab.runner.resolve_stage" [label="resolve_stage"];
+    "quintic_bcov_lab.runner.stages" [label="stages"];
+    "quintic_bcov_lab.runner.workspace_path" [label="workspace_path"];
+  }
+  subgraph cluster_8 { label="sections"; style="rounded,filled"; fillcolor="#fdf1e6"; color="#999999";
+    "quintic_bcov_lab.sections.difference_from_charges" [label="difference_from_charges"];
+    "quintic_bcov_lab.sections.dimensions" [label="dimensions"];
+    "quintic_bcov_lab.sections.from_reference" [label="from_reference"];
+    "quintic_bcov_lab.sections.kernel" [label="kernel"];
+  }
+  subgraph cluster_9 { label="sections.Residual"; style="rounded,filled"; fillcolor="#eaf6ec"; color="#999999";
+    "quintic_bcov_lab.sections.Residual.validate" [label="validate"];
+  }
+  "quintic_bcov_lab.__main__.main" -> "quintic_bcov_lab.backend.validate_small" [style=solid];
+  "quintic_bcov_lab.__main__.main" -> "quintic_bcov_lab.datasets.write_intermediate" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.__main__.main" -> "quintic_bcov_lab.runner.audit_import" [style=solid];
+  "quintic_bcov_lab.__main__.main" -> "quintic_bcov_lab.runner.audit_sources" [style=solid];
+  "quintic_bcov_lab.__main__.main" -> "quintic_bcov_lab.runner.execute" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.__main__.main" -> "quintic_bcov_lab.runner.execute_all" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.__main__.main" -> "quintic_bcov_lab.runner.install_large_data" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.__main__.main" -> "quintic_bcov_lab.runner.prepare" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.__main__.main" -> "quintic_bcov_lab.runner.stages" [style=solid];
+  "quintic_bcov_lab.__main__.main" -> "quintic_bcov_lab.runner.workspace_path" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.arithmetic.difference" -> "quintic_bcov_lab.arithmetic.fraction" [style=dashed, color="#1f77b4"];
+  "quintic_bcov_lab.arithmetic.newton_forecast" -> "quintic_bcov_lab.arithmetic.difference" [style=solid];
+  "quintic_bcov_lab.arithmetic.newton_forecast" -> "quintic_bcov_lab.arithmetic.fraction" [style=dashed, color="#1f77b4"];
+  "quintic_bcov_lab.arithmetic.second_difference_pulse" -> "quintic_bcov_lab.arithmetic.difference" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.arithmetic.sparse_pulse_reconstruct" -> "quintic_bcov_lab.arithmetic.fraction" [style=solid];
+  "quintic_bcov_lab.backend.api" -> "quintic_bcov_lab.backend.module" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.backend.validate_small" -> "bcov.bcov_yy.Amplitude.polynomial" [style=dashed, color="#1f77b4"];
+  "quintic_bcov_lab.backend.validate_small" -> "bcov.bcov_yy.BCOV.__init__" [style=dashed, color="#1f77b4"];
+  "quintic_bcov_lab.backend.validate_small" -> "bcov.bcov_yy.BCOV.integrate" [style=dashed, color="#1f77b4"];
+  "quintic_bcov_lab.backend.validate_small" -> "bcov.bcov_yy.BCOV.residual" [style=dashed, color="#1f77b4"];
+  "quintic_bcov_lab.backend.validate_small" -> "bcov.bcov_yy.BCOV.set_ambiguity" [style=dashed, color="#1f77b4"];
+  "quintic_bcov_lab.backend.validate_small" -> "bcov.bcov_yy.reference_genus2" [style=dashed, color="#1f77b4"];
+  "quintic_bcov_lab.backend.validate_small" -> "quintic_bcov_lab.backend.module" [style=solid];
+  "quintic_bcov_lab.datasets.intermediate_labels" -> "quintic_bcov_lab.datasets.read_reference" [style=solid];
+  "quintic_bcov_lab.datasets.intermediate_labels" -> "quintic_bcov_lab.sections.from_reference" [style=solid];
+  "quintic_bcov_lab.datasets.read_csv" -> "quintic_bcov_lab.runner.resolve_stage" [style=solid];
+  "quintic_bcov_lab.datasets.read_reference" -> "quintic_bcov_lab.datasets.provenance" [style=solid];
+  "quintic_bcov_lab.datasets.read_reference" -> "quintic_bcov_lab.datasets.reference_digest" [style=solid];
+  "quintic_bcov_lab.datasets.write_intermediate" -> "quintic_bcov_lab.datasets.intermediate_labels" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.runner.audit_sources" -> "quintic_bcov_lab.runner.workspace_path" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.runner.execute" -> "quintic_bcov_lab.runner._output" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.runner.execute" -> "quintic_bcov_lab.runner.prepare" [style=solid];
+  "quintic_bcov_lab.runner.execute" -> "quintic_bcov_lab.runner.resolve_stage" [style=solid];
+  "quintic_bcov_lab.runner.execute" -> "quintic_bcov_lab.runner.workspace_path" [style=solid];
+  "quintic_bcov_lab.runner.execute_all" -> "quintic_bcov_lab.runner.execute" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.runner.execute_all" -> "quintic_bcov_lab.runner.resolve_stage" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.runner.execute_all" -> "quintic_bcov_lab.runner.stages" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.runner.execute_all" -> "quintic_bcov_lab.runner.workspace_path" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.runner.install_large_data" -> "quintic_bcov_lab.runner.prepare" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.runner.install_large_data" -> "quintic_bcov_lab.runner.workspace_path" [style=dotted, color="#d62728", penwidth=1.6];
+  "quintic_bcov_lab.runner.prepare" -> "quintic_bcov_lab.runner.workspace_path" [style=solid];
+  "quintic_bcov_lab.runner.resolve_stage" -> "quintic_bcov_lab.runner.stages" [style=solid];
+  "quintic_bcov_lab.sections.Residual.validate" -> "quintic_bcov_lab.sections.dimensions" [style=solid];
+  "quintic_bcov_lab.sections.Residual.validate" -> "quintic_bcov_lab.sections.kernel" [style=solid];
+  "quintic_bcov_lab.sections.difference_from_charges" -> "quintic_bcov_lab.arithmetic.fraction" [style=solid];
+  "quintic_bcov_lab.sections.difference_from_charges" -> "quintic_bcov_lab.sections.dimensions" [style=solid];
+  "quintic_bcov_lab.sections.from_reference" -> "quintic_bcov_lab.arithmetic.fraction" [style=dashed, color="#1f77b4"];
+  "quintic_bcov_lab.sections.from_reference" -> "quintic_bcov_lab.sections.Residual.validate" [style=dashed, color="#1f77b4"];
+  "quintic_bcov_lab.sections.from_reference" -> "quintic_bcov_lab.sections.dimensions" [style=solid];
+  "quintic_bcov_lab.sections.from_reference" -> "quintic_bcov_lab.sections.kernel" [style=solid];
+  "quintic_bcov_lab.sections.kernel" -> "quintic_bcov_lab.sections.dimensions" [style=solid];
+}
