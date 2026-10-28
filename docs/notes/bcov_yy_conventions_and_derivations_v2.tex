@@ -1,0 +1,1361 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{mathrsfs}
+\usepackage{booktabs,longtable,array}
+\usepackage{xcolor,listings}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black]{hyperref}
+\allowdisplaybreaks[2]
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\bdel}{\bar\partial_{\bar\psi}}
+\newcommand{\tht}{\vartheta}
+\newcommand{\del}{\partial}
+\newcommand{\Pg}[2]{P_{#1}^{(#2)}}
+\newcommand{\wt}{\operatorname{wt}}
+\newcommand{\an}{\mathrm{an}}
+\newcommand{\hol}{\mathrm{hol}}
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,
+  keepspaces=true,frame=single,rulecolor=\color{black!25},showstringspaces=false}
+\title{An Exact BCOV Algebra in Yamaguchi--Yau Variables\\
+\large Definitions, conventions, signs, normalization factors, and implementation audit}
+\author{Companion to \texttt{bcov\_yy.py}, version 0.2.0 (frame audit)}
+\date{19 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note specifies the exact mathematical problem solved by the accompanying
+quintic BCOV implementation. It derives the differential ring in
+$u,v_1,v_2,v_3,X$, the normalized covariant derivative, and the three polynomial
+anomaly equations, accounting explicitly for the minus sign and factor
+$1/2$ in the recursion. The genus-two calculation is expanded coefficient by
+coefficient. Holomorphic inputs, algebraic consequences, and conventions for
+integration constants are distinguished throughout. The note also documents
+the sparse exact representation, shared arithmetic recipes, validation, and
+limitations of the implementation. It does not claim that unfixed boundary
+data have been determined by the anomaly equation.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\input{bcov_convention_reconciliation_v2.tex}
+
+\section{Scope and the distinction between inputs and consequences}
+
+The implementation specializes to the mirror quintic and to the original
+$\psi$ convention of Yamaguchi and Yau (YY) \cite{YY}. The equations below
+refer to that convention unless a different coordinate or gauge is explicitly
+introduced. The four central objects must not be conflated:
+\begin{align}
+F_g(\psi,\bar\psi)&:
+  \text{the B-model amplitude in a chosen Hodge-line gauge},\\
+P_g&=C^{g-1}F_g:
+  \text{the normalized polynomial amplitude},\\
+P_g^{\an}&:
+  \text{the implementation's particular polynomial primitive},\\
+F_g^A(t)&:
+  \text{the holomorphic A-model amplitude after the frame conversion}.
+\end{align}
+Here $C=\psi^3 C_{\psi\psi\psi}$, not $C_{\psi\psi\psi}$ itself.
+
+The geometric inputs are the quintic Picard--Fuchs operator, special geometry,
+the choice of holomorphic terms that closes the differential ring, the
+genus-one one-point function, and any supplied higher-genus boundary data.
+The program derives higher anomaly polynomials from those inputs by exact
+polynomial arithmetic. It neither proves the special-geometry identities
+from the construction of the Calabi--Yau family nor independently solves all
+physical boundary conditions.
+
+In particular, the four pure-$X$ coefficients supplied at genus two are
+reference boundary data from the complete YY polynomial. Their presence
+must not be described as a prediction of the anomaly recursion alone.
+The note makes the origin of each such coefficient explicit.
+
+\section{Coordinates, discriminants, and Euler derivatives}
+\label{sec:coordinate}
+
+The mirror family is obtained from the quintic polynomial
+\begin{equation}
+p(x,\psi)=x_1^5+x_2^5+x_3^5+x_4^5+x_5^5
+          -5\psi x_1x_2x_3x_4x_5
+\end{equation}
+with its usual mirror quotient. Set
+\begin{equation}
+z=(5\psi)^{-5}=\frac{1}{5^5\psi^5},\qquad
+\tht=\psi\del_\psi,\qquad \theta_z=z\del_z.
+\end{equation}
+The factor $5^5=3125$ is part of the definition of $z$.
+Since
+\begin{equation}
+\del_\psi z=-\frac{5z}{\psi},\qquad
+\tht z=-5z,
+\end{equation}
+the chain rule gives
+\begin{equation}\boxed{\tht=-5\theta_z.}\label{eq:theta-coordinate}\end{equation}
+This accounts for the division by $-5$ in \code{YYRing.theta_z}.
+It implements $z\del_z$, not $\del_z$. To obtain $\del_z$ one would
+also need multiplication by $z^{-1}$, which is outside the present polynomial
+ring unless a localization is added.
+
+The YY generator and the conventional discriminant are
+\begin{equation}
+X=\frac{1}{1-\psi^5},\qquad \Delta(z)=1-3125z.
+\end{equation}
+Solving for the same $X$ in $z$ gives
+\begin{align}
+X&=\frac{3125z}{3125z-1}=-\frac{3125z}{\Delta},\\
+X-1&=-\frac1{\Delta},\qquad 1-X=\frac1{\Delta}.
+\end{align}
+Thus a paper defining its variable as $1/\Delta$ uses $1-X$, not this $X$.
+The sign changes under this substitution are real convention changes.
+At large complex structure, $z\to0$, $\psi\to\infty$, and $X\to0$.
+At the conifold, $\psi^5=1$ and $X$ has a pole.
+
+Differentiating the defining rational function directly,
+\begin{align}
+\tht X&=\frac{5\psi^5}{(1-\psi^5)^2}
+       =5\left(\frac1{1-\psi^5}\right)
+           \left(\frac{\psi^5}{1-\psi^5}\right)\\
+       &=5X(X-1),\label{eq:thetaX}\\
+\theta_z X&=-X(X-1)=X(1-X).
+\end{align}
+The second factor is $X-1$, since $\psi^5/(1-\psi^5)=X-1$.
+
+\section{Hodge gauge, metric, and connection signs}
+
+The reference holomorphic-form gauge is YY's local residue representative
+\begin{equation}
+\Omega=5\psi\,\frac{x_5\,\dd x_1\wedge\dd x_2\wedge\dd x_3}
+                         {\del p/\del x_4}.
+\end{equation}
+An overall period normalization is additionally fixed by the Yukawa coefficient
+specified below. The engine stores neither the form nor the periods themselves.
+Fix a period vector $\Pi$ and symplectic matrix $\Sigma$ with the convention
+\begin{equation}
+E:=e^{-K}=-i\,\bar\Pi^{,T}\Sigma\Pi,\qquad
+G:=G_{\psi\bar\psi}=\del_\psi\bdel K.
+\end{equation}
+The overall constant in $E$ cancels from all $B_p$ below. Define the
+standard holomorphic Christoffel component by
+\begin{equation}
+\Gamma_{\rm std}=G^{-1}\del_\psi G.
+\end{equation}
+YY also use a Christoffel symbol with the opposite sign,
+$\Gamma_{\rm YY}=-\Gamma_{\rm std}$. We avoid any ambiguity by using
+\begin{equation}
+A=\tht\log G=\psi\Gamma_{\rm std}
+              =-\psi\Gamma_{\rm YY},\qquad
+B=\tht\log E=-\psi\del_\psi K.
+\label{eq:ABconnections}
+\end{equation}
+For a section $h$ of $(T^*)^n\otimes\mathcal L^m$, our covariant derivative is
+\begin{equation}
+D_\psi h=\del_\psi h-n\Gamma_{\rm std}h+mK_\psi h.
+\label{eq:cov-original}
+\end{equation}
+There is one minus Christoffel contribution for each lower holomorphic tensor
+index. Since $K_\psi=-B/\psi$,
+\begin{equation}
+\psi D_\psi h=\tht h-nAh-mBh.
+\end{equation}
+Equivalently, YY write $+n\Gamma_{\rm YY}$; the two formulas are identical.
+
+Under $\Omega\mapsto f(\psi)\Omega$, one has
+\begin{equation}
+K\mapsto K-\log f-\log\bar f,\qquad
+F_g\mapsto f^{2-2g}F_g.
+\end{equation}
+The plus sign in $+mK_\psi$ in \eqref{eq:cov-original} is required:
+the derivative of $f^m$ cancels the change $-m\del_\psi\log f$
+in the connection. For $F_g$ the Hodge power is $m=2-2g$.
+
+\section{Yukawa normalization and its derivative}
+
+Write
+\begin{equation}
+C_{\psi\psi\psi}=\kappa\frac{\psi^2}{1-\psi^5},\qquad
+\kappa=\frac{(2\pi i)^3}{5^3}
+\end{equation}
+in the YY period normalization. The coefficient $\kappa$ is an overall
+period/gauge normalization; the polynomial engine never numerically
+evaluates it. The scalar normalization used by the code is
+\begin{equation}
+C:=\psi^3C_{\psi\psi\psi}
+ =\kappa\frac{\psi^5}{1-\psi^5}=\kappa(X-1).
+\end{equation}
+Consequently,
+\begin{align}
+\tht\log C_{\psi\psi\psi}
+ &=2+5\frac{\psi^5}{1-\psi^5}=5X-3,\\
+\tht\log C&=3+(5X-3)=5X,\qquad \tht C=5XC.
+\label{eq:thetaC}
+\end{align}
+The cancellation of the $+3$ from $\psi^3$ against the $-3$ in the tensor
+Yukawa derivative is essential. Omitting it changes every normalized
+covariant derivative.
+
+For a coordinate-only change, keeping the same Hodge gauge,
+\begin{align}
+C_{zzz}&=\left(\frac{\dd\psi}{\dd z}\right)^3 C_{\psi\psi\psi}
+ =\left(-\frac{\psi}{5z}\right)^3
+       \kappa\frac{\psi^2}{1-\psi^5}\\
+ &=-\frac{\kappa}{125z^3}(X-1)
+  =\frac{\kappa}{125z^3\Delta}.
+\end{align}
+The two minus signs, one from the cubic Jacobian and one from
+$X-1=-1/\Delta$, cancel. The familiar $5/(z^3\Delta)$ is in a differently
+normalized Hodge gauge; it must not be inserted here without also transforming
+the amplitudes.
+
+\section{The original differential ring and the geometric closure input}
+
+Define, for $p\ge1$,
+\begin{equation}
+A_p=\frac{\tht^p G}{G},\qquad
+B_p=\frac{\tht^p E}{E},\qquad A=A_1,\quad B=B_1.
+\end{equation}
+Thus $A_2$ is not $A^2$, and $B_2$ is not $B^2$.
+The quotient rule gives the exact identities
+\begin{equation}
+\tht A_p=A_{p+1}-AA_p,\qquad
+\tht B_p=B_{p+1}-BB_p.
+\label{eq:quotient}
+\end{equation}
+The negative terms arise from differentiating $G^{-1}$ or $E^{-1}$.
+
+\subsection{Picard--Fuchs closure of \texorpdfstring{$B_4$}{B4}}
+The period equation in this gauge is
+\begin{equation}
+\left[\tht^4-\psi^{-5}
+   (\tht-1)(\tht-2)(\tht-3)(\tht-4)\right]\Pi=0.
+\end{equation}
+The elementary symmetric sums of $1,2,3,4$ are $10,35,50,24$, so
+\begin{equation}
+\prod_{j=1}^4(\tht-j)
+ =\tht^4-10\tht^3+35\tht^2-50\tht+24.
+\end{equation}
+Multiplying the period equation by $\psi^5$ and rearranging gives
+\begin{equation}
+(1-\psi^5)\tht^4\Pi
+  =10\tht^3\Pi-35\tht^2\Pi+50\tht\Pi-24\Pi.
+\end{equation}
+The sign of the constant is negative on the right-hand side. Since the
+antiholomorphic period factor is untouched by $\tht$, the same linear
+identity holds for $E$. Dividing by $E$ therefore yields
+\begin{equation}\boxed{
+B_4=10XB_3-35XB_2+50XB-24X.}\label{eq:B4}
+\end{equation}
+As a check, using \eqref{eq:theta-coordinate}, the same operator becomes
+\begin{equation}
+\theta_z^4-3125z\prod_{j=1}^4\left(\theta_z+\frac j5\right).
+\end{equation}
+The factor $(-5)^4=625$ cancels in dividing the entire equation; there
+is no extra sign because there are four factors.
+
+\subsection{Special-geometry closure of \texorpdfstring{$A_2$}{A2}}
+The chosen quintic geometric closure is YY equation (3.22):
+\begin{equation}\boxed{\begin{aligned}
+A_2={}&-4B_2-2AB-2B+2B^2-2A\\
+      &+10XB+5XA-5X-1.
+\end{aligned}}\label{eq:A2}
+\end{equation}
+For clarity, $-4B_2$ and $+2B^2$ have different meanings.
+The origin of the holomorphic part can be exhibited by the
+special-geometry identity
+\begin{equation}
+\bdel\left[-4B_2-A_2-2AB-2B+2B^2-2A+10XB+5XA\right]=0.
+\end{equation}
+Denoting the bracket by $h(\psi)$, solving for $A_2$ gives the first
+line and the $XB,XA$ terms in \eqref{eq:A2}, followed by $-h$.
+In the adopted YY gauge the holomorphic input is
+\begin{equation}
+h=5X+1.
+\end{equation}
+This explains both signs in $-5X-1$. It is a geometric/gauge input,
+not a consequence of the Picard--Fuchs equation alone. Using $+5X+1$
+in \eqref{eq:A2} would correspond to solving for the bracket with the wrong sign.
+
+An explicit local consistency check is useful. At large complex structure,
+\begin{align}
+\omega_0&=1+120z+O(z^2),&
+t&=-\log z-770z+O(z^2),\\
+B&=-600z+O(z^2),& B_2&=3000z+O(z^2),\\
+A&=-1-3850z+O(z^2),& A_2&=1+26950z+O(z^2),\\
+X&=-3125z+O(z^2).
+\end{align}
+Here $B=\tht\log\omega_0$ in the holomorphic limit, and
+$A=\tht\log(\del_\psi t)$. The coefficient $770$ follows from
+$5(120)(H_5-H_1)=5(120)(77/60)=770$.
+Substitution in the bracket gives
+\begin{align}
+h&=1+[-12000-26950-1200+1200+7700+15625]z+O(z^2)\\
+ &=1-15625z+O(z^2)=1+5X+O(z^2).
+\end{align}
+This checks the displayed constants locally. It does not, by itself,
+exclude arbitrary additional holomorphic functions; the exact closure
+is the specified geometric input.
+
+\section{Change to \texorpdfstring{$u,v_1,v_2,v_3,X$}{u, v1, v2, v3, X} and the complete derivation table}
+
+The precise change of variables is
+\begin{align}
+u&=B,\\
+v_1&=A+1+2B,\\
+v_2&=B_2-B(A+1+2B)=B_2-uv_1,\\
+v_3&=B_3-B\{B(1+A+2B)-B_2+5X(1+A+2B)-10X\}\\
+   &=B_3+uv_2-5uX(v_1-2).
+\label{eq:v3definition}
+\end{align}
+Its inverse is
+\begin{equation}\boxed{\begin{aligned}
+B&=u,&A&=v_1-1-2u,\\
+B_2&=v_2+uv_1,&B_3&=v_3-uv_2+5uX(v_1-2).
+\end{aligned}}\label{eq:inverse}
+\end{equation}
+The factor $5$ in the last equation is present in the implementation.
+The constant $-2$ inside $v_1-2$ is responsible for several terms proportional
+to $10X$ and $24X$ below; it cannot be dropped as an irrelevant shift.
+
+\subsection{Derivative of \texorpdfstring{$u$}{u}}
+Equation \eqref{eq:quotient} gives
+\begin{equation}\boxed{\tht u=B_2-B^2=v_2+uv_1-u^2.}\end{equation}
+
+\subsection{Derivative of \texorpdfstring{$v_1$}{v1}}
+First differentiate before substituting:
+\begin{align}
+\tht v_1&=(A_2-A^2)+2(B_2-B^2)\\
+ &=-2B_2-2AB-2B-2A-A^2+10XB+5XA-5X-1.
+\end{align}
+The $+2B^2$ in $A_2$ cancels the $-2B^2$ from $2\tht B$.
+Now substitute \eqref{eq:inverse}:
+\begin{align}
+\tht v_1={}&-2(v_2+uv_1)-2u(v_1-1-2u)-2u\\
+ &-2(v_1-1-2u)-(v_1-1-2u)^2\\
+ &+10Xu+5X(v_1-1-2u)-5X-1\\
+={}&-v_1^2-2v_2-10X+5Xv_1.
+\end{align}
+All powers of $u$ cancel. The $-10X$ is the sum of $-5X$ from
+$5XA$ and the explicit $-5X$ in $A_2$.
+
+\subsection{Derivative of \texorpdfstring{$v_2$}{v2}}
+Using $v_2=B_2-uv_1$ gives
+\begin{align}
+\tht v_2={}&B_3-uB_2-(\tht u)v_1-u\tht v_1\\
+={}&v_3-uv_2+5uX(v_1-2)-uv_2-u^2v_1\\
+ &-v_1v_2-uv_1^2+u^2v_1\\
+ &+uv_1^2+2uv_2+10uX-5uXv_1\\
+={}&v_3-v_1v_2.
+\end{align}
+The $uv_2$ coefficients are $-1-1+2=0$; the $u^2v_1$ and
+$uv_1^2$ terms cancel in pairs; and
+$5uX(v_1-2)+10uX-5uXv_1=0$.
+
+\subsection{Derivative of \texorpdfstring{$v_3$}{v3}}
+To display all cancellations without an opaque large expansion, put
+\begin{equation}
+L=-v_2+5X(v_1-2),\qquad B_3=v_3+uL.
+\end{equation}
+From \eqref{eq:B4} and \eqref{eq:quotient},
+\begin{equation}
+\tht B_3=(10X-u)(v_3+uL)-35X(v_2+uv_1)+50Xu-24X.
+\end{equation}
+Independently, using the derivatives already established,
+\begin{align}
+\tht L
+ &=-\tht v_2+5(\tht X)(v_1-2)+5X\tht v_1\\
+ &=-v_3+v_1v_2+25X(X-1)(v_1-2)\\
+ &\hspace{12mm}+5X(-v_1^2-2v_2-10X+5Xv_1)\\
+ &=-v_3+(10X-v_1)L-35Xv_1+50X.
+\end{align}
+Since $v_3=B_3-uL$,
+\begin{align}
+\tht v_3={}&10Xv_3-35Xv_2-24X-v_2L\\
+ &+u\{-v_3+(10X-v_1)L-35Xv_1+50X-\tht L\}\\
+={}&10Xv_3-35Xv_2-24X-v_2[-v_2+5X(v_1-2)]\\
+={}&v_2^2-24X-25Xv_2-5Xv_1v_2+10Xv_3.
+\end{align}
+The two $u^2L$ terms canceled before the second line. The remaining
+coefficient of $u$ vanishes by the displayed expression for $\tht L$.
+Finally, $-35Xv_2+10Xv_2=-25Xv_2$.
+
+\subsection{The closed table and its meaning}
+Combining the results,
+\begin{equation}\boxed{\begin{aligned}
+\tht u&=v_2+uv_1-u^2,\\
+\tht v_1&=-v_1^2-2v_2-10X+5Xv_1,\\
+\tht v_2&=-v_1v_2+v_3,\\
+\tht v_3&=v_2^2-24X-25Xv_2-5Xv_1v_2+10Xv_3,\\
+\tht X&=5X(X-1).
+\end{aligned}}\label{eq:table}
+\end{equation}
+These are ordinary derivation identities in the commutative ring
+\begin{equation}
+\mathcal R=\QQ[u,v_1,v_2,v_3,X].
+\end{equation}
+In particular, $\QQ[v_1,v_2,v_3,X]$ is closed under $\tht$. Denote the
+restriction of $\tht$ to this subring by $\delta$; explicitly,
+\begin{align}
+\delta={}&(-v_1^2-2v_2-10X+5Xv_1)\del_{v_1}
+ +(v_3-v_1v_2)\del_{v_2}\\
+ &+(v_2^2-24X-25Xv_2-5Xv_1v_2+10Xv_3)\del_{v_3}
+ +5X(X-1)\del_X.
+\end{align}
+For a general element of $\mathcal R$,
+\begin{equation}
+\tht=(v_2+uv_1-u^2)\del_u+\delta.
+\end{equation}
+
+Assign the filtration weights
+\begin{equation}
+\wt(u)=\wt(v_1)=\wt(X)=1,\quad \wt(v_2)=2,\quad\wt(v_3)=3.
+\end{equation}
+Each image in \eqref{eq:table} has weight at most one greater than the
+generator. This is a filtration, not a homogeneous grading preserved by
+$\tht$: for example, $\tht X=5X^2-5X$ has both weights two and one.
+The YY bound is $\wt(P_g)\le3g-3$ and
+$\wt(\Pg gn)\le3g-3+n$ for stable vertices.
+Indeed, assuming the bound at lower genus, both
+$\Pg{g-1}2$ and every product $\Pg h1\Pg{g-h}1$ have weight at most
+$3g-4$. Extracting $u^k$ reduces that bound by $k$. Hence the three
+gradient components in \eqref{eq:gradient} have weights at most
+$3g-4,3g-5,3g-6$, respectively: multiplication of $r_{g,2}$ by $X$
+raises its weight by one in the middle component. Integration in variables
+of weights $1,2,3$ then gives weight at most $3g-3$ in every case.
+The degree restriction on the added function of $X$ is the additional
+polynomial/meromorphic ansatz of the YY construction.
+
+\section{Normalized vertices and the covariant derivative: every factor}
+
+For $g\ge2$, define
+\begin{equation}
+P_g=\Pg g0=C^{g-1}F_g,\qquad
+\Pg gn=C^{g-1}\psi^n D_\psi^n F_g.
+\end{equation}
+The upper parenthesized index is the number of insertions; it is not a power.
+The stable low-genus definitions are
+\begin{equation}
+\Pg 0n=C^{-1}\psi^nD_\psi^{n-3}C_{\psi\psi\psi}\ (n\ge3),\qquad
+\Pg 1n=\psi^nD_\psi^{n-1}\del_\psi F_1\ (n\ge1).
+\end{equation}
+No zero-insertion $P_0$ or $P_1$ is needed by the algorithm. In particular,
+$\Pg 03=1$ does not mean that the genus-zero prepotential is one.
+
+Let $H=\Pg gn$, and let $h$ be the corresponding unnormalized rank-$n$
+vertex, so $h=C^{1-g}\psi^{-n}H$. By the product rule and \eqref{eq:thetaC},
+\begin{align}
+\tht h
+ &=C^{1-g}\psi^{-n}
+       \{\tht H+[5(1-g)X-n]H\}.
+\end{align}
+The Hodge power is $m=2-2g$. Equation \eqref{eq:cov-original} then gives
+\begin{align}
+C^{g-1}\psi^{n+1}D_\psi h
+ &=\tht H+[5(1-g)X-n-nA-(2-2g)B]H\\
+ &=\tht H+[-n(A+1)+(2g-2)B-5(g-1)X]H\\
+ &=\tht H+
+   \left[-n(v_1-2u)+(2g-2)\left(u-\frac52X\right)\right]H.
+\end{align}
+Therefore
+\begin{equation}\boxed{
+\Pg g{n+1}=\mathcal D_{g,n}\Pg gn,
+\quad \mathcal D_{g,n}=\tht-n(v_1-2u)
+ +(2g-2)\left(u-\frac52X\right).}\label{eq:cov}
+\end{equation}
+The ledger of contributions is
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Contribution & Origin\\\midrule
+$-n$ & derivative of $\psi^{-n}$\\
+$-nA$ & $n$ lower covariant tensor indices\\
+$+(2g-2)B$ & Hodge power $2-2g$ and $K_\psi=-B/\psi$\\
+$-5(g-1)X$ & derivative of $C^{1-g}$\\
+$-n(A+1)=-n(v_1-2u)$ & inverse generator change\\
+$5/2$ & $5(g-1)=(2g-2)(5/2)$\\\bottomrule
+\end{tabular}
+\end{center}
+For two derivatives, the second operator is $\mathcal D_{g,1}$,
+not another $\mathcal D_{g,0}$. For example,
+\begin{equation}
+\Pg 22=\mathcal D_{2,1}\mathcal D_{2,0}P_2.
+\end{equation}
+Genus is unchanged during differentiation; tensor rank increases by one.
+
+The genus-zero seed follows by cancellation:
+\begin{equation}
+\Pg 03=C^{-1}\psi^3C_{\psi\psi\psi}=1.
+\end{equation}
+As a sign/rank check,
+\begin{equation}
+\Pg 04=\mathcal D_{0,3}1
+ =-3(v_1-2u)-2(u-5X/2)=5X-3v_1+4u.
+\end{equation}
+
+\section{Genus one: the seed and the numerical constants}
+
+The Euler characteristic parameter used by YY and by this implementation is
+$\chi=-200$, the original quintic's value in this mirror-symmetry convention.
+It must not be replaced by the Euler characteristic $+200$ of the resolved
+mirror while keeping all other formulas unchanged. The genus-one anomaly is
+\begin{equation}
+\bdel\del_\psi F_1
+ =\frac12 C_{\psi\psi\psi}\bar C_{\bar\psi}^{\psi\psi}
+   +\left(1-\frac\chi{24}\right)G.
+\end{equation}
+Here
+\begin{equation}
+\bar C_{\bar\psi}^{\psi\psi}
+ =e^{2K}G^{-2}\bar C_{\bar\psi\bar\psi\bar\psi}.
+\end{equation}
+The bar label is antiholomorphic; the raised indices come from inverse
+metrics, not from changing the holomorphic Yukawa normalization.
+
+The adopted genus-one holomorphic boundary data give the local derivative
+\begin{equation}
+\del_\psi F_1=\frac12\del_\psi
+ \left[-\log G+\frac{62}{3}K
+       +\frac{62}{3}\log\psi-\frac16\log(1-\psi^5)\right].
+\label{eq:F1input}
+\end{equation}
+Terms depending only on $\bar\psi$ have no effect on this formula.
+The coefficient $31/3=2-\chi/24$ gives $62/3$ inside the bracket because
+of the prefactor $1/2$. Indeed, using
+$\bdel\del_\psi\log G=2G-C_{\psi\psi\psi}\bar C_{\bar\psi}^{\psi\psi}$,
+the first two terms give
+\begin{equation}
+-G+\frac12 C_{\psi\psi\psi}\bar C_{\bar\psi}^{\psi\psi}+\frac{31}{3}G
+ =\frac12 C_{\psi\psi\psi}\bar C_{\bar\psi}^{\psi\psi}+\frac{28}{3}G,
+\end{equation}
+where $28/3=1-\chi/24$. The $\log\psi$ and conifold-log terms
+are holomorphic boundary inputs, not determined by this mixed derivative.
+
+Since $\tht\log(1-\psi^5)=-5(X-1)$, multiplication of
+\eqref{eq:F1input} by $\psi$ gives
+\begin{align}
+\Pg 11
+ &=-\frac12A-\frac{31}{3}B+\frac{31}{3}
+      +\frac5{12}(X-1)\\
+ &=\frac{31}{3}(1-B)+\frac5{12}(X-1)-\frac12A\\
+ &=\boxed{\frac{125}{12}-\frac12v_1-\frac{28}{3}u+\frac5{12}X}.
+\label{eq:seed}
+\end{align}
+The constants are $31/3-5/12+1/2=125/12$; the $u$ coefficient is
+$-31/3+1=-28/3$. The $+5/12$ in the conifold term comes from
+$\tfrac12(-\tfrac16)(-5)$: both minus signs are needed.
+
+\section{From the geometric BCOV equation to the polynomial anomaly}
+
+For $g\ge2$, the BCOV equation \cite{BCOV} is
+\begin{equation}
+\bdel F_g=\frac12\bar C_{\bar\psi}^{\psi\psi}
+ \left[D_\psi D_\psi F_{g-1}
+       +\sum_{h=1}^{g-1}D_\psi F_hD_\psi F_{g-h}\right].
+\label{eq:BCOV}
+\end{equation}
+The $1/2$ is the BCOV symmetry factor. The sum as written is ordered:
+$h$ and $g-h$ both occur unless they are equal.
+
+\subsection{Normalization of each term on the right}
+For the first term,
+\begin{equation}
+D_\psi D_\psi F_{g-1}=C^{2-g}\psi^{-2}\Pg{g-1}2.
+\end{equation}
+For each product,
+\begin{align}
+D_\psi F_hD_\psi F_{g-h}
+ &=C^{1-h}\psi^{-1}\Pg h1\,
+   C^{1-(g-h)}\psi^{-1}\Pg{g-h}1\\
+ &=C^{2-g}\psi^{-2}\Pg h1\Pg{g-h}1.
+\end{align}
+The exponents add as $(1-h)+(1-g+h)=2-g$.
+Since $C$ is holomorphic, $\bdel(C^{g-1}F_g)=C^{g-1}\bdel F_g$.
+Multiplying \eqref{eq:BCOV} by $C^{g-1}$ therefore leaves precisely
+$C^{g-1}C^{2-g}\psi^{-2}=C/\psi^2$:
+\begin{equation}
+\bdel P_g=\frac12\frac C{\psi^2}\bar C_{\bar\psi}^{\psi\psi}H_g,
+\qquad
+H_g=\Pg{g-1}2+\sum_{h=1}^{g-1}\Pg h1\Pg{g-h}1.
+\label{eq:normalizedBCOV}
+\end{equation}
+
+\subsection{The minus sign from special geometry}
+Set $a=\bdel A$ and $b=\bdel B$. From \eqref{eq:ABconnections},
+\begin{equation}
+b=-\psi G.
+\end{equation}
+Special geometry in our Christoffel convention gives
+\begin{equation}
+\bdel\Gamma_{\rm std}=2G-C_{\psi\psi\psi}\bar C_{\bar\psi}^{\psi\psi}.
+\end{equation}
+Thus
+\begin{align}
+a+2b
+ &=\psi[2G-C_{\psi\psi\psi}\bar C_{\bar\psi}^{\psi\psi}]-2\psi G\\
+ &=-\psi C_{\psi\psi\psi}\bar C_{\bar\psi}^{\psi\psi}
+  =-\frac C{\psi^2}\bar C_{\bar\psi}^{\psi\psi}.
+\end{align}
+Inserting this identity into \eqref{eq:normalizedBCOV},
+\begin{equation}\boxed{\bdel P_g=-\frac12(a+2b)H_g.}\label{eq:minus}
+\end{equation}
+The sign is negative even though \eqref{eq:BCOV} has a positive $1/2$.
+It comes from the relation between the antiholomorphic Yukawa and $a+2b$.
+
+As an optional propagator check, the adopted holomorphic propagator choice is
+\begin{equation}
+S^{\psi\psi}=\frac{2K_\psi+2/\psi-\del_\psi\log G}{C_{\psi\psi\psi}},
+\qquad
+T^{\psi\psi}:=\frac C{\psi^2}S^{\psi\psi}=2-2B-A=3-v_1.
+\end{equation}
+The $2/\psi$ term is the propagator-gauge contribution corresponding to
+the local holomorphic choice $\mathfrak f=\psi$; it is not a second
+copy of $K_\psi$. Since $\bdel S^{\psi\psi}=\bar C_{\bar\psi}^{\psi\psi}$,
+one obtains again $(C/\psi^2)\bar C=-\bdel v_1=-(a+2b)$.
+
+\subsection{Antiholomorphic changes of all generators}
+The quotient identities and $b=-\psi G$ give
+\begin{align}
+\bdel B_2&=\bdel(\tht B+B^2)
+          =\tht b+2Bb=(A+1+2B)b=v_1b,\\
+\bdel B_3&=\bdel(\tht B_2+BB_2)\\
+ &=\{\tht v_1+(A+1+B)v_1+B_2\}b\\
+ &=\{-v_2+5X(v_1-2)\}b.
+\end{align}
+In the first line $\tht b=(A+1)b$, since $b=-\psi G$.
+The second simplification uses the already derived $\tht v_1$.
+Consequently,
+\begin{align}
+\bdel u&=b,\\
+\bdel v_1&=a+2b,\\
+\bdel v_2&=\bdel(B_2-uv_1)
+           =v_1b-v_1b-u(a+2b)=-u(a+2b),\\
+\bdel v_3&=\bdel[B_3+uv_2-5uX(v_1-2)]\\
+ &=\{-v_2+5X(v_1-2)\}b+v_2b-u^2(a+2b)\\
+ &\hspace{8mm}-5X(v_1-2)b-5uX(a+2b)\\
+ &=-u(u+5X)(a+2b),\\
+\bdel X&=0.
+\end{align}
+Every term proportional to $b$ in the intermediate expression for
+$\bdel v_3$ cancels; the remaining two terms factor as shown.
+
+\subsection{The two formal equations and the three gradient components}
+By the chain rule,
+\begin{equation}
+\bdel P_g=b\del_uP_g+(a+2b)\mathscr L P_g,
+\quad
+\mathscr L=\del_{v_1}-u\del_{v_2}-u(u+5X)\del_{v_3}.
+\end{equation}
+Comparing this with \eqref{eq:minus} in the formal YY anomaly system gives
+\begin{equation}\boxed{\del_uP_g=0,\qquad \mathscr L P_g=-\frac12 H_g.}\label{eq:PDE}
+\end{equation}
+More explicitly, the coefficient of $a$ gives $\mathscr L P_g=-H_g/2$;
+the coefficient of $b$ gives $\del_uP_g+2\mathscr L P_g=-H_g$;
+subtracting twice the first equation gives $\del_uP_g=0$.
+
+The coefficient comparison is a formal polynomial-ring statement used by YY.
+It should not be misread as claiming that two $(0,1)$ differential forms on a
+one-complex-dimensional base are linearly independent over all smooth functions.
+The implementation adopts the resulting formal differential/anomaly algebra.
+
+Define the source used by the code by
+\begin{equation}
+R_g=-\frac12 H_g=r_{g,0}+ur_{g,1}+u^2r_{g,2}.
+\end{equation}
+The absence of higher powers follows from the insertion formulas discussed
+below and is checked by the program. Since $P_g$ is independent of $u$,
+\begin{align}
+\mathscr L P_g
+ &=\del_{v_1}P_g
+    +u[-\del_{v_2}P_g-5X\del_{v_3}P_g]
+    -u^2\del_{v_3}P_g.
+\end{align}
+Therefore
+\begin{equation}\boxed{\begin{aligned}
+\del_{v_1}P_g&=r_{g,0},\\
+\del_{v_2}P_g&=-r_{g,1}+5Xr_{g,2},\\
+\del_{v_3}P_g&=-r_{g,2}.
+\end{aligned}}\label{eq:gradient}
+\end{equation}
+In the second equation the plus sign comes from substituting
+$\del_{v_3}P_g=-r_{g,2}$ into
+$-\del_{v_2}P_g-5X\del_{v_3}P_g=r_{g,1}$.
+Integrating only $r_{g,0}$ would incorrectly leave arbitrary functions of
+$v_2,v_3,X$, whereas the full system leaves only a function of $X$.
+
+\section{Exact gradient integration and the ambiguity convention}
+
+Write $G_i=\del_{v_i}P_g$ as obtained from \eqref{eq:gradient}.
+The consistency conditions are
+\begin{equation}
+\del_{v_j}G_i=\del_{v_i}G_j\qquad(1\le i,j\le3).
+\end{equation}
+They are tested as exact polynomial equalities. A particular primitive is
+constructed in the order $v_3,v_2,v_1$:
+\begin{align}
+Q_3&=\int G_3\,\dd v_3,\\
+Q_{23}&=Q_3+\int(G_2-\del_{v_2}Q_3)\,\dd v_2,\\
+P_g^{\an}&=Q_{23}+\int(G_1-\del_{v_1}Q_{23})\,\dd v_1.
+\end{align}
+Every primitive here has zero integration constant in its integration variable.
+The mixed-partial identities ensure that each residual has no dependence on
+variables already integrated; a final check verifies all three derivatives.
+Equivalently, the selected primitive satisfies
+\begin{equation}
+P_g^{\an}(v_1=v_2=v_3=0,X)=0.
+\end{equation}
+This is an algebraic choice of representative, not a physical boundary condition.
+
+The complete polynomial is stored as
+\begin{equation}
+P_g=P_g^{\an}+a_g(X),\qquad
+a_g(X)=\sum_{j=0}^{3g-3}a_{g,j}X^j.
+\end{equation}
+The vector has up to $3g-2$ entries because both endpoint powers, zero and
+$3g-3$, are included. This is the full polynomial kernel allowed by the coarse
+weight bound; geometric regularity and pole restrictions may reduce the physical
+ambiguity subspace.
+
+The conventional holomorphic ambiguity in $F_g$ obeys
+\begin{equation}
+\Delta F_g=C^{1-g}\Delta a_g(X).
+\end{equation}
+Thus a vector of coefficients of $a_g$ is not directly a vector of coefficients
+of $f_g(\psi)$ in a different meromorphic basis. Moreover, our $P_g^{\an}$ need
+not equal $C^{g-1}$ times a particular Feynman-diagram representative. The
+reference pure-$X$ vector includes whichever shift is required by our zero-at-
+$v=0$ primitive convention.
+
+A more restrictive meromorphic ansatz used in YY for the holomorphic addition
+to a Feynman-diagram representative is
+\begin{equation}
+f_g(\psi)=\sum_{j=1}^{\lfloor(2g-2)/5\rfloor}b_{g,j}\psi^{-5j}
+          +\sum_{j=0}^{2g-2}d_{g,j}(1-\psi^5)^{-j}.
+\end{equation}
+Here the symbols $d_{g,j}$ avoid confusing this basis with $a_{g,j}$.
+Because $\psi^{-5}=X/(X-1)$, multiplication by $C^{g-1}$ gives
+\begin{align}
+C^{g-1}f_g=\kappa^{g-1}\bigg[&
+ \sum_{j=1}^{\lfloor(2g-2)/5\rfloor}
+       b_{g,j}X^j(X-1)^{g-1-j}\\
+ &+\sum_{j=0}^{2g-2}d_{g,j}(X-1)^{g-1}X^j\bigg].
+\end{align}
+All exponents of $X-1$ in the first sum are nonnegative for $g\ge2$.
+The second sum has maximal degree $(g-1)+(2g-2)=3g-3$, explaining
+the coarse polynomial degree used by the code. Physical constraints can
+therefore select an affine subspace of the full coefficient vector.
+Because our primitive differs from the chosen Feynman representative by a
+pure-$X$ polynomial, the displayed restrictions apply directly to differences
+of allowed amplitudes or to a consistently converted ambiguity, not blindly
+to the raw vector returned by our zero-at-$v=0$ convention.
+
+In the API, \code{ambiguity=None} means unresolved. It is distinct from
+\code{ambiguity=()}, which explicitly assigns zero to every coefficient.
+Continuing to higher genus requires an explicit choice for every lower genus.
+The current code propagates rational choices, not symbolic unknowns. Across
+several genera the dependence on earlier ambiguity parameters is generally
+nonlinear, so a symbolic extension would need a suitable coefficient algebra,
+not merely an unresolved linear vector attached to the output.
+
+\section{The genus-two recursion, fully expanded}
+\label{sec:g2}
+
+Put
+\begin{equation}
+p:=\Pg11=\frac{125}{12}-\frac12v_1-\frac{28}{3}u+\frac5{12}X.
+\end{equation}
+The genus-two source is
+\begin{equation}
+H_2=\Pg12+p^2,\qquad
+\Pg12=\mathcal D_{1,1}p=\tht p-(v_1-2u)p.
+\end{equation}
+There is one product term because the ordered sum has only $h=1$;
+there is no extra factor two at genus two.
+
+\subsection{Differentiate the seed and apply the rank-one connection}
+Using the closure table gives
+\begin{align}
+\tht p={}&\frac12v_1^2-\frac{25}{3}v_2+\frac{35}{12}X
+ -\frac52v_1X+\frac{25}{12}X^2
+ -\frac{28}{3}uv_1+\frac{28}{3}u^2.
+\end{align}
+For example, the $v_2$ coefficient is $1-28/3=-25/3$;
+the $X$ coefficient is $5-25/12=35/12$.
+The connection contribution is
+\begin{align}
+-(v_1-2u)p={}&-\frac{125}{12}v_1+\frac12v_1^2
+ -\frac5{12}v_1X+\frac{125}{6}u\\
+ &+\left(\frac{28}{3}-1\right)uv_1
+ -\frac{56}{3}u^2+\frac56uX.
+\end{align}
+Adding yields
+\begin{align}
+\Pg12={}&v_1^2-\frac{25}{3}v_2-\frac{125}{12}v_1
+ +\frac{35}{12}X-\frac{35}{12}v_1X+\frac{25}{12}X^2\\
+ &+u\left(\frac{125}{6}-v_1+\frac56X\right)-\frac{28}{3}u^2.
+\label{eq:P12}
+\end{align}
+In particular the $uv_1$ coefficient is $-28/3+28/3-1=-1$.
+
+\subsection{Square the one-point seed}
+The square is an ordinary commutative polynomial square:
+\begin{align}
+p^2={}&\frac{15625}{144}-\frac{125}{12}v_1+\frac14v_1^2
+ +\frac{625}{72}X-\frac5{12}v_1X+\frac{25}{144}X^2\\
+ &+u\left(-\frac{1750}{9}+\frac{28}{3}v_1-\frac{70}{9}X\right)
+ +\frac{784}{9}u^2.
+\end{align}
+Every cross term carries its factor two. For example,
+$2(125/12)(5/12)=625/72$, and
+$2(-1/2)(-28/3)=28/3$.
+
+\subsection{Collect the source and apply the negative half}
+Adding \eqref{eq:P12} to the square gives
+\begin{align}
+[u^0]H_2={}&\frac{15625}{144}-\frac{125}{6}v_1+\frac54v_1^2
+ -\frac{25}{3}v_2+\frac{835}{72}X
+ -\frac{10}{3}v_1X+\frac{325}{144}X^2,\\
+[u^1]H_2={}&-\frac{3125}{18}+\frac{25}{3}v_1-\frac{125}{18}X,\\
+[u^2]H_2={}&\frac{700}{9}.
+\end{align}
+For example,
+\begin{align}
+\frac{35}{12}+\frac{625}{72}&=\frac{835}{72},&
+\frac{25}{12}+\frac{25}{144}&=\frac{325}{144},\\
+\frac{125}{6}-\frac{1750}{9}&=-\frac{3125}{18},&
+-\frac{28}{3}+\frac{784}{9}&=\frac{700}{9}.
+\end{align}
+Since $R_2=-H_2/2$,
+\begin{align}
+r_{2,0}={}&-\frac{15625}{288}+\frac{125}{12}v_1-\frac58v_1^2
+ +\frac{25}{6}v_2-\frac{835}{144}X
+ +\frac53v_1X-\frac{325}{288}X^2,\\
+r_{2,1}={}&\frac{3125}{36}-\frac{25}{6}v_1+\frac{125}{36}X,\\
+r_{2,2}={}&-\frac{350}{9}.
+\end{align}
+Applying \eqref{eq:gradient} now gives
+\begin{align}
+\del_{v_1}P_2={}&r_{2,0},\\
+\del_{v_2}P_2={}&-\frac{3125}{36}+\frac{25}{6}v_1-\frac{2375}{12}X,\\
+\del_{v_3}P_2={}&\frac{350}{9}.
+\end{align}
+The $X$ coefficient in the second line is
+\begin{equation}
+-\frac{125}{36}+5\left(-\frac{350}{9}\right)
+ =-\frac{125+7000}{36}=-\frac{2375}{12}.
+\end{equation}
+The positive $350/9$ in the third line is the second minus sign:
+$\del_{v_3}P_2=-r_{2,2}$.
+
+\subsection{Integrate and list all ten anomaly coefficients}
+First integrate $G_3$, then $G_2$, then the remaining part of $G_1$:
+\begin{align}
+Q_3={}&\frac{350}{9}v_3,\\
+Q_{23}={}&Q_3-\frac{3125}{36}v_2+\frac{25}{6}v_1v_2
+                         -\frac{2375}{12}v_2X,\\
+P_2^{\an}={}&Q_{23}-\frac{15625}{288}v_1+\frac{125}{24}v_1^2
+ -\frac5{24}v_1^3-\frac{835}{144}v_1X\\
+ &+\frac56v_1^2X-\frac{325}{288}v_1X^2.
+\end{align}
+For the last line, the quadratic term of $G_1$ integrates as
+$\int(-5v_1^2/8)\dd v_1=-5v_1^3/24$; the mixed term integrates as
+$\int(5v_1X/3)\dd v_1=5v_1^2X/6$. The $25v_2/6$ part of $G_1$
+has already been supplied by $\del_{v_1}(25v_1v_2/6)$ and must not be
+integrated a second time.
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Monomial & Coefficient & Direct source in gradient integration\\\midrule
+$v_1$ & $-15625/288$ & constant term of $G_1$\\
+$v_1^2$ & $125/24$ & $(125/12)/2$\\
+$v_1^3$ & $-5/24$ & $(-5/8)/3$\\
+$v_2$ & $-3125/36$ & constant term of $G_2$\\
+$v_1v_2$ & $25/6$ & $v_1$ term of $G_2$\\
+$v_3$ & $350/9$ & $G_3$\\
+$v_1X$ & $-835/144$ & $X$ term of $G_1$\\
+$v_1^2X$ & $5/6$ & $(5/3)/2$\\
+$v_2X$ & $-2375/12$ & $X$ term of $G_2$\\
+$v_1X^2$ & $-325/288$ & $X^2$ term of $G_1$\\\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{The four supplied pure-\texorpdfstring{$X$}{X} coefficients}
+The reference choice is
+\begin{equation}
+a_2(X)=\frac{3125}{144}-\frac{28795}{144}X
+       +\frac{205}{144}X^2+\frac{25}{48}X^3.
+\label{eq:a2reference}
+\end{equation}
+These are, in order, the four entries of \code{YY_GENUS2_AMBIGUITY}.
+The full polynomial is
+\begin{equation}\boxed{\begin{aligned}
+P_2={}&\frac{3125}{144}-\frac{15625}{288}v_1
+ +\frac{125}{24}v_1^2-\frac5{24}v_1^3
+ -\frac{3125}{36}v_2+\frac{25}{6}v_1v_2+\frac{350}{9}v_3\\
+ &-\frac{28795}{144}X-\frac{835}{144}v_1X
+ +\frac56v_1^2X-\frac{2375}{12}v_2X
+ +\frac{205}{144}X^2-\frac{325}{288}v_1X^2+\frac{25}{48}X^3.
+\end{aligned}}\label{eq:P2full}
+\end{equation}
+Equation \eqref{eq:P2full} agrees with YY equation (4.1).
+The anomaly equations annihilate every term in \eqref{eq:a2reference}.
+Consequently they cannot determine $-28795/144$, $205/144$, or $25/48$,
+or the constant $3125/144$, without further information. The program imports
+the complete reference vector rather than claiming a boundary-fitting derivation
+of those three remaining numbers.
+
+There is a useful independent check of the constant coefficient. In the
+A-model convention specified in Section~\ref{sec:amodel}, the genus-two
+constant-map value is $F_2^A(0)=\chi/5760=-5/144$. The conversion factor
+at large complex structure is $-1/625$, so
+\begin{equation}
+-\frac1{625}\,a_{2,0}=-\frac5{144}
+\quad\Longrightarrow\quad a_{2,0}=\frac{3125}{144}.
+\end{equation}
+This verifies the imported constant within the stated A-model sign convention.
+It is not an implementation of all genus-two boundary constraints.
+
+\section{Why the source is quadratic in \texorpdfstring{$u$}{u} and an all-genus check}
+
+For $g\ge2$ let $k=2g-2$, $p=P_g$, and define
+\begin{equation}
+\mathcal Q_g=\delta-\frac52kX=\delta-5(g-1)X.
+\end{equation}
+Here $p$ is independent of $u$, so
+\begin{equation}
+\Pg g1=\mathcal Q_gp+ku p.
+\end{equation}
+Applying $\mathcal D_{g,1}$ and using $\tht u=v_2+uv_1-u^2$ gives
+\begin{equation}\boxed{\begin{aligned}
+\Pg g2={}&(\delta-v_1-\tfrac52kX)\mathcal Q_gp+kv_2p\\
+ &+(2k+2)u\,\mathcal Q_gp+k(k+1)u^2p.
+\end{aligned}}\label{eq:quadraticvertex}
+\end{equation}
+For completeness, the linear-$u$ terms before simplification are
+\begin{equation}
+k\delta p-\frac52k^2Xp+(k+2)\mathcal Q_gp
+  =(2k+2)\mathcal Q_gp,
+\end{equation}
+and the quadratic coefficient is $-k+k(k+2)=k(k+1)$.
+The $+kuv_1p$ from $k(\tht u)p$ cancels the $-kuv_1p$ from
+the rank-one connection.
+The genus-one seed is separately linear in $u$, and \eqref{eq:P12}
+is quadratic. Therefore every term of $H_g$ is at most quadratic in $u$.
+
+For an entirely explicit higher-genus coefficient prescription, set
+$s=125/12-v_1/2+5X/12$, $c=-28/3$, and, for $h\ge2$,
+\begin{equation}
+k_h=2h-2,\qquad q_h=\mathcal Q_hP_h,\qquad
+t_h=(\delta-v_1-\tfrac52k_hX)q_h+k_hv_2P_h.
+\end{equation}
+For $g\ge3$, with $m=g-1$, collecting the endpoint terms separately gives
+\begin{align}
+[u^0]H_g={}&t_m+2s q_m
+             +\sum_{h=2}^{g-2}q_hq_{g-h},\\
+[u^1]H_g={}&(2k_m+2)q_m+2(sk_mP_m+cq_m)\\
+ &+\sum_{h=2}^{g-2}
+       (k_hP_hq_{g-h}+k_{g-h}P_{g-h}q_h),\\
+[u^2]H_g={}&k_m(k_m+1)P_m+2ck_mP_m\\
+ &+\sum_{h=2}^{g-2}k_hk_{g-h}P_hP_{g-h}.
+\end{align}
+Each interior sum is ordered, and it is empty at $g=3$. The endpoint
+factor two is the pair $h=1,m$ and $h=m,1$; it is not present at genus
+two, where they are the same single term. Multiplying each of these three
+lines by $-1/2$ gives $r_{g,0},r_{g,1},r_{g,2}$, respectively.
+These formulas provide a direct route to a future blocked implementation
+without first building an expanded polynomial in $u$.
+
+The coefficient $c$ of $u$ in the genus-one seed is
+\begin{equation}
+c=\frac\chi{24}-1=-\frac{28}{3}.
+\end{equation}
+For $g=2$, $[u^2]H_2=c+c^2=c(c+1)$, hence
+\begin{equation}
+\del_{v_3}P_2=\frac12c(c+1)
+ =\frac12\left(-\frac{28}{3}\right)\left(-\frac{25}{3}\right)
+ =\frac{350}{9}.
+\end{equation}
+For $g\ge3$, put $a=2g-4$. Equation \eqref{eq:quadraticvertex} and
+the two endpoint terms $h=1,g-1$ of the ordered genus sum yield
+\begin{align}
+[u^2]H_g={}&a(a+1)P_{g-1}+2caP_{g-1}\\
+ &+\sum_{h=2}^{g-2}(2h-2)(2g-2h-2)P_hP_{g-h}.
+\end{align}
+As $\del_{v_3}P_g=[u^2]H_g/2$, this becomes
+\begin{equation}\boxed{\begin{aligned}
+\del_{v_3}P_g={}&(g-2)\left(2g-5+\frac\chi{12}\right)P_{g-1}\\
+ &+2\sum_{h=2}^{g-2}(h-1)(g-h-1)P_hP_{g-h},\qquad g\ge3.
+\end{aligned}}\label{eq:allgenusv3}
+\end{equation}
+The interior sum is still ordered. Its prefactor two arises from
+$(2h-2)(2g-2h-2)/2$, not from reducing the ordered sum to a half-sum.
+For the first two cases,
+\begin{align}
+\del_{v_3}P_3&=-\frac{47}{3}P_2,\\
+\del_{v_3}P_4&=-\frac{82}{3}P_3+2P_2^2.
+\end{align}
+The coefficients follow from $\chi/12=-50/3$:
+$1(1-50/3)=-47/3$, $2(3-50/3)=-82/3$.
+These identities are tested independently of direct residual evaluation.
+
+They can also be derived from YY equation (4.7) for
+\begin{equation}
+Z=\exp\left(\sum_{g\ge2}\lambda^{2g-2}P_g\right),\qquad
+\mathcal E=\lambda\del_\lambda:
+\end{equation}
+\begin{equation}
+\frac2{\lambda^2}\del_{v_3}Z
+ =\left[\left(\frac\chi{12}-1\right)\mathcal E
+         +\mathcal E^2+\frac\chi{24}\left(\frac\chi{24}-1\right)\right]Z.
+\end{equation}
+Writing $W=\log Z$, division by $Z$ uses
+$\mathcal E^2Z/Z=\mathcal E^2W+(\mathcal EW)^2$.
+The constant term gives genus two, the coefficient of $\lambda^{2g-4}$
+gives \eqref{eq:allgenusv3}. The formal coupling $\lambda$ counts genus;
+it is unrelated to the modulus $z$ and to polynomial weights.
+
+\section{Genus three and the role of supplied genus-two data}
+
+At genus three the source is
+\begin{equation}
+R_3=-\frac12\left[\Pg22+2\Pg11\Pg21\right].
+\end{equation}
+The factor two occurs because the ordered terms $h=1$ and $h=2$ are equal.
+The genus-two polynomial here includes its chosen $a_2(X)$:
+although $a_2$ is annihilated by $\mathscr L$, it is not annihilated by
+$\delta$ or by covariant differentiation. For example,
+\begin{equation}
+\delta a_2(X)=5X(X-1)a_2'(X).
+\end{equation}
+Consequently genus-three anomaly coefficients depend on the genus-two
+boundary vector. Choosing zero genus-two ambiguity instead would produce a
+different, mathematically consistent formal continuation.
+
+With \eqref{eq:a2reference}, the selected $P_3^{\an}$ has 55 nonzero terms,
+weight at most six, no $u$, and no pure-$X$ terms. It is determined up to
+\begin{equation}
+a_3(X)=a_{3,0}+a_{3,1}X+\cdots+a_{3,6}X^6.
+\end{equation}
+The code leaves these seven entries unresolved. In particular,
+\begin{equation}
+[v_3^2]P_3^{\an}=\frac12\left(-\frac{47}{3}\right)\frac{350}{9}
+ =-\frac{8225}{27}.
+\end{equation}
+The factor $1/2$ here is from integrating a term proportional to $v_3$,
+not an additional BCOV symmetry factor.
+The complete list of the 55 coefficients is given in Appendix~\ref{app:g3}.
+
+\section{Holomorphic and A-model limits: factors not used by the engine}
+\label{sec:amodel}
+
+The recursion produces the normalized B-model object. Recovering the
+B-model amplitude in the same gauge is simply
+\begin{equation}
+F_g=C^{1-g}P_g=\kappa^{1-g}(X-1)^{1-g}P_g.
+\end{equation}
+For the holomorphic limit based at large complex structure,
+\begin{equation}
+E^{\hol}\propto\omega_0,\qquad
+G^{\hol}\propto\del_\psi t,
+\end{equation}
+where proportionality factors are antiholomorphic or independent of $\psi$
+for the relevant logarithmic derivatives. Thus one may evaluate the generators by
+\begin{align}
+u^{\hol}&=\frac{\tht\omega_0}{\omega_0},\\
+v_1^{\hol}&=\frac{\tht^2t}{\tht t}
+                   +2\frac{\tht\omega_0}{\omega_0},\\
+v_2^{\hol}&=\frac{\tht^2\omega_0}{\omega_0}-u^{\hol}v_1^{\hol},\\
+v_3^{\hol}&=\frac{\tht^3\omega_0}{\omega_0}
+                   +u^{\hol}v_2^{\hol}-5u^{\hol}X(v_1^{\hol}-2).
+\end{align}
+The first term in $v_1^{\hol}$ follows from
+$\tht\log(\del_\psi t)=\tht\log(\tht t)-1$; its $-1$
+cancels the $+1$ in $v_1=A+1+2B$.
+
+In the YY A-model normalization,
+\begin{align}
+F_g^A(t)&=\left[\frac{(2\pi i)^3\omega_0^2}{5^7C}\right]^{g-1}
+                    P_g^{\hol}\\
+ &=\left[\frac{\omega_0^2}{5^4(X-1)}\right]^{g-1}P_g^{\hol}\\
+ &=\left[\frac{\omega_0^2(\psi^{-5}-1)}{5^4}\right]^{g-1}P_g^{\hol}.
+\end{align}
+The simplification uses $C=(2\pi i)^3(X-1)/5^3$, leaving $5^{7-3}=5^4$;
+also $1/(X-1)=\psi^{-5}-1$. At large complex structure the factor
+in brackets tends to $-1/625$, explaining the sign used in the genus-two
+constant-map check.
+
+Equivalently, YY define $W_1^3=\omega_0^2/[625(X-1)]$,
+$V_i=W_1^i v_i^{\hol}$, and $Y_1=W_1X$. If a monomial in $P_g$
+has weight $w$, its contribution to $F_g^A$ becomes that monomial in
+$V_1,V_2,V_3,Y_1$ multiplied by $W_1^{3g-3-w}$.
+This is the homogeneous five-generator A-model description; it is different
+from the inhomogeneous four-generator polynomial $P_g$.
+
+Neither the period series, the mirror map, nor these frame factors are
+numerically evaluated by the prototype. They are subsequent exact-series
+operations. The distinction is particularly important when comparing
+polynomials quoted in different papers.
+
+\section{Exact sparse representation and the meaning of atomic recipes}
+
+An element is represented by
+\begin{equation}
+P=\sum_{\alpha\in\mathbb N^5}c_\alpha x^\alpha,\quad
+x=(u,v_1,v_2,v_3,X),\quad c_\alpha\in\QQ,
+\end{equation}
+with the exponent order fixed exactly as displayed. Only nonzero coefficients
+are stored. A coefficient is a reduced Python \code{Fraction} with integer
+numerator and positive denominator. A negative sign belongs to the numerator.
+For example,
+\begin{equation}
+-\frac{325}{288}v_1X^2
+\quad\longleftrightarrow\quad
+(0,1,0,0,2)\mapsto\operatorname{Fraction}(-325,288).
+\end{equation}
+Float input is rejected rather than converted into a rational approximation.
+An exponent tuple has five nonnegative integers; negative exponents and
+polynomial denominators are not supported by this class.
+
+The elementary algorithms are the mathematical rules
+\begin{align}
+(P+Q)_\alpha&=p_\alpha+q_\alpha,\\
+(PQ)_\gamma&=\sum_{\alpha+\beta=\gamma}p_\alpha q_\beta,\\
+\del_{x_i}(c_\alpha x^\alpha)
+ &=c_\alpha\alpha_i x^{\alpha-e_i},\\
+\int c_\alpha x^\alpha\,\dd x_i
+ &=\frac{c_\alpha}{\alpha_i+1}x^{\alpha+e_i},\\
+\tht(c_\alpha x^\alpha)
+ &=c_\alpha\sum_i\alpha_i x^{\alpha-e_i}\tht x_i.
+\end{align}
+The last formula has no derivative of $c_\alpha$ because the coefficient
+field is $\QQ$. Dependence on the modulus is encoded by the generators,
+in particular $X$, rather than by an extra rational function of $z$ in
+each coefficient. This is why the earlier general $\QQ(z)$ coefficient
+layer is unnecessary for the normalized quintic computation.
+
+All equal monomials are combined and zero coefficients discarded after
+each operation. The polynomial layer is expanded and canonical. It is
+not an unevaluated symbolic expression tree. Scalar division remains
+exact; division by a nonconstant polynomial would require a separate
+localized/rational-function layer.
+
+Above it, \code{RecipeArena} stores a directed acyclic graph with nodes
+for polynomial leaves, addition, multiplication, and normalized covariant
+derivatives labeled by $(g,n)$. Equal node specifications are interned;
+commutative binary arguments are ordered by node identifiers. Thus repeated
+subexpressions and derivative vertices share nodes. This is structural sharing,
+not general factorization or discovery of arbitrary algebraic identities.
+\code{expand()} evaluates the needed graph in topological order and caches
+exact polynomial values. There is no recursive descent through long graph
+chains during this evaluation.
+
+The source sum exploits its symmetry by iterating
+$1\le h\le\lfloor g/2\rfloor$ with multiplier two for $h<g-h$
+and multiplier one for $h=g-h$. For example,
+\begin{equation}
+H_4=\Pg32+2\Pg11\Pg31+(\Pg21)^2.
+\end{equation}
+The central term is not doubled. The overall factor $-1/2$ is applied
+after assembling this bracket.
+
+The prototype expands the source before extracting its three $u$
+coefficients. Hence its atomic representation delays and shares computations
+but does not eliminate expansion. The monomial-derivative cache is bounded
+by 8192 entries by default. The recipe arena and expanded node values can
+grow until explicitly compacted; \code{compact_recipes()} drops that arena
+and its cached vertices while preserving amplitudes. Externally held old
+recipe handles can keep an old arena alive.
+
+The polynomial algebra itself is commutative. If one formally adjoins the
+operator $\tht$, then $[\tht,M_f]=M_{\tht f}$ for multiplication by $f$.
+No arbitrary noncommutative operator algebra is needed by this implementation.
+
+\section{API correspondence, exact checks, and extension boundaries}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}}
+\toprule
+Code entry point & Mathematical operation or invariant\\\midrule\endhead
+\code{Poly} & Canonical sparse element of $\QQ[u,v_1,v_2,v_3,X]$.\\
+\code{partial} / \code{integrate} & Polynomial derivative / zero-constant primitive in one named generator.\\
+\code{coefficient("u", k)} & Extract $[u^k]P$ and remove the $u^k$ exponent.\\
+\code{substitute} & Simultaneous substitution; replacements do not substitute into each other.\\
+\code{degree()} & Maximum filtration weight; the zero polynomial uses sentinel $-1$.\\
+\code{YYRing.theta} & Leibniz derivation from \eqref{eq:table}.\\
+\code{YYRing.theta_z} & $-\tht/5$, not $\del_z$.\\
+\code{YYRing.covariant(p,g,n)} & $\mathcal D_{g,n}p$ from \eqref{eq:cov}.\\
+\code{BCOV.vertex(g,n)} & Shared recipe for the stable normalized insertion vertex.\\
+\code{source_recipe(g)} & Shared recipe for $R_g=-H_g/2$.\\
+\code{anomaly_gradient(g)} & All three derivatives in \eqref{eq:gradient}.\\
+\code{integrate(g)} & Mixed-partial checks and the particular primitive $P_g^{\an}$.\\
+\code{set_ambiguity(g, coeffs)} & Assign rational coefficients of $a_g(X)$; invalidate affected derivative caches.\\
+\code{Amplitude.polynomial()} & Return the complete chosen $P_g$, or reject an unresolved vector.\\
+\code{residual(g,p)} & $\mathscr Lp-R_g$; exact zero is necessary for the polynomial anomaly equation.\\
+\code{save} / \code{load} & Versioned exact JSON amplitudes; restore checks conventions and recomputes anomaly representatives.\\
+\bottomrule
+\end{longtable}
+
+The residual alone does not test $\del_up=0$ for an arbitrary externally
+supplied $p$; the amplitude constructor and the tests impose that condition
+separately. Likewise a vanishing residual does not determine $a_g(X)$.
+JSON numerator/denominator strings preserve exact integers. Saving uses
+atomic file replacement; no executable pickle is used. Restoring validates
+the mathematical anomaly representatives against the recorded lower-genus
+choices, but it does not certify the physical correctness of those choices.
+
+The 25 tests cover rational arithmetic, rejection of floats, sparse operations,
+the Leibniz rule, original $A,B_p$ identities, the filtration, tensor rank,
+recipe sharing, gradient integrability, the full published $P_2$, the independent
+relations \eqref{eq:allgenusv3}, ambiguity/cache behavior, and checkpoint restoration.
+With the reference genus-two vector and explicit zero ambiguity choices at
+genera three through seven, a formal run to genus eight gives anomaly-term counts
+\begin{equation}
+10,\ 55,\ 173,\ 403,\ 830,\ 1502,\ 2548\qquad(g=2,\ldots,8).
+\end{equation}
+Every residual vanishes exactly. These counts describe the specified formal
+run, not a physical boundary-complete genus-eight calculation or a proof of
+performance at genus 64.
+
+Useful extensions have clear boundaries: a faster exact coefficient backend;
+blocked sparse multiplication; direct use of \eqref{eq:quadraticvertex} to
+avoid materializing powers of $u$; modular arithmetic with certified rational
+reconstruction; exact boundary-condition solvers; and exact period/mirror-map
+series evaluation. A different Calabi--Yau model requires replacing the closure
+table, normalization, seed, anomaly vector fields, and ambiguity space together.
+Changing $\chi$ alone does not generalize the quintic engine.
+
+\appendix
+\section{Coordinate changes of the metric connection}
+For comparisons in the same Hodge gauge, define
+\begin{equation}
+\widetilde A=\theta_z\log G_{z\bar z},\qquad
+\widetilde B_p=\frac{\theta_z^pE}{E}.
+\end{equation}
+The metric transforms as
+$G_{\psi\bar\psi}=|\del_\psi z|^2G_{z\bar z}$.
+Only the holomorphic Jacobian contributes to $\tht\log G$:
+\begin{align}
+A&=-5\widetilde A+\tht\log(-5z/\psi)
+  =-5\widetilde A-6,\\
+B_p&=(-5)^p\widetilde B_p.
+\end{align}
+The $-6$ consists of $-5$ from $\tht\log z$ and $-1$
+from $-\tht\log\psi$. Consequently,
+\begin{align}
+u&=-5\widetilde B_1,\\
+v_1&=-5(\widetilde A+1+2\widetilde B_1),\\
+v_2&=25\{\widetilde B_2-
+    \widetilde B_1(\widetilde A+1+2\widetilde B_1)\}.
+\end{align}
+For $v_3$, insert these expressions into
+$B_3+uv_2-5uX(v_1-2)$ before making any naming convention for new
+$z$-generators. In particular, the constant $-2$ does not scale with $v_1$.
+A Hodge-gauge change adds its own shift to $B$; the above formulas describe
+a coordinate change alone. This is why replacing $\tht$ by $-5\theta_z$
+without transforming the metric connection is insufficient.
+
+\section{Complete genus-three anomaly coefficient table}
+\label{app:g3}
+The following table is generated directly from the exact implementation with
+the genus-two boundary vector \eqref{eq:a2reference}. Its entries specify
+$P_3^{\an}=\sum c_m m$, with no pure-$X$ terms. Each rational is exact.
+It is not a claim that $a_3(X)=0$ is the physical choice.
+\begingroup\renewcommand{\arraystretch}{1.5}\setlength{\extrarowheight}{3pt}
+\begin{longtable}{lll}
+\toprule
+Monomial $m$ & Coefficient $c_m$ & Weight\\
+\midrule\endhead
+$v_2$ & $\dfrac{390625}{864}$ & 2 \\
+$v_1 X$ & $-\dfrac{2882375}{576}$ & 2 \\
+$v_3$ & $-\dfrac{146875}{432}$ & 3 \\
+$v_2 X$ & $-\dfrac{808975}{144}$ & 3 \\
+$v_1 X^{2}$ & $-\dfrac{497125}{576}$ & 3 \\
+$v_1 v_2$ & $-\dfrac{1990625}{1728}$ & 3 \\
+$v_1^{2} X$ & $\dfrac{2917175}{3456}$ & 3 \\
+$v_1^{3}$ & $-\dfrac{1953125}{10368}$ & 3 \\
+$v_3 X$ & $\dfrac{1353365}{432}$ & 4 \\
+$v_2 X^{2}$ & $-\dfrac{1736425}{108}$ & 4 \\
+$v_2^{2}$ & $-\dfrac{359375}{288}$ & 4 \\
+$v_1 X^{3}$ & $-\dfrac{570875}{1728}$ & 4 \\
+$v_1 v_3$ & $\dfrac{734375}{864}$ & 4 \\
+$v_1 v_2 X$ & $-\dfrac{6462385}{1728}$ & 4 \\
+$v_1^{2} X^{2}$ & $\dfrac{1362425}{3456}$ & 4 \\
+$v_1^{2} v_2$ & $-\dfrac{78125}{432}$ & 4 \\
+$v_1^{3} X$ & $-\dfrac{801575}{3456}$ & 4 \\
+$v_1^{4}$ & $\dfrac{15625}{288}$ & 4 \\
+$v_3 X^{2}$ & $-\dfrac{9635}{432}$ & 5 \\
+$v_2 X^{3}$ & $\dfrac{1525}{27}$ & 5 \\
+$v_2 v_3$ & $\dfrac{146875}{108}$ & 5 \\
+$v_2^{2} X$ & $-\dfrac{2951365}{432}$ & 5 \\
+$v_1 X^{4}$ & $-\dfrac{200375}{1728}$ & 5 \\
+$v_1 v_3 X$ & $\dfrac{39245}{432}$ & 5 \\
+$v_1 v_2 X^{2}$ & $-\dfrac{460135}{1728}$ & 5 \\
+$v_1 v_2^{2}$ & $-\dfrac{26375}{216}$ & 5 \\
+$v_1^{2} X^{3}$ & $\dfrac{560425}{3456}$ & 5 \\
+$v_1^{2} v_3$ & $-\dfrac{5875}{72}$ & 5 \\
+$v_1^{2} v_2 X$ & $\dfrac{95315}{432}$ & 5 \\
+$v_1^{3} X^{2}$ & $-\dfrac{394925}{3456}$ & 5 \\
+$v_1^{3} v_2$ & $\dfrac{8125}{144}$ & 5 \\
+$v_1^{4} X$ & $\dfrac{3995}{96}$ & 5 \\
+$v_1^{5}$ & $-\dfrac{625}{96}$ & 5 \\
+$v_3 X^{3}$ & $-\dfrac{1175}{144}$ & 6 \\
+$v_3^{2}$ & $-\dfrac{8225}{27}$ & 6 \\
+$v_2 X^{4}$ & $\dfrac{2375}{288}$ & 6 \\
+$v_2 v_3 X$ & $\dfrac{111625}{36}$ & 6 \\
+$v_2^{2} X^{2}$ & $-\dfrac{6774925}{864}$ & 6 \\
+$v_2^{3}$ & $-\dfrac{5225}{81}$ & 6 \\
+$v_1 X^{5}$ & $-\dfrac{11875}{288}$ & 6 \\
+$v_1 v_3 X^{2}$ & $\dfrac{15275}{864}$ & 6 \\
+$v_1 v_2 X^{3}$ & $-\dfrac{31775}{1728}$ & 6 \\
+$v_1 v_2 v_3$ & $-\dfrac{1175}{18}$ & 6 \\
+$v_1 v_2^{2} X$ & $\dfrac{56905}{216}$ & 6 \\
+$v_1^{2} X^{4}$ & $\dfrac{163375}{3456}$ & 6 \\
+$v_1^{2} v_3 X$ & $-\dfrac{235}{18}$ & 6 \\
+$v_1^{2} v_2 X^{2}$ & $\dfrac{775}{108}$ & 6 \\
+$v_1^{2} v_2^{2}$ & $\dfrac{1465}{72}$ & 6 \\
+$v_1^{3} X^{3}$ & $-\dfrac{317375}{10368}$ & 6 \\
+$v_1^{3} v_3$ & $\dfrac{235}{72}$ & 6 \\
+$v_1^{3} v_2 X$ & $\dfrac{925}{144}$ & 6 \\
+$v_1^{4} X^{2}$ & $\dfrac{875}{72}$ & 6 \\
+$v_1^{4} v_2$ & $-\dfrac{15}{4}$ & 6 \\
+$v_1^{5} X$ & $-\dfrac{275}{96}$ & 6 \\
+$v_1^{6}$ & $\dfrac{5}{16}$ & 6 \\
+\bottomrule
+\end{longtable}
+\endgroup
+
+\section{Reproducibility and source identification}
+The accompanying audit script \code{verify_bcov_notes.py} checks the expanded
+genus-one second vertex, the three genus-two source coefficients, the complete
+genus-two reference polynomial, the general quadratic-insertion identity,
+the genus-three/four $v_3$ relations, and the frame-factor simplifications.
+The SHA-256 digest below identifies the original 0.1.0 core implementation
+that was audited on 16 October 2026. The additional frame and enumerative
+checks in Section~\ref{sec:ledger2026} use separate v0.2 modules:
+\begin{center}\small\texttt{bd9d0415c8cc0a0fef5b8dd8e085f41538d6115cdb978f3ca569dccb86768313}\end{center}
+
+The formulas are based on YY equations (2.4), (2.12), (2.16), (2.19)--(2.20),
+(3.1)--(3.8), (3.16), (3.22)--(3.30), (3.31)--(3.33), (4.1), and (4.7).
+The BCOV equation is geometric input; the coefficient arithmetic and the
+implementation-specific primitive/ambiguity split are given explicitly here.
+
+\begin{thebibliography}{9}
+\bibitem{YY} S.~Yamaguchi and S.-T.~Yau,
+\emph{Topological String Partition Functions as Polynomials},
+JHEP \textbf{07} (2004) 047,
+\href{https://arxiv.org/abs/hep-th/0406078}{arXiv:hep-th/0406078}, version 2.
+\bibitem{HKQ} M.~Huang, A.~Klemm and S.~Quackenbush,
+\emph{Topological String Theory on Compact Calabi--Yau: Modularity and Boundary Conditions},
+\href{https://arxiv.org/abs/hep-th/0612125}{arXiv:hep-th/0612125}.
+\bibitem{BCOV} M.~Bershadsky, S.~Cecotti, H.~Ooguri and C.~Vafa,
+\emph{Kodaira--Spencer Theory of Gravity and Exact Results for Quantum String Amplitudes},
+Commun. Math. Phys. \textbf{165} (1994) 311--428,
+\href{https://arxiv.org/abs/hep-th/9309140}{arXiv:hep-th/9309140}.
+\end{thebibliography}
+\end{document}

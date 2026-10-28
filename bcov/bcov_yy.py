@@ -336,12 +336,24 @@ class YYRing:
                 data[out] = data.get(out, 0) + coefficient * value
         return Poly(data)
 
+    def theta_z(self, p: Poly | Scalar) -> Poly:
+        """z*d/dz for z=(5*psi)^(-5), i.e. -theta/5; this is not d/dz.
+
+        Acts on YY-frame generators. Unrelated to quintic_frames.theta_z, which
+        acts on small-z frame generators.
+        """
+        return self.theta(p) / -5
+
     def covariant(self, p: Poly, genus: int, insertions: int) -> Poly:
         """P_g^(n) -> P_g^(n+1); genus and tensor rank are external metadata."""
         if type(genus) is not int or genus < 0 or type(insertions) is not int or insertions < 0:
             raise ValueError("Genus and insertion count must be nonnegative integers")
         connection = -insertions*(v1-2*u) + (2*genus-2)*(u-Fraction(5,2)*X)
         return self.theta(p) + connection*p
+
+    def clear_cache(self) -> None:
+        """Drop the memoized monomial derivatives."""
+        self._transition.cache_clear()
 
 
 class Recipe:
@@ -597,6 +609,17 @@ class BCOV:
         """BCOV equation residual; zero iff polynomial (default P_g) solves it."""
         p = self.amplitudes[genus].polynomial() if polynomial is None else polynomial
         return p.partial("v1")-u*p.partial("v2")-u*(u+5*X)*p.partial("v3")-self.source_recipe(genus).expand()
+
+    def compact_recipes(self) -> None:
+        """Release temporary DAGs/expansions; keep exact amplitude checkpoints.
+
+        Handles previously returned by source_recipe remain valid snapshots if
+        the caller still holds them, so release those handles to reclaim memory.
+        """
+        self.arena = RecipeArena(self.ring)
+        self._vertices.clear()
+        self._sources.clear()
+        self.ring.clear_cache()
 
     def save(self, path: str | Path) -> None:
         """Versioned exact JSON, written by atomic replacement; no pickle."""
